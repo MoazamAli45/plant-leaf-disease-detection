@@ -1,0 +1,43 @@
+# Faithful reproduction of Usman & Ali, MobileNet.
+# Assumption ids refer to docs/reproduction.md.
+name: paper_mobilenet_fullepochs
+description: "Paper mobilenet, original 80/20 split, one full pass over train and val per epoch (assumption A8, reading b)"
+seed: 42
+output_dir: outputs
+data:
+  train_manifest: manifests/paper_split/train.csv
+  val_manifest: manifests/paper_split/val.csv
+  data_root: data
+  npd_root: null            # set on Kaggle, see notebooks/kaggle_train.ipynb
+  image_size: 224           # paper
+  resize_method: nearest    # assumption A2 (flow_from_directory default)
+  preprocessing: rescale    # assumption A3 (ImageDataGenerator(rescale=1/255))
+augment:                    # paper lists the transforms; values except rotation are A5
+  enabled: true
+  rotation_range: 30        # paper: "rotation angle of up to 30 degrees"
+  width_shift_range: 0.2
+  height_shift_range: 0.2
+  shear_range: 0.2          # degrees (ImageDataGenerator units)
+  zoom_range: 0.2
+  brightness_range: [0.8, 1.2]
+  horizontal_flip: true     # paper
+  vertical_flip: true       # paper
+  fill_mode: nearest
+model:
+  name: paper_mobilenet     # paper Figure 3
+  num_classes: 38
+  output_activation: softmax   # paper
+  dropout: 0.2              # paper Figure 3
+  alpha: 1.0                # assumption A7
+  weights: imagenet         # paper: "pre-trained MobileNet"
+  freeze_backbone: true     # assumption A6
+train:
+  epochs: 20                # paper
+  batch_size: 32            # assumption A4
+  optimizer: adam           # assumption A4
+  learning_rate: 0.001      # assumption A4 (Keras default)
+  loss: categorical_crossentropy   # A1: paper says "cross-entropy"; curves rule out binary CE
+  steps_per_epoch: null      # A8b: full epochs
+  validation_steps: null
+  shuffle_buffer: null
+  mixed_precision: false
