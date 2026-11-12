@@ -1,9 +1,12 @@
 PY ?= .venv/bin/python
+# TensorFlow needs Python 3.10-3.12 (on Apple silicon, a native arm64 build). For example:
+#   make setup PYTHON=/path/to/python3.12
+PYTHON ?= python3
 
 .PHONY: setup data data-public prepare eda test lint format train-paper-local report
 
-setup:            ## create venv and install everything for Phase 1
-	python3 -m venv .venv
+setup:            ## create venv and install everything
+	$(PYTHON) -m venv .venv
 	$(PY) -m pip install -U pip
 	$(PY) -m pip install -e ".[download,notebook,dev,train]"
 
