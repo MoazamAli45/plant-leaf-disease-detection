@@ -11,7 +11,6 @@ dependencies = [
     "numpy>=2.0",          # np.bitwise_count for fast Hamming distances
     "pandas>=2.0",
     "pillow>=10.0",
-    "imagehash>=4.3",
     "scipy>=1.10",
     "pyyaml>=6.0",
     "requests>=2.31",
@@ -20,9 +19,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-download = ["kaggle>=1.6", "six", "huggingface_hub>=0.23"]
+download = ["kaggle>=1.6", "six"]  # kaggle 2.x imports six without declaring it
 notebook = ["jupyter", "nbformat>=5.9", "nbclient>=0.10", "ipykernel"]
-dev = ["pytest>=8.0", "ruff>=0.6", "nbformat>=5.9"]
+dev = ["pytest>=8.0", "ruff>=0.6", "nbformat>=5.9", "imagehash>=4.3"]  # imagehash: reference test only
 
 [tool.setuptools.packages.find]
 where = ["src"]
