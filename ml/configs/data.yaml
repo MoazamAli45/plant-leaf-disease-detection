@@ -1,0 +1,27 @@
+# Phase 1 data protocol. Paths are relative to the ml/ directory.
+data_dir: data                         # raw data + caches (gitignored)
+manifest_dir: manifests                # committed CSV manifests
+report_dir: ../docs/figures/data_audit # generated tables/figures
+
+seed: 42
+split_ratios: {train: 0.70, val: 0.15, test: 0.15}
+
+phash:
+  # Two images whose D4-invariant pHash distance (0-64 bits) is <= group_threshold are put in
+  # the same group, in addition to grouping by source image, physical leaf and SHA-256.
+  # Chosen after inspecting the distance distribution and example pairs (see EDA notebook).
+  group_threshold: 4
+  # Thresholds at which leakage is reported (sensitivity analysis).
+  audit_thresholds: [0, 2, 4, 6, 8, 10, 12]
+
+plantdoc:
+  # PlantDoc images within this distance of any NPD image are excluded from the field test set.
+  overlap_threshold: 4
+
+# Groups that contain more than one label (the same picture filed under different classes)
+# are label conflicts; they are dropped from the clean split and listed in the report.
+drop_label_conflicts: true
+# Byte-identical copies are collapsed to one file in the clean split.
+drop_exact_duplicates: true
+
+workers: null # null = all cores but one
