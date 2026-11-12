@@ -20,6 +20,7 @@ import hashlib
 import json
 import logging
 import shutil
+import time
 import zipfile
 from collections.abc import Callable, Iterable
 from dataclasses import asdict, dataclass, field
@@ -192,13 +193,47 @@ def _extract_once(
     return info
 
 
-def kaggle_metadata(ref: str) -> dict[str, Any]:
-    """Public dataset metadata (no auth needed): version, license, size."""
-    r = requests.get(sources.KAGGLE_VIEW_API.format(ref=ref), timeout=30)
-    r.raise_for_status()
-    d = r.json()
+def kaggle_metadata(ref: str, retries: int = 3) -> dict[str, Any]:
+    """Dataset metadata (version, license, size).
+
+    Tries the public endpoint (no auth) with retries, since it intermittently returns 404,
+    then falls back to the authenticated client. ``source`` records which one answered.
+    """
     keys = ["ref", "title", "licenseName", "currentVersionNumber", "lastUpdated", "totalBytes"]
-    return {k: d.get(k) for k in keys}
+    for attempt in range(retries):
+        try:
+            r = requests.get(sources.KAGGLE_VIEW_API.format(ref=ref), timeout=30)
+            r.raise_for_status()
+            d = r.json()
+            return {**{k: d.get(k) for k in keys}, "source": "public_api"}
+        except (requests.RequestException, ValueError) as e:
+            log.warning("Kaggle public metadata attempt %d failed: %s", attempt + 1, e)
+            time.sleep(2**attempt)
+    api = _kaggle_api()
+    owner, slug = ref.split("/", 1)
+    match = [d for d in api.dataset_list(search=slug, user=owner) if d.ref == ref]
+    if not match:
+        raise RuntimeError(f"Kaggle dataset {ref} not found")
+    d = match[0]
+    return {
+        "ref": d.ref,
+        "title": d.title,
+        "licenseName": d.license_name,
+        "currentVersionNumber": d.current_version_number,
+        "lastUpdated": str(d.last_updated),
+        "totalBytes": d.total_bytes,
+        "source": "authenticated_api",
+    }
+
+
+def _kaggle_api() -> Any:
+    try:
+        from kaggle.api.kaggle_api_extended import KaggleApi  # lazy: authenticates on import
+    except ImportError as e:  # pragma: no cover
+        raise SystemExit("pip install -e '.[download]' to get the kaggle client") from e
+    api = KaggleApi()
+    api.authenticate()
+    return api
 
 
 def download_npd(data_dir: Path, allow_version_change: bool = False) -> dict[str, Any]:
@@ -211,13 +246,11 @@ def download_npd(data_dir: Path, allow_version_change: bool = False) -> dict[str
         )
     downloads = data_dir / "downloads"
     archive = downloads / "new-plant-diseases-dataset.zip"
-    if not archive.exists():
-        try:
-            from kaggle.api.kaggle_api_extended import KaggleApi  # lazy: authenticates on import
-        except ImportError as e:  # pragma: no cover
-            raise SystemExit("pip install -e '.[download]' to get the kaggle client") from e
-        api = KaggleApi()
-        api.authenticate()
+    # the Kaggle client writes to the final name and marks unfinished downloads with a
+    # sidecar file; treat those as missing so an interrupted download is resumed, not used
+    partial = archive.with_name(archive.name + ".kaggle-partial")
+    if not archive.exists() or partial.exists():
+        api = _kaggle_api()
         downloads.mkdir(parents=True, exist_ok=True)
         api.dataset_download_files(src.ref, path=str(downloads), unzip=False, quiet=False)
     extract = _extract_once(
