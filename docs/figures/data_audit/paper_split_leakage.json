@@ -1,0 +1,41 @@
+{
+  "eval_split": "val",
+  "train_split": "train",
+  "n_eval": 17572,
+  "n_eval_with_leaf_id": 12166,
+  "frac_source_in_train": 0.6245162758934669,
+  "frac_leaf_in_train": 0.6822217163669474,
+  "frac_leaf_in_train_among_known": 0.9853690613184284,
+  "frac_exact_duplicate_in_train": 0.0003414523104939677,
+  "frac_source_or_leaf_or_exact": 0.8754268153881175,
+  "phash": {
+    "0": {
+      "frac_near_duplicate_in_train": 0.5227634873662645,
+      "frac_near_duplicate_not_explained": 0.0002845435920783064
+    },
+    "2": {
+      "frac_near_duplicate_in_train": 0.5648759389938539,
+      "frac_near_duplicate_not_explained": 0.0021056225813794673
+    },
+    "4": {
+      "frac_near_duplicate_in_train": 0.5862736171181425,
+      "frac_near_duplicate_not_explained": 0.008820851354427499
+    },
+    "6": {
+      "frac_near_duplicate_in_train": 0.6308331436376052,
+      "frac_near_duplicate_not_explained": 0.018438424766674254
+    },
+    "8": {
+      "frac_near_duplicate_in_train": 0.7091964488959709,
+      "frac_near_duplicate_not_explained": 0.031242886410198043
+    },
+    "10": {
+      "frac_near_duplicate_in_train": 0.813510129751878,
+      "frac_near_duplicate_not_explained": 0.049453676303209654
+    },
+    "12": {
+      "frac_near_duplicate_in_train": 0.9090029592533576,
+      "frac_near_duplicate_not_explained": 0.07699749601638971
+    }
+  }
+}

@@ -1,14 +1,14 @@
 # Dataset card
 
-> **Status:** Phase 1. Every `⟨PLACEHOLDER⟩` below is filled from
-> `docs/figures/data_audit/summary.json` once `make prepare` has run on the Kaggle data.
-> No number in this card is typed in by hand.
+> **Status:** Phase 1 complete. The numbers below come from the run of 2026-11-13
+> (`docs/figures/data_audit/summary.json`; manifests verified by `ml/manifests/SHA256SUMS`).
+> Re-running `make prepare` reproduces them byte for byte.
 
 ## 1. Datasets used
 
 | Role | Dataset | Version pinned | Images | License |
 |---|---|---|---|---|
-| Train / val / test (in-distribution) | New Plant Diseases Dataset (NPD) [`npd_kaggle`] | Kaggle version 2 (last updated 2018-11-18) | ⟨PLACEHOLDER: `npd.n_images`⟩ | "Data files © Original Authors": upstream PlantVillage terms apply |
+| Train / val / test (in-distribution) | New Plant Diseases Dataset (NPD) [`npd_kaggle`] | Kaggle version 2 (last updated 2018-11-18) | 87,867 (70,295 train + 17,572 valid; the archive stores every file twice in identical trees, and 33 unlabelled `test/` images are ignored) | "Data files © Original Authors": upstream PlantVillage terms apply |
 | Upstream of NPD | PlantVillage [`hughes2015open`, `mohanty2016using`] | git `7f7ecc7` (leaf map only) | not downloaded | CC BY-SA 3.0 (see note) |
 | Field test set (out-of-distribution) | PlantDoc classification set [`singh2020plantdoc`] | git `5467f60` | 2,578 files extracted (from `ml/data/raw/PROVENANCE.json`) | CC BY 4.0 |
 
@@ -26,6 +26,8 @@
   `pratikkayal/PlantDoc-Dataset`).
 - This repository never redistributes images. It ships download scripts and CSV manifests
   (file paths, labels and hashes) only.
+  The one exception is the small sample grids in `docs/figures/eda/`. They show a few dataset
+  images under the licenses above, with attribution to the datasets cited here.
 
 ## 2. Provenance and download
 
@@ -51,9 +53,18 @@ silently loses one file of each pair. The extractor renames the second file to
 
 NPD's Kaggle description says it was "recreated using offline augmentation from the original
 dataset" and then "divided into 80/20 ratio of training and validation set". File names keep the
-PlantVillage name and add a suffix per transform (`_90deg`, `_180deg`, `_270deg`, `_flipLR`,
-`_flipTB`, `_new30degFlipLR`, `_new30degFlipTB`, `_newGRR`). If the 80/20 split was drawn
-*after* augmentation, rotated or mirrored copies of one photo can sit on both sides of the split.
+PlantVillage name and add a suffix per transform. The 87,867 images come from **48,239 source
+photos**:
+
+| Suffix | Images | Suffix | Images |
+|---|---|---|---|
+| (none: original) | 48,239 | `_new30degFlipLR` | 5,042 |
+| `_flipLR` | 8,681 | `_new30degFlipTB`, `_newGRR` | 427 each |
+| `_180deg` | 8,668 | `_new200degFlipLR/TB`, `_new90degFlipLR/TB`, `_newGGR` | 152 each |
+| `_flipTB` | 7,275 | `_90deg`, `_270deg` | 4,174 each |
+
+If the 80/20 split was drawn *after* augmentation, rotated or mirrored copies of one photo can
+sit on both sides of the split.
 PlantVillage also often has several photos of one physical leaf, which upstream records in
 `leaf_grouping/leaf-map.json`. Both effects let a validation image be "seen" during training.
 
@@ -74,20 +85,54 @@ would miss. Arbitrary-angle rotations, for example, change the hash.
 
 ### Results on the paper's 80/20 split
 
-| Measure | Value |
-|---|---|
-| val images whose source photo has a copy in train | ⟨PLACEHOLDER: `paper_split_audit.frac_source_in_train`⟩ |
-| val images whose physical leaf appears in train | ⟨PLACEHOLDER: `paper_split_audit.frac_leaf_in_train`⟩ |
-| val images with a byte-identical file in train | ⟨PLACEHOLDER: `paper_split_audit.frac_exact_duplicate_in_train`⟩ |
-| any of the above | ⟨PLACEHOLDER: `paper_split_audit.frac_source_or_leaf_or_exact`⟩ |
-| pHash near-duplicate in train, by threshold | ⟨PLACEHOLDER: `figures/data_audit/paper_split_leakage_thresholds.md`⟩ |
+All 17,572 validation images were audited.
+
+| Measure | Images | Share |
+|---|---|---|
+| source photo has an augmented copy in train | 10,974 | 62.5% |
+| physical leaf also photographed in train | 11,988 | 68.2% (98.5% of the 12,166 val images that have a leaf id) |
+| byte-identical file in train | 6 | 0.03% |
+| **any of the above** | **15,383** | **87.5%** |
+
+**87.5% is a lower bound.** Leaf ids exist for only 69.2% of images, so photos of the same leaf
+without an id are not counted.
+
+**pHash as a detector.** Recall on the known (original, copy) pairs
+(`phash_recall_by_aug_type.csv`):
+
+- **90/180/270-degree rotations and flips:** ≥ 99.7% at ≤ 4 bits.
+- **The `new*` 30- and 200-degree rotations:** 0% at any threshold tested. Their median
+  distance is 22–24 bits.
+
+So pHash alone would miss about 5,800 copies that file names catch. In the other direction,
+pHash at ≥ 2 bits also matches *different* leaves on the same lab background: even in the clean
+split, 0.8% of test images have a train "near-duplicate" at 2 bits and 71% at 12 bits.
+Near-duplicate rates on the paper split (`paper_split_leakage_thresholds.md`) therefore mix
+real leaks with look-alikes, and the file-name and leaf-id numbers above are the defensible
+measure.
+
+| pHash threshold (bits) | paper val with a train near-duplicate | of which not explained by file name or leaf id |
+|---|---|---|
+| 0 | 52.3% | 0.03% |
+| 4 | 58.6% | 0.9% |
+| 8 | 70.9% | 3.1% |
+| 12 | 90.9% | 7.7% |
+
+Figures: `docs/figures/eda/leakage_curve.png`, `augmented_variants.png`.
 
 ## 5. Clean protocol: grouped, stratified 70/15/15 split
 
 1. Build a graph over all NPD images (train + valid merged). Images are linked when they share
    a source photo, a physical leaf or a SHA-256, or when their D4 pHash distance is
-   ≤ `phash.group_threshold` (default 4 bits). The threshold must be justified by the
-   "hash-only pairs" figure in the EDA notebook.
+   ≤ `phash.group_threshold` = **0 bits** (an exact match under rotation and flip). The
+   threshold was chosen from the first full run:
+   - by eye (`hash_only_pairs.png`), the 85 pairs at 0 bits not explained by file name or leaf
+     id are true duplicates; pairs at 2 bits are mixed; pairs at ≥ 4 bits are different
+     leaves;
+   - grouping is single-linkage, so a loose threshold chains look-alikes together. At ≤ 0 bits
+     the largest group has 110 images (4.9% of its class). At ≤ 2 bits it has 594 (26.7%). At
+     ≤ 4 bits it has 1,870, which is 84% of *Raspberry healthy* and would leave that class
+     with almost no val or test images.
 2. Connected components are **groups**. No group is ever split between train, val and test.
 3. Groups that contain more than one label (the same picture filed under different classes)
    are dropped as label conflicts. Byte-identical copies are collapsed to one file.
@@ -95,6 +140,12 @@ would miss. Arbitrary-angle rotations, for example, change the hash.
    sizes) to the split furthest below its 70/15/15 target. Seed: 42 (`configs/data.yaml`).
 5. The pipeline **asserts** that val and test share no source photo, leaf, file or
    near-duplicate (≤ threshold) with train, and fails otherwise.
+
+**Result.** The split has 22,133 groups (median size 2, largest 110). It holds **61,485 train
+/ 13,185 val / 13,171 test** images. 26 byte-identical copies were removed, and no group
+contained two labels. Every class is within 0.25 percentage points of 70/15/15, and every class
+has at least 308 val and 308 test images. Val and test share no source photo, leaf or file with
+train, and have no train image at 0 bits.
 
 Manifests: `ml/manifests/clean_split/{train,val,test}.csv` (columns: `path, label, group_id,
 source_id, leaf_id, aug_type, sha256`). `ml/manifests/SHA256SUMS` makes the split citable and
@@ -136,9 +187,13 @@ healthy, Strawberry leaf scorch, Tomato target spot.
 PlantDoc images within `plantdoc.overlap_threshold` bits (D4 pHash, all classes) of any NPD
 image are excluded. Byte-identical files filed under **different** PlantDoc classes are
 excluded entirely, because their true label cannot be known. For identical copies under the
-same class, one copy is kept. Kept / excluded:
-⟨PLACEHOLDER: `plantdoc.excluded`⟩. Phase 3 reports field accuracy on all mapped classes and on
-the `exact`-only subset.
+same class, one copy is kept. The overlap threshold is 0 bits. At 4 bits, 8 PlantDoc images
+matched NPD images, and by eye all 8 were unrelated leaves (mostly stock photos on white
+paired with PlantVillage leaves of other crops).
+
+**Result:** 2,557 of 2,578 images kept, covering all 28 classes. 18 were removed as label
+conflicts (9 pairs), 3 as same-label duplicates and 0 as NPD copies. Phase 3 reports field
+accuracy on all mapped classes and on the `exact`-only subset.
 
 ## 7. Known issues and limitations
 
@@ -147,8 +202,12 @@ the `exact`-only subset.
   2.6% for chance [`noyan2022uncovering`]. In-distribution accuracy therefore overstates field
   performance. The EDA notebook compares background brightness between NPD and PlantDoc.
 - **Leaf ids are incomplete.** Upstream `leaf-map.json` covers only part of PlantVillage
-  (⟨PLACEHOLDER: `npd.n_with_leaf_id`⟩ of NPD's images resolve to a leaf). Photos of the same
-  leaf without a leaf id are linked only if pHash catches them.
+  (60,809 of NPD's 87,867 images, 69.2%, resolve to one of 7,378 leaves). Photos of the same
+  leaf without a leaf id are linked only if pHash matches them exactly, so some same-leaf
+  pairs may remain across the clean split. Residual look-alike rates are reported in
+  `clean_split_test_leakage.json`.
+- **Rotation artefacts.** The `new*` rotations fill their corners with black. This is a
+  synthetic cue the original photos do not have.
 - **PlantDoc duplicates with conflicting labels.** Indexing the 2,578 PlantDoc files found 12
   byte-identical pairs. In 9 of them the two copies carry different labels: 5 pairs are filed
   under both *Potato leaf early blight* and *late blight*, 3 under both *Corn Gray leaf spot*

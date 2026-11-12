@@ -1,0 +1,15 @@
+aug_type,train,val
+180deg,6886,1782
+270deg,3348,826
+90deg,3381,793
+flipLR,6918,1763
+flipTB,5849,1426
+new200degFlipLR,117,35
+new200degFlipTB,123,29
+new30degFlipLR,4026,1016
+new30degFlipTB,349,78
+new90degFlipLR,111,41
+new90degFlipTB,128,24
+newGGR,124,28
+newGRR,337,90
+original,38598,9641

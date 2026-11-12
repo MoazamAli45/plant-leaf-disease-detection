@@ -9,13 +9,17 @@ three parts:
 3. **correct and extend** the experiments: a leakage-free split, more backbones, field-image
    evaluation, explainability and efficiency. The best model is served in a web app.
 
-> **Status: Phase 1 (data and audit).** No models have been trained yet. Every result in this
-> repository is a placeholder until it is produced by a real run, and every number will be read
-> from output files.
+> **Status: Phase 1 complete.** No models have been trained yet. Dataset and audit numbers
+> come from the run recorded in `docs/figures/data_audit/summary.json`. Model results will
+> appear only once real training runs produce them.
+>
+> **Key finding so far:** 87.5% of the validation images in the paper's 80/20 split have an
+> augmented copy, or another photo of the same leaf, in the training split (lower bound; see
+> the [dataset card](docs/dataset_card.md#4-audit-protocol)).
 
 | Phase | Scope | Status |
 |---|---|---|
-| 1 | Data download, EDA, leakage audit, clean grouped split, PlantDoc mapping | code done; waiting for the NPD download |
+| 1 | Data download, EDA, leakage audit, clean grouped split, PlantDoc mapping | done |
 | 2 | Faithful reproduction (custom CNN + MobileNetV1, original 80/20 split) | not started |
 | 3 | Corrected and extended experiments, PlantDoc evaluation, Grad-CAM, efficiency | not started |
 | 4 | Next.js PWA with in-browser TensorFlow.js inference | not started |
