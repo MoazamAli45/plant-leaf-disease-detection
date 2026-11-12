@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leafdx"
+version = "0.1.0"
+description = "Plant leaf disease detection: data pipeline, training and evaluation"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",          # np.bitwise_count for fast Hamming distances
+    "pandas>=2.0",
+    "pillow>=10.0",
+    "imagehash>=4.3",
+    "scipy>=1.10",
+    "pyyaml>=6.0",
+    "requests>=2.31",
+    "tqdm>=4.66",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+download = ["kaggle>=1.6", "six", "huggingface_hub>=0.23"]
+notebook = ["jupyter", "nbformat>=5.9", "nbclient>=0.10", "ipykernel"]
+dev = ["pytest>=8.0", "ruff>=0.6", "nbformat>=5.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "SIM", "RUF", "ANN"]
+ignore = ["ANN401"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["ANN"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

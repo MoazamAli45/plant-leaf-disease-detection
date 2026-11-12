@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Data and artifacts (never committed; regenerate with the scripts)
+ml/data/
+ml/outputs/
+ml/wandb/
+ml/mlruns/
+*.onnx
+*.pt
+*.ckpt
+
+# Node
+node_modules/
+.next/
+out/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Env
+.env
+.env.*
+!.env.example
