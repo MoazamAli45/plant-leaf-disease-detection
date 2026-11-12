@@ -1,0 +1,13 @@
+model,schedule,seed,metric,paper,reproduced,difference
+cnn,steps100,42,"train accuracy (last epoch, as Keras reports)",0.9711,0.5290625095367432,-0.4420374904632568
+cnn,steps100,42,"train loss (last epoch, as Keras reports)",0.0898,1.5226269960403442,1.4328269960403441
+cnn,steps100,42,"validation accuracy (last epoch, as Keras reports)",0.9025,0.4566666781902313,-0.44583332180976865
+cnn,steps100,42,"validation loss (last epoch, as Keras reports)",0.3605,2.0493335723876953,1.6888335723876953
+cnn,steps100,42,"validation accuracy, full 17,572 images (argmax)",,0.4516844980651036,
+cnn,steps100,42,"validation macro-F1, full set",,0.43567157999330025,
+mobilenet,steps100,42,"train accuracy (last epoch, as Keras reports)",0.9348,0.8765624761581421,-0.058237523841857874
+mobilenet,steps100,42,"train loss (last epoch, as Keras reports)",0.206,0.3627312183380127,0.1567312183380127
+mobilenet,steps100,42,"validation accuracy (last epoch, as Keras reports)",0.9547,0.9137499928474426,-0.040950007152557366
+mobilenet,steps100,42,"validation loss (last epoch, as Keras reports)",0.1419,0.2648029029369354,0.12290290293693543
+mobilenet,steps100,42,"validation accuracy, full 17,572 images (argmax)",0.95,0.9161734577737309,
+mobilenet,steps100,42,"validation macro-F1, full set",0.95,0.9153648907757108,
