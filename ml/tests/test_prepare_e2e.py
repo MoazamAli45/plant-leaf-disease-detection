@@ -52,9 +52,14 @@ def result(tmp_path_factory):
     pdoc = data / "raw" / "plantdoc"
     (pdoc / "train" / "Apple leaf").mkdir(parents=True)
     (pdoc / "test" / "Tomato leaf").mkdir(parents=True)
+    (pdoc / "test" / "Apple leaf").mkdir(parents=True)
     for k in range(3):
         textured(10_000 + k).save(pdoc / "train" / "Apple leaf" / f"f{k}.png")
     textured(20_000).save(pdoc / "test" / "Tomato leaf" / "t.png")
+    # identical file under two PlantDoc classes -> both copies excluded (label unknowable)
+    shutil.copy(pdoc / "test" / "Tomato leaf" / "t.png", pdoc / "train" / "Apple leaf" / "t2.png")
+    # identical file twice under the same class -> one copy kept
+    shutil.copy(pdoc / "train" / "Apple leaf" / "f0.png", pdoc / "test" / "Apple leaf" / "f0b.png")
     # a PlantDoc image that is really an NPD image -> must be excluded from the field test set
     src = next((npd / "train" / PLANTVILLAGE_CLASSES[3]).glob("*k3*"))
     shutil.copy(src, pdoc / "train" / "Apple leaf" / "copied.png")
@@ -99,17 +104,40 @@ def test_groups_respected_in_manifests(result):
 
 def test_plantdoc_copy_excluded(result):
     tmp, s = result
-    assert s["plantdoc"]["n_images"] == 5
-    assert s["plantdoc"]["n_test"] == 4
+    assert s["plantdoc"]["n_images"] == 7
+    assert s["plantdoc"]["n_test"] == 3
     allpd = pd.read_csv(tmp / "manifests" / "plantdoc" / "all.csv", keep_default_na=False)
-    excluded = allpd[allpd["exclude_reason"] != ""]
-    assert excluded["path"].str.endswith("copied.png").all() and len(excluded) == 1
+    names = allpd["path"].str.rsplit("/", n=1).str[-1]
+    reasons = dict(zip(names, allpd["exclude_reason"], strict=True))
+    assert reasons == {
+        "copied.png": "near_duplicate_of_npd",
+        "t.png": "label_conflict_within_plantdoc",
+        "t2.png": "label_conflict_within_plantdoc",
+        # the copy whose path sorts first is kept ("test/" < "train/")
+        "f0.png": "exact_duplicate_within_plantdoc",
+        "f0b.png": "",
+        "f1.png": "",
+        "f2.png": "",
+    }
 
 
 def test_checksums_written(result):
     tmp, _ = result
     lines = (tmp / "manifests" / "SHA256SUMS").read_text().splitlines()
     assert {Path(line.split("  ")[1]).name for line in lines} >= {"train.csv", "test.csv"}
+
+
+def test_eda_figures_render(result):
+    from leafdx import eda
+
+    tmp, _ = result
+    cfg = DataConfig(
+        data_dir=tmp / "data", manifest_dir=tmp / "manifests", report_dir=tmp / "reports"
+    )
+    made = eda.run(cfg, out=tmp / "eda")
+    names = {p.name for p in made}
+    assert {"class_counts.png", "leakage_curve.png", "samples_plantdoc.png"} <= names
+    assert all(p.stat().st_size > 0 for p in made)
 
 
 def test_recall_table(result):

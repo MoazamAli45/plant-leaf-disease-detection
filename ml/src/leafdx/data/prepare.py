@@ -232,6 +232,12 @@ def run(cfg: DataConfig) -> dict[str, Any]:
     pdm.loc[
         pdm["nearest_npd_dist"].le(cfg.plantdoc_overlap_threshold).fillna(False), "exclude_reason"
     ] = "near_duplicate_of_npd"
+    # identical files filed under different PlantDoc classes: the true label is unknowable
+    n_cls = pdm.groupby("sha256")["plantdoc_class"].transform("nunique")
+    conflict = n_cls > 1
+    pdm.loc[conflict & (pdm["exclude_reason"] == ""), "exclude_reason"] = (
+        "label_conflict_within_plantdoc"
+    )
     dup = pdm.sort_values("path").duplicated("sha256").reindex(pdm.index)
     pdm.loc[dup & (pdm["exclude_reason"] == ""), "exclude_reason"] = (
         "exact_duplicate_within_plantdoc"
