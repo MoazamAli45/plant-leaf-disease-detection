@@ -251,11 +251,11 @@ def fig_hash_only_pairs(
     unexplained = pairs[(src[i] != src[j]) & ~((leaf[i] != "") & (leaf[i] == leaf[j]))]
     if unexplained.empty:
         return None
-    pick = unexplained.groupby("dist", group_keys=False).apply(
-        lambda g: g.sample(min(per_dist, len(g)), random_state=seed)
+    shuffled = unexplained.sample(frac=1.0, random_state=seed)
+    pick = shuffled.groupby("dist").head(per_dist).sort_values("dist", kind="stable").head(16)
+    fig, axes = plt.subplots(
+        len(pick), 2, figsize=(3.6, 1.8 * len(pick)), squeeze=False, layout="constrained"
     )
-    pick = pick.sort_values("dist").head(16)
-    fig, axes = plt.subplots(len(pick), 2, figsize=(3.6, 1.8 * len(pick)), squeeze=False)
     for r, (_, p) in enumerate(pick.iterrows()):
         for c, idx in enumerate((p["i"], p["j"])):
             row = npd.iloc[int(idx)]

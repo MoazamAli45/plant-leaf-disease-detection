@@ -46,6 +46,9 @@ def result(tmp_path_factory):
         if c == 0:
             leaf_map[f"id {c * 10 + 2}"] = [f"{cls}:::1.0"]
             leaf_map[f"id {c * 10 + 3}"] = [f"{cls}:::1.0"]
+    # the same file filed under two classes -> label conflict, both copies leave the clean split
+    conflict_src = next((npd / "train" / PLANTVILLAGE_CLASSES[5]).glob("*k3___*"))
+    shutil.copy(conflict_src, npd / "train" / PLANTVILLAGE_CLASSES[6] / "dup___ID 999.png")
     (data / "raw" / "plantvillage").mkdir(parents=True)
     (data / "raw" / "plantvillage" / "leaf-map.json").write_text(json.dumps(leaf_map))
 
@@ -99,7 +102,14 @@ def test_groups_respected_in_manifests(result):
     )
     assert clean.groupby("group_id")["split"].nunique().max() == 1
     assert clean.groupby("source_id")["split"].nunique().max() == 1
-    assert len(clean) == 6 * len(PLANTVILLAGE_CLASSES)
+    # 6 images per class + 1 cross-class copy, minus the 2 label-conflict images
+    assert len(clean) == 6 * len(PLANTVILLAGE_CLASSES) - 1
+
+
+def test_label_conflicts_excluded(result):
+    _, s = result
+    assert s["npd"]["n_label_conflict_images"] == 2
+    assert s["npd"]["n_excluded_from_clean_split"] == 2
 
 
 def test_plantdoc_copy_excluded(result):

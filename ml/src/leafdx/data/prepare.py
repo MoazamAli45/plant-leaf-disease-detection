@@ -203,7 +203,7 @@ def run(cfg: DataConfig) -> dict[str, Any]:
         pool &= ~df["label_conflict"]
     if cfg.drop_exact_duplicates:
         pool &= ~df.sort_values("path").duplicated("sha256").reindex(df.index)
-    df["clean_split"] = pd.Series(pd.NA, index=df.index, dtype=object)
+    df["clean_split"] = pd.Series(None, index=df.index, dtype=object)
     df.loc[pool, "clean_split"] = stratified_group_split(
         df.loc[pool, "label"], df.loc[pool, "group_id"], cfg.split_ratios, cfg.seed
     )

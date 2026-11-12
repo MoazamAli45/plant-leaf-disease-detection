@@ -24,12 +24,18 @@ def _frac(mask: pd.Series | np.ndarray) -> float:
     return float(m.mean()) if len(m) else 0.0
 
 
+def split_labels(df: pd.DataFrame, split_col: str) -> np.ndarray:
+    """Split names as a plain string array; rows outside every split become ""."""
+    return df[split_col].astype("string").fillna("").to_numpy(dtype=object)
+
+
 def key_overlap(
     df: pd.DataFrame, split_col: str, eval_split: str, train_split: str, key: str
 ) -> pd.Series:
     """Boolean per eval row: does its ``key`` value also occur in the train split?"""
-    train_keys = set(df.loc[df[split_col] == train_split, key].dropna())
-    ev = df.loc[df[split_col] == eval_split, key]
+    split = split_labels(df, split_col)
+    train_keys = set(df.loc[split == train_split, key].dropna())
+    ev = df.loc[split == eval_split, key]
     return ev.notna() & ev.isin(train_keys)
 
 
@@ -42,7 +48,7 @@ def phash_overlap(
     thresholds: Sequence[int],
 ) -> dict[int, pd.Series]:
     """Per threshold: boolean per eval row, has a train neighbour within distance t."""
-    split = df[split_col].to_numpy()
+    split = split_labels(df, split_col)
     i, j, d = (pairs[c].to_numpy() for c in ("i", "j", "dist"))
     # orient each pair as (eval, train)
     e1 = (split[i] == eval_split) & (split[j] == train_split)
@@ -50,7 +56,7 @@ def phash_overlap(
     ev_idx = np.concatenate([i[e1], j[e2]])
     dist = np.concatenate([d[e1], d[e2]])
     nearest = pd.Series(dist).groupby(ev_idx).min()
-    eval_rows = df.index[df[split_col] == eval_split]
+    eval_rows = df.index[split == eval_split]
     nn = nearest.reindex(eval_rows)
     return {t: nn.le(t).fillna(False) for t in thresholds}
 
@@ -68,7 +74,7 @@ def leakage_report(
     ``df`` must have a RangeIndex aligned with the indices in ``pairs`` and columns
     label, source_id, leaf_id, sha256.
     """
-    ev = df[df[split_col] == eval_split]
+    ev = df[split_labels(df, split_col) == eval_split]
     src = key_overlap(df, split_col, eval_split, train_split, "source_id")
     leaf = key_overlap(df, split_col, eval_split, train_split, "leaf_id")
     sha = key_overlap(df, split_col, eval_split, train_split, "sha256")
