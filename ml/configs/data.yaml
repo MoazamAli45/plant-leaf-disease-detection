@@ -9,14 +9,19 @@ split_ratios: {train: 0.70, val: 0.15, test: 0.15}
 phash:
   # Two images whose D4-invariant pHash distance (0-64 bits) is <= group_threshold are put in
   # the same group, in addition to grouping by source image, physical leaf and SHA-256.
-  # Chosen after inspecting the distance distribution and example pairs (see EDA notebook).
-  group_threshold: 4
+  # 0 = exact D4 match. Chosen from the first full run (2026-11-13), see EDA section 6:
+  # - pairs at d=0 not explained by file name/leaf id (85) are true duplicates by eye;
+  #   at d=2 they are mixed, at d>=4 they are different leaves on the same lab background;
+  # - single-linkage chaining: d<=0 keeps the largest group at 110 images (4.9% of a class),
+  #   d<=2 gives 594 (26.7%), d<=4 gives 1870 (84% of Raspberry healthy).
+  group_threshold: 0
   # Thresholds at which leakage is reported (sensitivity analysis).
   audit_thresholds: [0, 2, 4, 6, 8, 10, 12]
 
 plantdoc:
   # PlantDoc images within this distance of any NPD image are excluded from the field test set.
-  overlap_threshold: 4
+  # 0: the 8 PlantDoc images at d=4 were all unrelated leaves (inspected 2026-11-13).
+  overlap_threshold: 0
 
 # Groups that contain more than one label (the same picture filed under different classes)
 # are label conflicts; they are dropped from the clean split and listed in the report.
