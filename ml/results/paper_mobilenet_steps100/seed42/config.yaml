@@ -1,0 +1,45 @@
+name: paper_mobilenet_steps100
+description: Paper mobilenet, original 80/20 split, 100 training steps and 150 validation
+  steps per epoch (assumption A8, reading a)
+seed: 42
+output_dir: outputs
+data:
+  train_manifest: manifests/paper_split/train.csv
+  val_manifest: manifests/paper_split/val.csv
+  test_manifest: null
+  data_root: data
+  npd_root: null
+  image_size: 224
+  resize_method: nearest
+  preprocessing: rescale
+augment:
+  enabled: true
+  rotation_range: 30
+  width_shift_range: 0.2
+  height_shift_range: 0.2
+  shear_range: 0.2
+  zoom_range: 0.2
+  brightness_range:
+  - 0.8
+  - 1.2
+  horizontal_flip: true
+  vertical_flip: true
+  fill_mode: nearest
+model:
+  name: paper_mobilenet
+  num_classes: 38
+  output_activation: softmax
+  dropout: 0.2
+  alpha: 1.0
+  weights: imagenet
+  freeze_backbone: true
+train:
+  epochs: 20
+  batch_size: 32
+  optimizer: adam
+  learning_rate: 0.001
+  loss: categorical_crossentropy
+  steps_per_epoch: 100
+  validation_steps: 150
+  shuffle_buffer: null
+  mixed_precision: false

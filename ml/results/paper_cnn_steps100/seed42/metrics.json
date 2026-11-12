@@ -1,0 +1,32 @@
+{
+  "name": "paper_cnn_steps100",
+  "seed": 42,
+  "params": 2426534,
+  "trainable_params": 2426534,
+  "train_seconds": 665.9850519159954,
+  "images_seen": 64000,
+  "last_epoch": {
+    "accuracy": 0.5290625095367432,
+    "binary_accuracy": 0.8377631306648254,
+    "loss": 1.5226269960403442,
+    "val_accuracy": 0.4566666781902313,
+    "val_binary_accuracy": 0.8255919218063354,
+    "val_loss": 2.0493335723876953,
+    "epoch_seconds": 26.6722007089993
+  },
+  "val_full": {
+    "keras": {
+      "accuracy": 0.45168450474739075,
+      "binary_accuracy": 0.8256850838661194,
+      "loss": 2.0456223487854004
+    },
+    "n": 17572,
+    "accuracy": 0.4516844980651036,
+    "top3_accuracy": 0.6909856590029593,
+    "macro_f1": 0.43567157999330025,
+    "weighted_f1": 0.4363753298443342,
+    "macro_precision": 0.5373701789307589,
+    "macro_recall": 0.44938924995538143,
+    "prob_row_sum_mean": 7.979989528656006
+  }
+}
