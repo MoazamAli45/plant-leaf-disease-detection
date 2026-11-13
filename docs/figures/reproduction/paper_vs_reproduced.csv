@@ -1,10 +1,22 @@
 model,schedule,seed,metric,paper,reproduced,difference
+cnn,fullepochs,42,"train accuracy (last epoch, as Keras reports)",0.9711,0.9248737692832947,-0.046226230716705285
+cnn,fullepochs,42,"train loss (last epoch, as Keras reports)",0.0898,0.21696172654628754,0.12716172654628755
+cnn,fullepochs,42,"validation accuracy (last epoch, as Keras reports)",0.9025,0.8457773923873901,-0.05672260761260983
+cnn,fullepochs,42,"validation loss (last epoch, as Keras reports)",0.3605,0.552704930305481,0.19220493030548097
+cnn,fullepochs,42,"validation accuracy, full 17,572 images (argmax)",,0.8457773730935579,
+cnn,fullepochs,42,"validation macro-F1, full set",,0.8427232727817461,
 cnn,steps100,42,"train accuracy (last epoch, as Keras reports)",0.9711,0.5290625095367432,-0.4420374904632568
 cnn,steps100,42,"train loss (last epoch, as Keras reports)",0.0898,1.5226269960403442,1.4328269960403441
 cnn,steps100,42,"validation accuracy (last epoch, as Keras reports)",0.9025,0.4566666781902313,-0.44583332180976865
 cnn,steps100,42,"validation loss (last epoch, as Keras reports)",0.3605,2.0493335723876953,1.6888335723876953
 cnn,steps100,42,"validation accuracy, full 17,572 images (argmax)",,0.4516844980651036,
 cnn,steps100,42,"validation macro-F1, full set",,0.43567157999330025,
+mobilenet,fullepochs,42,"train accuracy (last epoch, as Keras reports)",0.9348,0.9214738011360168,-0.013326198863983119
+mobilenet,fullepochs,42,"train loss (last epoch, as Keras reports)",0.206,0.2493996024131775,0.0433996024131775
+mobilenet,fullepochs,42,"validation accuracy (last epoch, as Keras reports)",0.9547,0.9488390684127808,-0.005860931587219231
+mobilenet,fullepochs,42,"validation loss (last epoch, as Keras reports)",0.1419,0.15371331572532654,0.01181331572532654
+mobilenet,fullepochs,42,"validation accuracy, full 17,572 images (argmax)",0.95,0.9488390621443205,
+mobilenet,fullepochs,42,"validation macro-F1, full set",0.95,0.9489214200572066,
 mobilenet,steps100,42,"train accuracy (last epoch, as Keras reports)",0.9348,0.8765624761581421,-0.058237523841857874
 mobilenet,steps100,42,"train loss (last epoch, as Keras reports)",0.206,0.3627312183380127,0.1567312183380127
 mobilenet,steps100,42,"validation accuracy (last epoch, as Keras reports)",0.9547,0.9137499928474426,-0.040950007152557366

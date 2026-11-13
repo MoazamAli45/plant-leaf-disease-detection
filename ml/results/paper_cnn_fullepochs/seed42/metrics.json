@@ -1,0 +1,32 @@
+{
+  "name": "paper_cnn_fullepochs",
+  "seed": 42,
+  "params": 2426534,
+  "trainable_params": 2426534,
+  "train_seconds": 10832.725066464,
+  "images_seen": 1406080,
+  "last_epoch": {
+    "accuracy": 0.9248737692832947,
+    "binary_accuracy": 0.9242916703224182,
+    "loss": 0.21696172654628754,
+    "val_accuracy": 0.8457773923873901,
+    "val_binary_accuracy": 0.9232416749000549,
+    "val_loss": 0.552704930305481,
+    "epoch_seconds": 521.0335746660003
+  },
+  "val_full": {
+    "keras": {
+      "accuracy": 0.8457773923873901,
+      "binary_accuracy": 0.9232416749000549,
+      "loss": 0.552704930305481
+    },
+    "n": 17572,
+    "accuracy": 0.8457773730935579,
+    "top3_accuracy": 0.9619849760983382,
+    "macro_f1": 0.8427232727817461,
+    "weighted_f1": 0.8438678494399132,
+    "macro_precision": 0.8672670632790265,
+    "macro_recall": 0.8445224110138113,
+    "prob_row_sum_mean": 4.06793737411499
+  }
+}

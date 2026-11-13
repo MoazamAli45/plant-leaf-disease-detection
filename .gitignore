@@ -30,3 +30,6 @@ out/
 .env
 .env.*
 !.env.example
+
+# Kaggle download bundles (contents are extracted into ml/results/)
+ml/results/*.zip

@@ -1,0 +1,29 @@
+{
+  "name": "paper_mobilenet_fullepochs",
+  "seed": 42,
+  "params": 3267814,
+  "trainable_params": 38950,
+  "train_seconds": 10746.395375502,
+  "images_seen": 1406080,
+  "last_epoch": {
+    "accuracy": 0.9214738011360168,
+    "loss": 0.2493996024131775,
+    "val_accuracy": 0.9488390684127808,
+    "val_loss": 0.15371331572532654,
+    "epoch_seconds": 534.1062279830003
+  },
+  "val_full": {
+    "keras": {
+      "accuracy": 0.9488390684127808,
+      "loss": 0.15371331572532654
+    },
+    "n": 17572,
+    "accuracy": 0.9488390621443205,
+    "top3_accuracy": 0.9949920327794218,
+    "macro_f1": 0.9489214200572066,
+    "weighted_f1": 0.9491362210807052,
+    "macro_precision": 0.9514450816470512,
+    "macro_recall": 0.9486943235298109,
+    "prob_row_sum_mean": 1.0
+  }
+}

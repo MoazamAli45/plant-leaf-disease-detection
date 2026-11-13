@@ -1,3 +1,5 @@
 run,seed,params,trainable_params,images_seen,train_minutes,device
+paper_cnn_fullepochs,42,2426534,2426534,1406080,180.5,"Tesla T4, Tesla T4"
 paper_cnn_steps100,42,2426534,2426534,64000,11.1,CPU
+paper_mobilenet_fullepochs,42,3267814,38950,1406080,179.1,"Tesla T4, Tesla T4"
 paper_mobilenet_steps100,42,3267814,38950,64000,10.2,CPU
