@@ -1,0 +1,58 @@
+# Phase 3: corrected and extended experiments on the clean grouped split.
+# See docs/experiments.md for the protocol.
+name: p3_mobilenet_v2
+description: "MobileNetV2 (alpha 1.0), ImageNet, fine-tuned"
+seed: 42                    # runs use seeds 42, 43, 44 (--set seed=...)
+output_dir: outputs
+data:
+  train_manifest: manifests/clean_split/train.csv
+  val_manifest: manifests/clean_split/val.csv
+  test_manifest: null       # test and PlantDoc are evaluated via `eval` below
+  data_root: data
+  npd_root: null
+  image_size: 224
+  resize_method: bilinear
+  preprocessing: mobilenet
+  augment_in_model: true    # augmentation + preprocessing run on the GPU, inside the model
+augment:                  # same transforms and values as the reproduction (A5)
+  enabled: true
+  rotation_range: 30
+  width_shift_range: 0.2
+  height_shift_range: 0.2
+  shear_range: 0.2
+  zoom_range: 0.2
+  brightness_range: [0.8, 1.2]
+  horizontal_flip: true
+  vertical_flip: true
+  fill_mode: nearest
+model:
+  name: transfer
+  backbone: mobilenet_v2
+  num_classes: 38
+  output_activation: softmax
+  dropout: 0.2
+  alpha: 1.0
+  weights: imagenet
+  freeze_backbone: false
+train:
+  epochs: 20
+  batch_size: 32
+  optimizer: adam
+  learning_rate: 0.0001
+  loss: categorical_crossentropy
+  steps_per_epoch: null
+  validation_steps: null
+  shuffle_buffer: null
+  mixed_precision: true
+  early_stopping_patience: 5   # on val_loss; best epoch restored
+  save_model: true
+eval:
+  - name: test              # clean held-out test split
+    manifest: manifests/clean_split/test.csv
+    subsets:
+      original: "aug_type == 'original'"   # without NPD's offline-augmented copies
+  - name: plantdoc          # field images, 28 mapped classes
+    manifest: manifests/plantdoc/test.csv
+    subsets:
+      exact: "match == 'exact'"
+      not_approximate: "match != 'approximate'"
