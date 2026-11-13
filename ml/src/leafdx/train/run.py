@@ -8,8 +8,8 @@ Writes ``<output_dir>/<name>/seed<seed>/``:
     env.json           library versions, device, git commit, manifest checksums
     history.csv        per-epoch metrics exactly as Keras reported them
     metrics.json       last-epoch Keras numbers (comparable to the paper) + full evaluations
-    per_class_<split>.csv, confusion_<split>.csv, probs_<split>.npz
-    model.keras        final weights (not committed)
+    per_class_<set>.csv, confusion_<set>.csv, probs_<set>.npz   (val, test, extra eval sets)
+    model.keras        final weights (best epoch if early stopping is on; not committed)
 """
 
 from __future__ import annotations
@@ -31,8 +31,14 @@ import tensorflow as tf
 import yaml
 
 from leafdx.data.classes import PLANTVILLAGE_CLASSES
-from leafdx.train.config import ExperimentCfg, load_config
-from leafdx.train.data import HAS_RANDOM_SHEAR, build_augmentation, load_manifest, make_dataset
+from leafdx.train.config import EvalSetCfg, ExperimentCfg, load_config
+from leafdx.train.data import (
+    HAS_RANDOM_SHEAR,
+    build_augmentation,
+    load_manifest,
+    make_dataset,
+    preprocessing_layer,
+)
 from leafdx.train.metrics import classification_metrics
 from leafdx.train.models import build_model
 
@@ -104,11 +110,18 @@ def compile_model(model: keras.Model, cfg: ExperimentCfg) -> None:
     model.compile(optimizer=opt, loss=t.loss, metrics=metrics)
 
 
-def evaluate_split(
-    model: keras.Model, cfg: ExperimentCfg, manifest: str, split: str, run_dir: Path
+def evaluate_set(
+    model: keras.Model, cfg: ExperimentCfg, es: EvalSetCfg, run_dir: Path
 ) -> dict[str, Any]:
-    paths, labels = load_manifest(manifest, cfg.data)
-    _check_files(paths, split)
+    """Predict once on a manifest; report metrics for all rows and for each subset."""
+    df = pd.read_csv(es.manifest, keep_default_na=False)
+    if es.limit is not None and es.limit < len(df):
+        df = df.sample(n=es.limit, random_state=0).sort_values("path").reset_index(drop=True)
+    tmp = run_dir / f".manifest_{es.name}.csv"
+    df.to_csv(tmp, index=False)
+    paths, labels = load_manifest(tmp, cfg.data)
+    tmp.unlink()
+    _check_files(paths, es.name)
     ds = make_dataset(
         paths,
         labels,
@@ -118,18 +131,49 @@ def evaluate_split(
         shuffle=False,
         repeat=False,
         seed=cfg.seed,
+        preprocess=not cfg.data.augment_in_model,
     )
     keras_eval = model.evaluate(ds, return_dict=True, verbose=0)
     probs = model.predict(ds, verbose=0)
     summary, per_class, cm = classification_metrics(labels, probs, PLANTVILLAGE_CLASSES)
-    per_class.to_csv(run_dir / f"per_class_{split}.csv", index=False)
+    per_class.to_csv(run_dir / f"per_class_{es.name}.csv", index=False)
     pd.DataFrame(cm, index=PLANTVILLAGE_CLASSES, columns=PLANTVILLAGE_CLASSES).to_csv(
-        run_dir / f"confusion_{split}.csv"
+        run_dir / f"confusion_{es.name}.csv"
     )
     np.savez_compressed(
-        run_dir / f"probs_{split}.npz", probs=probs.astype(np.float16), labels=labels
+        run_dir / f"probs_{es.name}.npz",
+        probs=probs.astype(np.float16),
+        labels=labels,
+        paths=np.asarray(df["path"].tolist()),
     )
-    return {"keras": {k: float(v) for k, v in keras_eval.items()}, **summary}
+    out: dict[str, Any] = {"keras": {k: float(v) for k, v in keras_eval.items()}, **summary}
+    subsets = {}
+    for name, query in es.subsets.items():
+        mask = df.eval(query).to_numpy(dtype=bool)
+        if mask.any():
+            subsets[name] = classification_metrics(labels[mask], probs[mask], PLANTVILLAGE_CLASSES)[
+                0
+            ]
+    if subsets:
+        out["subsets"] = subsets
+    return out
+
+
+def evaluate_split(
+    model: keras.Model, cfg: ExperimentCfg, manifest: str, split: str, run_dir: Path
+) -> dict[str, Any]:
+    return evaluate_set(model, cfg, EvalSetCfg(name=split, manifest=manifest), run_dir)
+
+
+def build_stem(cfg: ExperimentCfg) -> list[keras.layers.Layer] | None:
+    """Augmentation + preprocessing as model layers (Phase 3), kept in float32."""
+    if not cfg.data.augment_in_model:
+        return None
+    stem: list[keras.layers.Layer] = []
+    if cfg.augment.enabled:
+        stem.append(build_augmentation(cfg.augment, cfg.seed, dtype="float32"))
+    stem.append(preprocessing_layer(cfg.data.preprocessing))
+    return stem
 
 
 def run(cfg: ExperimentCfg) -> dict[str, Any]:
@@ -147,7 +191,10 @@ def run(cfg: ExperimentCfg) -> dict[str, Any]:
     _check_files(tr_paths, "train")
     _check_files(va_paths, "val")
     t = cfg.train
-    aug = build_augmentation(cfg.augment, cfg.seed) if cfg.augment.enabled else None
+    in_model = cfg.data.augment_in_model
+    aug = (
+        build_augmentation(cfg.augment, cfg.seed) if cfg.augment.enabled and not in_model else None
+    )
     train_ds = make_dataset(
         tr_paths,
         tr_labels,
@@ -159,6 +206,7 @@ def run(cfg: ExperimentCfg) -> dict[str, Any]:
         seed=cfg.seed,
         augment=aug,
         shuffle_buffer=t.shuffle_buffer,
+        preprocess=not in_model,
     )
     # With validation_steps set, validate on a shuffled, repeating stream like a shuffled
     # flow_from_directory generator; otherwise on the whole validation set each epoch.
@@ -172,9 +220,10 @@ def run(cfg: ExperimentCfg) -> dict[str, Any]:
         shuffle=partial_val,
         repeat=partial_val,
         seed=cfg.seed + 1,
+        preprocess=not in_model,
     )
 
-    model = build_model(cfg.model, cfg.data.image_size)
+    model = build_model(cfg.model, cfg.data.image_size, stem=build_stem(cfg))
     compile_model(model, cfg)
     log.info(
         "model %s: %d params (%d trainable)",
@@ -182,6 +231,16 @@ def run(cfg: ExperimentCfg) -> dict[str, Any]:
         model.count_params(),
         sum(int(np.prod(w.shape)) for w in model.trainable_weights),
     )
+    callbacks: list[keras.callbacks.Callback] = [
+        EpochTimer(),
+        keras.callbacks.CSVLogger(str(run_dir / "history.csv")),
+    ]
+    if t.early_stopping_patience is not None:
+        callbacks.append(
+            keras.callbacks.EarlyStopping(
+                monitor="val_loss", patience=t.early_stopping_patience, restore_best_weights=True
+            )
+        )
     t0 = time.perf_counter()
     hist = model.fit(
         train_ds,
@@ -189,13 +248,16 @@ def run(cfg: ExperimentCfg) -> dict[str, Any]:
         steps_per_epoch=t.steps_per_epoch,
         validation_data=val_ds,
         validation_steps=t.validation_steps,
-        callbacks=[EpochTimer(), keras.callbacks.CSVLogger(str(run_dir / "history.csv"))],
+        callbacks=callbacks,
         verbose=2,
     )
     train_seconds = time.perf_counter() - t0
-    model.save(run_dir / "model.keras")
+    if t.save_model:
+        model.save(run_dir / "model.keras")
 
     last = {k: float(v[-1]) for k, v in hist.history.items()}
+    epochs_run = len(hist.history["loss"])
+    best_epoch = int(np.argmin(hist.history["val_loss"])) + 1
     metrics: dict[str, Any] = {
         "name": cfg.name,
         "seed": cfg.seed,
@@ -203,13 +265,18 @@ def run(cfg: ExperimentCfg) -> dict[str, Any]:
         "trainable_params": int(sum(int(np.prod(w.shape)) for w in model.trainable_weights)),
         "train_seconds": train_seconds,
         "images_seen": int(
-            t.epochs * (t.steps_per_epoch or np.ceil(len(tr_paths) / t.batch_size)) * t.batch_size
+            epochs_run * (t.steps_per_epoch or np.ceil(len(tr_paths) / t.batch_size)) * t.batch_size
         ),
+        "epochs_run": epochs_run,
+        "best_epoch": best_epoch,
+        "weights_from_epoch": best_epoch if t.early_stopping_patience is not None else epochs_run,
         "last_epoch": last,
         "val_full": evaluate_split(model, cfg, cfg.data.val_manifest, "val", run_dir),
     }
     if cfg.data.test_manifest:
         metrics["test_full"] = evaluate_split(model, cfg, cfg.data.test_manifest, "test", run_dir)
+    if cfg.eval:
+        metrics["eval"] = {es.name: evaluate_set(model, cfg, es, run_dir) for es in cfg.eval}
     (run_dir / "metrics.json").write_text(json.dumps(metrics, indent=2))
     log.info("done: %s", json.dumps({k: metrics[k] for k in ("last_epoch",)}))
     return metrics

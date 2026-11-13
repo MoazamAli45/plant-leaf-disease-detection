@@ -46,12 +46,14 @@ def load_manifest(path: str | Path, cfg: DataCfg) -> tuple[list[str], np.ndarray
     return resolve_paths(df["path"].tolist(), cfg), labels
 
 
+@keras.saving.register_keras_serializable(package="leafdx")
 class RandomBrightnessMultiplicative(keras.layers.Layer):
     """``ImageDataGenerator(brightness_range=(lo, hi))``: scale pixels by U(lo, hi), clip."""
 
     def __init__(self, low: float, high: float, seed: int | None = None, **kwargs: object) -> None:
         super().__init__(**kwargs)
         self.low, self.high = float(low), float(high)
+        self.seed = seed
         self.seed_gen = keras.random.SeedGenerator(seed)
 
     def call(self, x: tf.Tensor, training: bool | None = None) -> tf.Tensor:
@@ -61,14 +63,37 @@ class RandomBrightnessMultiplicative(keras.layers.Layer):
         f = keras.random.uniform((batch, 1, 1, 1), self.low, self.high, seed=self.seed_gen)
         return keras.ops.clip(x * f, 0.0, 255.0)
 
+    def get_config(self) -> dict[str, object]:
+        return {**super().get_config(), "low": self.low, "high": self.high, "seed": self.seed}
 
-def build_augmentation(cfg: AugmentCfg, seed: int) -> keras.Sequential:
+
+if HAS_RANDOM_SHEAR:
+
+    @keras.saving.register_keras_serializable(package="leafdx")
+    class SymmetricRandomShear(keras.layers.RandomShear):
+        """RandomShear that survives save/load.
+
+        Keras stores a float ``x_factor=f`` internally as the symmetric range (-f, f) (so it
+        shears both ways, like ImageDataGenerator) but writes that range to the config, which its
+        own constructor then rejects. Writing back the magnitude fixes the round trip.
+        """
+
+        def get_config(self) -> dict[str, object]:
+            config = super().get_config()
+            for key in ("x_factor", "y_factor"):
+                v = config.get(key)
+                if isinstance(v, list | tuple):
+                    config[key] = max(abs(float(t)) for t in v)
+            return config
+
+
+def build_augmentation(cfg: AugmentCfg, seed: int, dtype: str | None = None) -> keras.Sequential:
     """Keras layers equivalent to the ImageDataGenerator parameters in ``cfg``.
 
     Mapping (ImageDataGenerator -> Keras 3):
     - rotation_range (deg)   -> RandomRotation(factor = deg / 360)
     - width/height_shift     -> RandomTranslation(same fractions)
-    - shear_range (deg)      -> RandomShear(x_factor = tan(deg)); Keras samples positive shears
+    - shear_range (deg)      -> RandomShear(x_factor = tan(deg)); sampled in (-f, f) like IDG
     - zoom_range z           -> RandomZoom(+-z height, +-z width, independent like IDG)
     - horizontal/vertical    -> RandomFlip
     - brightness_range       -> RandomBrightnessMultiplicative
@@ -77,12 +102,18 @@ def build_augmentation(cfg: AugmentCfg, seed: int) -> keras.Sequential:
     fill = cfg.fill_mode
     if cfg.rotation_range:
         aug.append(
-            keras.layers.RandomRotation(cfg.rotation_range / 360.0, fill_mode=fill, seed=seed)
+            keras.layers.RandomRotation(
+                cfg.rotation_range / 360.0, fill_mode=fill, seed=seed, dtype=dtype
+            )
         )
     if cfg.width_shift_range or cfg.height_shift_range:
         aug.append(
             keras.layers.RandomTranslation(
-                cfg.height_shift_range, cfg.width_shift_range, fill_mode=fill, seed=seed + 1
+                cfg.height_shift_range,
+                cfg.width_shift_range,
+                fill_mode=fill,
+                seed=seed + 1,
+                dtype=dtype,
             )
         )
     if cfg.shear_range and not HAS_RANDOM_SHEAR:
@@ -90,30 +121,38 @@ def build_augmentation(cfg: AugmentCfg, seed: int) -> keras.Sequential:
         warnings.warn("keras.layers.RandomShear unavailable: shear skipped", stacklevel=2)
     elif cfg.shear_range:
         aug.append(
-            keras.layers.RandomShear(
-                x_factor=math.tan(math.radians(cfg.shear_range)), fill_mode=fill, seed=seed + 2
+            SymmetricRandomShear(
+                x_factor=math.tan(math.radians(cfg.shear_range)),
+                fill_mode=fill,
+                seed=seed + 2,
+                dtype=dtype,
             )
         )
     if cfg.zoom_range:
         z = (-cfg.zoom_range, cfg.zoom_range)
-        aug.append(keras.layers.RandomZoom(z, z, fill_mode=fill, seed=seed + 3))
+        aug.append(keras.layers.RandomZoom(z, z, fill_mode=fill, seed=seed + 3, dtype=dtype))
     mode = {
         (True, True): "horizontal_and_vertical",
         (True, False): "horizontal",
         (False, True): "vertical",
     }.get((cfg.horizontal_flip, cfg.vertical_flip))
     if mode:
-        aug.append(keras.layers.RandomFlip(mode, seed=seed + 4))
+        aug.append(keras.layers.RandomFlip(mode, seed=seed + 4, dtype=dtype))
     if cfg.brightness_range:
-        aug.append(RandomBrightnessMultiplicative(*cfg.brightness_range, seed=seed + 5))
+        aug.append(
+            RandomBrightnessMultiplicative(*cfg.brightness_range, seed=seed + 5, dtype=dtype)
+        )
     return keras.Sequential(aug, name="augmentation")
 
 
-def _preprocess_fn(kind: str) -> keras.layers.Layer:
+def preprocessing_layer(kind: str) -> keras.layers.Layer:
+    """Map [0, 255] pixels to what a model expects."""
     if kind == "rescale":
-        return keras.layers.Rescaling(1.0 / 255)
+        return keras.layers.Rescaling(1.0 / 255, name="rescale")
     if kind == "mobilenet":
-        return keras.layers.Rescaling(1.0 / 127.5, offset=-1.0)
+        return keras.layers.Rescaling(1.0 / 127.5, offset=-1.0, name="rescale_pm1")
+    if kind == "raw":
+        return keras.layers.Identity(name="raw_pixels")
     raise ValueError(f"unknown preprocessing {kind!r}")
 
 
@@ -129,7 +168,10 @@ def make_dataset(
     seed: int,
     augment: keras.Sequential | None = None,
     shuffle_buffer: int | None = None,
+    preprocess: bool = True,
 ) -> tf.data.Dataset:
+    """Batches of (image, one-hot label). With ``preprocess=False`` images stay in [0, 255]
+    (the model then contains the preprocessing)."""
     size = data_cfg.image_size
     method = data_cfg.resize_method
 
@@ -150,6 +192,7 @@ def make_dataset(
     ds = ds.map(load, num_parallel_calls=AUTOTUNE).batch(batch_size)
     if augment is not None:
         ds = ds.map(lambda x, y: (augment(x, training=True), y), num_parallel_calls=AUTOTUNE)
-    prep = _preprocess_fn(data_cfg.preprocessing)
-    ds = ds.map(lambda x, y: (prep(x), y), num_parallel_calls=AUTOTUNE)
+    if preprocess:
+        prep = preprocessing_layer(data_cfg.preprocessing)
+        ds = ds.map(lambda x, y: (prep(x), y), num_parallel_calls=AUTOTUNE)
     return ds.prefetch(AUTOTUNE)

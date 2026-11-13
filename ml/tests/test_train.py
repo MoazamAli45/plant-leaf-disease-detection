@@ -137,3 +137,130 @@ def test_smoke_run(tmp_path, cfg_name):
     assert {"accuracy", "loss", "val_accuracy", "val_loss"} <= set(saved["last_epoch"])
     if "cnn" in cfg_name:
         assert "binary_accuracy" in saved["last_epoch"]
+
+
+# ---------------------------------------------------------------- Phase 3
+
+
+@pytest.mark.parametrize(
+    ("backbone", "prep"),
+    [
+        ("mobilenet_v1", "mobilenet"),
+        ("mobilenet_v2", "mobilenet"),
+        ("mobilenet_v3_small", "raw"),
+        ("efficientnet_b0", "raw"),
+    ],
+)
+def test_transfer_backbones_build_with_stem(backbone, prep):
+    from leafdx.train.config import AugmentCfg
+    from leafdx.train.data import preprocessing_layer
+    from leafdx.train.models import build_model
+
+    cfg = ModelCfg(
+        name="transfer",
+        backbone=backbone,
+        output_activation="softmax",
+        weights=None,
+        freeze_backbone=False,
+    )
+    stem = [build_augmentation(AugmentCfg(), 0, dtype="float32"), preprocessing_layer(prep)]
+    m = build_model(cfg, 96, stem=stem)
+    out = m(tf.random.uniform((2, 96, 96, 3), 0, 255), training=False)
+    assert out.shape == (2, 38)
+    np.testing.assert_allclose(out.numpy().sum(axis=1), 1.0, rtol=1e-4)
+
+
+def test_model_with_stem_roundtrips(tmp_path):
+    import keras
+
+    from leafdx.train.config import AugmentCfg
+    from leafdx.train.data import preprocessing_layer
+    from leafdx.train.models import build_model
+
+    stem = [build_augmentation(AugmentCfg(), 0, dtype="float32"), preprocessing_layer("rescale")]
+    m = build_model(ModelCfg(output_activation="softmax"), 64, stem=stem)
+    x = tf.random.uniform((3, 64, 64, 3), 0, 255)
+    m.save(tmp_path / "m.keras")
+    m2 = keras.models.load_model(tmp_path / "m.keras")
+    # augmentation is inactive at inference, so both give the same output
+    np.testing.assert_allclose(m(x, training=False), m2(x, training=False), atol=1e-6)
+
+
+def test_restricted_accuracy_and_macro_over_present():
+    y = np.array([0, 1])  # only classes 0 and 1 present
+    probs = np.zeros((2, 38))
+    probs[0, [0, 5]] = [0.4, 0.6]  # wrong overall (5), right among present classes
+    probs[1, 1] = 1.0
+    s, _, _ = classification_metrics(y, probs, PLANTVILLAGE_CLASSES)
+    assert s["accuracy"] == 0.5 and s["restricted_accuracy"] == 1.0
+    assert s["n_classes_present"] == 2
+    assert s["macro_recall"] == 0.5  # recall: class 0 -> 0, class 1 -> 1; mean over present
+
+
+def test_ece_perfect_and_overconfident():
+    from leafdx.train.metrics import expected_calibration_error
+
+    y = np.array([0, 1, 2, 3])
+    perfect = np.eye(38)[y]
+    assert expected_calibration_error(y, perfect) == 0.0
+    wrong = np.eye(38)[[1, 2, 3, 0]]  # 100% confident, always wrong
+    assert expected_calibration_error(y, wrong) == pytest.approx(1.0)
+
+
+def test_phase3_smoke_run(tmp_path):
+    from pathlib import Path
+
+    from leafdx.train.run import run
+
+    rng = np.random.default_rng(1)
+    rows = {"train": [], "val": [], "test": [], "pd": []}
+    for c, cls in enumerate(PLANTVILLAGE_CLASSES):
+        d = tmp_path / "data" / "raw" / "npd" / "train" / cls
+        d.mkdir(parents=True)
+        for k in range(4):
+            f = d / f"{c}_{k}.jpg"
+            Image.fromarray(rng.integers(0, 255, (72, 72, 3), dtype=np.uint8)).save(f)
+            rel = f.relative_to(tmp_path / "data").as_posix()
+            split = ["train", "train", "val", "test"][k]
+            rows[split].append(
+                {"path": rel, "label": cls, "aug_type": "original" if c % 2 else "90deg"}
+            )
+    for c, cls in enumerate(PLANTVILLAGE_CLASSES[:5]):  # field set: 5 classes only
+        d = tmp_path / "data" / "raw" / "plantdoc" / "test" / f"pd{c}"
+        d.mkdir(parents=True)
+        f = d / "a.jpg"
+        Image.fromarray(rng.integers(0, 255, (90, 60, 3), dtype=np.uint8)).save(f)
+        rows["pd"].append(
+            {
+                "path": f.relative_to(tmp_path / "data").as_posix(),
+                "label": cls,
+                "match": "exact" if c < 3 else "approximate",
+            }
+        )
+    for k, r in rows.items():
+        pd.DataFrame(r).to_csv(tmp_path / f"{k}.csv", index=False)
+
+    cfg_path = Path(__file__).parents[1] / "configs" / "phase3" / "mobilenet_v3_small.yaml"
+    over = [
+        f"data.train_manifest={tmp_path / 'train.csv'}",
+        f"data.val_manifest={tmp_path / 'val.csv'}",
+        f"data.data_root={tmp_path / 'data'}",
+        "data.image_size=64",
+        f"output_dir={tmp_path / 'out'}",
+        "train.epochs=2",
+        "train.batch_size=16",
+        "train.mixed_precision=false",
+        "model.weights=null",
+        f"eval=[{{name: test, manifest: {tmp_path / 'test.csv'},"
+        " subsets: {original: \"aug_type == 'original'\"}},"
+        f" {{name: plantdoc, manifest: {tmp_path / 'pd.csv'},"
+        " subsets: {exact: \"match == 'exact'\"}}]",
+    ]
+    m = run(load_config(cfg_path, over))
+    run_dir = tmp_path / "out" / "p3_mobilenet_v3_small" / "seed42"
+    assert (run_dir / "model.keras").exists() and (run_dir / "probs_plantdoc.npz").exists()
+    assert m["eval"]["test"]["n"] == 38
+    assert m["eval"]["test"]["subsets"]["original"]["n"] == 19
+    assert m["eval"]["plantdoc"]["n_classes_present"] == 5
+    assert m["eval"]["plantdoc"]["subsets"]["exact"]["n"] == 3
+    assert 1 <= m["best_epoch"] <= m["epochs_run"] == 2

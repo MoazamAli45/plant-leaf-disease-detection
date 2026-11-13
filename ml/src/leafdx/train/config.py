@@ -26,8 +26,12 @@ class DataCfg:
     image_size: int = 224
     # Keras' old flow_from_directory resized with "nearest" by default.
     resize_method: str = "nearest"
-    # "rescale": x / 255 (ImageDataGenerator(rescale=1/255)); "mobilenet": [-1, 1].
+    # "rescale": x / 255 (ImageDataGenerator(rescale=1/255)); "mobilenet": [-1, 1];
+    # "raw": keep [0, 255] (Keras EfficientNet/MobileNetV3 rescale internally).
     preprocessing: str = "rescale"
+    # Phase 3: run augmentation and preprocessing as layers inside the model (on the GPU)
+    # instead of in tf.data (on the CPU). The saved model then takes raw [0, 255] pixels.
+    augment_in_model: bool = False
 
 
 @dataclass
@@ -48,11 +52,13 @@ class AugmentCfg:
 
 @dataclass
 class ModelCfg:
-    name: str = "paper_cnn"  # paper_cnn | paper_mobilenet
+    name: str = "paper_cnn"  # paper_cnn | paper_mobilenet | transfer
     num_classes: int = 38
     output_activation: str = "sigmoid"
     dropout: float = 0.2
-    # MobileNet only
+    # transfer models: mobilenet_v1 | mobilenet_v2 | mobilenet_v3_small | efficientnet_b0
+    backbone: str = "mobilenet_v1"
+    # MobileNet width multiplier (V1/V2/V3)
     alpha: float = 1.0
     weights: str | None = "imagenet"
     freeze_backbone: bool = True
@@ -70,6 +76,21 @@ class TrainCfg:
     validation_steps: int | None = 150
     shuffle_buffer: int | None = None  # None = full shuffle (manifests are class-sorted)
     mixed_precision: bool = False
+    # Early stopping on val_loss; the best epoch's weights are restored at the end.
+    early_stopping_patience: int | None = None
+    save_model: bool = True
+
+
+@dataclass
+class EvalSetCfg:
+    """An extra evaluation manifest. ``subsets`` maps a name to a pandas query on its columns,
+    e.g. {"original": "aug_type == 'original'"}; metrics are reported for all rows and per
+    subset."""
+
+    name: str = "test"
+    manifest: str = ""
+    subsets: dict[str, str] = field(default_factory=dict)
+    limit: int | None = None  # evaluate a random sample of this size (smoke tests)
 
 
 @dataclass
@@ -82,6 +103,7 @@ class ExperimentCfg:
     augment: AugmentCfg = field(default_factory=AugmentCfg)
     model: ModelCfg = field(default_factory=ModelCfg)
     train: TrainCfg = field(default_factory=TrainCfg)
+    eval: list[EvalSetCfg] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -95,7 +117,9 @@ def _build(cls: type, values: dict[str, Any]) -> Any:
     kwargs = {}
     for name, val in values.items():
         default = getattr(cls(), name) if name in known else None
-        if is_dataclass(default) and isinstance(val, dict):
+        if cls is ExperimentCfg and name == "eval":
+            kwargs[name] = [_build(EvalSetCfg, v) for v in (val or [])]
+        elif is_dataclass(default) and isinstance(val, dict):
             kwargs[name] = _build(type(default), val)
         elif isinstance(default, tuple) and isinstance(val, list):
             kwargs[name] = tuple(val)

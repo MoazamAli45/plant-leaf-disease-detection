@@ -33,3 +33,7 @@ out/
 
 # Kaggle download bundles (contents are extracted into ml/results/)
 ml/results/*.zip
+*.zip
+*.keras
+ml/models/
+ml/results/models_*.zip
