@@ -38,3 +38,6 @@ ml/results/*.zip
 *.keras
 ml/models/
 ml/results/models_*.zip
+
+# API model files are generated: (cd ml && python -m leafdx.train.export_web api-model)
+api/model/

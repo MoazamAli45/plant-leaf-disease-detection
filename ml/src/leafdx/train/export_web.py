@@ -3,6 +3,7 @@
     python -m leafdx.train.export_web research   # -> web/src/data/research.json
     python -m leafdx.train.export_web verify     # -> web/test-data/ (tensors + Keras outputs)
     python -m leafdx.train.export_web classes    # -> web/src/data/classes.json
+    python -m leafdx.train.export_web api-model  # -> api/model/ (inference.keras, classes.json)
 
 ``verify`` writes a few clean-test and PlantDoc images, preprocessed exactly as in training,
 with the Keras model's probabilities, so ``web/scripts/verify-model.mjs`` can check that the
@@ -45,6 +46,16 @@ def classes(out: Path) -> Path:
     ]
     out.write_text(json.dumps(data, indent=1) + "\n")
     return out
+
+
+def api_model(export_dir: Path, out_dir: Path) -> Path:
+    """Copy the verified float32 inference model and the class list for the API."""
+    import shutil
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(export_dir / "inference.keras", out_dir / "inference.keras")
+    classes(out_dir / "classes.json")
+    return out_dir
 
 
 def research(out: Path) -> Path:
@@ -135,6 +146,8 @@ def main(argv: list[str] | None = None) -> None:
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("research")
     sub.add_parser("classes")
+    am = sub.add_parser("api-model")
+    am.add_argument("--export", type=Path, default=Path("models/_export/p3_mobilenet_v1"))
     v = sub.add_parser("verify")
     v.add_argument("--model", type=Path, default=Path("models/p3_mobilenet_v1"))
     v.add_argument("--per-class", type=int, default=2)
@@ -143,6 +156,8 @@ def main(argv: list[str] | None = None) -> None:
     args = p.parse_args(argv)
     if args.cmd == "research":
         print("wrote", research(WEB / "src" / "data" / "research.json"))
+    elif args.cmd == "api-model":
+        print("wrote", api_model(args.export, Path("../api/model")))
     elif args.cmd == "classes":
         print("wrote", classes(WEB / "src" / "data" / "classes.json"))
     else:
