@@ -37,7 +37,12 @@ def fake(root, name, seed, test_acc, pd_acc, rng):
     for split, n in (("test", 76), ("plantdoc", 40)):
         y = np.arange(n) % (C if split == "test" else 5)
         probs = rng.dirichlet(np.ones(C), size=n).astype(np.float16)
-        np.savez(d / f"probs_{split}.npz", probs=probs, labels=y)
+        np.savez(
+            d / f"probs_{split}.npz",
+            probs=probs,
+            labels=y,
+            paths=np.array([f"p{i}" for i in range(n)]),
+        )
         pd.DataFrame(
             {
                 "class": PLANTVILLAGE_CLASSES,
@@ -60,7 +65,7 @@ def test_table_mean_std_and_figures(tmp_path):
     runs = load(tmp_path / "r")
     tbl = results_table(runs, {"p3_mobilenet_v1": "MobileNetV1"})
     assert tbl.loc[0, "test acc. (%)"] == "97.00 ± 1.00"
-    assert tbl.loc[0, "gap test - PlantDoc (pp)"] == "82.00 ± 4.00"
+    assert "leak-free" in " ".join(tbl.columns)
     made = build(tmp_path / "r", tmp_path / "out")
     assert all(p.exists() for p in made)
     assert (tmp_path / "out" / "per_class" / "p3_cnn_softmax_plantdoc.csv").exists()

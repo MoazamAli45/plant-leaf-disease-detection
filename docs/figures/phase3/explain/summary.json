@@ -1,0 +1,46 @@
+{
+  "p3_cnn_softmax": {
+    "n": 185,
+    "accuracy": 0.8594594594594595,
+    "leaf_area_mean": 0.47351818894787645,
+    "leaf_energy_mean": 0.5142409437512224,
+    "leaf_energy_ratio_median": 1.0654113537371013,
+    "background_only_accuracy": 0.12972972972972974,
+    "border_only_accuracy": 0.14594594594594595,
+    "leaf_only_accuracy": 0.5135135135135135,
+    "chance": 0.02631578947368421
+  },
+  "p3_mobilenet_v1": {
+    "n": 185,
+    "accuracy": 0.972972972972973,
+    "leaf_area_mean": 0.47351818894787645,
+    "leaf_energy_mean": 0.6198244818159052,
+    "leaf_energy_ratio_median": 1.4631826390664064,
+    "background_only_accuracy": 0.07567567567567568,
+    "border_only_accuracy": 0.06486486486486487,
+    "leaf_only_accuracy": 0.8918918918918919,
+    "chance": 0.02631578947368421
+  },
+  "p3_mobilenet_v2": {
+    "n": 185,
+    "accuracy": 0.9783783783783784,
+    "leaf_area_mean": 0.47351818894787645,
+    "leaf_energy_mean": 0.7051957798454709,
+    "leaf_energy_ratio_median": 1.6030882144894867,
+    "background_only_accuracy": 0.04864864864864865,
+    "border_only_accuracy": 0.05945945945945946,
+    "leaf_only_accuracy": 0.8702702702702703,
+    "chance": 0.02631578947368421
+  },
+  "p3_efficientnet_b0": {
+    "n": 185,
+    "accuracy": 0.9891891891891892,
+    "leaf_area_mean": 0.47351818894787645,
+    "leaf_energy_mean": 0.8260554213781615,
+    "leaf_energy_ratio_median": 1.8238384185695455,
+    "background_only_accuracy": 0.08108108108108109,
+    "border_only_accuracy": 0.11891891891891893,
+    "leaf_only_accuracy": 0.7189189189189189,
+    "chance": 0.02631578947368421
+  }
+}

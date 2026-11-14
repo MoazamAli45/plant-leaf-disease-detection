@@ -37,6 +37,25 @@ ABLATIONS = {
 SERIES = ["#2a78d6", "#eb6834"]  # dataviz reference palette (validated pair)
 INK, INK_2, GRID = "#0b0b0b", "#52514e", "#e4e3df"
 THRESHOLDS = [0.5, 0.7, 0.9]
+# Images of clean split v1's test set with a source-photo/leaf link to train under the
+# corrected parser (see leafdx.data.recheck); excluded for the leak-free accuracy.
+LINKS = Path("manifests/clean_split/test_links_corrected.csv")
+_LINKED: dict[str, bool] | None = None
+
+
+def linked_test_paths() -> dict[str, bool]:
+    global _LINKED
+    if _LINKED is None:
+        lk = pd.read_csv(LINKS) if LINKS.exists() else pd.DataFrame(columns=["path", "linked_any"])
+        _LINKED = dict(zip(lk["path"], lk["linked_any"].astype(bool), strict=True))
+    return _LINKED
+
+
+def leakfree_test_accuracy(run: dict[str, Any]) -> float:
+    d = np.load(run["_dir"] / "probs_test.npz")
+    linked = linked_test_paths()
+    keep = np.array([not linked.get(str(p), False) for p in d["paths"]])
+    return float((d["probs"].argmax(1) == d["labels"])[keep].mean())
 
 
 # ----------------------------------------------------------------------------- loading
@@ -77,6 +96,7 @@ def summary_metrics(m: dict[str, Any]) -> dict[str, float]:
     t, p = e["test"], e["plantdoc"]
     return {
         "test_acc": t["accuracy"],
+        "test_acc_leakfree": leakfree_test_accuracy(m),
         "test_orig_acc": t["subsets"]["original"]["accuracy"],
         "test_macro_f1": t["macro_f1"],
         "test_ece": t["ece"],
@@ -85,12 +105,13 @@ def summary_metrics(m: dict[str, Any]) -> dict[str, float]:
         "pd_macro_f1": p["macro_f1"],
         "pd_exact_acc": p["subsets"]["exact"]["accuracy"],
         "pd_ece": p["ece"],
-        "gap": t["accuracy"] - p["accuracy"],
+        "gap": leakfree_test_accuracy(m) - p["accuracy"],
     }
 
 
 COLUMNS = {
     "test_acc": "test acc. (%)",
+    "test_acc_leakfree": "test acc., leak-free subset (%)",
     "test_orig_acc": "test acc., originals only (%)",
     "test_macro_f1": "test macro-F1 (%)",
     "test_ece": "test ECE (%)",
@@ -99,7 +120,7 @@ COLUMNS = {
     "pd_macro_f1": "PlantDoc macro-F1 (%)",
     "pd_exact_acc": "PlantDoc acc., exact-match classes (%)",
     "pd_ece": "PlantDoc ECE (%)",
-    "gap": "gap test - PlantDoc (pp)",
+    "gap": "gap leak-free test - PlantDoc (pp)",
 }
 
 
