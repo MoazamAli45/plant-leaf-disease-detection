@@ -32,6 +32,17 @@
     "leaf_only_accuracy": 0.8702702702702703,
     "chance": 0.02631578947368421
   },
+  "p3_mobilenet_v3_small": {
+    "n": 185,
+    "accuracy": 0.9891891891891892,
+    "leaf_area_mean": 0.47351818894787645,
+    "leaf_energy_mean": 0.7806517219624004,
+    "leaf_energy_ratio_median": 1.750450147985579,
+    "background_only_accuracy": 0.07027027027027027,
+    "border_only_accuracy": 0.10270270270270271,
+    "leaf_only_accuracy": 0.8108108108108109,
+    "chance": 0.02631578947368421
+  },
   "p3_efficientnet_b0": {
     "n": 185,
     "accuracy": 0.9891891891891892,

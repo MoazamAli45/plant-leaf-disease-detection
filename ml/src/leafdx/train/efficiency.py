@@ -124,9 +124,23 @@ def latency_ms(fn: Any, x: np.ndarray, warmup: int = 10, runs: int = 50) -> dict
 
 
 class TFLiteRunner:
+    """TFLite interpreter. Uses the default XNNPACK CPU delegate; if XNNPACK cannot prepare a
+    graph (seen for MobileNetV3-Small), falls back to the built-in kernels and records it."""
+
     def __init__(self, path: Path) -> None:
-        self.it = tf.lite.Interpreter(model_path=str(path), num_threads=THREADS)
-        self.it.allocate_tensors()
+        self.xnnpack = True
+        try:
+            self.it = tf.lite.Interpreter(model_path=str(path), num_threads=THREADS)
+            self.it.allocate_tensors()
+        except RuntimeError as e:
+            print(f"XNNPACK failed for {path.name} ({str(e)[:80]}); using built-in kernels")
+            self.xnnpack = False
+            self.it = tf.lite.Interpreter(
+                model_path=str(path),
+                num_threads=THREADS,
+                experimental_op_resolver_type=tf.lite.experimental.OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES,
+            )
+            self.it.allocate_tensors()
         self.inp = self.it.get_input_details()[0]
         self.out = self.it.get_output_details()[0]
 
@@ -188,6 +202,7 @@ def measure(
                 **_lat(latency_ms(r, x1)),
                 "accuracy": float((pred.argmax(1) == y).mean()),
                 "agreement_with_keras": float((pred.argmax(1) == ref.argmax(1)).mean()),
+                "xnnpack": r.xnnpack,
             }
         )
     for quant, label in [(False, "TF.js float32"), (True, "TF.js uint8 weights")]:

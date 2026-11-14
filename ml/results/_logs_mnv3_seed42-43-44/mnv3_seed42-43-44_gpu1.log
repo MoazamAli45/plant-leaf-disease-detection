@@ -1,0 +1,43 @@
+
+>>> --config configs/phase3/mobilenet_v3_small.yaml --set data.npd_root=/kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented) output_dir=/kaggle/working/outputs seed=43
+INFO model mobilenet_v3_small: 961046 params (948934 trainable)
+Epoch 1/20
+1922/1922 - 588s - 306ms/step - accuracy: 0.8037 - loss: 0.7221 - val_accuracy: 0.9043 - val_loss: 0.3174 - epoch_seconds: 587.4576
+Epoch 2/20
+1922/1922 - 227s - 118ms/step - accuracy: 0.9621 - loss: 0.1202 - val_accuracy: 0.9499 - val_loss: 0.1548 - epoch_seconds: 226.7979
+Epoch 3/20
+1922/1922 - 227s - 118ms/step - accuracy: 0.9779 - loss: 0.0706 - val_accuracy: 0.9512 - val_loss: 0.1517 - epoch_seconds: 227.3829
+Epoch 4/20
+1922/1922 - 227s - 118ms/step - accuracy: 0.9836 - loss: 0.0516 - val_accuracy: 0.9616 - val_loss: 0.1203 - epoch_seconds: 227.3789
+Epoch 5/20
+1922/1922 - 223s - 116ms/step - accuracy: 0.9868 - loss: 0.0419 - val_accuracy: 0.9574 - val_loss: 0.1392 - epoch_seconds: 223.1191
+Epoch 6/20
+1922/1922 - 218s - 114ms/step - accuracy: 0.9895 - loss: 0.0318 - val_accuracy: 0.9703 - val_loss: 0.0951 - epoch_seconds: 218.4001
+Epoch 7/20
+1922/1922 - 219s - 114ms/step - accuracy: 0.9911 - loss: 0.0279 - val_accuracy: 0.9740 - val_loss: 0.0899 - epoch_seconds: 218.5263
+Epoch 8/20
+1922/1922 - 220s - 114ms/step - accuracy: 0.9921 - loss: 0.0250 - val_accuracy: 0.9738 - val_loss: 0.0926 - epoch_seconds: 219.8368
+Epoch 9/20
+1922/1922 - 220s - 114ms/step - accuracy: 0.9923 - loss: 0.0231 - val_accuracy: 0.9760 - val_loss: 0.0753 - epoch_seconds: 219.4120
+Epoch 10/20
+1922/1922 - 222s - 115ms/step - accuracy: 0.9935 - loss: 0.0198 - val_accuracy: 0.9747 - val_loss: 0.0868 - epoch_seconds: 221.9082
+Epoch 11/20
+1922/1922 - 220s - 115ms/step - accuracy: 0.9941 - loss: 0.0179 - val_accuracy: 0.9675 - val_loss: 0.1061 - epoch_seconds: 220.1372
+Epoch 12/20
+1922/1922 - 219s - 114ms/step - accuracy: 0.9951 - loss: 0.0156 - val_accuracy: 0.9777 - val_loss: 0.0719 - epoch_seconds: 218.5470
+Epoch 13/20
+1922/1922 - 210s - 110ms/step - accuracy: 0.9952 - loss: 0.0152 - val_accuracy: 0.9776 - val_loss: 0.0733 - epoch_seconds: 210.4719
+Epoch 14/20
+1922/1922 - 226s - 117ms/step - accuracy: 0.9954 - loss: 0.0139 - val_accuracy: 0.9790 - val_loss: 0.0710 - epoch_seconds: 225.4727
+Epoch 15/20
+1922/1922 - 225s - 117ms/step - accuracy: 0.9957 - loss: 0.0134 - val_accuracy: 0.9757 - val_loss: 0.0893 - epoch_seconds: 225.4841
+Epoch 16/20
+1922/1922 - 209s - 109ms/step - accuracy: 0.9961 - loss: 0.0112 - val_accuracy: 0.9758 - val_loss: 0.0838 - epoch_seconds: 209.2241
+Epoch 17/20
+1922/1922 - 209s - 109ms/step - accuracy: 0.9962 - loss: 0.0116 - val_accuracy: 0.9679 - val_loss: 0.1217 - epoch_seconds: 209.3343
+Epoch 18/20
+1922/1922 - 220s - 115ms/step - accuracy: 0.9964 - loss: 0.0110 - val_accuracy: 0.9759 - val_loss: 0.0808 - epoch_seconds: 220.3751
+Epoch 19/20
+1922/1922 - 218s - 114ms/step - accuracy: 0.9967 - loss: 0.0100 - val_accuracy: 0.9706 - val_loss: 0.0956 - epoch_seconds: 218.1774
+INFO done: {"last_epoch": {"accuracy": 0.9966658353805542, "loss": 0.01001488696783781, "val_accuracy": 0.9705725908279419, "val_loss": 0.09555323421955109, "epoch_seconds": 218.17736583399983}}
+[gpu1] OK     configs/phase3/mobilenet_v3_small.yaml seed=43 in 82.1 min

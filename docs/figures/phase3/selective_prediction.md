@@ -18,6 +18,12 @@
 | MobileNetV2 | plantdoc | 0.5 | 0.8866 | 0.1434 |
 | MobileNetV2 | plantdoc | 0.7 | 0.7137 | 0.1512 |
 | MobileNetV2 | plantdoc | 0.9 | 0.499 | 0.1701 |
+| MobileNetV3-Small | test | 0.5 | 0.9985 | 0.9872 |
+| MobileNetV3-Small | test | 0.7 | 0.9896 | 0.9916 |
+| MobileNetV3-Small | test | 0.9 | 0.9769 | 0.995 |
+| MobileNetV3-Small | plantdoc | 0.5 | 0.8088 | 0.162 |
+| MobileNetV3-Small | plantdoc | 0.7 | 0.5827 | 0.1826 |
+| MobileNetV3-Small | plantdoc | 0.9 | 0.3535 | 0.2124 |
 | EfficientNetB0 | test | 0.5 | 0.9996 | 0.9926 |
 | EfficientNetB0 | test | 0.7 | 0.9933 | 0.9947 |
 | EfficientNetB0 | test | 0.9 | 0.9844 | 0.9979 |

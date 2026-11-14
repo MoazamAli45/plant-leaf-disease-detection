@@ -1,7 +1,7 @@
 # Phase 3: corrected and extended experiments
 
-> **Status:** main comparison done for 4 of 5 models (3 seeds each). MobileNetV3-Small,
-> the ablations and the efficiency study are pending, and are marked ⟨PLACEHOLDER⟩ below.
+> **Status:** main comparison done (5 models × 3 seeds) and efficiency study done. The
+> ablations are pending and are marked ⟨PLACEHOLDER⟩ below.
 > Every number here is generated from `ml/results/` by `python -m leafdx.train.report_phase3`
 > (tables in [`figures/phase3/`](figures/phase3/)), `leafdx.explain.gradcam` and
 > `leafdx.train.efficiency`.
@@ -57,14 +57,17 @@ Full table: [`figures/phase3/main_results.md`](figures/phase3/main_results.md).
 | Paper CNN (softmax) | 2.43 | 88.40 ± 0.45 | 88.46 ± 0.38 | 88.39 ± 0.41 | 2.84 ± 0.20 | 7.46 ± 1.02 | 6.72 ± 1.23 | 9.28 ± 1.64 |
 | MobileNetV1 | 3.27 | 98.40 ± 0.38 | 98.26 ± 0.43 | 98.39 ± 0.38 | 0.60 ± 0.24 | 16.33 ± 1.12 | 15.60 ± 0.96 | 22.23 ± 1.58 |
 | MobileNetV2 | 2.31 | 97.43 ± 0.40 | 97.47 ± 0.43 | 97.40 ± 0.38 | 1.16 ± 0.31 | 15.02 ± 1.98 | 13.75 ± 1.11 | 19.06 ± 2.58 |
-| MobileNetV3-Small | ⟨PLACEHOLDER⟩ | | | | | | | |
+| MobileNetV3-Small | **0.96** | 98.52 ± 0.17 | 98.45 ± 0.18 | 98.50 ± 0.17 | 0.55 ± 0.12 | 13.84 ± 1.22 | 13.49 ± 1.02 | 15.30 ± 1.74 |
 | **EfficientNetB0** | 4.10 | **99.22 ± 0.09** | **99.18 ± 0.07** | 99.21 ± 0.08 | 0.32 ± 0.03 | **18.15 ± 0.58** | 17.76 ± 0.32 | 22.23 ± 1.37 |
 
 - **Lab test.** On held-out lab images, fine-tuned backbones reach 97–99%. The paper's CNN,
   trained from scratch, reaches 88.4%.
 - **Field images.** Every model collapses on PlantDoc: 7–18% accuracy, against 2.6% chance.
-  The gap between leak-free lab accuracy and field accuracy is **81–82 pp for every model**.
+  The gap between leak-free lab accuracy and field accuracy is **81–85 pp for every model**.
   A better lab score does not close it.
+- **Size versus accuracy.** MobileNetV3-Small reaches the lab accuracy of MobileNetV1
+  (98.45% vs 98.26% leak-free) with 3.4× fewer parameters, but generalises worst to the field
+  among the pretrained models (13.84%).
 - **Per class.** Precision, recall and F1 per class (mean ± std over seeds), for every model
   and both test sets, are in `figures/phase3/per_class/`. Confusion matrices (seed 42) are in
   `figures/phase3/confusion/`.
@@ -78,6 +81,7 @@ From [`figures/phase3/field_analysis.md`](figures/phase3/field_analysis.md):
 | Paper CNN | 7.46% | 23.90% | 72.27% | 38.52% | 34.57% | 79.9% / 75.4% |
 | MobileNetV1 | 16.33% | 37.48% | 76.50% | 43.23% | 26.09% | 86.0% / 77.1% |
 | MobileNetV2 | 15.02% | 32.24% | 72.44% | 41.75% | 21.84% | 84.2% / 76.6% |
+| MobileNetV3-Small | 13.84% | 32.79% | 75.27% | 44.31% | 33.10% | 82.4% / 72.9% |
 | EfficientNetB0 | 18.15% | 38.74% | 71.88% | 43.49% | 24.66% | 83.6% / 73.7% |
 
 1. **Even the crop is mostly wrong.** The best model names the right plant species only 39%
@@ -104,6 +108,7 @@ Source: `figures/phase3/explain/summary.json`.
 | Paper CNN | 85.9% | 1.07 | 51.4% | 13.0% | 14.6% |
 | MobileNetV1 | 97.3% | 1.46 | 89.2% | 7.6% | 6.5% |
 | MobileNetV2 | 97.8% | 1.60 | 87.0% | 4.9% | 5.9% |
+| MobileNetV3-Small | 98.9% | 1.75 | 81.1% | 7.0% | 10.3% |
 | EfficientNetB0 | 98.9% | 1.82 | 71.9% | 8.1% | 11.9% |
 
 - **Fine-tuned backbones attend to the leaf.** 62–83% of their Grad-CAM mass is on the leaf,
@@ -134,23 +139,27 @@ Seed-42 models on an Apple M3 Pro CPU: batch 1, 4 threads, median of 50 runs aft
 warm-up runs. Accuracy is measured on 746 leak-free clean-test images (up to 20 per class;
 *Raspberry healthy* has only 6). INT8 means full integer quantisation (weights and
 activations), calibrated on 200 training images, with float input and output. Full table:
-[`figures/phase3/efficiency.md`](figures/phase3/efficiency.md). MobileNetV3-Small will be
-added when its runs exist.
+[`figures/phase3/efficiency.md`](figures/phase3/efficiency.md).
 
 | Model | Format | Size (MB) | CPU latency (ms) | Accuracy (%) | Agreement with Keras (%) |
 |---|---|---|---|---|---|
-| Paper CNN | Keras float32 | 9.76 | 2.68 | 88.20 | 100 |
-| | TFLite INT8 | 2.45 | 0.57 | 87.80 | 98.66 |
-| MobileNetV1 | Keras float32 | 13.40 | 7.30 | 99.06 | 100 |
-| | TFLite float32 | 12.96 | 3.93 | 99.06 | 100 |
-| | TFLite dynamic-range | 3.42 | 2.84 | 99.06 | 99.87 |
-| | **TFLite INT8** | **3.55** | **1.38** | **98.53** | 99.20 |
-| | TF.js uint8 weights | 3.32 | (browser, Phase 4) | | |
-| MobileNetV2 | Keras float32 | 9.82 | 7.47 | 97.72 | 100 |
-| | TFLite INT8 | 2.76 | 1.34 | 95.58 | 97.05 |
-| EfficientNetB0 | Keras float32 | 17.24 | 11.18 | 99.60 | 100 |
-| | TFLite dynamic-range | 4.60 | 6.71 | 99.46 | 99.60 |
-| | TFLite INT8 | 4.96 | 2.27 | **69.84** | 69.97 |
+| Paper CNN | Keras float32 | 9.76 | 2.64 | 88.20 | 100 |
+|  | TFLite INT8 | 2.45 | 0.76 | 87.80 | 98.66 |
+| MobileNetV1 | Keras float32 | 13.40 | 7.40 | 99.06 | 100 |
+|  | TFLite float32 | 12.96 | 3.95 | 99.06 | 100 |
+|  | TFLite dynamic-range | 3.42 | 2.78 | 99.06 | 99.87 |
+|  | TFLite INT8 | 3.55 | 1.39 | **98.53** | 99.20 |
+|  | TF.js uint8 weights | 3.32 | (browser, Phase 4) |  |  |
+| MobileNetV2 | Keras float32 | 9.82 | 7.68 | 97.72 | 100 |
+|  | TFLite INT8 | 2.76 | 1.35 | 95.58 | 97.05 |
+| MobileNetV3-Small | Keras float32 | 4.42 | 3.75 | 98.93 | 100 |
+|  | TFLite float32 | 3.82 | 0.97 | 98.93 | 100 |
+|  | TFLite dynamic-range | 1.13 | 1.22 | 99.20 | 99.20 |
+|  | TFLite INT8 | 1.24 | 0.91 ¹ | **60.86** | 60.72 |
+|  | TF.js uint8 weights | 1.15 | (browser, Phase 4) |  |  |
+| EfficientNetB0 | Keras float32 | 17.24 | 11.61 | 99.60 | 100 |
+|  | TFLite dynamic-range | 4.60 | 6.71 | 99.46 | 99.60 |
+|  | TFLite INT8 | 4.96 | 2.38 | **69.84** | 69.97 |
 
 - **MobileNetV1 quantises almost losslessly.** Full INT8 is 3.8× smaller and 5.3× faster
   than the Keras model, for −0.53 pp, so it is the model deployed in the browser (Phase 4).
@@ -159,6 +168,15 @@ added when its runs exist.
   activation quantisation. Its dynamic-range version (int8 weights, float activations)
   keeps 99.46%. Quantisation-aware training was not tried.
 - **MobileNetV2 loses 2.1 pp** under full INT8.
+- **MobileNetV3-Small also breaks under full INT8** (−38.1 pp), like EfficientNetB0, while
+  weight-only (dynamic-range) quantisation keeps 99.20% at 1.13 MB. Its hard-swish
+  activations and squeeze-and-excitation blocks are the likely cause.
+  ¹ TFLite's XNNPACK delegate could not prepare this INT8 graph, so it ran on the built-in
+  kernels.
+- **Model chosen for the browser: MobileNetV1.** MobileNetV3-Small is 3× smaller and slightly
+  better on the leak-free lab test (98.45% vs 98.26%), but MobileNetV1 is better on field
+  images (16.33% vs 13.84%), which is where the app will be used, and it is the paper's
+  model.
 - **Accuracy after conversion was measured, not assumed.** The agreement column compares
   each converted model's predictions with its Keras original.
 
