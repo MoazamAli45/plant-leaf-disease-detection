@@ -61,7 +61,8 @@ def eval_sample(manifest: Path, links: Path, per_class: int, seed: int) -> pd.Da
     lk = pd.read_csv(links)
     df = df.merge(lk[["path", "linked_any"]], on="path")
     df = df[~df["linked_any"]]
-    return df.groupby("label", group_keys=False).sample(per_class, random_state=seed)
+    # up to per_class per class: a few classes have fewer leak-free test images
+    return df.sample(frac=1.0, random_state=seed).groupby("label").head(per_class)
 
 
 def calib_sample(manifest: Path, n: int, seed: int) -> list[str]:

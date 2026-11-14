@@ -1,0 +1,10 @@
+{
+  "machine": "arm64",
+  "processor": "arm",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "tensorflow": "2.20.0",
+  "threads": 4,
+  "eval_images": 746,
+  "calibration_images": 200,
+  "tfjs_converter": true
+}

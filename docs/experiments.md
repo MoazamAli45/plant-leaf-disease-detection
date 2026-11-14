@@ -37,6 +37,11 @@ copies were therefore not grouped with their source photos. With corrected parsi
 | clean split v1, validation | 11.81% (1,557 of 13,185) |
 | clean split v1, test | 11.94% (1,572 of 13,171) |
 
+The links are **concentrated in a few classes**: 98.2% of *Raspberry healthy* test images
+(6 leak-free images remain), 93.8% of *Peach healthy*, 63.0% of *Apple cedar apple rust*,
+53.0% of *Tomato mosaic virus* and 49.1% of *Potato healthy*. Per-class test scores for these
+classes are therefore not reliable on split v1, and split v2 would be needed for them.
+
 The models were already trained on v1, so we keep v1. Test results are reported both on the
 full test set and on the **leak-free subset** (the 11,599 test images with no link). The
 difference is at most 0.15 pp for every model (table below), so the conclusions do not
@@ -125,6 +130,37 @@ and 0.5. Pending Kaggle runs. Table: `figures/phase3/ablations.md`.⟩
 
 ## 7. Efficiency
 
-⟨PLACEHOLDER: parameters, size, CPU latency and accuracy for Keras, TFLite float32,
-dynamic-range and INT8, and TF.js sizes. `figures/phase3/efficiency.md`. TF.js latency is
-measured in the browser in Phase 4.⟩
+Seed-42 models on an Apple M3 Pro CPU: batch 1, 4 threads, median of 50 runs after 10
+warm-up runs. Accuracy is measured on 746 leak-free clean-test images (up to 20 per class;
+*Raspberry healthy* has only 6). INT8 means full integer quantisation (weights and
+activations), calibrated on 200 training images, with float input and output. Full table:
+[`figures/phase3/efficiency.md`](figures/phase3/efficiency.md). MobileNetV3-Small will be
+added when its runs exist.
+
+| Model | Format | Size (MB) | CPU latency (ms) | Accuracy (%) | Agreement with Keras (%) |
+|---|---|---|---|---|---|
+| Paper CNN | Keras float32 | 9.76 | 2.68 | 88.20 | 100 |
+| | TFLite INT8 | 2.45 | 0.57 | 87.80 | 98.66 |
+| MobileNetV1 | Keras float32 | 13.40 | 7.30 | 99.06 | 100 |
+| | TFLite float32 | 12.96 | 3.93 | 99.06 | 100 |
+| | TFLite dynamic-range | 3.42 | 2.84 | 99.06 | 99.87 |
+| | **TFLite INT8** | **3.55** | **1.38** | **98.53** | 99.20 |
+| | TF.js uint8 weights | 3.32 | (browser, Phase 4) | | |
+| MobileNetV2 | Keras float32 | 9.82 | 7.47 | 97.72 | 100 |
+| | TFLite INT8 | 2.76 | 1.34 | 95.58 | 97.05 |
+| EfficientNetB0 | Keras float32 | 17.24 | 11.18 | 99.60 | 100 |
+| | TFLite dynamic-range | 4.60 | 6.71 | 99.46 | 99.60 |
+| | TFLite INT8 | 4.96 | 2.27 | **69.84** | 69.97 |
+
+- **MobileNetV1 quantises almost losslessly.** Full INT8 is 3.8× smaller and 5.3× faster
+  than the Keras model, for −0.53 pp, so it is the model deployed in the browser (Phase 4).
+- **EfficientNetB0 does not survive full INT8 post-training quantisation** (−29.8 pp). Its
+  swish activations and squeeze-and-excitation blocks are known to be sensitive to
+  activation quantisation. Its dynamic-range version (int8 weights, float activations)
+  keeps 99.46%. Quantisation-aware training was not tried.
+- **MobileNetV2 loses 2.1 pp** under full INT8.
+- **Accuracy after conversion was measured, not assumed.** The agreement column compares
+  each converted model's predictions with its Keras original.
+
+Environment: TensorFlow 2.20 for TFLite; TF.js converter 4.22 in a separate environment
+(`ml/requirements-tfjs.txt`).

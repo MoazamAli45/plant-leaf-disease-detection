@@ -1,0 +1,7 @@
+# Separate environment for the TF.js converter (tensorflowjs pins an older TensorFlow):
+#   uv venv .venv-tfjs --python 3.12 && uv pip install --python .venv-tfjs/bin/python -r requirements-tfjs.txt
+# ydf and setuptools are pinned because the latest versions break the converter import
+# (protobuf gencode/runtime mismatch; pkg_resources removed in setuptools 81).
+tensorflowjs==4.22.0
+ydf==0.9.0
+setuptools<81
