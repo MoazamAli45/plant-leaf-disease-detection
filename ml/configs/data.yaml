@@ -29,4 +29,9 @@ drop_label_conflicts: true
 # Byte-identical copies are collapsed to one file in the clean split.
 drop_exact_duplicates: true
 
+# Split v1 (used to train every Phase 3 model) did not recognise the "_newPixel25" offline
+# augmentation; false reproduces v1 byte for byte. Set true for the corrected split v2.
+# The residual leakage this causes in v1 is measured by `python -m leafdx.data.recheck`.
+parse_newpixel_suffix: false
+
 workers: null # null = all cores but one

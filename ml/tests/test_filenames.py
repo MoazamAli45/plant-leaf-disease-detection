@@ -18,6 +18,7 @@ U = "01a66316-0e98-4d3b-a56f-d78752cd043f___FREC_Scab 3003"
         (f"{U}_new30degFlipTB.JPG", "new30degFlipTB"),
         (f"{U}_newGRR.JPG", "newGRR"),
         (f"{U}_flipLR_90deg.JPG", "flipLR+90deg"),
+        (f"{U}_newPixel25.JPG", "newPixel25"),
     ],
 )
 def test_parse_strips_augmentation_suffix(name, aug):
@@ -51,3 +52,9 @@ def test_resolve_leaf_id_requires_matching_class():
     # single suggestion from another class is rejected (official loader would accept it)
     assert resolve_leaf_id("a___RS_HL 6251", "Tomato___healthy", leaf_map) is None
     assert resolve_leaf_id("a___unknown 1", "Apple___healthy", leaf_map) is None
+
+
+def test_v1_parsing_keeps_newpixel_suffix():
+    p = parse_npd_filename(f"{U}_newPixel25.JPG", newpixel=False)
+    assert p.source_stem == f"{U}_newPixel25"
+    assert p.aug_type == "original"

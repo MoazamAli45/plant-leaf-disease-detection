@@ -57,6 +57,8 @@ class DataConfig:
     plantdoc_overlap_threshold: int = 4
     drop_label_conflicts: bool = True
     drop_exact_duplicates: bool = True
+    # False reproduces split v1 (newPixel<n> copies not recognised); see filenames.py
+    parse_newpixel_suffix: bool = True
     workers: int | None = None
 
     @classmethod
@@ -73,6 +75,7 @@ class DataConfig:
             plantdoc_overlap_threshold=int(raw["plantdoc"]["overlap_threshold"]),
             drop_label_conflicts=bool(raw["drop_label_conflicts"]),
             drop_exact_duplicates=bool(raw["drop_exact_duplicates"]),
+            parse_newpixel_suffix=bool(raw.get("parse_newpixel_suffix", True)),
             workers=raw.get("workers"),
         )
 
@@ -84,7 +87,7 @@ class DataConfig:
 # ----------------------------------------------------------------------------- scanning
 
 
-def scan_npd(data_dir: Path, leaf_map: dict[str, list[str]]) -> pd.DataFrame:
+def scan_npd(data_dir: Path, leaf_map: dict[str, list[str]], newpixel: bool = True) -> pd.DataFrame:
     root = data_dir / "raw" / "npd"
     rows = []
     for folder, split in PAPER_SPLIT_DIRS.items():
@@ -94,7 +97,7 @@ def scan_npd(data_dir: Path, leaf_map: dict[str, list[str]]) -> pd.DataFrame:
                 raise FileNotFoundError(f"missing class folder {d}; run leafdx.data.download")
             for f in sorted(d.iterdir()):
                 if f.is_file() and f.suffix.lower() in IMAGE_SUFFIXES:
-                    parsed = parse_npd_filename(f.name)
+                    parsed = parse_npd_filename(f.name, newpixel=newpixel)
                     rows.append(
                         {
                             "path": f.relative_to(data_dir).as_posix(),
@@ -171,7 +174,7 @@ def run(cfg: DataConfig) -> dict[str, Any]:
     leaf_map = json.loads((data_dir / "raw" / "plantvillage" / "leaf-map.json").read_text())
 
     # 1-2. scan + index
-    df = scan_npd(data_dir, leaf_map)
+    df = scan_npd(data_dir, leaf_map, newpixel=cfg.parse_newpixel_suffix)
     log.info("NPD: %d images", len(df))
     df = attach_index(df, data_dir, cache / "index_npd.csv", cfg.workers)
     unreadable = df[df["error"].astype(str) != ""]

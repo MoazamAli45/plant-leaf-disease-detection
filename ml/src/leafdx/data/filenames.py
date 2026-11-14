@@ -19,11 +19,16 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import PurePosixPath
 
-# Known families, observed in the Kaggle file listing (2026-11-12): 90deg, 180deg, 270deg,
-# flipLR, flipTB, new30degFlipLR, new30degFlipTB, newGRR. The pattern is slightly more general
-# (any angle, any 'new' + capitals tag) so an unseen variant is still stripped; prepare.py
-# reports counts per type so new ones are visible.
-_AUG_RE = re.compile(r"_(new\d+deg(?:Flip(?:LR|TB))?|new[A-Z]{2,5}|\d+deg|flip(?:LR|TB))$")
+# Known families: 90deg, 180deg, 270deg, flipLR, flipTB, new30degFlipLR, new30degFlipTB,
+# new90degFlipLR/TB, new200degFlipLR/TB, newGRR, newGGR and newPixel25.
+#
+# Split v1 (the one Phase 3 models were trained on) was built without the ``newPixel<n>``
+# family, which this pattern originally missed: 2,399 such copies were treated as separate
+# source photos. ``newpixel=False`` reproduces that behaviour exactly; see
+# docs/dataset_card.md section 5 for the consequences.
+_AUG_V1 = r"new\d+deg(?:Flip(?:LR|TB))?|new[A-Z]{2,5}|\d+deg|flip(?:LR|TB)"
+_AUG_RE = re.compile(rf"_({_AUG_V1}|newPixel\d+)$")
+_AUG_RE_V1 = re.compile(rf"_({_AUG_V1})$")
 
 ORIGINAL = "original"
 
@@ -34,10 +39,12 @@ class ParsedName:
     aug_type: str  # "original" or e.g. "270deg", "flipLR+90deg"
 
 
-def parse_npd_filename(filename: str) -> ParsedName:
+def parse_npd_filename(filename: str, newpixel: bool = True) -> ParsedName:
+    """Strip augmentation suffixes. ``newpixel=False`` reproduces split v1's parsing."""
+    pattern = _AUG_RE if newpixel else _AUG_RE_V1
     stem = PurePosixPath(filename).stem
     augs: list[str] = []
-    while (m := _AUG_RE.search(stem)) is not None:
+    while (m := pattern.search(stem)) is not None:
         augs.append(m.group(1))
         stem = stem[: m.start()]
     aug_type = "+".join(reversed(augs)) if augs else ORIGINAL
