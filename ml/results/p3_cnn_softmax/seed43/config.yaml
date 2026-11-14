@@ -1,0 +1,61 @@
+name: p3_cnn_softmax
+description: Paper CNN with softmax output, trained from scratch
+seed: 43
+output_dir: /kaggle/working/outputs
+data:
+  train_manifest: manifests/clean_split/train.csv
+  val_manifest: manifests/clean_split/val.csv
+  test_manifest: null
+  data_root: data
+  npd_root: /kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant
+    Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)
+  image_size: 224
+  resize_method: bilinear
+  preprocessing: rescale
+  augment_in_model: true
+augment:
+  enabled: true
+  rotation_range: 30
+  width_shift_range: 0.2
+  height_shift_range: 0.2
+  shear_range: 0.2
+  zoom_range: 0.2
+  brightness_range:
+  - 0.8
+  - 1.2
+  horizontal_flip: true
+  vertical_flip: true
+  fill_mode: nearest
+model:
+  name: paper_cnn
+  num_classes: 38
+  output_activation: softmax
+  dropout: 0.2
+  backbone: mobilenet_v1
+  alpha: 1.0
+  weights: imagenet
+  freeze_backbone: true
+train:
+  epochs: 20
+  batch_size: 32
+  optimizer: adam
+  learning_rate: 0.001
+  loss: categorical_crossentropy
+  steps_per_epoch: null
+  validation_steps: null
+  shuffle_buffer: null
+  mixed_precision: true
+  early_stopping_patience: 5
+  save_model: true
+eval:
+- name: test
+  manifest: manifests/clean_split/test.csv
+  subsets:
+    original: aug_type == 'original'
+  limit: null
+- name: plantdoc
+  manifest: manifests/plantdoc/test.csv
+  subsets:
+    exact: match == 'exact'
+    not_approximate: match != 'approximate'
+  limit: null

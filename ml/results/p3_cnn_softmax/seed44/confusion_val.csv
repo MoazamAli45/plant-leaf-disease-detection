@@ -1,0 +1,39 @@
+,Apple___Apple_scab,Apple___Black_rot,Apple___Cedar_apple_rust,Apple___healthy,Blueberry___healthy,Cherry_(including_sour)___Powdery_mildew,Cherry_(including_sour)___healthy,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)___Common_rust_,Corn_(maize)___Northern_Leaf_Blight,Corn_(maize)___healthy,Grape___Black_rot,Grape___Esca_(Black_Measles),Grape___Leaf_blight_(Isariopsis_Leaf_Spot),Grape___healthy,Orange___Haunglongbing_(Citrus_greening),Peach___Bacterial_spot,Peach___healthy,"Pepper,_bell___Bacterial_spot","Pepper,_bell___healthy",Potato___Early_blight,Potato___Late_blight,Potato___healthy,Raspberry___healthy,Soybean___healthy,Squash___Powdery_mildew,Strawberry___Leaf_scorch,Strawberry___healthy,Tomato___Bacterial_spot,Tomato___Early_blight,Tomato___Late_blight,Tomato___Leaf_Mold,Tomato___Septoria_leaf_spot,Tomato___Spider_mites Two-spotted_spider_mite,Tomato___Target_Spot,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato___Tomato_mosaic_virus,Tomato___healthy
+Apple___Apple_scab,289,3,0,26,31,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,4,0,0,2,0,0,0,0,0,0,2,0,0,0,0,0,8
+Apple___Black_rot,0,369,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Apple___Cedar_apple_rust,2,0,252,0,6,10,0,0,0,1,0,0,0,0,0,7,3,1,2,3,0,0,0,3,0,2,0,0,19,0,8,0,3,1,2,1,1,3
+Apple___healthy,0,0,0,346,18,0,1,0,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0,0,3,0,0,0,0,0,0,0,0,2,0,0,0,0
+Blueberry___healthy,0,0,0,12,319,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0,1,0,0,2,0,0,0,0,0,2,2
+Cherry_(including_sour)___Powdery_mildew,0,0,0,2,3,279,0,0,0,0,0,0,0,0,0,1,0,1,0,2,0,0,0,0,0,3,0,4,0,0,0,0,0,0,0,0,0,21
+Cherry_(including_sour)___healthy,0,0,0,1,0,0,317,0,0,0,0,0,0,0,3,0,0,0,0,21,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,0,0,0,0,0,0,0,271,3,23,0,0,0,2,0,0,0,0,0,0,3,1,0,0,0,2,0,0,1,0,2,0,0,0,0,0,0,0
+Corn_(maize)___Common_rust_,1,0,0,0,0,0,0,0,357,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Corn_(maize)___Northern_Leaf_Blight,0,0,0,0,0,0,0,15,0,332,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,6,0,0,0,0,4,0,0,0,0,0,0,0
+Corn_(maize)___healthy,0,0,0,0,0,0,0,0,0,0,348,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Grape___Black_rot,5,1,0,0,0,0,0,0,0,0,0,324,10,7,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Grape___Esca_(Black_Measles),0,0,0,0,0,0,0,0,0,0,0,6,337,5,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,4,0,0,0,0,1,0,0,0
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot),0,0,0,0,0,0,0,0,0,0,0,1,0,321,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,1,0,0,0,0,0
+Grape___healthy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,310,0,0,0,0,0,0,0,0,1,4,0,0,5,0,0,0,0,0,0,0,0,0,0
+Orange___Haunglongbing_(Citrus_greening),0,0,0,3,0,0,2,0,0,0,0,0,0,0,2,363,0,2,0,1,0,1,0,0,2,0,0,0,1,0,0,0,0,0,0,0,0,0
+Peach___Bacterial_spot,43,9,0,1,8,1,0,0,0,0,0,0,0,0,3,3,244,9,2,6,0,0,0,0,1,0,0,0,4,1,1,2,6,0,0,0,1,0
+Peach___healthy,0,0,0,11,6,0,0,0,0,0,0,0,0,0,0,0,0,301,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2
+"Pepper,_bell___Bacterial_spot",0,1,0,2,6,0,0,0,0,0,0,0,0,10,0,13,0,2,265,16,0,0,1,0,0,0,0,0,0,20,0,0,0,14,6,0,0,0
+"Pepper,_bell___healthy",0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,2,0,350,0,0,0,0,5,0,0,0,0,0,4,0,0,0,5,0,2,1
+Potato___Early_blight,0,0,0,6,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,349,4,0,0,0,0,0,0,0,3,1,0,0,0,0,0,0,0
+Potato___Late_blight,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,348,0,0,0,0,0,0,0,4,9,0,1,0,0,0,0,3
+Potato___healthy,0,0,0,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,259,5,20,0,0,2,0,0,0,0,0,12,21,0,1,7
+Raspberry___healthy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,0,0,0,1,0,0,0,269,4,3,0,12,0,0,0,0,0,1,0,0,0,1
+Soybean___healthy,0,1,0,10,0,0,2,0,0,0,0,0,0,0,8,0,0,0,0,6,0,0,3,1,343,0,0,1,0,0,0,0,0,4,0,0,0,0
+Squash___Powdery_mildew,1,0,0,1,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,312,0,0,0,0,0,0,0,0,0,0,0,9
+Strawberry___Leaf_scorch,1,0,0,0,0,0,0,0,0,2,0,1,3,25,0,0,6,0,0,0,18,4,0,0,0,0,243,0,0,19,1,0,6,0,4,0,0,1
+Strawberry___healthy,0,0,0,6,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,302,0,0,0,0,0,0,0,0,0,1
+Tomato___Bacterial_spot,0,0,0,0,0,0,0,1,0,0,0,1,0,2,2,0,0,0,0,0,0,0,0,0,3,0,0,0,282,17,5,0,4,0,3,0,0,0
+Tomato___Early_blight,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,21,0,2,0,0,0,0,2,300,11,0,0,2,0,9,0,0
+Tomato___Late_blight,2,0,0,0,0,2,0,0,0,0,0,0,0,0,4,7,1,0,0,7,0,1,0,0,0,16,0,2,4,2,240,0,1,10,1,0,0,46
+Tomato___Leaf_Mold,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,2,327,1,5,1,0,1,9
+Tomato___Septoria_leaf_spot,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,28,5,20,255,1,5,0,5,5
+Tomato___Spider_mites Two-spotted_spider_mite,0,0,0,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,1,275,12,0,0,29
+Tomato___Target_Spot,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,21,261,0,2,49
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,1,0,0,0,0,17,0,1,1,0,7,0,286,0,0
+Tomato___Tomato_mosaic_virus,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,8,28,0,294,3
+Tomato___healthy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,356

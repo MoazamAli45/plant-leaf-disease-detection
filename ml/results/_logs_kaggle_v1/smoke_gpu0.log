@@ -1,0 +1,24 @@
+
+>>> --config configs/phase3/efficientnet_b0.yaml --set data.npd_root=/kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented) output_dir=/kaggle/working/smoke train.epochs=1 train.steps_per_epoch=5 train.validation_steps=2 train.save_model=false seed=0 eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}]
+Downloading data from https://storage.googleapis.com/keras-applications/efficientnetb0_notop.h5
+[1m       0/16705208[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step[1m10436608/16705208[0m [32m━━━━━━━━━━━━[0m[37m━━━━━━━━[0m [1m0s[0m 0us/step[1m16705208/16705208[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+INFO model efficientnet_b0: 4098249 params (4056226 trainable)
+5/5 - 76s - 15s/step - accuracy: 0.0500 - loss: 3.7793 - val_accuracy: 0.0469 - val_loss: 3.7247 - epoch_seconds: 75.2225
+INFO done: {"last_epoch": {"accuracy": 0.05000000074505806, "loss": 3.779339551925659, "val_accuracy": 0.046875, "val_loss": 3.724729061126709, "epoch_seconds": 75.22249045099994}}
+[gpu0] OK  configs/phase3/efficientnet_b0.yaml eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}] in 5.1 min
+
+>>> --config configs/phase3/mobilenet_v2.yaml --set data.npd_root=/kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented) output_dir=/kaggle/working/smoke train.epochs=1 train.steps_per_epoch=5 train.validation_steps=2 train.save_model=false seed=0 eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}]
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v2/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224_no_top.h5
+[1m      0/9406464[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step[1m5619712/9406464[0m [32m━━━━━━━━━━━[0m[37m━━━━━━━━━[0m [1m0s[0m 0us/step[1m9406464/9406464[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+INFO model mobilenet_v2: 2306662 params (2272550 trainable)
+5/5 - 59s - 12s/step - accuracy: 0.0250 - loss: 3.9452 - val_accuracy: 0.0312 - val_loss: 3.8508 - epoch_seconds: 59.1730
+INFO done: {"last_epoch": {"accuracy": 0.02500000037252903, "loss": 3.9452176094055176, "val_accuracy": 0.03125, "val_loss": 3.8507776260375977, "epoch_seconds": 59.173036987000046}}
+[gpu0] OK  configs/phase3/mobilenet_v2.yaml eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}] in 2.0 min
+
+>>> --config configs/phase3/mobilenet_v3_small.yaml --set data.npd_root=/kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented) output_dir=/kaggle/working/smoke train.epochs=1 train.steps_per_epoch=5 train.validation_steps=2 train.save_model=false seed=0 eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}]
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v3/weights_mobilenet_v3_small_224_1.0_float_no_top_v2.h5
+[1m      0/4334752[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step[1m4334752/4334752[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+INFO model mobilenet_v3_small: 961046 params (948934 trainable)
+5/5 - 45s - 9s/step - accuracy: 0.0250 - loss: 4.2884 - val_accuracy: 0.0469 - val_loss: 4.0850 - epoch_seconds: 44.5765
+INFO done: {"last_epoch": {"accuracy": 0.02500000037252903, "loss": 4.288364410400391, "val_accuracy": 0.046875, "val_loss": 4.085025787353516, "epoch_seconds": 44.57649338700003}}
+[gpu0] OK  configs/phase3/mobilenet_v3_small.yaml eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}] in 1.4 min
