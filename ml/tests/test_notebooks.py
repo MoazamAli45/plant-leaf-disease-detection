@@ -50,4 +50,4 @@ def test_batches_reference_existing_configs():
     for configs in ns["BATCHES"].values():
         for c in configs:
             assert (root / c).exists(), c
-    assert ns["TAG"] == "main_seed42"
+    assert ns["TAG"] == f"{ns['BATCH']}_seed{'-'.join(map(str, ns['SEEDS']))}"

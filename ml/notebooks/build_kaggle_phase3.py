@@ -19,14 +19,15 @@ and on **PlantDoc** field images, and packs the results for download.
 **Setup:** *Accelerator* **GPU T4 x2**, *Internet* **on**, *Add Input* **New Plant Diseases
 Dataset** (vipoooool).
 
-In the settings cell, choose `BATCH` and **one** seed, then **Save Version → Save & Run All
-(Commit)**. Repeat for seeds 42, 43 and 44; each version stays well under Kaggle's 12-hour
-limit.
+In the settings cell, choose `BATCH` and `SEEDS`, then **Save Version → Save & Run All
+(Commit)**. Kaggle stops a session after 12 hours, so keep each version within the times below
+(measured on 2 × T4; two runs go in parallel).
 
-| `BATCH` | runs per seed |
-|---|---|
-| `"main"` | 5 models: paper CNN (softmax), MobileNetV1, V2, V3-Small, EfficientNetB0 |
-| `"ablations"` | 4 MobileNetV1 variants: no augmentation, frozen backbone, width 0.75, width 0.5 |
+| `BATCH` | runs per seed | `SEEDS` per version | about |
+|---|---|---|---|
+| `"main"` | 5 models: paper CNN (softmax), MobileNetV1, V2, V3-Small, EfficientNetB0 | one seed | 5–6 h |
+| `"mnv3"` | MobileNetV3-Small only | `[42, 43, 44]` | 2.5 h |
+| `"ablations"` | 4 MobileNetV1 variants: no augmentation, frozen backbone, width 0.75, width 0.5 | at most two seeds | 3 h per seed |
 
 What happens:
 1. **Smoke pass:** every config trains for a few steps (a few minutes), so a bug fails
@@ -41,8 +42,8 @@ What happens:
 SETTINGS = '''# ---- settings ---------------------------------------------------------------------------
 REPO_URL = "https://github.com/MoazamAli45/plant-leaf-disease-detection.git"
 BRANCH = "main"
-BATCH = "main"          # "main" or "ablations"
-SEEDS = [42]            # ONE seed per version: run three versions with [42], [43], [44]
+BATCH = "mnv3"          # "main", "mnv3" or "ablations"
+SEEDS = [42, 43, 44]    # see the table in the first cell for what fits in one version
 SMOKE_TEST = True       # quick pass over every config before the real runs
 START_DEADLINE_H = 9.0  # no new run starts after this (Kaggle stops sessions at 12 h)
 
@@ -53,6 +54,10 @@ BATCHES = {
         "configs/phase3/mobilenet_v1.yaml": 2,
         "configs/phase3/mobilenet_v2.yaml": 2,
         "configs/phase3/cnn_softmax.yaml": 2,
+        "configs/phase3/mobilenet_v3_small.yaml": 1,
+    },
+    # MobileNetV3-Small alone: the three runs cut off by the first (12 h) version
+    "mnv3": {
         "configs/phase3/mobilenet_v3_small.yaml": 1,
     },
     "ablations": {
