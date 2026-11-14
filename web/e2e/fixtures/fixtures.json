@@ -1,0 +1,22 @@
+{
+ "tomato-early-blight.jpg": {
+  "class": "Tomato___Early_blight",
+  "source_path": "raw/npd/valid/Tomato___Early_blight/64fade29-cabf-4ec2-a5cf-8c7aeca19eea___RS_Erly.B 6427.JPG",
+  "keras_prob": 1.0
+ },
+ "apple-apple-scab.jpg": {
+  "class": "Apple___Apple_scab",
+  "source_path": "raw/npd/train/Apple___Apple_scab/ba94f188-df0b-41fd-94e3-f0ed4924e23e___FREC_Scab 3102.JPG",
+  "keras_prob": 1.0
+ },
+ "grape-healthy.jpg": {
+  "class": "Grape___healthy",
+  "source_path": "raw/npd/train/Grape___healthy/69a50f71-f8ee-4280-ac3e-c1d68e950c2e___Mt.N.V_HL 6165.JPG",
+  "keras_prob": 1.0
+ },
+ "grey-wall.jpg": {
+  "class": null,
+  "note": "synthetic grey image, not a leaf"
+ },
+ "_license": "Leaf photos: PlantVillage (Hughes & Salathe 2015) via the New Plant Diseases Dataset, CC BY-SA 3.0."
+}

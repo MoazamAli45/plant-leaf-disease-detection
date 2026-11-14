@@ -1,0 +1,756 @@
+{
+  "meta": {
+    "review_status": "draft",
+    "review_note": "Written from the cited university extension and plant-pathology sources (searched 2026-11-14). Not yet reviewed by a plant pathologist or agronomist. Product names and rates are deliberately omitted: they change by region and over time.",
+    "disclaimer": "This information is for learning and research only. It is not agronomic advice. Confirm any diagnosis with a local extension office or plant diagnostic clinic, and follow current local recommendations and product labels."
+  },
+  "classes": [
+    {
+      "class": "Apple___Apple_scab",
+      "slug": "apple-scab",
+      "crop": "Apple",
+      "name": "Apple scab",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Venturia inaequalis",
+      "summary": "A common fungal disease of apple and crabapple that spots leaves and fruit. Severe leaf infection can cause early leaf drop.",
+      "symptoms": [
+        "Olive-green spots with feathery, poorly defined edges on leaves, later turning brown to black and merging.",
+        "Dark, scabby lesions on fruit; badly affected fruit can be deformed and drop early.",
+        "Heavy infections can defoliate trees, which can reduce flower bud formation for the next season."
+      ],
+      "conditions": "The fungus overwinters in fallen infected leaves. Spores released in spring infect new growth during wet weather.",
+      "management": [
+        "Rake up and remove or shred fallen leaves in autumn to reduce the spores available next spring.",
+        "Plant scab-resistant cultivars where possible; most major commercial cultivars are susceptible.",
+        "Where needed, protectant fungicides are timed to spring infection periods; weather-based risk models help with timing. The fungus can develop fungicide resistance, so check current local guidance and labels (many products are not for fruit that will be eaten)."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Apple IPM: Apple scab", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/fruit/fact-sheets/apple-ipm-apple-scab"},
+        {"title": "Apple scab (Venturia inaequalis) fact sheet", "publisher": "Cornell CALS Integrated Pest Management", "url": "https://cals.cornell.edu/integrated-pest-management/outreach-education/fact-sheets/apple-scab-fruit-fact-sheet"},
+        {"title": "Apple scab", "publisher": "UMass Extension (landscape)", "url": "https://www.umass.edu/agriculture-food-environment/landscape/fact-sheets/apple-scab"}
+      ]
+    },
+    {
+      "class": "Apple___Black_rot",
+      "slug": "apple-black-rot",
+      "crop": "Apple",
+      "name": "Black rot (frogeye leaf spot)",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Diplodia seriata (syn. Botryosphaeria obtusa)",
+      "summary": "One fungus causes three problems on apple: frogeye leaf spot on leaves, black rot on fruit, and cankers on limbs.",
+      "symptoms": [
+        "Leaves: small purple spots whose centres turn brown or tan while the margin stays purple (\"frogeye\").",
+        "Fruit: rot that usually starts at the blossom end.",
+        "Branches: cankers and dieback of twigs and limbs."
+      ],
+      "conditions": "Leaf infection usually occurs around petal fall. The fungus survives in cankers, dead wood and mummified fruit.",
+      "management": [
+        "Prune out dead wood and cankers and remove mummified fruit; these cultural steps are the main control for cankers.",
+        "Fungicides do not control cankers. Some fungicides protect fruit; check current local recommendations before spraying."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Pome fruit disease: black rot and frogeye leaf spot", "publisher": "Penn State Extension", "url": "https://extension.psu.edu/pome-fruit-disease-black-rot-and-frogeye-leaf-spot"},
+        {"title": "Black rot, frogeye leaf spot and white rot of apple (PPFS-FR-T-03)", "publisher": "University of Kentucky", "url": "https://publications.ca.uky.edu/sites/publications.ca.uky.edu/files/ppfs-fr-t-03.pdf"},
+        {"title": "Black rot of apple (PLPATH-FRU-07)", "publisher": "Ohio State University Extension", "url": "https://ohioline.osu.edu/factsheet/plpath-fru-07"}
+      ]
+    },
+    {
+      "class": "Apple___Cedar_apple_rust",
+      "slug": "apple-cedar-apple-rust",
+      "crop": "Apple",
+      "name": "Cedar apple rust",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Gymnosporangium juniperi-virginianae",
+      "summary": "A rust fungus that needs two hosts: junipers (eastern red cedar) and apples or crabapples.",
+      "symptoms": [
+        "Bright yellow-orange spots on apple leaves, often with small dark dots in the centre.",
+        "On junipers, brown galls that swell into orange, jelly-like horns in wet spring weather."
+      ],
+      "conditions": "Spores from juniper galls infect young apple leaves in wet spring weather. The full cycle takes two years and both hosts.",
+      "management": [
+        "Prune out galls on nearby junipers before they form horns in spring.",
+        "Choose rust-resistant apple, crabapple and juniper cultivars.",
+        "Early-spring fungicide protection of young leaves is used where needed; scab programs often cover this disease too. In many landscapes it causes little lasting damage."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Cedar apple rusts", "publisher": "NC State Extension", "url": "https://content.ces.ncsu.edu/cedar-apple-rusts"},
+        {"title": "Cedar apple rust", "publisher": "University of Illinois Extension", "url": "https://extension.illinois.edu/plant-problems/cedar-apple-rust"},
+        {"title": "Cedar apple rust", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/landscape/fact-sheets/cedar-apple-rust"}
+      ]
+    },
+    {
+      "class": "Apple___healthy",
+      "slug": "apple-healthy",
+      "crop": "Apple",
+      "name": "Healthy apple leaf",
+      "healthy": true
+    },
+    {
+      "class": "Blueberry___healthy",
+      "slug": "blueberry-healthy",
+      "crop": "Blueberry",
+      "name": "Healthy blueberry leaf",
+      "healthy": true
+    },
+    {
+      "class": "Cherry_(including_sour)___Powdery_mildew",
+      "slug": "cherry-powdery-mildew",
+      "crop": "Cherry",
+      "name": "Powdery mildew of cherry",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Podosphaera cerasi (formerly treated as P. clandestina)",
+      "summary": "A fungus that grows as a white, powdery layer on cherry leaves and fruit.",
+      "symptoms": [
+        "White, powdery patches on leaves, which may curl or pucker.",
+        "Powdery spots on fruit; fruit is most susceptible until pit hardening."
+      ],
+      "conditions": "Favoured by moderate to warm, humid weather (about 15–25 °C).",
+      "management": [
+        "Plant less susceptible varieties where available.",
+        "Where needed, fungicide programs typically start around petal fall and continue to pit hardening; resistance to some fungicide groups has been reported, so rotate modes of action and follow local guidance."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Powdery mildew of cherry", "publisher": "Michigan State University IPM", "url": "https://www.canr.msu.edu/ipm/diseases/powdery_mildew_of_cherry"},
+        {"title": "Powdery mildew of cherry and plum in home fruit plantings", "publisher": "Penn State Extension", "url": "https://extension.psu.edu/powdery-mildew-of-cherry-and-plum-in-home-fruit-plantings"},
+        {"title": "Powdery mildew (sweet cherries)", "publisher": "BC Tree Fruit Production Guide", "url": "https://bctfpg.ca/pest_guide/info/101"}
+      ]
+    },
+    {
+      "class": "Cherry_(including_sour)___healthy",
+      "slug": "cherry-healthy",
+      "crop": "Cherry",
+      "name": "Healthy cherry leaf",
+      "healthy": true
+    },
+    {
+      "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "slug": "corn-gray-leaf-spot",
+      "crop": "Corn (maize)",
+      "name": "Gray leaf spot",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Cercospora zeae-maydis",
+      "summary": "A common foliar disease of corn that can cause yield loss when weather favours it.",
+      "symptoms": [
+        "Rectangular, tan to gray lesions bounded by leaf veins.",
+        "Early lesions are small and can be confused with other leaf diseases."
+      ],
+      "conditions": "The fungus survives in corn residue, so the disease is often worse in corn following corn. Warm temperatures and long periods of high humidity favour it.",
+      "management": [
+        "Plant resistant hybrids.",
+        "Rotate crops and manage residue to reduce surviving fungus.",
+        "Foliar fungicides labelled for gray leaf spot are available; use local thresholds and guidance."
+      ],
+      "lookalikes": ["Anthracnose leaf blight", "Eyespot", "Common rust (early lesions)"],
+      "sources": [
+        {"title": "Gray leaf spot of corn", "publisher": "Crop Protection Network", "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn"},
+        {"title": "Gray leaf spot", "publisher": "University of Delaware Cooperative Extension", "url": "https://udel.edu/academics/colleges/canr/cooperative-extension/fact-sheets/gray-leaf-spot"}
+      ]
+    },
+    {
+      "class": "Corn_(maize)___Common_rust_",
+      "slug": "corn-common-rust",
+      "crop": "Corn (maize)",
+      "name": "Common rust",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Puccinia sorghi",
+      "summary": "A rust fungus that appears most seasons but is seldom a serious problem in field (hybrid) corn.",
+      "symptoms": [
+        "Small, cinnamon-brown, powdery pustules on both leaf surfaces.",
+        "Husks, leaf sheaths and stalks can also be infected."
+      ],
+      "conditions": "Favoured by cool weather (about 16–25 °C) with moisture. In northern regions spores arrive on the wind from the south each year.",
+      "management": [
+        "Resistant hybrids and inbreds are available.",
+        "Fungicides are rarely needed, except on susceptible hybrids or specialty corn (seed or sweet corn) under very favourable conditions."
+      ],
+      "lookalikes": ["Southern rust"],
+      "sources": [
+        {"title": "Common rust of corn", "publisher": "Crop Protection Network", "url": "https://cropprotectionnetwork.org/encyclopedia/common-rust-of-corn"},
+        {"title": "Common and southern rust in field corn", "publisher": "Clemson Cooperative Extension", "url": "https://lgpress.clemson.edu/publication/common-and-southern-rust-in-field-corn/"}
+      ]
+    },
+    {
+      "class": "Corn_(maize)___Northern_Leaf_Blight",
+      "slug": "corn-northern-leaf-blight",
+      "crop": "Corn (maize)",
+      "name": "Northern corn leaf blight",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Exserohilum turcicum (syn. Setosphaeria turcica)",
+      "summary": "A yield-limiting leaf disease of corn in North America.",
+      "symptoms": [
+        "Long, cigar-shaped, gray-green to tan lesions on leaves.",
+        "Symptoms vary with hybrid resistance and the race of the fungus."
+      ],
+      "conditions": "The fungus overwinters in corn residue. Infection needs free water on leaves for about 6–18 hours at about 18–27 °C.",
+      "management": [
+        "Plant hybrids with resistance (race-specific Ht genes or broader polygenic resistance).",
+        "Crop rotation and residue reduction lower the amount of fungus.",
+        "Several foliar fungicides are labelled for this disease; consult local specialists."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "An overview of northern corn leaf blight", "publisher": "Crop Protection Network", "url": "https://cropprotectionnetwork.org/publications/an-overview-of-northern-corn-leaf-blight"},
+        {"title": "Northern corn leaf blight (PPFS-AG-C-10)", "publisher": "University of Kentucky", "url": "https://publications.ca.uky.edu/sites/publications.ca.uky.edu/files/ppfs-ag-c-10.pdf"}
+      ]
+    },
+    {
+      "class": "Corn_(maize)___healthy",
+      "slug": "corn-healthy",
+      "crop": "Corn (maize)",
+      "name": "Healthy corn leaf",
+      "healthy": true
+    },
+    {
+      "class": "Grape___Black_rot",
+      "slug": "grape-black-rot",
+      "crop": "Grape",
+      "name": "Black rot of grape",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Guignardia bidwellii",
+      "summary": "A serious fungal disease of grape leaves, shoots and especially fruit in warm, wet regions.",
+      "symptoms": [
+        "Brown leaf spots with dark borders and tiny black specks (fruiting bodies).",
+        "Infected berries shrivel into hard, black \"mummies\"."
+      ],
+      "conditions": "The fungus overwinters in mummified berries and infected tissue. Extended wet weather favours infection; leaves wet for about six hours at around 27 °C can be infected.",
+      "management": [
+        "Sanitation is the most important step: remove mummies and infected canes before spring.",
+        "Manage the canopy and choose sites with good air movement so leaves dry quickly.",
+        "Protective fungicides work best when started early in spring and timed ahead of rain; check current local guides for products."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Grape IPM: Black rot", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/fruit/fact-sheets/grape-ipm-black-rot"},
+        {"title": "Black rot of grapes (EPP-7643)", "publisher": "Oklahoma State University Extension", "url": "https://extension.okstate.edu/fact-sheets/black-rot-of-grapes.html"},
+        {"title": "Black rot of grape (Fact Sheet 5106)", "publisher": "University of Maine Cooperative Extension", "url": "https://extension.umaine.edu/ipm/ipddl/publications/5106e/"}
+      ]
+    },
+    {
+      "class": "Grape___Esca_(Black_Measles)",
+      "slug": "grape-esca",
+      "crop": "Grape",
+      "name": "Esca (black measles)",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "A complex of wood-infecting fungi, including Phaeomoniella chlamydospora and Phaeoacremonium species",
+      "summary": "A trunk disease of grapevines caused by several fungi that enter through pruning wounds.",
+      "symptoms": [
+        "Leaves with stripes between the veins that dry and turn brown (\"tiger stripes\"), peaking in mid-summer.",
+        "Small dark spots on berries, sometimes ringed brown-purple; badly affected berries may crack.",
+        "A severe form (apoplexy) causes sudden dieback of shoots."
+      ],
+      "conditions": "Spores infect fresh pruning wounds, which can stay susceptible for months after pruning.",
+      "management": [
+        "Protect pruning wounds and prune at times when infection risk is low; follow local vineyard guidelines.",
+        "Confirm the diagnosis with a lab: symptoms are hard to link to a single fungus."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Esca (black measles): Grape pest management guidelines", "publisher": "UC IPM (University of California)", "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/"},
+        {"title": "Grapevine decline or esca", "publisher": "Michigan State University IPM", "url": "https://canr.msu.edu/ipm/diseases/grapevine_decline_or_esca"}
+      ]
+    },
+    {
+      "class": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "slug": "grape-leaf-blight",
+      "crop": "Grape",
+      "name": "Leaf blight (Isariopsis leaf spot)",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Pseudocercospora vitis (formerly Isariopsis vitis)",
+      "summary": "A fungal leaf spot of grapevines, important mainly in warm, humid regions.",
+      "symptoms": [
+        "Small chlorotic, angular spots that grow into large dark brown to black spots.",
+        "Heavy infection can cause leaves to drop early."
+      ],
+      "conditions": "Primary infections can start from budburst; the fungus survives on infected leaves.",
+      "management": [
+        "Where the disease is a problem, preventive fungicide programs from bud break are used; programs started late in the season have been ineffective.",
+        "Sprays for other grape diseases may also help; rotate modes of action and follow local guidance."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "North Carolina Winegrape Grower's Guide, chapter 8: Pest management", "publisher": "NC State Extension", "url": "https://content.ces.ncsu.edu/pdf/chapter-8-pest-management/2014-10-16/winegrapes8.pdf"},
+        {"title": "Grape: diseases and pests", "publisher": "PlantVillage, Penn State", "url": "https://plantvillage.psu.edu/topics/grape/infos"},
+        {"title": "Pseudocercospora vitis (MYCOPS)", "publisher": "EPPO Global Database", "url": "https://qbank.eppo.int/fungi/taxon/MYCOPS/"}
+      ]
+    },
+    {
+      "class": "Grape___healthy",
+      "slug": "grape-healthy",
+      "crop": "Grape",
+      "name": "Healthy grape leaf",
+      "healthy": true
+    },
+    {
+      "class": "Orange___Haunglongbing_(Citrus_greening)",
+      "slug": "orange-huanglongbing",
+      "crop": "Orange",
+      "name": "Huanglongbing (citrus greening)",
+      "healthy": false,
+      "agent_type": "bacterium (insect-vectored)",
+      "pathogen": "Candidatus Liberibacter asiaticus, spread by the Asian citrus psyllid",
+      "summary": "A devastating bacterial disease of citrus spread by a small insect, the Asian citrus psyllid. There is no cure for infected trees.",
+      "symptoms": [
+        "Blotchy, asymmetric yellow mottling of leaves.",
+        "Severe symptoms on sweet orange, mandarins and their hybrids."
+      ],
+      "conditions": "All citrus species can be infected. Diagnosis needs laboratory testing (PCR): nutrient deficiencies are easily confused with greening.",
+      "management": [
+        "Report suspected cases to local authorities or extension; in many regions the disease is regulated.",
+        "Control of the psyllid vector (especially protecting new flush on young trees) is central to management.",
+        "Use certified clean nursery trees."
+      ],
+      "lookalikes": ["Nutrient deficiencies (e.g. zinc)"],
+      "sources": [
+        {"title": "2025–2026 Florida Citrus Production Guide: Huanglongbing (CG086)", "publisher": "UF/IFAS EDIS", "url": "https://edis.ifas.ufl.edu/publication/CG086/pdf"},
+        {"title": "Huanglongbing (citrus greening)", "publisher": "UF/IFAS Citrus Research and Education Center", "url": "https://citrusresearch.ifas.ufl.edu/pest-management/diseases/huanglongbing/"}
+      ]
+    },
+    {
+      "class": "Peach___Bacterial_spot",
+      "slug": "peach-bacterial-spot",
+      "crop": "Peach",
+      "name": "Bacterial spot of peach",
+      "healthy": false,
+      "agent_type": "bacterium",
+      "pathogen": "Xanthomonas arboricola pv. pruni",
+      "summary": "A bacterial disease of peach, nectarine, plum and apricot that spots leaves, twigs and fruit.",
+      "symptoms": [
+        "Small, angular, water-soaked leaf spots that turn dark and may fall out, leaving \"shot holes\".",
+        "Pitting or cracking on fruit infected early in the season; shallower spots later."
+      ],
+      "conditions": "Bacteria overwinter in twig cankers and spread by wind-driven rain. Sandy soils, stressed trees and blowing sand make it worse.",
+      "management": [
+        "Plant less susceptible cultivars (few are fully resistant).",
+        "Use windbreaks and reduce dust from field roads.",
+        "Copper or antibiotic sprays are preventive, not curative; follow local guidance and forecast models."
+      ],
+      "lookalikes": ["Peach scab", "Copper spray injury"],
+      "sources": [
+        {"title": "Bacterial spot of peach and plum", "publisher": "Michigan State University IPM", "url": "https://www.canr.msu.edu/ipm/agriculture/fruit/bacterial_spot_of_peach_and_plum"},
+        {"title": "Bacterial spot treatment in peaches (ANR-2962)", "publisher": "Alabama Cooperative Extension System", "url": "https://www.aces.edu/blog/topics/crop-production/bacterial-spot-treatment-in-peaches/"},
+        {"title": "Bacterial spot on stonefruit trees", "publisher": "Iowa State University Extension", "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/bacterial-spot-stonefruit-trees"}
+      ]
+    },
+    {
+      "class": "Peach___healthy",
+      "slug": "peach-healthy",
+      "crop": "Peach",
+      "name": "Healthy peach leaf",
+      "healthy": true
+    },
+    {
+      "class": "Pepper,_bell___Bacterial_spot",
+      "slug": "pepper-bacterial-spot",
+      "crop": "Bell pepper",
+      "name": "Bacterial leaf spot of pepper",
+      "healthy": false,
+      "agent_type": "bacterium",
+      "pathogen": "Xanthomonas species (mainly X. euvesicatoria on pepper)",
+      "summary": "One of the most common and destructive pepper diseases in warm, wet regions.",
+      "symptoms": [
+        "Small water-soaked leaf spots that turn brown; leaves become ragged and may drop.",
+        "Raised, scabby, dark spots on fruit; leaf loss exposes fruit to sunscald."
+      ],
+      "conditions": "Often starts from infected seed. Warm (about 25–30 °C), wet weather favours spread.",
+      "management": [
+        "Use certified disease-free seed and transplants.",
+        "Plant resistant varieties (some strains can overcome resistance genes).",
+        "Remove infected plants; copper sprays help but are not very effective used alone."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Bacterial leaf spot of pepper", "publisher": "West Virginia University Extension", "url": "https://extension.wvu.edu/lawn-gardening-pests/plant-disease/fruit-vegetable-diseases/bacterial-leaf-spot-of-pepper"},
+        {"title": "Bacterial spot of pepper and tomato (PPFS-VG-17)", "publisher": "University of Kentucky", "url": "https://publications.o2.boa.ca.uky.edu/sites/publications.ca.uky.edu/files/ppfs-vg-17.pdf"},
+        {"title": "Bacterial spot of pepper (PP362)", "publisher": "UF/IFAS EDIS", "url": "https://edis.ifas.ufl.edu/publication/PP362/pdf"}
+      ]
+    },
+    {
+      "class": "Pepper,_bell___healthy",
+      "slug": "pepper-healthy",
+      "crop": "Bell pepper",
+      "name": "Healthy bell pepper leaf",
+      "healthy": true
+    },
+    {
+      "class": "Potato___Early_blight",
+      "slug": "potato-early-blight",
+      "crop": "Potato",
+      "name": "Early blight of potato",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Alternaria solani",
+      "summary": "A common leaf disease of potato (and tomato) that can defoliate plants and reduce yield.",
+      "symptoms": [
+        "Dark brown leaf spots with concentric rings (\"target\" pattern), often with a yellow halo, starting on older leaves.",
+        "Spots usually appear as the plant canopy begins to close."
+      ],
+      "conditions": "The fungus survives on infected plant debris and spreads in warm, humid weather.",
+      "management": [
+        "Rotate away from potato, tomato and eggplant for about three years.",
+        "Remove infected debris and keep plants vigorous.",
+        "Protectant fungicides are used where needed; resistance to some fungicide groups has been reported, so follow local guides."
+      ],
+      "lookalikes": ["Septoria leaf spot (on tomato)", "Late blight"],
+      "sources": [
+        {"title": "Early blight of potatoes and tomatoes (Bulletin 5087)", "publisher": "University of Maine Cooperative Extension", "url": "https://extension.umaine.edu/ipm/?p=4592"},
+        {"title": "Potato early blight", "publisher": "University of Wisconsin Vegetable Pathology", "url": "https://vegpath.plantpath.wisc.edu/diseases/potato-early-blight"},
+        {"title": "Solanaceous crops: early blight", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/solanaceous-early-blight"}
+      ]
+    },
+    {
+      "class": "Potato___Late_blight",
+      "slug": "potato-late-blight",
+      "crop": "Potato",
+      "name": "Late blight of potato",
+      "healthy": false,
+      "agent_type": "oomycete (water mould)",
+      "pathogen": "Phytophthora infestans",
+      "summary": "A fast-spreading disease of potato and tomato, best known as the cause of the Irish potato famine. It can spread from gardens to farms.",
+      "symptoms": [
+        "Large, dark, water-soaked leaf lesions that spread quickly; white growth may appear on leaf undersides in humid weather.",
+        "Brown rot on tubers."
+      ],
+      "conditions": "Cool (below about 25 °C), wet weather with rain, fog or heavy dew. Survives in infected tubers and cull piles; spores travel long distances on wind.",
+      "management": [
+        "Plant certified seed potatoes; remove volunteer plants, cull piles and all infected debris.",
+        "Scout often in wet weather and confirm suspected cases with an extension office.",
+        "Fungicides work best preventively; ask local extension which products are currently recommended."
+      ],
+      "lookalikes": ["Early blight", "Leaf mold", "Septoria leaf spot", "Bacterial diseases"],
+      "sources": [
+        {"title": "Late blight on tomatoes and potatoes", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/home-lawn-garden/fact-sheets/late-blight-on-tomatoes-potatoes"},
+        {"title": "Late blight in the home garden (BUL 1022)", "publisher": "University of Idaho Extension", "url": "https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/publications/bul/bul1022.PDF?la=en"},
+        {"title": "Potato late blight", "publisher": "University of Wisconsin–Madison Extension", "url": "https://barron.extension.wisc.edu/files/2023/02/Potato-Late-Blight.pdf"}
+      ]
+    },
+    {
+      "class": "Potato___healthy",
+      "slug": "potato-healthy",
+      "crop": "Potato",
+      "name": "Healthy potato leaf",
+      "healthy": true
+    },
+    {
+      "class": "Raspberry___healthy",
+      "slug": "raspberry-healthy",
+      "crop": "Raspberry",
+      "name": "Healthy raspberry leaf",
+      "healthy": true
+    },
+    {
+      "class": "Soybean___healthy",
+      "slug": "soybean-healthy",
+      "crop": "Soybean",
+      "name": "Healthy soybean leaf",
+      "healthy": true
+    },
+    {
+      "class": "Squash___Powdery_mildew",
+      "slug": "squash-powdery-mildew",
+      "crop": "Squash",
+      "name": "Powdery mildew of squash",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Podosphaera xanthii (and Golovinomyces species)",
+      "summary": "A very common fungal disease of squash, pumpkin and other cucurbits.",
+      "symptoms": [
+        "Small, round, white powdery spots, first on the upper leaf surface, that spread to cover leaves.",
+        "Fruit is not attacked directly, but leaf loss can cause sunscald and poorer storage."
+      ],
+      "conditions": "Favoured by humidity or dew and temperatures of about 20–27 °C.",
+      "management": [
+        "Plant resistant (tolerant) cultivars.",
+        "Rotate away from cucurbits and remove crop debris after harvest.",
+        "Scout regularly; fungicide programs typically begin when mildew is first found (one guide uses about 1 in 50 leaves)."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Cucurbits: powdery mildew", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/cucurbits-powdery-mildew"},
+        {"title": "Powdery mildew of cucurbits", "publisher": "University of Minnesota Extension", "url": "https://extension.umn.edu/disease-management/powdery-mildew-cucurbits"},
+        {"title": "Powdery mildew of cucurbits", "publisher": "UConn Home & Garden Education Center", "url": "https://homegarden.cahnr.uconn.edu/factsheets/powdery-mildew-of-cucurbits/"}
+      ]
+    },
+    {
+      "class": "Strawberry___Leaf_scorch",
+      "slug": "strawberry-leaf-scorch",
+      "crop": "Strawberry",
+      "name": "Leaf scorch of strawberry",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Diplocarpon earlianum",
+      "summary": "A common fungal leaf disease of strawberry, especially in perennial matted-row plantings.",
+      "symptoms": [
+        "Small purple to brown spots with indistinct borders on upper leaf surfaces.",
+        "Spots merge until leaves turn brown, dry and curl at the edges, looking scorched."
+      ],
+      "conditions": "Long periods of leaf wetness, frequent rain and temperatures of about 15–25 °C.",
+      "management": [
+        "Choose resistant cultivars suited to your area.",
+        "Avoid excess spring nitrogen, which produces tender, susceptible leaves.",
+        "Fungicides used for other strawberry diseases can reduce leaf scorch; follow local spray guides."
+      ],
+      "lookalikes": ["Common leaf spot"],
+      "sources": [
+        {"title": "Leaf scorch of strawberry", "publisher": "NC State Extension", "url": "https://content.ces.ncsu.edu/leaf-scorch-of-strawberry"},
+        {"title": "Leaf scorch of strawberry (PP359)", "publisher": "UF/IFAS EDIS", "url": "https://edis.ifas.ufl.edu/publication/PP359"},
+        {"title": "Strawberry leaf diseases (RPD 702)", "publisher": "University of Illinois", "url": "https://ipm.illinois.edu/diseases/series700/rpd702/"}
+      ]
+    },
+    {
+      "class": "Strawberry___healthy",
+      "slug": "strawberry-healthy",
+      "crop": "Strawberry",
+      "name": "Healthy strawberry leaf",
+      "healthy": true
+    },
+    {
+      "class": "Tomato___Bacterial_spot",
+      "slug": "tomato-bacterial-spot",
+      "crop": "Tomato",
+      "name": "Bacterial spot of tomato",
+      "healthy": false,
+      "agent_type": "bacterium",
+      "pathogen": "Xanthomonas species (X. vesicatoria, X. euvesicatoria, X. gardneri, X. perforans)",
+      "summary": "A bacterial disease of tomato and pepper that usually starts from infected seed or transplants.",
+      "symptoms": [
+        "Small, dark, water-soaked spots on leaves, sometimes with yellow halos.",
+        "Raised, scabby spots on fruit."
+      ],
+      "conditions": "Warm, wet weather and overhead water spread the bacteria. A single infected seed can start an outbreak.",
+      "management": [
+        "Start with certified disease-free or treated seed and clean transplants.",
+        "Copper (often mixed with mancozeb) applied early may slow spread, but copper-tolerant strains are common and sprays do little once disease is established."
+      ],
+      "lookalikes": ["Bacterial speck", "Target spot", "Early blight"],
+      "sources": [
+        {"title": "Bacterial spot of tomato", "publisher": "Ohio State University Vegetable Disease Facts", "url": "https://u.osu.edu/vegetablediseasefacts/?p=209"},
+        {"title": "Bacterial spot of tomato", "publisher": "University of Wisconsin Plant Disease Diagnostics Clinic", "url": "https://pddc.wisc.edu/2017/02/17/bacterial-spot-tomato/"},
+        {"title": "Solanaceous crops: bacterial spot", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/solanaceous-bacterial-spot"}
+      ]
+    },
+    {
+      "class": "Tomato___Early_blight",
+      "slug": "tomato-early-blight",
+      "crop": "Tomato",
+      "name": "Early blight of tomato",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Alternaria species (A. solani / A. linariae)",
+      "summary": "One of the most common tomato diseases; it defoliates plants from the bottom up.",
+      "symptoms": [
+        "Brown leaf spots with concentric rings (\"target\" pattern), often with yellow halos, on older leaves first.",
+        "Dark cankers can girdle stems of seedlings at the soil line."
+      ],
+      "conditions": "Survives on infected debris; warm, humid weather favours spread.",
+      "management": [
+        "Rotate away from tomato, potato and eggplant for about three years.",
+        "Remove infected debris, mulch and avoid overhead watering.",
+        "Protectant fungicides are used where needed; follow local guides."
+      ],
+      "lookalikes": ["Septoria leaf spot", "Target spot", "Late blight"],
+      "sources": [
+        {"title": "Early blight of tomato", "publisher": "Oklahoma State University Extension", "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/early-blight-of-tomato"},
+        {"title": "Tomato problems: early blight", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/home-lawn-garden/fact-sheets/tomato-problems-early-blight"},
+        {"title": "Early blight of tomato (PPFS-VG-25)", "publisher": "University of Kentucky", "url": "https://plantpathology.ca.uky.edu/files/ppfs-vg-25.pdf"}
+      ]
+    },
+    {
+      "class": "Tomato___Late_blight",
+      "slug": "tomato-late-blight",
+      "crop": "Tomato",
+      "name": "Late blight of tomato",
+      "healthy": false,
+      "agent_type": "oomycete (water mould)",
+      "pathogen": "Phytophthora infestans",
+      "summary": "A fast-spreading disease of tomato and potato that can destroy plants within days in cool, wet weather.",
+      "symptoms": [
+        "Large, irregular, greasy-looking dark leaf lesions; white growth may appear on undersides in humid weather.",
+        "Firm, brown, greasy patches on fruit."
+      ],
+      "conditions": "Cool (below about 25 °C), wet weather. Spores travel long distances on wind.",
+      "management": [
+        "Use healthy transplants; remove volunteer tomato and potato plants.",
+        "Scout often and confirm suspected cases with an extension office (national alerts exist, e.g. USAblight).",
+        "Fungicides work best preventively; follow current local recommendations."
+      ],
+      "lookalikes": ["Early blight", "Leaf mold", "Septoria leaf spot"],
+      "sources": [
+        {"title": "Tomato late blight", "publisher": "University of Wisconsin Vegetable Pathology", "url": "https://vegpath.plantpath.wisc.edu/diseases/tomato-late-blight"},
+        {"title": "Solanaceous crops: late blight", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/solanaceous-late-blight"}
+      ]
+    },
+    {
+      "class": "Tomato___Leaf_Mold",
+      "slug": "tomato-leaf-mold",
+      "crop": "Tomato",
+      "name": "Leaf mold of tomato",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Passalora fulva (formerly Fulvia fulva / Cladosporium fulvum)",
+      "summary": "Mainly a disease of greenhouse and high-tunnel tomatoes in very humid air.",
+      "symptoms": [
+        "Pale green to yellow spots on upper leaf surfaces, oldest leaves first.",
+        "Olive-green to brown velvety mould on the undersides beneath the spots."
+      ],
+      "conditions": "Needs relative humidity above about 85%; survives in debris and spreads by air and splash.",
+      "management": [
+        "Lower humidity and leaf wetness: ventilate, space plants and avoid wetting leaves.",
+        "Grow resistant cultivars (resistance can vary with pathogen strain).",
+        "Remove crop residue after harvest; fungicides exist but changing the environment works best."
+      ],
+      "lookalikes": ["Black leaf mould (Pseudocercospora fuligena)", "Late blight"],
+      "sources": [
+        {"title": "Tomato leaf mold", "publisher": "UMass Extension", "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/tomato-leaf-mold"},
+        {"title": "Tomato leaf mold (PPFS-VG-52)", "publisher": "University of Kentucky", "url": "https://plantpathology.ca.uky.edu/sites/plantpathology.ca.uky.edu/files/PPFS-VG-52.pdf"},
+        {"title": "Leaf mold", "publisher": "Utah State University Extension", "url": "https://extension.usu.edu/vegetableguide/tomato-pepper-eggplant/leaf-mold"}
+      ]
+    },
+    {
+      "class": "Tomato___Septoria_leaf_spot",
+      "slug": "tomato-septoria-leaf-spot",
+      "crop": "Tomato",
+      "name": "Septoria leaf spot",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Septoria lycopersici",
+      "summary": "A common tomato leaf disease that starts on the lowest leaves and moves up the plant.",
+      "symptoms": [
+        "Many small, round spots (about 2–6 mm) with dark borders and tan centres, often with yellow halos.",
+        "Tiny black specks (fruiting bodies) in the spot centres; no concentric rings."
+      ],
+      "conditions": "Survives on tomato debris and nightshade-family weeds; wet, humid weather and dense foliage favour it.",
+      "management": [
+        "Rotate crops, remove infected debris and control nightshade weeds.",
+        "Space plants for airflow and remove infected lower leaves.",
+        "Use resistant varieties where available; fungicide programs are often needed once the disease appears."
+      ],
+      "lookalikes": ["Early blight (has concentric rings and larger spots)"],
+      "sources": [
+        {"title": "Septoria leaf spot of tomato", "publisher": "University of Maine Cooperative Extension", "url": "https://extension.umaine.edu/ipm/?p=4626"},
+        {"title": "Septoria leaf spot", "publisher": "Oklahoma State University Extension", "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/septoria-leaf-spot"},
+        {"title": "Septoria leaf spot", "publisher": "University of Wisconsin–Madison Extension", "url": "https://hort.extension.wisc.edu/articles/septoria-leaf-spot/"}
+      ]
+    },
+    {
+      "class": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "slug": "tomato-spider-mites",
+      "crop": "Tomato",
+      "name": "Two-spotted spider mite",
+      "healthy": false,
+      "agent_type": "pest (mite)",
+      "pathogen": "Tetranychus urticae",
+      "summary": "Tiny mites that feed on leaf undersides and multiply quickly in hot, dry conditions. Not a disease, but a common cause of leaf damage.",
+      "symptoms": [
+        "Small yellow or white speckles (stippling) on leaves.",
+        "Fine webbing and tiny moving dots on leaf undersides in heavy infestations."
+      ],
+      "conditions": "Hot, dry, dusty conditions; infestations often start at field or tunnel edges.",
+      "management": [
+        "Encourage natural enemies, especially predatory mites.",
+        "If treatment is needed, choose less toxic options and rotate modes of action: mites develop pesticide resistance quickly."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Twospotted spider mite", "publisher": "UF/IFAS Integrated Pest Management", "url": "https://ipm.ifas.ufl.edu/pdfs/Twospotted_Spider_Mite.pdf"},
+        {"title": "Tomato: spider mites", "publisher": "UConn Integrated Pest Management", "url": "https://ipm.cahnr.uconn.edu/tomato-spider-mites/"},
+        {"title": "Twospotted spider mite (peppers)", "publisher": "UC IPM (University of California)", "url": "https://ipm.ucanr.edu/agriculture/peppers/twospotted-spider-mite/"}
+      ]
+    },
+    {
+      "class": "Tomato___Target_Spot",
+      "slug": "tomato-target-spot",
+      "crop": "Tomato",
+      "name": "Target spot of tomato",
+      "healthy": false,
+      "agent_type": "fungus",
+      "pathogen": "Corynespora cassiicola",
+      "summary": "A fungal disease of tomato leaves and fruit that has become more frequent in warm regions such as Florida.",
+      "symptoms": [
+        "Brown leaf spots that can show concentric rings, on mature leaves first.",
+        "Fruit can be infected when green or ripe; heavy infection defoliates plants."
+      ],
+      "conditions": "Spores spread by wind and rain through the season; the fungus has many alternative hosts.",
+      "management": [
+        "Destroy crop residues promptly and avoid excess nitrogen.",
+        "No commercial resistant tomato varieties are currently available.",
+        "Fungicides are used where needed; resistance to some groups (e.g. strobilurins) has been detected."
+      ],
+      "lookalikes": ["Bacterial spot", "Early blight"],
+      "sources": [
+        {"title": "Target spot of tomato in Florida (PP351)", "publisher": "UF/IFAS EDIS", "url": "https://edis.ifas.ufl.edu/publication/PP351"},
+        {"title": "Target spot", "publisher": "UF/IFAS Integrated Pest Management", "url": "https://ipm.ifas.ufl.edu/pdfs/Target_Spot.pdf"}
+      ]
+    },
+    {
+      "class": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "slug": "tomato-yellow-leaf-curl-virus",
+      "crop": "Tomato",
+      "name": "Tomato yellow leaf curl virus (TYLCV)",
+      "healthy": false,
+      "agent_type": "virus (insect-vectored)",
+      "pathogen": "Tomato yellow leaf curl virus, spread by the sweetpotato whitefly (Bemisia tabaci)",
+      "summary": "A damaging virus spread by whiteflies. Infected plants cannot be cured.",
+      "symptoms": [
+        "Stunted plants with small leaves.",
+        "Leaf edges that curl upward and turn bright yellow."
+      ],
+      "conditions": "Whiteflies carry the virus from plant to plant; risk is highest where whitefly populations are large.",
+      "management": [
+        "Plant TYLCV-tolerant varieties.",
+        "Manage whiteflies: clean culture, removal of infected plants, reflective mulches, and insecticide rotation to limit resistance."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {"title": "Managing Bemisia tabaci MEAM1 and Tomato yellow leaf curl virus in Florida tomato (IN1430)", "publisher": "UF/IFAS EDIS", "url": "https://ask.ifas.ufl.edu/publication/IN1430"},
+        {"title": "Whitefly management, TYLCV and insecticide resistance in tomato (IN695)", "publisher": "UF/IFAS EDIS", "url": "https://edis.ifas.ufl.edu/publication/IN695/pdf"}
+      ]
+    },
+    {
+      "class": "Tomato___Tomato_mosaic_virus",
+      "slug": "tomato-mosaic-virus",
+      "crop": "Tomato",
+      "name": "Tomato mosaic virus (ToMV)",
+      "healthy": false,
+      "agent_type": "virus",
+      "pathogen": "Tomato mosaic virus (a tobamovirus)",
+      "summary": "A very stable virus that spreads on hands, tools and infected seed. Infected plants cannot be cured.",
+      "symptoms": [
+        "Light and dark green mottling (mosaic) on leaves.",
+        "Distorted or fern-like leaves and reduced growth."
+      ],
+      "conditions": "Can be seed-borne and spreads easily by contact: hands, tools, grafting and workers.",
+      "management": [
+        "Buy seed from reputable vendors or use treated seed.",
+        "Plant resistant varieties (often marked ToMV).",
+        "Remove infected plants (do not compost them) and sanitise tools and hands."
+      ],
+      "lookalikes": ["Other mosaic viruses", "Herbicide injury"],
+      "sources": [
+        {"title": "Tomato mosaic", "publisher": "Ohio State University Vegetable Disease Facts", "url": "https://u.osu.edu/vegetablediseasefacts/?p=1269"},
+        {"title": "Tomato viruses", "publisher": "University of Minnesota Extension", "url": "https://extension.umn.edu/disease-management/tomato-viruses"},
+        {"title": "Tomato viruses (Plant Disease Diagnostic Clinic, 2015)", "publisher": "Cornell University", "url": "https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/64105/Tomato_Viruses_CU_PDDC_2015.pdf?1698783386"}
+      ]
+    },
+    {
+      "class": "Tomato___healthy",
+      "slug": "tomato-healthy",
+      "crop": "Tomato",
+      "name": "Healthy tomato leaf",
+      "healthy": true
+    }
+  ]
+}

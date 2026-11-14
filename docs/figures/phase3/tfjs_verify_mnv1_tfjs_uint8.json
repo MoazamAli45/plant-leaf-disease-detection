@@ -1,0 +1,23 @@
+{
+ "model_dir": "ml/models/_export/p3_mobilenet_v1/tfjs_uint8",
+ "node": "v20.20.2",
+ "tfjs": "4.22.0",
+ "keras_accuracy": {
+  "test": 0.9868421052631579,
+  "plantdoc": 0.08333333333333333
+ },
+ "results": [
+  {
+   "backend": "wasm",
+   "images": 100,
+   "agreement_with_keras": 0.87,
+   "max_abs_prob_diff": 0.9741737083531916,
+   "accuracy_test": 0.9473684210526315,
+   "accuracy_plantdoc": 0.08333333333333333,
+   "n_test": 76,
+   "n_plantdoc": 24,
+   "latency_ms_median": 22.96225000000004,
+   "latency_ms_p90": 23.729291000000103
+  }
+ ]
+}
