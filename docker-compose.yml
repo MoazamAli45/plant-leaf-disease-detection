@@ -1,0 +1,17 @@
+# Local stack: web on http://localhost:3000, API on http://localhost:7860/docs
+# Generate the API model first: (cd ml && .venv/bin/python -m leafdx.train.export_web api-model)
+services:
+  api:
+    build:
+      context: api
+      platform: linux/amd64
+    ports: ["7860:7860"]
+    environment:
+      LEAFDX_CORS_ORIGINS: http://localhost:3000
+  web:
+    build:
+      context: web
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:7860
+    ports: ["3000:3000"]
+    depends_on: [api]

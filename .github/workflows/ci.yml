@@ -60,3 +60,20 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm run e2e
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build web image
+        run: docker build -t leafdx-web web
+      # The model is not in the repository, so the API image is built with placeholder model
+      # files: this checks the Dockerfile and dependency install, not inference.
+      - name: Build API image
+        run: |
+          mkdir -p api/model
+          echo '[]' > api/model/classes.json
+          touch api/model/inference.keras
+          docker build -t leafdx-api api
+      - name: Check the API image's Python environment
+        run: docker run --rm --entrypoint python leafdx-api -c "import tensorflow, fastapi, leafdx_api; print(tensorflow.__version__)"

@@ -186,7 +186,8 @@ Binary-accuracy numbers therefore cannot have produced the paper's figures eithe
 supports A1.
 
 **What this reproduction does not show.** All numbers here, the paper's and ours, are measured
-on the paper's 80/20 split. The Phase 1 audit found that **87.5%** of its validation images
+on the paper's 80/20 split. The Phase 1 audit found that **87.5%** of its validation images (90.31% after the Phase 3 correction,
+[`experiments.md` §2](experiments.md#2-a-correction-to-the-clean-split))
 have a source-photo, leaf or exact-file link to the training split (`docs/dataset_card.md`
 §4), so these accuracies are not estimates of performance on unseen leaves. Phase 3 retrains
 on the clean grouped split and on field images.

@@ -1,8 +1,16 @@
 # Dataset card
 
-> **Status:** Phase 1 complete. The numbers below come from the run of 2026-11-13
+> **Status:** final (Phase 5). The numbers below come from the run of 2026-11-13
 > (`docs/figures/data_audit/summary.json`; manifests verified by `ml/manifests/SHA256SUMS`).
 > Re-running `make prepare` reproduces them byte for byte.
+>
+> **Correction (Phase 3).** The Phase 1 file-name parser missed NPD's `_newPixel25`
+> augmentation (2,399 images). With it, **90.31%** of the paper split's validation images are
+> linked to training (§4 below reports the original 87.5%), and 11.94% of the clean split v1
+> test images are linked to training, concentrated in five classes. Results are therefore
+> reported on the 11,599-image leak-free test subset. Details and the re-audit:
+> [`experiments.md` §2](experiments.md#2-a-correction-to-the-clean-split),
+> `figures/data_audit/recheck_newpixel.json`.
 
 ## 1. Datasets used
 
@@ -94,7 +102,7 @@ All 17,572 validation images were audited.
 | byte-identical file in train | 6 | 0.03% |
 | **any of the above** | **15,383** | **87.5%** |
 
-**87.5% is a lower bound.** Leaf ids exist for only 69.2% of images, so photos of the same leaf
+**87.5% is a lower bound** (90.31% after the Phase 3 correction above). Leaf ids exist for only 69.2% of images, so photos of the same leaf
 without an id are not counted.
 
 **pHash as a detector.** Recall on the known (original, copy) pairs

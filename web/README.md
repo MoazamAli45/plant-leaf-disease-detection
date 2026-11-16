@@ -20,3 +20,6 @@ npm run build && npm run e2e   # Playwright, desktop + mobile viewports
 | `scripts/verify-model.mjs` | checks the TF.js model against the Keras model (`npm run verify-model`) |
 
 Environment: `NEXT_PUBLIC_API_URL` (optional) is the base URL of the Grad-CAM API.
+
+Docker: `docker build -t leafdx-web web` (see `Dockerfile`). Deployment on Vercel:
+[`../docs/deployment.md`](../docs/deployment.md).
