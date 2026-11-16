@@ -1,7 +1,7 @@
 # Plant leaf disease detection: from lab accuracy to the field
 
 This project takes our earlier paper, *Plant Leaf Disease Detection Using Traditional CNN and
-MobileNet Architecture* (Usman & Ali, [`docs/paper.pdf`](docs/paper.pdf)), and asks whether its
+MobileNet Architecture* (Ali Usman and Syed Moazam Ali, [`docs/paper.pdf`](docs/paper.pdf)), and asks whether its
 results hold up. It reproduces the paper, finds and fixes a flaw in how the dataset is usually
 split, compares five neural networks fairly, tests them on real field photos, looks at what
 they pay attention to, shrinks them for phones, and puts the chosen model in a web app that

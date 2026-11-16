@@ -1,4 +1,4 @@
-# Faithful reproduction of Usman & Ali, custom CNN.
+# Faithful reproduction of Ali Usman and Syed Moazam Ali, custom CNN.
 # Assumption ids refer to docs/reproduction.md.
 name: paper_cnn_steps100
 description: "Paper cnn, original 80/20 split, 100 training steps and 150 validation steps per epoch (assumption A8, reading a)"

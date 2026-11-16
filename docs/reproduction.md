@@ -1,4 +1,4 @@
-# Reproduction of Usman & Ali
+# Reproduction of the paper by Ali Usman and Syed Moazam Ali
 
 This document records how the two models of *Plant Leaf Disease Detection Using Traditional CNN
 and MobileNet Architecture* ([`paper.pdf`](paper.pdf)) were re-implemented. It lists what the

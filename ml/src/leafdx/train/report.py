@@ -25,7 +25,7 @@ MISSING = "\u2013"  # en dash for empty table cells
 RESULT_FILES = ["config.yaml", "env.json", "history.csv", "metrics.json"]
 RESULT_GLOBS = ["per_class_*.csv", "confusion_*.csv", "probs_*.npz"]
 
-# Usman & Ali, Table 3 ("Accuracy Measure during Training of Models"), 20 epochs.
+# Ali Usman and Syed Moazam Ali, Table 3 ("Accuracy Measure during Training of Models"), 20 epochs.
 PAPER_TABLE3: dict[str, dict[str, float]] = {
     "paper_cnn": {"accuracy": 0.9711, "loss": 0.0898, "val_accuracy": 0.9025, "val_loss": 0.3605},
     "paper_mobilenet": {

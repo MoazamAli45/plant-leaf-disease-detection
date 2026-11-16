@@ -1,4 +1,4 @@
-# Faithful reproduction of Usman & Ali, MobileNet.
+# Faithful reproduction of Ali Usman and Syed Moazam Ali, MobileNet.
 # Assumption ids refer to docs/reproduction.md.
 name: paper_mobilenet_steps100
 description: "Paper mobilenet, original 80/20 split, 100 training steps and 150 validation steps per epoch (assumption A8, reading a)"

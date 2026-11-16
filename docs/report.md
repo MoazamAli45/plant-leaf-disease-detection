@@ -394,7 +394,7 @@ root `README.md`; training runs on free Kaggle GPUs through `ml/notebooks/kaggle
 
 Keys refer to `docs/references.bib`.
 
-- [`usman_ali_plant_leaf`] A. Usman and S. M. Ali. *Plant Leaf Disease Detection Using
+- [`usman_ali_plant_leaf`] Ali Usman and Syed Moazam Ali. *Plant Leaf Disease Detection Using
   Traditional CNN and MobileNet Architecture.* Unpublished manuscript, UET Taxila.
 - [`hughes2015open`] D. P. Hughes and M. Salathé. An open access repository of images on plant
   health to enable the development of mobile disease diagnostics. arXiv:1511.08060, 2015.

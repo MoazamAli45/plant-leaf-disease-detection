@@ -1,4 +1,4 @@
-# Faithful reproduction of Usman & Ali, MobileNet.
+# Faithful reproduction of Ali Usman and Syed Moazam Ali, MobileNet.
 # Assumption ids refer to docs/reproduction.md.
 name: paper_mobilenet_fullepochs
 description: "Paper mobilenet, original 80/20 split, one full pass over train and val per epoch (assumption A8, reading b)"

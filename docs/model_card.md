@@ -8,7 +8,7 @@ below is copied from the generated tables cited next to it.
 
 | | |
 |---|---|
-| Developer | Syed Moazam Ali (reproduction and extension of Usman & Ali, [`paper.pdf`](paper.pdf)) |
+| Developer | Syed Moazam Ali (reproduction and extension of the paper by Ali Usman and Syed Moazam Ali, [`paper.pdf`](paper.pdf)) |
 | Date | November 2026, version 0.1.0 |
 | Architecture | MobileNetV1 [`howard2017mobilenets`], width 1.0, ImageNet-pretrained, fine-tuned end to end; head: global average pooling, dropout 0.2, dense 38 softmax. 3.27 M parameters |
 | Input | RGB image resized to 224 × 224 (bilinear), values 0–255. MobileNet preprocessing (scaling to [−1, 1]) is inside the model |

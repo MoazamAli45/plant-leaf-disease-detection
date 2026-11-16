@@ -1,6 +1,7 @@
 """Models.
 
-Paper CNN (Figure 2 of Usman & Ali): three blocks of Conv2D(32, 3x3, ReLU) -> MaxPool(2x2) ->
+Paper CNN (Figure 2 of the paper by Ali Usman and Syed Moazam Ali): three blocks of
+Conv2D(32, 3x3, ReLU) -> MaxPool(2x2) ->
 Dropout(0.2), then Conv2D(128, 3x3, ReLU) -> MaxPool(2x2), Flatten, Dense(128, ReLU),
 Dense(64, ReLU), Dense(38, sigmoid). Padding is not stated; Keras' default ("valid") is assumed.
 
