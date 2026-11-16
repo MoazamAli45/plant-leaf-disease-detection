@@ -141,6 +141,36 @@ def results_table(runs: dict[str, list[dict[str, Any]]], names: dict[str, str]) 
     return pd.DataFrame(rows)
 
 
+def welch_vs_main(
+    runs: dict[str, list[dict[str, Any]]], main: str = "p3_mobilenet_v1"
+) -> pd.DataFrame:
+    """Welch t-test of each ablation against the main model, per seed (n = 3 each).
+    Low power: treat p-values as indicative, not as proof of no effect."""
+    from scipy import stats
+
+    def vals(key: str, metric: str) -> np.ndarray:
+        return np.array([summary_metrics(m)[metric] * 100 for m in runs[key]])
+
+    rows = []
+    for key, label in ABLATIONS.items():
+        if key == main or key not in runs:
+            continue
+        for metric, name in [("test_acc_leakfree", "lab test (leak-free)"), ("pd_acc", "PlantDoc")]:
+            a, b = vals(key, metric), vals(main, metric)
+            t = stats.ttest_ind(a, b, equal_var=False)
+            rows.append(
+                {
+                    "variant": label,
+                    "metric": name,
+                    "n": f"{len(a)} vs {len(b)}",
+                    "difference (pp)": f"{a.mean() - b.mean():+.2f}",
+                    "t": f"{t.statistic:.2f}",
+                    "p": f"{t.pvalue:.4f}",
+                }
+            )
+    return pd.DataFrame(rows)
+
+
 def per_class_table(runs: list[dict[str, Any]], split: str) -> pd.DataFrame:
     frames = [pd.read_csv(m["_dir"] / f"per_class_{split}.csv") for m in runs]
     stacked = pd.concat(frames)
@@ -342,7 +372,10 @@ def build(results: Path, out: Path) -> list[Path]:
     if len(abl) > 1:
         abl.to_csv(out / "ablations.csv", index=False)
         (out / "ablations.md").write_text(_md(abl))
-        made.append(out / "ablations.md")
+        welch = welch_vs_main(runs)
+        welch.to_csv(out / "ablations_welch.csv", index=False)
+        (out / "ablations_welch.md").write_text(_md(welch))
+        made += [out / "ablations.md", out / "ablations_welch.md"]
 
     pc_dir = out / "per_class"
     pc_dir.mkdir(exist_ok=True)

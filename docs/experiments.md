@@ -1,7 +1,7 @@
 # Phase 3: corrected and extended experiments
 
-> **Status:** main comparison done (5 models × 3 seeds) and efficiency study done. The
-> ablations are pending and are marked ⟨PLACEHOLDER⟩ below.
+> **Status:** complete: 5 models and 4 ablations, 3 seeds each (27 runs), plus the
+> explainability and efficiency studies.
 > Every number here is generated from `ml/results/` by `python -m leafdx.train.report_phase3`
 > (tables in [`figures/phase3/`](figures/phase3/)), `leafdx.explain.gradcam` and
 > `leafdx.train.efficiency`.
@@ -130,8 +130,49 @@ to be wrong for dark and powdery leaves, so those numbers were discarded before 
 
 ## 6. Ablations (MobileNetV1, 3 seeds)
 
-⟨PLACEHOLDER: augmentation off, frozen backbone (the paper's set-up), width multiplier 0.75
-and 0.5. Pending Kaggle runs. Table: `figures/phase3/ablations.md`.⟩
+Each variant changes one thing relative to the main MobileNetV1 run (fine-tuned, augmentation
+on, width multiplier 1.0). Source: [`figures/phase3/ablations.md`](figures/phase3/ablations.md).
+
+| Variant | Params (M) | Test acc., leak-free (%) | Test ECE (%) | PlantDoc acc. (%) | PlantDoc macro-F1 (%) |
+|---|---|---|---|---|---|
+| MobileNetV1 (main: fine-tuned, augmentation, alpha 1.0) | 3.27 | 98.26 ± 0.43 | 0.60 ± 0.24 | 16.33 ± 1.12 | 15.60 ± 0.96 |
+| no augmentation | 3.27 | 99.30 ± 0.09 | 0.28 ± 0.04 | 16.18 ± 2.87 | 15.72 ± 1.78 |
+| frozen backbone (as in the paper) | 3.27 | 93.58 ± 0.31 | 0.81 ± 0.26 | 17.48 ± 0.64 | 15.23 ± 0.36 |
+| width multiplier 0.75 | 1.86 | 98.61 ± 0.17 | 0.42 ± 0.16 | 14.38 ± 0.87 | 14.77 ± 1.02 |
+| width multiplier 0.5 | 0.85 | 98.14 ± 0.18 | 0.45 ± 0.07 | 14.44 ± 1.31 | 12.93 ± 1.14 |
+
+Welch's t-test against the main model, per seed (`figures/phase3/ablations_welch.md`):
+
+| Variant | Metric | Difference vs main (pp) | t | p |
+|---|---|---|---|---|
+| no augmentation | lab test (leak-free) | +1.04 | 4.09 | 0.0480 |
+| no augmentation | PlantDoc | -0.16 | -0.09 | 0.9362 |
+| frozen backbone (as in the paper) | lab test (leak-free) | -4.68 | -15.33 | 0.0002 |
+| frozen backbone (as in the paper) | PlantDoc | +1.15 | 1.53 | 0.2175 |
+| width multiplier 0.75 | lab test (leak-free) | +0.35 | 1.31 | 0.2928 |
+| width multiplier 0.75 | PlantDoc | -1.96 | -2.38 | 0.0798 |
+| width multiplier 0.5 | lab test (leak-free) | -0.12 | -0.44 | 0.6938 |
+| width multiplier 0.5 | PlantDoc | -1.89 | -1.90 | 0.1326 |
+
+With 3 seeds per arm the tests have little power, and eight comparisons are made, so only the
+two lab-accuracy effects with p < 0.05 are treated as findings. The field differences are
+reported but not claimed.
+
+- **Freezing the backbone (the paper's set-up) costs -4.68 pp
+  of lab accuracy** (p = 0.0002). Its field accuracy is
+  +1.15 pp higher, but not significantly so
+  (p = 0.2175). Its lab-to-field gap is the smallest of all models,
+  because its lab accuracy is lower, not because it generalises better.
+- **The paper's augmentation does not help.** Without it, lab accuracy is
+  +1.04 pp *higher* (p = 0.0480, borderline),
+  and field accuracy is unchanged (-0.16 pp,
+  p = 0.9362). Geometric and brightness augmentation does not simulate the
+  shift from lab to field photos (backgrounds, multiple leaves, lighting, camera).
+- **Narrower networks keep lab accuracy** (width 0.75: +0.35 pp,
+  p = 0.2928; width 0.5: -0.12 pp, p = 0.6938) with
+  1.8× and 3.8× fewer parameters, and *may* lose about 2 pp in the field
+  (-1.96 pp, p = 0.0798; -1.89 pp,
+  p = 0.1326).
 
 ## 7. Efficiency
 
@@ -143,26 +184,32 @@ activations), calibrated on 200 training images, with float input and output. Fu
 
 | Model | Format | Size (MB) | CPU latency (ms) | Accuracy (%) | Agreement with Keras (%) |
 |---|---|---|---|---|---|
-| Paper CNN | Keras float32 | 9.76 | 2.64 | 88.20 | 100 |
-|  | TFLite INT8 | 2.45 | 0.76 | 87.80 | 98.66 |
-| MobileNetV1 | Keras float32 | 13.40 | 7.40 | 99.06 | 100 |
-|  | TFLite float32 | 12.96 | 3.95 | 99.06 | 100 |
-|  | TFLite dynamic-range | 3.42 | 2.78 | 99.06 | 99.87 |
+| Paper CNN | Keras float32 | 9.76 | 2.61 | 88.20 | 100 |
+|  | TFLite INT8 | 2.45 | 0.57 | 87.80 | 98.66 |
+| MobileNetV1 | Keras float32 | 13.40 | 7.34 | 99.06 | 100 |
+|  | TFLite float32 | 12.96 | 3.92 | 99.06 | 100 |
+|  | TFLite dynamic-range | 3.42 | 2.90 | 99.06 | 99.87 |
 |  | TFLite INT8 | 3.55 | 1.39 | **98.53** | 99.20 |
 |  | TF.js uint8 weights | 3.32 | (browser, Phase 4) |  |  |
-| MobileNetV2 | Keras float32 | 9.82 | 7.68 | 97.72 | 100 |
-|  | TFLite INT8 | 2.76 | 1.35 | 95.58 | 97.05 |
-| MobileNetV3-Small | Keras float32 | 4.42 | 3.75 | 98.93 | 100 |
-|  | TFLite float32 | 3.82 | 0.97 | 98.93 | 100 |
-|  | TFLite dynamic-range | 1.13 | 1.22 | 99.20 | 99.20 |
-|  | TFLite INT8 | 1.24 | 0.91 ¹ | **60.86** | 60.72 |
+| MobileNetV2 | Keras float32 | 9.82 | 7.29 | 97.72 | 100 |
+|  | TFLite INT8 | 2.76 | 1.33 | 95.58 | 97.05 |
+| MobileNetV3-Small | Keras float32 | 4.42 | 3.66 | 98.93 | 100 |
+|  | TFLite float32 | 3.82 | 0.96 | 98.93 | 100 |
+|  | TFLite dynamic-range | 1.13 | 1.25 | 99.20 | 99.20 |
+|  | TFLite INT8 | 1.24 | 0.90 ¹ | **60.86** | 60.72 |
 |  | TF.js uint8 weights | 1.15 | (browser, Phase 4) |  |  |
-| EfficientNetB0 | Keras float32 | 17.24 | 11.61 | 99.60 | 100 |
-|  | TFLite dynamic-range | 4.60 | 6.71 | 99.46 | 99.60 |
-|  | TFLite INT8 | 4.96 | 2.38 | **69.84** | 69.97 |
+| EfficientNetB0 | Keras float32 | 17.24 | 11.79 | 99.60 | 100 |
+|  | TFLite dynamic-range | 4.60 | 7.00 | 99.46 | 99.60 |
+|  | TFLite INT8 | 4.96 | 2.19 | **69.84** | 69.97 |
+| MobileNetV1, width 0.75 | Keras float32 | 7.78 | 5.46 | 99.20 | 100 |
+|  | TFLite INT8 | 2.08 | 1.03 | 99.06 | 99.60 |
+| MobileNetV1, width 0.5 | Keras float32 | 3.72 | 3.85 | 98.39 | 100 |
+|  | TFLite INT8 | 1.00 | 0.66 | **98.12** | 99.46 |
+| MobileNetV1, frozen backbone | Keras float32 | 13.40 | 7.16 | 95.71 | 100 |
+|  | TFLite INT8 | 3.55 | 1.39 | 94.50 | 96.92 |
 
 - **MobileNetV1 quantises almost losslessly.** Full INT8 is 3.8× smaller and 5.3× faster
-  than the Keras model, for −0.53 pp, so it is the model deployed in the browser (Phase 4).
+  than the Keras model, for −0.54 pp, so it is the model deployed in the browser (Phase 4).
 - **EfficientNetB0 does not survive full INT8 post-training quantisation** (−29.8 pp). Its
   swish activations and squeeze-and-excitation blocks are known to be sensitive to
   activation quantisation. Its dynamic-range version (int8 weights, float activations)

@@ -1,0 +1,16 @@
+
+>>> --config configs/phase3/abl_mnv1_frozen.yaml --set data.npd_root=/kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented) output_dir=/kaggle/working/smoke train.epochs=1 train.steps_per_epoch=5 train.validation_steps=2 train.save_model=false eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}] seed=0
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet/mobilenet_1_0_224_tf_no_top.h5
+[1m       0/17225924[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step[1m 2105344/17225924[0m [32m━━[0m[37m━━━━━━━━━━━━━━━━━━[0m [1m1s[0m 0us/step[1m14901248/17225924[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m0s[0m 0us/step[1m17225924/17225924[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+INFO model mobilenet_v1: 3267814 params (38950 trainable)
+5/5 - 17s - 3s/step - accuracy: 0.0437 - loss: 4.4332 - val_accuracy: 0.0781 - val_loss: 3.7642 - epoch_seconds: 16.6976
+INFO done: {"last_epoch": {"accuracy": 0.04374999925494194, "loss": 4.433235168457031, "val_accuracy": 0.078125, "val_loss": 3.764238119125366, "epoch_seconds": 16.697641418000046}}
+[gpu1] OK     configs/phase3/abl_mnv1_frozen.yaml seed=0 in 3.9 min
+
+>>> --config configs/phase3/abl_mnv1_alpha050.yaml --set data.npd_root=/kaggle/input/datasets/vipoooool/new-plant-diseases-dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented) output_dir=/kaggle/working/smoke train.epochs=1 train.steps_per_epoch=5 train.validation_steps=2 train.save_model=false eval=[{name: test, manifest: manifests/clean_split/test.csv, limit: 64, subsets: {original: "aug_type == 'original'"}}, {name: plantdoc, manifest: manifests/plantdoc/test.csv, limit: 64, subsets: {exact: "match == 'exact'"}}] seed=0
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/mobilenet/mobilenet_5_0_224_tf_no_top.h5
+[1m      0/5577668[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m0s[0m 0s/step[1m5577668/5577668[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 0us/step
+INFO model mobilenet_v1: 849030 params (838086 trainable)
+5/5 - 38s - 8s/step - accuracy: 0.0250 - loss: 4.7519 - val_accuracy: 0.0156 - val_loss: 4.1864 - epoch_seconds: 38.0703
+INFO done: {"last_epoch": {"accuracy": 0.02500000037252903, "loss": 4.751916885375977, "val_accuracy": 0.015625, "val_loss": 4.186436176300049, "epoch_seconds": 38.070302407999975}}
+[gpu1] OK     configs/phase3/abl_mnv1_alpha050.yaml seed=0 in 1.5 min
