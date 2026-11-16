@@ -22,6 +22,3 @@ stored or logged.
 
 Configuration (environment): `LEAFDX_MODEL`, `LEAFDX_CLASSES`, `LEAFDX_MAX_UPLOAD_MB`,
 `LEAFDX_RATE_LIMIT`, `LEAFDX_CORS_ORIGINS` (comma-separated).
-
-Docker and hosting: `Dockerfile` (also a valid Hugging Face Docker Space; `scripts/make_space.sh`)
-and [`../docs/deployment.md`](../docs/deployment.md).
