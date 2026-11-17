@@ -78,8 +78,9 @@ TF.js float16 model agrees with Keras on all of 100 verification images
   shown.
 - Every result states that field accuracy was about 16% in our tests and that the app is not
   agronomic advice.
-- Photos are classified in the browser and are not uploaded. The optional Grad-CAM API
-  processes images in memory and does not store or log them.
+- Photos are classified, and Grad-CAM heat maps computed, in the browser; they are never
+  uploaded. (The separate API in `api/`, not used by the app, processes images in memory and
+  does not store or log them.)
 
 ## Ethical considerations
 

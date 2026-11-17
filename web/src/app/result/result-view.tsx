@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, CheckCircle2, ExternalLink, HelpCircle, ImageOff, Loader2 } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Eye, HelpCircle, ImageOff, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 
@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CLASSES, DISEASE_META, type Disease, diseaseForIndex } from "@/lib/classes";
+import { colourise } from "@/lib/gradcam";
+import { INPUT_SIZE, explain } from "@/lib/model";
 import { parseAnalysis, readAnalysisRaw } from "@/lib/storage";
 import type { Verdict } from "@/lib/verdict";
 
@@ -105,7 +107,7 @@ export function ResultView({ fieldAccuracy }: { fieldAccuracy: string }) {
 
         {showInfo && disease && <DiseaseInfo disease={disease} />}
 
-        <GradcamPanel image={analysis.image} />
+        <GradcamPanel image={analysis.image} classIndex={top.index} label={disease?.name ?? CLASSES[top.index]?.name ?? "this class"} />
       </div>
       </div>
     </div>
@@ -225,29 +227,45 @@ function Section({ title, items }: { title: string; items?: string[] }) {
 type GradcamState =
   | { kind: "idle" }
   | { kind: "loading" }
-  | { kind: "done"; heatmap: string; serverTop: string }
+  | { kind: "done"; overlay: string; ms: number }
   | { kind: "error"; message: string };
 
-function GradcamPanel({ image }: { image: string }) {
-  const api = process.env.NEXT_PUBLIC_API_URL;
+function loadImage(url: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error("The photo could not be read again."));
+    img.src = url;
+  });
+}
+
+/** The photo with the heat map blended over it (45% opacity), at the photo's own aspect ratio. */
+function drawOverlay(img: HTMLImageElement, map: Float32Array): string {
+  const heat = document.createElement("canvas");
+  heat.width = heat.height = INPUT_SIZE;
+  heat.getContext("2d")!.putImageData(new ImageData(colourise(map), INPUT_SIZE, INPUT_SIZE), 0, 0);
+  const c = document.createElement("canvas");
+  c.width = img.naturalWidth;
+  c.height = img.naturalHeight;
+  const ctx = c.getContext("2d")!;
+  ctx.drawImage(img, 0, 0);
+  ctx.globalAlpha = 0.45;
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(heat, 0, 0, c.width, c.height);
+  return c.toDataURL("image/jpeg", 0.9);
+}
+
+function GradcamPanel({ image, classIndex, label }: { image: string; classIndex: number; label: string }) {
   const [state, setState] = useState<GradcamState>({ kind: "idle" });
 
   async function run() {
-    if (!api) return;
     setState({ kind: "loading" });
     try {
-      const blob = await (await fetch(image)).blob();
-      const form = new FormData();
-      form.append("file", blob, "leaf.jpg");
-      const res = await fetch(`${api.replace(/\/$/, "")}/predict?gradcam=true`, { method: "POST", body: form });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.detail ?? `Server error ${res.status}`);
-      setState({ kind: "done", heatmap: data.gradcam, serverTop: data.top_k?.[0]?.name ?? "" });
+      const img = await loadImage(image);
+      const { map, ms } = await explain(img, classIndex);
+      setState({ kind: "done", overlay: drawOverlay(img, map), ms });
     } catch (e) {
-      setState({
-        kind: "error",
-        message: e instanceof Error ? e.message : "The heat map service could not be reached.",
-      });
+      setState({ kind: "error", message: e instanceof Error ? e.message : "The heat map could not be computed." });
     }
   }
 
@@ -256,18 +274,24 @@ function GradcamPanel({ image }: { image: string }) {
       <CardHeader>
         <CardTitle className="text-base">Where did the model look?</CardTitle>
         <CardDescription>
-          A Grad-CAM heat map highlights the regions that drove the prediction. It is computed on
-          our server, so this step <strong>uploads the photo</strong>. It is not stored.
+          A Grad-CAM heat map shows which parts of the photo pushed the model towards &ldquo;{label}&rdquo;.
+          It is computed on this device; the photo is not uploaded.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
-        {!api ? (
-          <p className="text-sm text-muted-foreground">The heat map service is not configured for this deployment.</p>
-        ) : state.kind === "done" ? (
+        {state.kind === "done" ? (
           <div className="space-y-2">
-            {/* eslint-disable-next-line @next/next/no-img-element -- data URL from the API */}
-            <img src={state.heatmap} alt="Heat map overlay showing where the model looked" className="w-full max-w-sm rounded-lg border" />
-            <p className="text-xs text-muted-foreground">Server model&apos;s top class: {state.serverTop}</p>
+            {/* eslint-disable-next-line @next/next/no-img-element -- local data URL */}
+            <img src={state.overlay} alt={`Heat map over the photo showing where the model looked for ${label}`} className="w-full max-w-sm rounded-lg border" />
+            <div className="flex max-w-sm items-center gap-2 text-xs text-muted-foreground" aria-hidden>
+              <span>little influence</span>
+              <span className="h-2 flex-1 rounded-full" style={{ background: "linear-gradient(to right, rgb(0,0,4), rgb(87,16,110), rgb(188,55,84), rgb(249,142,9), rgb(252,255,164))" }} />
+              <span>strong influence</span>
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Bright areas mattered most. On a good photo they sit on the spots or lesions, not on the background.
+              A heat map explains the answer; it does not show that the answer is right. Computed in {Math.round(state.ms)} ms.
+            </p>
           </div>
         ) : (
           <Button variant="outline" onClick={run} disabled={state.kind === "loading"}>
@@ -277,7 +301,7 @@ function GradcamPanel({ image }: { image: string }) {
               </>
             ) : (
               <>
-                <ExternalLink aria-hidden /> Upload and show heat map
+                <Eye aria-hidden /> Show heat map
               </>
             )}
           </Button>

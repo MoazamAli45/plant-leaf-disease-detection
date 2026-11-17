@@ -72,7 +72,7 @@ export default function Home() {
           <Feature
             icon={<ShieldCheck aria-hidden className="size-5 text-primary" />}
             title="Private by default"
-            text={`The model (${size} MB) is downloaded once and runs in your browser with TensorFlow.js. A heat map of where the model looked is optional and asks before sending the photo.`}
+            text={`The model (${size} MB) is downloaded once and runs in your browser with TensorFlow.js, heat maps included. Photos never leave your device.`}
           />
           <Feature
             icon={<WifiOff aria-hidden className="size-5 text-primary" />}

@@ -356,8 +356,22 @@ uint8 weight quantisation agreed on only 87% and was rejected (`tfjs_verify_mnv1
 Because §5.3 shows that confidence does not identify field errors, the app does not present
 the model as a diagnosis tool. It answers "not a leaf" when too few pixels have plant colours,
 "not sure" below 40% confidence and "uncertain" below 70%, shows the top three classes, and
-states on every result that accuracy on field photos was 16% in our tests. An optional API
-(`api/`, FastAPI) returns Grad-CAM overlays; it is called only when a user asks for one.
+states on every result that accuracy on field photos was 16% in our tests.
+
+On request the app also shows a Grad-CAM heat map, computed on the device. Automatic
+differentiation is not needed: the network ends in global average pooling, inactive dropout
+and a dense softmax layer, so the gradient of the class probability $p_c$ with respect to the
+last feature maps $A_k$ ($H \times W$ positions) is the same at every position,
+
+$$\frac{\partial p_c}{\partial A_k(u,v)} = \frac{p_c}{HW}\Big(W_{kc} - \sum_j p_j W_{kj}\Big),$$
+
+which is therefore also the Grad-CAM weight $\alpha_k$. One forward pass returning the feature
+maps and the probabilities, plus the dense weights already in the model file, gives the full
+map. Against TensorFlow's gradient-based Grad-CAM on the float32 Keras model, the in-browser
+maps (float16 model) on the same 100 images (76 lab, 24 field) have a median Pearson
+correlation of 0.99997 (minimum 0.997), and the hottest of the 7 × 7 cells agrees on all 100
+(`figures/phase3/tfjs_verify_gradcam.json`). A server is therefore not needed for
+explanations either; the FastAPI service in `api/` remains for other clients.
 
 ## 7. Limitations
 

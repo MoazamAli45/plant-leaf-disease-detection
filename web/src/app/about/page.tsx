@@ -27,10 +27,8 @@ export default function AboutPage() {
 
       <Block title="Your photos and privacy">
         <p>
-          Analysis runs in your browser with TensorFlow.js; photos are not uploaded. The last result
-          is kept only in this browser tab. The optional heat map is the one exception: it sends
-          the photo to our server, only when you press the button, and the server does not store
-          it.
+          Analysis and heat maps both run in your browser with TensorFlow.js; photos are never
+          uploaded. The last result is kept only in this browser tab.
         </p>
       </Block>
 

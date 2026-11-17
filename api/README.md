@@ -1,7 +1,8 @@
 # LeafDx API
 
-FastAPI service for server-side inference and Grad-CAM heat maps. The web app runs the model in
-the browser; it calls this API only when a user asks for a heat map.
+FastAPI service for server-side inference and Grad-CAM heat maps, for use outside the web app
+(scripts, other clients). The web app does not need it: it computes predictions and heat maps
+in the browser.
 
 ```bash
 (cd ../ml && .venv/bin/python -m leafdx.train.export_web api-model)   # writes api/model/
@@ -22,3 +23,6 @@ stored or logged.
 
 Configuration (environment): `LEAFDX_MODEL`, `LEAFDX_CLASSES`, `LEAFDX_MAX_UPLOAD_MB`,
 `LEAFDX_RATE_LIMIT`, `LEAFDX_CORS_ORIGINS` (comma-separated).
+
+Hosting on Hugging Face Spaces: `Dockerfile` and `huggingface/README.md` (steps in
+[`../docs/deployment.md`](../docs/deployment.md)).

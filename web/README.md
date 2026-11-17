@@ -1,8 +1,8 @@
 # LeafDx web app
 
 Next.js 16 (App Router, TypeScript, Tailwind CSS 4, shadcn/ui) PWA that runs the MobileNetV1
-model in the browser with TensorFlow.js. Photos are not uploaded; the optional Grad-CAM heat
-map calls the API in `../api` only when the user asks.
+model in the browser with TensorFlow.js. Photos are never uploaded: the Grad-CAM heat
+map is computed in the browser too (`src/lib/gradcam.ts`).
 
 ```bash
 npm install
@@ -19,4 +19,6 @@ npm run build && npm run e2e   # Playwright, desktop + mobile viewports
 | `src/lib/verdict.ts` | confidence thresholds and the "not a leaf" check |
 | `scripts/verify-model.mjs` | checks the TF.js model against the Keras model (`npm run verify-model`) |
 
-Environment: `NEXT_PUBLIC_API_URL` (optional) is the base URL of the Grad-CAM API.
+`src/lib/__tests__/gradcam-model.test.ts` compares the in-browser heat maps with TensorFlow's
+gradient-based Grad-CAM; it runs when `test-data/` has been exported
+(`cd ../ml && .venv/bin/python -m leafdx.train.export_web verify`) and is skipped otherwise.

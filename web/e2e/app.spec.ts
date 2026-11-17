@@ -78,3 +78,18 @@ test("result page without an analysis asks for a photo", async ({ page }) => {
   await page.goto("/result");
   await expect(page.getByText("No result yet")).toBeVisible();
 });
+
+test("heat map is computed on the device, without network requests", async ({ page }) => {
+  const errors = collectErrors(page);
+  await analyse(page, "apple-apple-scab.jpg");
+  const requests: string[] = [];
+  page.on("request", (r) => requests.push(r.url()));
+  await page.getByRole("button", { name: "Show heat map" }).click();
+  const overlay = page.getByRole("img", { name: /Heat map over the photo/ });
+  await expect(overlay).toBeVisible({ timeout: 30_000 });
+  expect(await overlay.getAttribute("src")).toMatch(/^data:image\/jpeg;base64,/);
+  // only same-origin assets (e.g. cached model files) may be fetched; the photo is never sent anywhere
+  expect(requests.filter((u) => !u.startsWith("data:") && !u.startsWith("blob:") && !u.includes("localhost"))).toEqual([]);
+  expect(requests.filter((u) => /predict|gradcam/i.test(u))).toEqual([]);
+  expect(errors).toEqual([]);
+});

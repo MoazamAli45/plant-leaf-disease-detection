@@ -103,6 +103,27 @@ def research(out: Path) -> Path:
     return out
 
 
+def _reference_cams(model: object, x: np.ndarray, class_index: np.ndarray) -> np.ndarray:
+    """Grad-CAM at the feature-map resolution (7 x 7 for MobileNetV1), scaled to a maximum of 1,
+    computed with TensorFlow's automatic gradient. The web app computes the same map without
+    gradients (web/src/lib/gradcam.ts); scripts/verify-model.mjs compares the two."""
+    import tensorflow as tf
+
+    from leafdx.explain.gradcam import gradcam_model
+
+    grad_model = gradcam_model(model)
+    out = []
+    for xi, k in zip(x, class_index, strict=True):
+        with tf.GradientTape() as tape:
+            feats, p = grad_model(tf.convert_to_tensor(xi[None]), training=False)
+            score = p[:, int(k)]
+        grads = tf.cast(tape.gradient(score, feats), tf.float32)
+        w = tf.reduce_mean(grads, axis=(1, 2), keepdims=True)
+        cam = tf.nn.relu(tf.reduce_sum(w * tf.cast(feats, tf.float32), axis=-1))[0].numpy()
+        out.append(cam / cam.max() if cam.max() > 0 else cam)
+    return np.stack(out)
+
+
 def verify(model_dir: Path, out_dir: Path, per_class: int, n_field: int, seed: int) -> Path:
     import tensorflow as tf
 
@@ -125,7 +146,11 @@ def verify(model_dir: Path, out_dir: Path, per_class: int, n_field: int, seed: i
 
     x = np.stack([load(p) for p in rows["path"]]).astype(np.float32)
     probs = model.predict(x, verbose=0).astype(np.float32)
+    cams = _reference_cams(model, x, probs.argmax(axis=1))
     out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "gradcam.json").write_text(
+        json.dumps({"class_index": probs.argmax(axis=1).tolist(), "cams": cams.round(5).tolist()})
+    )
     (out_dir / "images.f32").write_bytes(x.tobytes())
     (out_dir / "expected.json").write_text(
         json.dumps(

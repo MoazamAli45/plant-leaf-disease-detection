@@ -11,6 +11,8 @@
 
 import type * as TF from "@tensorflow/tfjs";
 
+import { FEATURE_NODE, KERNEL_WEIGHT, OUTPUT_NODE, gradcam } from "@/lib/gradcam";
+
 export const MODEL_URL = "/model/model.json";
 export const INPUT_SIZE = 224;
 
@@ -69,4 +71,38 @@ export async function classify(source: HTMLImageElement | HTMLCanvasElement): Pr
   const probs = (await out.data()) as Float32Array;
   out.dispose();
   return { probs, backend, ms: performance.now() - t0 };
+}
+
+export type Explanation = {
+  /** Heat map in [0, 1], INPUT_SIZE x INPUT_SIZE, row-major. */
+  map: Float32Array;
+  /** The class the map explains, and the model's probability for it on this image. */
+  classIndex: number;
+  probability: number;
+  ms: number;
+};
+
+/**
+ * Grad-CAM for ``classIndex``, computed on the device (see lib/gradcam.ts): one forward pass
+ * returns the last feature maps and the probabilities, and the dense layer's weights are read
+ * from the loaded model. No gradients and no server are needed.
+ */
+export async function explain(source: HTMLImageElement | HTMLCanvasElement, classIndex: number): Promise<Explanation> {
+  const { tf, model } = await loadModel();
+  const t0 = performance.now();
+  const [feats, probs] = tf.tidy(() => {
+    const pixels = tf.browser.fromPixels(source).toFloat();
+    const resized = tf.image.resizeBilinear(pixels, [INPUT_SIZE, INPUT_SIZE], false, true);
+    return model.execute(resized.expandDims(0), [FEATURE_NODE, OUTPUT_NODE]) as TF.Tensor[];
+  });
+  const kernel = model.weights[KERNEL_WEIGHT]?.[0];
+  if (!kernel) {
+    tf.dispose([feats, probs]);
+    throw new Error("The model file does not contain the classifier weights.");
+  }
+  const [, h, w, k] = feats.shape;
+  const [f, p, wk] = await Promise.all([feats.data(), probs.data(), kernel.data()]);
+  tf.dispose([feats, probs]);
+  const { map } = gradcam(f, { h, w, k }, p, wk, classIndex, { h: INPUT_SIZE, w: INPUT_SIZE });
+  return { map, classIndex, probability: p[classIndex], ms: performance.now() - t0 };
 }

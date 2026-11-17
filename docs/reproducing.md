@@ -70,11 +70,13 @@ rm -rf ../web/public/model && cp -R $E/tfjs_fp16 ../web/public/model
 
 ```bash
 cd web && npm install && npm run dev            # http://localhost:3000
-# optional heat maps:
+# optional server-side API (the app does not need it):
 cd api && python3.12 -m venv .venv && .venv/bin/pip install -e ".[dev]"
-.venv/bin/uvicorn leafdx_api.main:app --port 8000
-cd web && NEXT_PUBLIC_API_URL=http://localhost:8000 npm run dev
+.venv/bin/uvicorn leafdx_api.main:app --port 8000          # docs at http://localhost:8000/docs
 ```
+
+Check that the in-browser heat maps match TensorFlow's Grad-CAM (needs the `verify` export from
+step 4): `cd web && npx vitest run src/lib/__tests__/gradcam-model.test.ts`.
 
 Deployment (free on Vercel): [`deployment.md`](deployment.md).
 

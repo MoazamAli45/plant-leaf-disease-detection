@@ -71,7 +71,7 @@ export function SiteFooter() {
         </p>
         <p>
           Trained on PlantVillage (CC BY-SA 3.0) and evaluated on PlantDoc (CC BY 4.0). Photos are
-          analysed in your browser and are not uploaded unless you ask for a heat map.
+          analysed in your browser and are never uploaded.
         </p>
       </div>
     </footer>
