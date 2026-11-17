@@ -11,16 +11,16 @@ Technical report, November 2026. Code, data manifests, results and this report:
 
 ## Abstract
 
-We revisit an earlier study of ours [`usman_ali_plant_leaf`] that classified 38 plant leaf
-disease classes from the New Plant Diseases Dataset (NPD) [`npd_kaggle`], an offline-augmented
-re-release of PlantVillage [`hughes2015open`]. In that study a custom CNN reached 90.25% and
+We revisit an earlier study of ours [1] that classified 38 plant leaf
+disease classes from the New Plant Diseases Dataset (NPD) [2], an offline-augmented
+re-release of PlantVillage [3]. In that study a custom CNN reached 90.25% and
 MobileNet 95.47% validation accuracy. We first reproduce both models (MobileNet within 0.6 pp;
 the CNN 5.7 pp lower). We then audit the dataset and find that **90.3% of the validation images
 in the standard 80/20 split are augmented copies of, or other photos of the same leaf as,
 training images**. We build a grouped 70/15/15 split and retrain five models (the paper's CNN
 with a softmax output, MobileNetV1, MobileNetV2, MobileNetV3-Small and EfficientNetB0) with
 three seeds each. Fine-tuned backbones reach 97.5–99.2% accuracy on leak-free test images.
-Yet on PlantDoc [`singh2020plantdoc`], 2,557 field photographs covering 28 of the classes,
+Yet on PlantDoc [4], 2,557 field photographs covering 28 of the classes,
 every model falls to 7–18%, a gap of 81–85 pp that a better lab score does not close. The
 models are confidently wrong in the field, so a confidence threshold does not catch these
 errors. Grad-CAM and counterfactual masking show that fine-tuned models do look at the leaf
@@ -33,20 +33,20 @@ in the browser and tells users plainly that field accuracy is low.
 ## 1. Introduction
 
 Image classifiers for plant disease regularly report accuracies above 95% on PlantVillage-
-derived datasets [`mohanty2016using`]. Our earlier study [`usman_ali_plant_leaf`] is one of
+derived datasets [5]. Our earlier study, by Ali Usman and Syed Moazam Ali [1], is one of
 them: a three-block CNN trained from scratch and an ImageNet-pretrained MobileNet
-[`howard2017mobilenets`] reached 90.25% and 95.47% validation accuracy on NPD.
+[6] reached 90.25% and 95.47% validation accuracy on NPD.
 
 Two questions decide whether such numbers mean anything for a farmer with a phone:
 
 1. **Is the validation set independent of the training set?** NPD was produced by augmenting
    PlantVillage photos offline (flips, rotations, colour changes) and then splitting the
    resulting files at random. Copies of one photo can therefore land on both sides of the
-   split. This is a form of data leakage [`kaufman2012leakage`].
+   split. This is a form of data leakage [7].
 2. **Does lab accuracy transfer to field photos?** PlantVillage leaves were photographed one
    at a time on a uniform background. Mohanty et al. already observed accuracy dropping to
-   31.4% on images collected online [`mohanty2016using`], and a model trained on 8 background
-   pixels alone reaches 49% on PlantVillage [`noyan2022uncovering`].
+   31.4% on images collected online [5], and a model trained on 8 background
+   pixels alone reaches 49% on PlantVillage [8].
 
 This report answers both questions for our own models and goes further. Contributions:
 
@@ -65,26 +65,26 @@ This report answers both questions for our own models and goes further. Contribu
 ## 2. Related work
 
 **PlantVillage and its derivatives.** Hughes and Salathé released the PlantVillage images
-[`hughes2015open`]. Mohanty et al. trained AlexNet and GoogLeNet on 54,306 of them and reached
+[3]. Mohanty et al. trained AlexNet and GoogLeNet on 54,306 of them and reached
 99.35% on held-out data, but 31.4% on images taken under other conditions
-[`mohanty2016using`]. NPD [`npd_kaggle`] re-released the data with offline augmentation and a
+[5]. NPD [2] re-released the data with offline augmentation and a
 fixed 80/20 split; it is widely used through Kaggle.
 
 **Dataset bias.** Noyan showed that PlantVillage carries capture bias: 8 background pixels
-predict the class with 49% accuracy against 2.6% chance [`noyan2022uncovering`]. PlantDoc
-[`singh2020plantdoc`] was collected from the web to provide field images with the same
+predict the class with 49% accuracy against 2.6% chance [8]. PlantDoc
+[4] was collected from the web to provide field images with the same
 crop and disease names.
 
 **Leakage.** Kaufman et al. define leakage as information in the training data that would not
 be available at prediction time, and recommend a strict separation between learning and
-evaluation data [`kaufman2012leakage`]. Augmented copies or repeat photos of one leaf shared
+evaluation data [7]. Augmented copies or repeat photos of one leaf shared
 between training and evaluation sets are an instance of this.
 
-**Models and tools.** We use MobileNetV1 [`howard2017mobilenets`], MobileNetV2
-[`sandler2018mobilenetv2`], MobileNetV3-Small [`howard2019mobilenetv3`] and EfficientNetB0
-[`tan2019efficientnet`]; Grad-CAM [`selvaraju2017gradcam`] for explanations; expected
-calibration error [`guo2017calibration`]; integer quantisation [`jacob2018quantization`]; and
-the DCT perceptual hash [`zauner2010phash`].
+**Models and tools.** We use MobileNetV1 [6], MobileNetV2
+[9], MobileNetV3-Small [10] and EfficientNetB0
+[11]; Grad-CAM [12] for explanations; expected
+calibration error [13]; integer quantisation [14]; and
+the DCT perceptual hash [15].
 
 ## 3. Data and leakage audit
 
@@ -154,7 +154,7 @@ Changes relative to the reproduction (`docs/experiments.md` §1):
   with early stopping on validation loss (patience 5, best weights restored), mixed float16,
   three seeds. Kaggle, 2 × Tesla T4, TensorFlow 2.21.
 - **Metrics:** accuracy, macro-F1, per-class precision/recall/F1, confusion matrices, expected
-  calibration error (ECE, 15 bins) [`guo2017calibration`], and accuracy versus coverage when
+  calibration error (ECE, 15 bins) [13], and accuracy versus coverage when
   predictions below a confidence threshold are withheld.
 - **PlantDoc** is evaluated on all 28 mapped classes, with a 38-way output (the model may
   predict a class absent from PlantDoc), and on the subset of classes whose mapping is exact.
@@ -164,7 +164,7 @@ Changes relative to the reproduction (`docs/experiments.md` §1):
 
 ### 4.3 Explainability
 
-For seed-42 models we compute Grad-CAM [`selvaraju2017gradcam`] at the last convolutional
+For seed-42 models we compute Grad-CAM [12] at the last convolutional
 layer on 185 clean-test originals (5 per class, where an upstream leaf segmentation exists).
 Using the PlantVillage authors' segmentation masks we measure (i) the **leaf ratio**, the
 share of Grad-CAM mass that falls on the leaf divided by the share of the image that is leaf
@@ -285,7 +285,7 @@ Fine-tuned backbones concentrate Grad-CAM on the leaf (ratios 1.46–1.82) and o
 the examples, and keep 72–89% accuracy when the background is removed. The paper's CNN barely
 prefers the leaf (1.07). From the background or a border strip alone the models score 5–15%,
 2–6× chance: a background cue exists but is weak for models trained on whole images (Noyan's
-49% [`noyan2022uncovering`] is for a model *trained* on background pixels, so the numbers
+49% [8] is for a model *trained* on background pixels, so the numbers
 measure different things). On field images, attention spreads to soil, neighbouring leaves
 and watermarks.
 
@@ -335,7 +335,7 @@ Source: `docs/figures/phase3/efficiency.md` (seed 42; selected rows).
 | EfficientNetB0 | TFLite dynamic-range | 4.60 | 7.00 | 99.46 | 99.60 |
 | | TFLite INT8 | 4.96 | 2.19 | 69.84 | 69.97 |
 
-Full INT8 post-training quantisation [`jacob2018quantization`] is almost lossless for the
+Full INT8 post-training quantisation [14] is almost lossless for the
 MobileNetV1 family (−0.54 pp at 3.8× smaller and 5.3× faster; 1.00 MB at width 0.5) but
 breaks EfficientNetB0 (−29.8 pp) and MobileNetV3-Small (−38.1 pp), whose squeeze-and-
 excitation blocks and swish-type activations are sensitive to activation quantisation.
@@ -406,35 +406,34 @@ root `README.md`; training runs on free Kaggle GPUs through `ml/notebooks/kaggle
 
 ## References
 
-Keys refer to `docs/references.bib`.
+BibTeX entries for all references are in `docs/references.bib`.
 
-- [`usman_ali_plant_leaf`] Ali Usman and Syed Moazam Ali. *Plant Leaf Disease Detection Using
-  Traditional CNN and MobileNet Architecture.* Unpublished manuscript, UET Taxila.
-- [`hughes2015open`] D. P. Hughes and M. Salathé. An open access repository of images on plant
-  health to enable the development of mobile disease diagnostics. arXiv:1511.08060, 2015.
-- [`mohanty2016using`] S. P. Mohanty, D. P. Hughes and M. Salathé. Using deep learning for
-  image-based plant disease detection. *Frontiers in Plant Science* 7:1419, 2016.
-- [`npd_kaggle`] New Plant Diseases Dataset, version 2. Kaggle, 2018.
-- [`singh2020plantdoc`] D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat and N. Batra.
-  PlantDoc: A dataset for visual plant disease detection. *CoDS-COMAD*, pp. 249–253, 2020.
-- [`noyan2022uncovering`] M. A. Noyan. Uncovering bias in the PlantVillage dataset.
-  arXiv:2206.04374, 2022.
-- [`kaufman2012leakage`] S. Kaufman, S. Rosset, C. Perlich and O. Stitelman. Leakage in data
-  mining: Formulation, detection, and avoidance. *ACM TKDD* 6(4):15, 2012.
-- [`zauner2010phash`] C. Zauner. Implementation and benchmarking of perceptual image hash
-  functions. Master's thesis, Upper Austria University of Applied Sciences, 2010.
-- [`howard2017mobilenets`] A. G. Howard et al. MobileNets: Efficient convolutional neural
-  networks for mobile vision applications. arXiv:1704.04861, 2017.
-- [`sandler2018mobilenetv2`] M. Sandler, A. Howard, M. Zhu, A. Zhmoginov and L.-C. Chen.
-  MobileNetV2: Inverted residuals and linear bottlenecks. *CVPR*, pp. 4510–4520, 2018.
-- [`howard2019mobilenetv3`] A. Howard et al. Searching for MobileNetV3. *ICCV*,
-  pp. 1314–1324, 2019.
-- [`tan2019efficientnet`] M. Tan and Q. V. Le. EfficientNet: Rethinking model scaling for
-  convolutional neural networks. *ICML*, PMLR 97:6105–6114, 2019.
-- [`selvaraju2017gradcam`] R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh and
-  D. Batra. Grad-CAM: Visual explanations from deep networks via gradient-based
-  localization. *ICCV*, 2017.
-- [`guo2017calibration`] C. Guo, G. Pleiss, Y. Sun and K. Q. Weinberger. On calibration of
-  modern neural networks. *ICML*, PMLR 70:1321–1330, 2017.
-- [`jacob2018quantization`] B. Jacob et al. Quantization and training of neural networks for
-  efficient integer-arithmetic-only inference. *CVPR*, pp. 2704–2713, 2018.
+[1] Ali Usman and Syed Moazam Ali. *Plant Leaf Disease Detection Using Traditional CNN and MobileNet Architecture.* Unpublished manuscript, Department of Software Engineering, University of Engineering and Technology (UET) Taxila, Pakistan.
+
+[2] New Plant Diseases Dataset, version 2. Kaggle, 2018. https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset
+
+[3] D. P. Hughes and M. Salathé. An open access repository of images on plant health to enable the development of mobile disease diagnostics. arXiv:1511.08060, 2015.
+
+[4] D. Singh, N. Jain, P. Jain, P. Kayal, S. Kumawat and N. Batra. PlantDoc: A dataset for visual plant disease detection. *CoDS-COMAD*, pp. 249–253, 2020.
+
+[5] S. P. Mohanty, D. P. Hughes and M. Salathé. Using deep learning for image-based plant disease detection. *Frontiers in Plant Science* 7:1419, 2016.
+
+[6] A. G. Howard et al. MobileNets: Efficient convolutional neural networks for mobile vision applications. arXiv:1704.04861, 2017.
+
+[7] S. Kaufman, S. Rosset, C. Perlich and O. Stitelman. Leakage in data mining: Formulation, detection, and avoidance. *ACM TKDD* 6(4):15, 2012.
+
+[8] M. A. Noyan. Uncovering bias in the PlantVillage dataset. arXiv:2206.04374, 2022.
+
+[9] M. Sandler, A. Howard, M. Zhu, A. Zhmoginov and L.-C. Chen. MobileNetV2: Inverted residuals and linear bottlenecks. *CVPR*, pp. 4510–4520, 2018.
+
+[10] A. Howard et al. Searching for MobileNetV3. *ICCV*, pp. 1314–1324, 2019.
+
+[11] M. Tan and Q. V. Le. EfficientNet: Rethinking model scaling for convolutional neural networks. *ICML*, PMLR 97:6105–6114, 2019.
+
+[12] R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh and D. Batra. Grad-CAM: Visual explanations from deep networks via gradient-based localization. *ICCV*, 2017.
+
+[13] C. Guo, G. Pleiss, Y. Sun and K. Q. Weinberger. On calibration of modern neural networks. *ICML*, PMLR 70:1321–1330, 2017.
+
+[14] B. Jacob et al. Quantization and training of neural networks for efficient integer-arithmetic-only inference. *CVPR*, pp. 2704–2713, 2018.
+
+[15] C. Zauner. Implementation and benchmarking of perceptual image hash functions. Master's thesis, Upper Austria University of Applied Sciences, 2010.

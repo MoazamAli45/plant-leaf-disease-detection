@@ -16,9 +16,9 @@
 
 | Role | Dataset | Version pinned | Images | License |
 |---|---|---|---|---|
-| Train / val / test (in-distribution) | New Plant Diseases Dataset (NPD) [`npd_kaggle`] | Kaggle version 2 (last updated 2018-11-18) | 87,867 (70,295 train + 17,572 valid; the archive stores every file twice in identical trees, and 33 unlabelled `test/` images are ignored) | "Data files © Original Authors": upstream PlantVillage terms apply |
-| Upstream of NPD | PlantVillage [`hughes2015open`, `mohanty2016using`] | git `7f7ecc7` (leaf map only) | not downloaded | CC BY-SA 3.0 (see note) |
-| Field test set (out-of-distribution) | PlantDoc classification set [`singh2020plantdoc`] | git `5467f60` | 2,578 files extracted (from `ml/data/raw/PROVENANCE.json`) | CC BY 4.0 |
+| Train / val / test (in-distribution) | New Plant Diseases Dataset (NPD) (Kaggle, 2018) | Kaggle version 2 (last updated 2018-11-18) | 87,867 (70,295 train + 17,572 valid; the archive stores every file twice in identical trees, and 33 unlabelled `test/` images are ignored) | "Data files © Original Authors": upstream PlantVillage terms apply |
+| Upstream of NPD | PlantVillage (Hughes and Salathé, 2015; Mohanty et al., 2016) | git `7f7ecc7` (leaf map only) | not downloaded | CC BY-SA 3.0 (see note) |
+| Field test set (out-of-distribution) | PlantDoc classification set (Singh et al., 2020) | git `5467f60` | 2,578 files extracted (from `ml/data/raw/PROVENANCE.json`) | CC BY 4.0 |
 
 **License notes.**
 - **PlantVillage** licensing is reported inconsistently. The maintainers' own Hugging Face card
@@ -85,7 +85,7 @@ For each validation image of the paper's split, we test whether the training spl
 | same source photo | file name with the augmentation suffix stripped (`leafdx.data.filenames`) |
 | same physical leaf | upstream `leaf-map.json`; the leaf id is accepted only when its class matches the image's label (stricter than the official loader, because photo identifiers repeat across crops) |
 | byte-identical file | SHA-256 |
-| perceptual near-duplicate | 64-bit DCT pHash [`zauner2010phash`], made **D4-invariant**: 8 hashes per image (4 rotations × mirror); distance = minimum Hamming distance over transforms. Searched exhaustively *within* each class; across classes only exact D4 matches are detected |
+| perceptual near-duplicate | 64-bit DCT pHash (Zauner, 2010), made **D4-invariant**: 8 hashes per image (4 rotations × mirror); distance = minimum Hamming distance over transforms. Searched exhaustively *within* each class; across classes only exact D4 matches are detected |
 
 pHash is also *calibrated* against the known (original, augmented copy) pairs
 (`phash_recall_by_aug_type.csv`). Recall per augmentation type shows which leaks pHash alone
@@ -207,7 +207,7 @@ accuracy on all mapped classes and on the `exact`-only subset.
 
 - **Lab capture bias.** PlantVillage photos were taken on uniform backgrounds under controlled
   light. A classifier trained on only 8 background pixels reaches 49% accuracy on it, against
-  2.6% for chance [`noyan2022uncovering`]. In-distribution accuracy therefore overstates field
+  2.6% for chance (Noyan, 2022). In-distribution accuracy therefore overstates field
   performance. The EDA notebook compares background brightness between NPD and PlantDoc.
 - **Leaf ids are incomplete.** Upstream `leaf-map.json` covers only part of PlantVillage
   (60,809 of NPD's 87,867 images, 69.2%, resolve to one of 7,378 leaves). Photos of the same
@@ -242,4 +242,5 @@ generalisation to field images). Not validated for agronomic decisions.
 
 ## References
 
-See `docs/references.bib` (keys in brackets above).
+Full references are listed in the [report](report.md#references); BibTeX entries are in
+`docs/references.bib`.

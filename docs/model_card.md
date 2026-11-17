@@ -10,14 +10,14 @@ below is copied from the generated tables cited next to it.
 |---|---|
 | Developer | Syed Moazam Ali (reproduction and extension of the paper by Ali Usman and Syed Moazam Ali, [`paper.pdf`](paper.pdf)) |
 | Date | November 2026, version 0.1.0 |
-| Architecture | MobileNetV1 [`howard2017mobilenets`], width 1.0, ImageNet-pretrained, fine-tuned end to end; head: global average pooling, dropout 0.2, dense 38 softmax. 3.27 M parameters |
+| Architecture | MobileNetV1 (Howard et al., 2017), width 1.0, ImageNet-pretrained, fine-tuned end to end; head: global average pooling, dropout 0.2, dense 38 softmax. 3.27 M parameters |
 | Input | RGB image resized to 224 × 224 (bilinear), values 0–255. MobileNet preprocessing (scaling to [−1, 1]) is inside the model |
 | Output | probabilities over 38 classes (14 crops; diseases and healthy), order in `web/src/data/classes.json` |
 | Training | Adam 1e-4, batch 32, up to 20 epochs, early stopping on validation loss (patience 5), mixed float16, augmentation as model layers (rotation 30°, shift, shear, zoom 0.2, brightness ±20%, flips). Config: `ml/configs/phase3/mobilenet_v1.yaml` |
 | Deployed checkpoint | seed 42 of three (`ml/results/p3_mobilenet_v1/seed42/`) |
 | Formats | Keras (`inference.keras`, float32, 13.4 MB) for the API; TensorFlow.js graph model with float16 weights (6.6 MB) for the browser |
 | Licence | the weights are trained on PlantVillage-derived images (CC BY-SA 3.0); whether weights count as an adaptation under ShareAlike is legally unsettled ([dataset card §1](dataset_card.md#1-datasets-used)). We attribute the datasets. The code licence is stated in the root `README.md` |
-| Citation | [`references.bib`](references.bib) |
+| Citation | see the [report](report.md#references); BibTeX in [`references.bib`](references.bib) |
 
 ## Intended use
 
