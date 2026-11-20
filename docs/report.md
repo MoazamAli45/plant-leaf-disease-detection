@@ -27,8 +27,12 @@ errors. Grad-CAM and counterfactual masking show that fine-tuned models do look 
 on lab images. Ablations show that the paper's augmentation does not help, and that the
 paper's frozen backbone costs 4.7 pp. Full INT8 quantisation is almost lossless for
 MobileNetV1 (−0.54 pp, 3.55 MB, 1.4 ms on a laptop CPU) but breaks EfficientNetB0 and
-MobileNetV3-Small. We deploy MobileNetV1 in an offline progressive web app that classifies
-in the browser and tells users plainly that field accuracy is low.
+MobileNetV3-Small. Finally, fine-tuning MobileNetV1 on 1,278 labelled PlantDoc photos, with
+lab images mixed in and test-time augmentation, raises accuracy on 898 held-out field photos
+from 18.2% to 54.3% (53.1 ± 1.3% over three seeds) while lab accuracy falls by 0.8 pp, and
+reduces the field calibration error from 60% to 7%. Methods that use no field labels gain only
+2–4 pp. We deploy this model in an offline progressive web app that classifies in the browser
+and states the measured field accuracy on every result.
 
 ## 1. Introduction
 
@@ -341,11 +345,49 @@ breaks EfficientNetB0 (−29.8 pp) and MobileNetV3-Small (−38.1 pp), whose squ
 excitation blocks and swish-type activations are sensitive to activation quantisation.
 Weight-only quantisation keeps both above 99%. Quantisation-aware training was not tried.
 
+### 5.7 Closing part of the field gap (Phase 6)
+
+Protocol, all results and deviations: [`field.md`](field.md); tables in
+`docs/figures/phase6/`. The 2,557 PlantDoc images were split once, grouped by near-duplicate
+(rotation- and mirror-invariant pHash distance ≤ 6 bits [15]), into field-train (1,278),
+field-val (381) and field-test (898). Every choice was made on field-val; field-test was used
+only to report. Forgetting was measured on 746 leak-free lab test images ("lab check").
+
+| MobileNetV1 | Labelled field images / class | Field-test (%) | Field-test ECE (%) | Lab check (%) |
+|---|---|---|---|---|
+| Phase 3 model | 0 | 18.15 | 59.73 | 99.06 |
+| Test-time augmentation (4 views) | 0 | 20.04 | 51.06 | 99.20 |
+| AdaBN [16] (unlabelled field-train) | 0 | 19.78 ± 0.13 | 56.20 ± 0.16 | 93.16 ± 0.00 |
+| Fine-tuning, 20 lab images/class replayed | 5 | 26.58 ± 1.36 | 14.72 ± 1.63 | 98.53 ± 0.82 |
+| | 10 | 34.19 ± 0.59 | 14.27 ± 2.26 | 97.94 ± 0.76 |
+| | 20 | 40.76 ± 0.70 | 13.01 ± 0.40 | 98.17 ± 0.43 |
+| | all (≈45) | 49.33 ± 1.78 | 9.24 ± 2.86 | 96.38 ± 0.48 |
+| Fine-tuning, 50 lab images/class replayed | all | 50.00 ± 0.68 | 9.91 ± 0.85 | 97.94 ± 0.47 |
+| **… + test-time augmentation** | all | **53.08 ± 1.28** | **7.24 ± 0.21** | 98.26 ± 0.71 |
+
+Without field labels, test-time augmentation and AdaBN recover only 2–4 pp, and AdaBN costs
+6 pp of lab accuracy. The shift is therefore not mainly a matter of image statistics that
+can be re-normalised. Labelled field photos are what helps. Accuracy rises roughly linearly
+in the logarithm of their number, with no plateau at 45 per class, and calibration is
+largely repaired. Mixing 50 instead of 20 lab images per class into fine-tuning keeps the
+lab loss within the protocol's 2 pp limit at the same field accuracy.
+
+The deployed model (seed 0, the best of three on field-val) scores 54.34% on field-test
+(crop 73.2%, ECE 7.0%) and 97.78% on all 11,599 leak-free lab test images, against 18.15% and
+98.55% for the Phase 3 model it started from. 22 of the 28 field classes improve. Five classes
+get worse, each a disease that resembles another disease of the same crop; for example, most
+*Corn: Cercospora / Gray leaf spot* photos are now called *Northern Leaf Blight*. Because
+field-train and field-test come from the same web-collected source, these numbers are an
+upper estimate of what photos from a different source would give.
+
 ## 6. Deployment
 
 MobileNetV1 is deployed although EfficientNetB0 is more accurate and MobileNetV3-Small is
 smaller: it is the original paper's model, it quantises cleanly, and it is better than
-MobileNetV3-Small on field images (16.33% vs 13.84%), which is where an app is used.
+MobileNetV3-Small on field images (16.33% vs 13.84%), which is where an app is used. The
+deployed weights are the Phase 6 fine-tuned model (§5.7). The app averages the same four
+test-time views as the evaluation, and agrees with the Python evaluation on the top class
+for all 100 verification images (`figures/phase6/tfjs_verify_tta.json`).
 
 The application (`web/`) is a Next.js progressive web app. The model runs in the browser
 with TensorFlow.js (WebGL, then WebAssembly, then CPU), so photos never leave the device and
@@ -356,7 +398,7 @@ uint8 weight quantisation agreed on only 87% and was rejected (`tfjs_verify_mnv1
 Because §5.3 shows that confidence does not identify field errors, the app does not present
 the model as a diagnosis tool. It answers "not a leaf" when too few pixels have plant colours,
 "not sure" below 40% confidence and "uncertain" below 70%, shows the top three classes, and
-states on every result that accuracy on field photos was 16% in our tests.
+states on every result the measured field accuracy (54% after Phase 6; 16% before).
 
 On request the app also shows a Grad-CAM heat map, computed on the device. Automatic
 differentiation is not needed: the network ends in global average pooling, inactive dropout
@@ -382,8 +424,10 @@ explanations either; the FastAPI service in `api/` remains for other clients.
   gap is far larger than this noise.
 - **Three seeds** give little statistical power for differences of 1–2 pp.
 - **The reproduction rests on assumptions** about unreported settings (A1–A9).
-- **No field training data was used.** The study measures the gap; it does not try to close
-  it (e.g. with PlantDoc fine-tuning, background randomisation or segmentation).
+- **Field adaptation uses one source.** The field fine-tuning (§5.7) trains and tests on
+  PlantDoc, so its 54% does not show how the model does on photos from other phones, regions
+  or seasons. Background randomisation, leaf segmentation and an independent field test set
+  were not tried.
 - **Latency** was measured on a laptop CPU, not on a phone.
 
 ## 8. Conclusion
@@ -394,7 +438,9 @@ images. Leakage in the standard NPD split is extensive (90.3% of validation imag
 inflates lab accuracy only modestly. The decisive problem is the field: every model, from a
 2.4 M-parameter CNN to EfficientNetB0, loses more than 80 pp on PlantDoc, and does so with
 high confidence. Better architectures, more augmentation of the kind used here, or
-explanations computed on lab images do not reveal or fix this. Work on PlantVillage-derived
+explanations computed on lab images do not reveal or fix this. What does help is labelled
+field data: about 45 PlantDoc photos per class triple MobileNetV1's field accuracy (18% to
+53–54%) at a cost of under 1 pp in the lab, and make its confidence usable. Work on PlantVillage-derived
 data should report a field benchmark next to lab accuracy, and applications built on it
 should say what that benchmark shows.
 
@@ -437,3 +483,5 @@ BibTeX entries for all references are in `docs/references.bib`.
 [14] B. Jacob et al. Quantization and training of neural networks for efficient integer-arithmetic-only inference. *CVPR*, pp. 2704–2713, 2018.
 
 [15] C. Zauner. Implementation and benchmarking of perceptual image hash functions. Master's thesis, Upper Austria University of Applied Sciences, 2010.
+
+[16] Y. Li, N. Wang, J. Shi, J. Liu and X. Hou. Revisiting batch normalization for practical domain adaptation. *arXiv:1603.04779*, 2016.

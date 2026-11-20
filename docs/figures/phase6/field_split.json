@@ -1,0 +1,24 @@
+{
+ "source": "manifests/plantdoc/test.csv",
+ "max_dist": 6,
+ "seed": 42,
+ "ratios": {
+  "train": 0.5,
+  "val": 0.15,
+  "test": 0.35
+ },
+ "n_images": 2557,
+ "n_classes": 28,
+ "n_pairs_linked": 85,
+ "n_groups": 2474,
+ "n_groups_multi": 79,
+ "largest_group": 3,
+ "n_groups_with_conflicting_labels": 26,
+ "n_groups_split_by_plantdoc_original_split": 9,
+ "counts": {
+  "train": 1278,
+  "val": 381,
+  "test": 898
+ },
+ "min_train_images_per_class": 1
+}

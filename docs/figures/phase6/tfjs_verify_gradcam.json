@@ -1,0 +1,11 @@
+{
+ "images": 100,
+ "reference": "Keras float32 model, tf.GradientTape (ml/src/leafdx/train/export_web.py)",
+ "browser": "TF.js float16 model, closed form (web/src/lib/gradcam.ts), wasm backend",
+ "resolution": "7 x 7, each map scaled to a maximum of 1",
+ "pearson_median": 0.9999848404351179,
+ "pearson_min": 0.9921711289730206,
+ "max_abs_diff_median": 0.005323678255081177,
+ "max_abs_diff_max": 0.1594800055027008,
+ "same_hottest_cell": 0.99
+}

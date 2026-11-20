@@ -1,0 +1,40 @@
+{
+ "generated_at": "2026-11-18T21:45:01+00:00",
+ "run": "results/p6_ft_p3_mobilenet_v1_kall_replay50/seed0",
+ "base_model": "p3_mobilenet_v1",
+ "method": "fine-tuned on labelled PlantDoc field-train images, with lab replay, test-time augmentation (4 views)",
+ "tta": true,
+ "k_per_class": "all",
+ "seed": 0,
+ "n_field_train": 1278,
+ "n_lab_replay": 1900,
+ "lr": 3e-05,
+ "best_epoch": 13,
+ "lab_test_leak_free": {
+  "n": 11599,
+  "accuracy": 0.9777567031640658,
+  "macro_f1": 0.9667074118429111,
+  "ece": 0.011986260116485722
+ },
+ "field_test": {
+  "n": 898,
+  "accuracy": 0.5434298440979956,
+  "macro_f1": 0.48704583138598434,
+  "crop_accuracy": 0.7316258351893096,
+  "ece": 0.07008203591960575
+ },
+ "single_view": {
+  "lab_test_leak_free_accuracy": 0.9728424864212432,
+  "field_test_accuracy": 0.5033407572383074,
+  "field_test_macro_f1": 0.4477984449210788,
+  "field_test_ece": 0.09045551143138604
+ },
+ "before_fine_tuning": {
+  "model": "p3_mobilenet_v1, seed 42 (Phase 3)",
+  "lab_test_leak_free_accuracy": 0.9855159927579964,
+  "field_test_accuracy": 0.18151447661469933,
+  "field_test_ece": 0.5973357696310184
+ },
+ "tfjs_fp16_mb": 6.55,
+ "check_max_prob_diff_vs_run": 0.0
+}

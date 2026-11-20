@@ -1,0 +1,35 @@
+{
+ "model_dir": "web/public/model",
+ "node": "v20.20.2",
+ "tfjs": "4.22.0",
+ "keras_accuracy": {
+  "test": 1,
+  "plantdoc": 0.5
+ },
+ "results": [
+  {
+   "backend": "wasm",
+   "images": 100,
+   "agreement_with_keras": 1,
+   "max_abs_prob_diff": 0.012497872114181519,
+   "accuracy_test": 1,
+   "accuracy_plantdoc": 0.5,
+   "n_test": 76,
+   "n_plantdoc": 24,
+   "latency_ms_median": 29.048542000000452,
+   "latency_ms_p90": 36.66612499999974
+  },
+  {
+   "backend": "cpu",
+   "images": 100,
+   "agreement_with_keras": 1,
+   "max_abs_prob_diff": 0.012495219707489014,
+   "accuracy_test": 1,
+   "accuracy_plantdoc": 0.5,
+   "n_test": 76,
+   "n_plantdoc": 24,
+   "latency_ms_median": 2240.883916999999,
+   "latency_ms_p90": 2705.5855420000153
+  }
+ ]
+}

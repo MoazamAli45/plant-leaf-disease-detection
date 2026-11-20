@@ -1,0 +1,7 @@
+{
+ "label": "MobileNetV1",
+ "feature_node": "StatefulPartitionedCall/mobilenet_v1_1/mobilenet_1.00_224_1/conv_pw_13_relu_1/Relu6",
+ "kernel_weight": "StatefulPartitionedCall/mobilenet_v1_1/classifier_1/Cast/ReadVariableOp",
+ "output_node": "Identity",
+ "tta_views": 4
+}

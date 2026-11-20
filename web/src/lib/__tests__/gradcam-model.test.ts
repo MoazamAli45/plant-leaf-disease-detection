@@ -13,12 +13,14 @@ import * as tf from "@tensorflow/tfjs";
 import { setWasmPaths } from "@tensorflow/tfjs-backend-wasm";
 import { describe, expect, it } from "vitest";
 
-import { FEATURE_NODE, KERNEL_WEIGHT, OUTPUT_NODE, gradcam } from "@/lib/gradcam";
+import { type ModelInfo, gradcam } from "@/lib/gradcam";
 
 const root = path.resolve(__dirname, "../../..");
 const data = path.join(root, "test-data");
 const modelDir = path.join(root, "public", "model");
 const available = ["images.f32", "expected.json", "gradcam.json"].every((f) => fs.existsSync(path.join(data, f)));
+
+const info = JSON.parse(fs.readFileSync(path.join(modelDir, "leafdx.json"), "utf8")) as ModelInfo;
 
 function loadModel() {
   const json = JSON.parse(fs.readFileSync(path.join(modelDir, "model.json"), "utf8"));
@@ -64,14 +66,14 @@ describe.skipIf(!available)("in-browser Grad-CAM vs Keras GradientTape", () => {
     const [n, h, w, c] = expected.shape as number[];
     const raw = fs.readFileSync(path.join(data, "images.f32"));
     const images = new Float32Array(raw.buffer, raw.byteOffset, raw.byteLength / 4);
-    const kernel = model.weights[KERNEL_WEIGHT][0].dataSync();
+    const kernel = model.weights[info.kernel_weight][0].dataSync();
 
     const corr: number[] = [];
     const maxDiff: number[] = [];
     const samePeak: boolean[] = [];
     for (let i = 0; i < n; i++) {
       const x = tf.tensor4d(images.subarray(i * h * w * c, (i + 1) * h * w * c), [1, h, w, c]);
-      const [feats, probs] = model.execute(x, [FEATURE_NODE, OUTPUT_NODE]) as tf.Tensor[];
+      const [feats, probs] = model.execute(x, [info.feature_node, info.output_node]) as tf.Tensor[];
       const [, fh, fw, k] = feats.shape;
       const [fd, pd] = await Promise.all([feats.data(), probs.data()]);
       const { small } = gradcam(fd, { h: fh, w: fw, k }, pd, kernel, ref.class_index[i], { h: fh, w: fw });

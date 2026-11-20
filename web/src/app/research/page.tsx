@@ -4,7 +4,7 @@ import { AccuracyChart } from "@/components/accuracy-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { modelSizeMb } from "@/lib/model-info";
-import { RESEARCH, type Row, meanSd, pct } from "@/lib/research";
+import { FIELD_ADAPTED, RESEARCH, type Row, meanSd, pct } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -38,6 +38,8 @@ export default function ResearchPage() {
   const uint8Changed = tfjs.tfjs_uint8 ? 1 - tfjs.tfjs_uint8.results[0].agreement_with_keras : null;
   const nExplain = Object.values(explain)[0]?.n ?? 0;
   const deployedMb = modelSizeMb();
+  const fa = RESEARCH.field_adaptation as { results: Row[]; split: { n_images: number; counts: Record<string, number> } } | null;
+  const fieldRows = fieldTable(fa?.results);
 
   return (
     <div className="mx-auto max-w-4xl space-y-12">
@@ -174,8 +176,71 @@ export default function ResearchPage() {
           </p>
         )}
       </Section>
+
+      <Section title="8. Improving field accuracy">
+        {fieldRows.length ? (
+          <>
+            <p>
+              To learn from field photos, the {fa?.split.n_images.toLocaleString()} PlantDoc photos
+              were split once into field-train ({fa?.split.counts.train}), field-val (
+              {fa?.split.counts.val}) and field-test ({fa?.split.counts.test}), keeping copies of the
+              same picture together. Methods were chosen on field-val; field-test was used only for
+              the numbers below. Methods without field labels help little; fine-tuning on labelled
+              field photos helps most.
+            </p>
+            <SimpleTable
+              head={["Model", "Method", "Labelled field photos per class", "Field val (%)", "Field test (%)", "Lab check (%)"]}
+              rows={fieldRows}
+            />
+            {FIELD_ADAPTED && (
+              <p className="text-sm text-muted-foreground">
+                This app uses MobileNetV1 fine-tuned on {FIELD_ADAPTED.n_field_train.toLocaleString()} field
+                photos{FIELD_ADAPTED.tta ? ", averaging four views of each photo" : ""}, chosen on field-val:{" "}
+                {pct(FIELD_ADAPTED.field_test.accuracy)} on {FIELD_ADAPTED.field_test.n} held-out
+                field photos and {pct(FIELD_ADAPTED.lab_test_leak_free.accuracy)} on{" "}
+                {FIELD_ADAPTED.lab_test_leak_free.n.toLocaleString()} held-out lab photos.
+              </p>
+            )}
+            <p className="text-sm text-muted-foreground">
+              Protocol and full results:{" "}
+              <a className="underline" href={`${REPO}/docs/field.md`}>field adaptation write-up</a>.
+            </p>
+          </>
+        ) : (
+          <p className="text-muted-foreground">Pending.</p>
+        )}
+      </Section>
     </div>
   );
+}
+
+const FIELD_METHODS: Record<string, string> = {
+  base: "As trained on lab photos",
+  tta: "Test-time augmentation",
+  adabn: "AdaBN (unlabelled field photos)",
+  ft: "Fine-tuned on field photos",
+  fttta: "Fine-tuned + test-time augmentation",
+};
+
+function fieldTable(rows: Row[] | undefined): string[][] {
+  if (!rows) return [];
+  const keep = rows.filter(
+    (r) =>
+      ["p3_mobilenet_v1", "p3_efficientnet_b0"].includes(r.model) &&
+      (!r.method.startsWith("ft") || Number(r.lr) === 3e-5 || r.lr === "-"),
+  );
+  const order = (r: Row) => ["base", "tta", "adabn", "ft", "fttta"].indexOf(r.method) * 1000 + (r.k === "all" ? 999 : Number(r.k) || 0) + (r.run.includes("_replay") ? 0.5 : 0);
+  const ms = (m: string, sd: string) => (sd && sd !== "nan" && sd !== "" ? `${Number(m).toFixed(1)} ± ${Number(sd).toFixed(1)}` : Number(m).toFixed(1));
+  return keep
+    .sort((a, b) => a.model.localeCompare(b.model) || order(a) - order(b))
+    .map((r) => [
+      labelFor(r.model),
+      FIELD_METHODS[r.method] + (r.run.includes("_replay") ? ` (${r.run.split("_replay")[1]} lab photos/class mixed in)` : ""),
+      r.method.startsWith("ft") ? String(r.k) : r.method === "adabn" ? "0 (unlabelled)" : "0",
+      ms(r.field_val_acc_mean, r.field_val_acc_std),
+      ms(r.field_test_acc_mean, r.field_test_acc_std),
+      ms(r.lab_check_acc_mean, r.lab_check_acc_std),
+    ]);
 }
 
 function labelFor(key: string): string {

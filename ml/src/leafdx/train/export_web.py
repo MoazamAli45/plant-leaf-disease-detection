@@ -99,6 +99,20 @@ def research(out: Path) -> Path:
     data["sources"]["tfjs_verify"] = "docs/figures/phase3/tfjs_verify_mnv1_*.json"
     abl = FIG / "phase3" / "ablations.csv"
     data["ablations"] = _csv(abl) if abl.exists() else None
+    # Phase 6 (field adaptation): summary table, field split and, once chosen, the deployed model
+    p6 = FIG / "phase6"
+    data["field_adaptation"] = (
+        {
+            "results": _csv(p6 / "results.csv"),
+            "split": json.loads((p6 / "field_split.json").read_text()),
+        }
+        if (p6 / "results.csv").exists()
+        else None
+    )
+    deployed = p6 / "deployed.json"
+    data["deployed"] = json.loads(deployed.read_text()) if deployed.exists() else None
+    data["sources"]["field_adaptation"] = "docs/figures/phase6/results.csv, field_split.json"
+    data["sources"]["deployed"] = "docs/figures/phase6/deployed.json"
     out.write_text(json.dumps(data, indent=1) + "\n")
     return out
 
@@ -129,13 +143,23 @@ def verify(model_dir: Path, out_dir: Path, per_class: int, n_field: int, seed: i
 
     from leafdx.train.inference import load_inference_model
 
-    model, _ = load_inference_model(model_dir)
+    if model_dir.suffix == ".keras":  # a plain Keras file, e.g. a Phase 6 fine-tuned model
+        import keras
+
+        model = keras.models.load_model(model_dir, compile=False)
+    else:
+        model, _ = load_inference_model(model_dir)
     test = pd.read_csv("manifests/clean_split/test.csv")
     links = pd.read_csv("manifests/clean_split/test_links_corrected.csv")
     test = test.merge(links[["path", "linked_any"]], on="path")
     test = test[~test["linked_any"]].sample(frac=1.0, random_state=seed)
     test = test.groupby("label").head(per_class)
-    field = pd.read_csv("manifests/plantdoc/test.csv").sample(n_field, random_state=seed)
+    # field images from the Phase 6 field-test split when it exists, so a model fine-tuned on
+    # field-train images is never checked on images it was trained on
+    field_csv = Path("manifests/field_split/test.csv")
+    if not field_csv.exists():
+        field_csv = Path("manifests/plantdoc/test.csv")
+    field = pd.read_csv(field_csv).sample(n_field, random_state=seed)
     rows = pd.concat([test.assign(set="test"), field.assign(set="plantdoc")])
 
     def load(p: str) -> np.ndarray:
@@ -146,6 +170,11 @@ def verify(model_dir: Path, out_dir: Path, per_class: int, n_field: int, seed: i
 
     x = np.stack([load(p) for p in rows["path"]]).astype(np.float32)
     probs = model.predict(x, verbose=0).astype(np.float32)
+    # test-time augmentation as in Phase 6 (the app averages the same 4 views, web/src/lib/tta.ts)
+    from leafdx.field.data import ImageSet
+    from leafdx.field.methods import predict as predict_views
+
+    probs_tta = predict_views(model, ImageSet("verify", x, np.zeros(len(x), int), []), tta=True)
     cams = _reference_cams(model, x, probs.argmax(axis=1))
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "gradcam.json").write_text(
@@ -160,6 +189,7 @@ def verify(model_dir: Path, out_dir: Path, per_class: int, n_field: int, seed: i
                 "labels": [PLANTVILLAGE_CLASSES.index(lab) for lab in rows["label"]],
                 "sets": rows["set"].tolist(),
                 "probs": probs.round(6).tolist(),
+                "probs_tta": probs_tta.round(6).tolist(),
             }
         )
     )
@@ -174,7 +204,12 @@ def main(argv: list[str] | None = None) -> None:
     am = sub.add_parser("api-model")
     am.add_argument("--export", type=Path, default=Path("models/_export/p3_mobilenet_v1"))
     v = sub.add_parser("verify")
-    v.add_argument("--model", type=Path, default=Path("models/p3_mobilenet_v1"))
+    v.add_argument(
+        "--model",
+        type=Path,
+        default=Path("models/p3_mobilenet_v1"),
+        help="a Phase 3 run directory, or a .keras file",
+    )
     v.add_argument("--per-class", type=int, default=2)
     v.add_argument("--field", type=int, default=24)
     v.add_argument("--seed", type=int, default=0)

@@ -29,6 +29,7 @@ such a number means anything for a farmer with a phone:
 | 3. Experiments | Trained a custom CNN and four pretrained networks (MobileNetV1, V2, V3-Small, EfficientNetB0) on the clean split with three random seeds each; tested on 2,557 field photos (PlantDoc); explained predictions with Grad-CAM; tested design choices (augmentation, frozen vs fine-tuned network, network width); measured size and speed after compression |
 | 4. App | A web app that runs the model on the phone itself, works offline, and is honest about when it is unsure |
 | 5. Documentation | Report, model card, dataset card |
+| 6. Field accuracy | Split the field photos into train, validation and test sets (keeping copies of a photo together), compared methods with and without labelled field photos under a protocol fixed in advance, and deployed the best one in the app |
 
 ## What we found
 
@@ -47,14 +48,24 @@ All numbers are averages over three training runs and come straight from the sav
    and freezing the pretrained network cost 4.7 points.
 6. **MobileNetV1 compresses well**: a 3.55 MB version runs in 1.4 ms on a laptop CPU and loses
    only 0.5 points. The same compression breaks EfficientNetB0 and MobileNetV3-Small.
+7. **Labelled field photos close much of the gap.** Fine-tuning MobileNetV1 on about 45 field
+   photos per class, while mixing in lab photos so it does not forget them, raises accuracy on
+   held-out field photos from 18% to 54%, at a cost of under 1 point on lab photos. Its
+   confidence also becomes meaningful (calibration error from 60% to 7%). Methods that use no
+   field labels gain only 2–4 points. Details in [docs/field.md](docs/field.md).
+
+Trained on lab photos only (mean of 3 runs; field photos: all 2,557 PlantDoc images):
 
 | Model | Size (M parameters) | Unseen lab photos | Field photos |
 |---|---|---|---|
 | Custom CNN | 2.43 | 88.5% | 7.5% |
-| **MobileNetV1** (used in the app) | 3.27 | 98.3% | 16.3% |
+| MobileNetV1 | 3.27 | 98.3% | 16.3% |
 | MobileNetV2 | 2.31 | 97.5% | 15.0% |
 | MobileNetV3-Small | 0.96 | 98.5% | 13.8% |
 | EfficientNetB0 | 4.10 | 99.2% | 18.2% |
+| **MobileNetV1 + field fine-tuning** (used in the app) | 3.27 | 97.8% | 54.3%* |
+
+\* on the 898 held-out field-test photos, which were not used for training or for any choice.
 
 ## What is Grad-CAM?
 
@@ -77,7 +88,7 @@ The web app classifies a leaf photo into one of 38 classes (14 crops, healthy or
 model runs inside the browser, so photos stay on the phone, and the app keeps working without
 internet once it has been opened. It answers "not a leaf" when the photo has too few plant
 colours, says "not sure" when the model is unsure, always shows the three most likely classes,
-and states that accuracy on field photos was about 16% in our tests. It also includes a
+and states the measured accuracy on field photos (54% on held-out PlantDoc photos). It also includes a
 library of the 38 classes and a page with the research results. On request it also draws a
 Grad-CAM heat map of where the model looked, computed on the phone as well.
 

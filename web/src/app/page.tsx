@@ -39,7 +39,7 @@ export default function Home() {
           <CardHeader>
             <CardTitle>What the evaluation found</CardTitle>
             <CardDescription>
-              {"Deployed model: MobileNetV1, mean of 3 training runs."}
+              {h.modelLabel}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -49,7 +49,7 @@ export default function Home() {
             />
             <Stat
               value={`${h.field.mean.toFixed(1)}%`}
-              label={`accuracy on ${h.fieldImages.toLocaleString()} real field photos (PlantDoc)`}
+              label={`accuracy on ${h.fieldImages.toLocaleString()} ${h.fieldSet}`}
               tone="warn"
             />
             <Stat
@@ -57,8 +57,10 @@ export default function Home() {
               label="of the original paper's validation images had a copy or same-leaf photo in training"
             />
             <p className="text-sm text-muted-foreground">
-              Lab accuracy does not carry over to field photos. Treat every result as a hint, not
-              a diagnosis.
+              {h.fieldAdapted
+                ? `Training on labelled field photos raised field accuracy, but the model is still wrong on about ${Math.round(100 - h.field.mean)}% of them.`
+                : "Lab accuracy does not carry over to field photos."}{" "}
+              Treat every result as a hint, not a diagnosis.
             </p>
           </CardContent>
         </Card>

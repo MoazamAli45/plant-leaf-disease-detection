@@ -1,0 +1,1279 @@
+path,label,plantdoc_class,plantdoc_split,match,group
+raw/plantdoc/test/Apple Scab Leaf/1b321015-6e33-4f18-aade-888f4383fe92.jpeg.jpg,Apple___Apple_scab,Apple Scab Leaf,test,exact,1
+raw/plantdoc/test/Apple Scab Leaf/28-500x375.jpg,Apple___Apple_scab,Apple Scab Leaf,test,exact,2
+raw/plantdoc/test/Apple Scab Leaf/816.jpg,Apple___Apple_scab,Apple Scab Leaf,test,exact,3
+raw/plantdoc/test/Apple Scab Leaf/apple%20scab%20leaf.jpg,Apple___Apple_scab,Apple Scab Leaf,test,exact,4
+raw/plantdoc/test/Apple Scab Leaf/apple%20scabnew.jpg,Apple___Apple_scab,Apple Scab Leaf,test,exact,5
+raw/plantdoc/test/Apple leaf/20180511_090912-14gtw8a-e1526047952754.jpg,Apple___healthy,Apple leaf,test,healthy_assumed,10
+raw/plantdoc/test/Apple leaf/20180511_091133-24l1vhg-e1526047988236.jpg,Apple___healthy,Apple leaf,test,healthy_assumed,11
+raw/plantdoc/test/Apple leaf/20180511_091252-1gy5xf5-e1526048000596.jpg,Apple___healthy,Apple leaf,test,healthy_assumed,12
+raw/plantdoc/test/Apple leaf/Apple-Leaf-Wallpaper-17.jpg,Apple___healthy,Apple leaf,test,healthy_assumed,14
+raw/plantdoc/test/Apple leaf/apple-leaf-14319997.jpg,Apple___healthy,Apple leaf,test,healthy_assumed,15
+raw/plantdoc/test/Apple leaf/apple-leaf-isolated-white-background-56631026.jpg,Apple___healthy,Apple leaf,test,healthy_assumed,18
+raw/plantdoc/test/Apple rust leaf/20130802_111632.jpg,Apple___Cedar_apple_rust,Apple rust leaf,test,approximate,25
+raw/plantdoc/test/Apple rust leaf/4-apple-rust2_19011_matt-bertone.jpg,Apple___Cedar_apple_rust,Apple rust leaf,test,approximate,26
+raw/plantdoc/test/Apple rust leaf/9343310-small.jpg,Apple___Cedar_apple_rust,Apple rust leaf,test,approximate,27
+raw/plantdoc/test/Apple rust leaf/99e886623c2080c22f6519b0e708c531.jpg,Apple___Cedar_apple_rust,Apple rust leaf,test,approximate,28
+raw/plantdoc/test/Bell_pepper leaf spot/000.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,test,approximate,30
+raw/plantdoc/test/Bell_pepper leaf spot/01.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,test,approximate,31
+raw/plantdoc/test/Bell_pepper leaf spot/CMVpepperLeafShock-copy-50QUALITY-1ge8umw.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,test,approximate,33
+raw/plantdoc/test/Bell_pepper leaf/RnGnC.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,test,healthy_assumed,42
+raw/plantdoc/test/Bell_pepper leaf/pepper_leaf.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,test,healthy_assumed,44
+raw/plantdoc/test/Bell_pepper leaf/why-are-my-pepper-plants-yellow-yellow-pepper-plants-yellow-leaves-green-veins-pepper-plants-yellow-veins.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,test,healthy_assumed,45
+raw/plantdoc/test/Blueberry leaf/P1200665+Vaccinium+alaskaense+vs+ovalifolium+leaf+and++twig+cr.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,46
+raw/plantdoc/test/Blueberry leaf/P1200701+Vaccinium+ovalifolium+Oval-leaf+Blueberry+leaf+margin+Heather+Meadows+cr.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,47
+raw/plantdoc/test/Blueberry leaf/blueberry-leaves-normal-above-and-iron-deficient-below-bgahf8.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,48
+raw/plantdoc/test/Blueberry leaf/blueberrysilverleaf16-1372b.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,49
+raw/plantdoc/test/Blueberry leaf/leaf-blueberry-15281271.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,50
+raw/plantdoc/test/Blueberry leaf/stock-photo-two-sides-of-blueberry-leaf-isolated-on-white-15582232.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,54
+raw/plantdoc/test/Blueberry leaf/vaccinium-angustifolium-low-bush-blueberry_0830_124221.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,55
+raw/plantdoc/test/Blueberry leaf/vaccinium_angustifolium_leaf2.JPG.jpg,Blueberry___healthy,Blueberry leaf,test,healthy_assumed,56
+raw/plantdoc/test/Cherry leaf/d7b79dbc0bca0eb3e63fbe5dfb256ccd53d90a4eb1413_1260x1260.jpg,Cherry_(including_sour)___healthy,Cherry leaf,test,healthy_assumed,57
+raw/plantdoc/test/Cherry leaf/five-cherry-tree-green-leaves-white-isolated-background-34493587.jpg,Cherry_(including_sour)___healthy,Cherry leaf,test,healthy_assumed,61
+raw/plantdoc/test/Cherry leaf/prunsero_leaf2.jpg,Cherry_(including_sour)___healthy,Cherry leaf,test,healthy_assumed,63
+raw/plantdoc/test/Cherry leaf/red-cherry-tree-leaf-isolated-crisp-white-background-35742030.jpg,Cherry_(including_sour)___healthy,Cherry leaf,test,healthy_assumed,65
+raw/plantdoc/test/Cherry leaf/three-vibrant-leaves-bird-cherry-tree-13905898.jpg,Cherry_(including_sour)___healthy,Cherry leaf,test,healthy_assumed,66
+raw/plantdoc/test/Corn Gray leaf spot/rsz0803Figure6.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,test,exact,67
+"raw/plantdoc/test/Corn Gray leaf spot/show_picture.asp?id=aaaaaaaaaaogcqq&w2=420&h2=378&clip=center,420,378&meta=0.jpg",Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,test,exact,68
+raw/plantdoc/test/Corn leaf blight/02c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,test,approximate,70
+raw/plantdoc/test/Corn leaf blight/1321189.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,test,approximate,74
+raw/plantdoc/test/Corn leaf blight/160314_web.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,test,approximate,75
+raw/plantdoc/test/Corn leaf blight/2013Corn_GrayLeafSpot_0815_0003.JPG.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,test,approximate,76
+raw/plantdoc/test/Corn leaf blight/Corn-SCLB-2017-1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,test,approximate,78
+raw/plantdoc/test/Corn leaf blight/corn-disease-update-fig-3-gray-leaf-spot.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,test,approximate,79
+raw/plantdoc/test/Corn rust leaf/0796.39maizerust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,test,approximate,80
+raw/plantdoc/test/Corn rust leaf/0796.40comrust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,test,approximate,81
+raw/plantdoc/test/Corn rust leaf/12-19striprustJIM.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,test,approximate,84
+raw/plantdoc/test/Corn rust leaf/2256-body-1501555581-1.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,test,approximate,86
+raw/plantdoc/test/Corn rust leaf/393.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,test,approximate,87
+raw/plantdoc/test/Peach leaf/00pe.jpg,Peach___healthy,Peach leaf,test,healthy_assumed,90
+raw/plantdoc/test/Peach leaf/7190f27ead55c0f6e3ff8b982972810a5446a9713a49d_1260x1260.jpg,Peach___healthy,Peach leaf,test,healthy_assumed,91
+raw/plantdoc/test/Peach leaf/depositphotos_3786198-Peach-leaf.jpg,Peach___healthy,Peach leaf,test,healthy_assumed,92
+raw/plantdoc/test/Peach leaf/rose_tree_220430.jpg,Peach___healthy,Peach leaf,test,healthy_assumed,96
+raw/plantdoc/test/Peach leaf/stock-photo-peach-leaf-isolated-on-white-background-281097503.jpg,Peach___healthy,Peach leaf,test,healthy_assumed,97
+raw/plantdoc/test/Potato leaf early blight/early-blight-alternaria-alternata-leaf-spotting-on-potato-leaf-X91XJE.jpg,Potato___Early_blight,Potato leaf early blight,test,exact,100
+raw/plantdoc/test/Potato leaf early blight/earlyblightpotato.jpg,Potato___Early_blight,Potato leaf early blight,test,exact,102
+raw/plantdoc/test/Potato leaf early blight/potato-blight-phytophthora-infestans-close-up-of-upper-surface-of-BMMRXC.jpg,Potato___Early_blight,Potato leaf early blight,test,exact,103
+raw/plantdoc/test/Potato leaf early blight/potato-early-blight-alternaria-alternata-lesion-on-a-potato-leaf-a1w1em.jpg,Potato___Early_blight,Potato leaf early blight,test,exact,104
+raw/plantdoc/test/Raspberry leaf/Raspberry-leaf.jpg,Raspberry___healthy,Raspberry leaf,test,healthy_assumed,111
+raw/plantdoc/test/Raspberry leaf/depositphotos_1323264-Raspberry-leaf-on-white.jpg,Raspberry___healthy,Raspberry leaf,test,healthy_assumed,112
+raw/plantdoc/test/Raspberry leaf/depositphotos_1323551-stock-photo-raspberry-leaves.jpg,Raspberry___healthy,Raspberry leaf,test,healthy_assumed,113
+raw/plantdoc/test/Raspberry leaf/depositphotos_2795312-stock-photo-green-raspberry-leaf.jpg,Raspberry___healthy,Raspberry leaf,test,healthy_assumed,114
+raw/plantdoc/test/Soyabean leaf/07feb_ma_sbr3.JPG.jpg,Soybean___healthy,Soyabean leaf,test,healthy_assumed,118
+raw/plantdoc/test/Soyabean leaf/Soybean%20edamame%20leaf1.JPG.jpg,Soybean___healthy,Soyabean leaf,test,healthy_assumed,119
+raw/plantdoc/test/Soyabean leaf/fresh-soy-leaves-isolated-on-260nw-667193923.jpg,Soybean___healthy,Soyabean leaf,test,healthy_assumed,120
+raw/plantdoc/test/Soyabean leaf/resistance1c.jpg,Soybean___healthy,Soyabean leaf,test,healthy_assumed,122
+raw/plantdoc/test/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-94700095.jpg,Soybean___healthy,Soyabean leaf,test,healthy_assumed,124
+raw/plantdoc/test/Squash Powdery mildew leaf/powdery-mildew-on-pumpkin-leaves-close-up-2.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,test,exact,128
+raw/plantdoc/test/Squash Powdery mildew leaf/squash-leave-w-powd-mild.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,test,exact,130
+raw/plantdoc/test/Squash Powdery mildew leaf/surface.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,test,exact,131
+raw/plantdoc/test/Strawberry leaf/strawberry-leaf--stock-photo-1431216.jpg,Strawberry___healthy,Strawberry leaf,test,healthy_assumed,132
+raw/plantdoc/test/Strawberry leaf/strawberry-leaf-22360816.jpg,Strawberry___healthy,Strawberry leaf,test,healthy_assumed,133
+raw/plantdoc/test/Strawberry leaf/strawberry-leaves-collection-white-background-36684676.jpg,Strawberry___healthy,Strawberry leaf,test,healthy_assumed,134
+raw/plantdoc/test/Strawberry leaf/strawberry-leaves-isolated-white-17473157.jpg,Strawberry___healthy,Strawberry leaf,test,healthy_assumed,135
+raw/plantdoc/test/Strawberry leaf/strawberry-leaves-stock-image-948674.jpg,Strawberry___healthy,Strawberry leaf,test,healthy_assumed,137
+raw/plantdoc/test/Strawberry leaf/wild-strawberry-leaf-top-view-rotated-KTBXCY.jpg,Strawberry___healthy,Strawberry leaf,test,healthy_assumed,139
+raw/plantdoc/test/Tomato Early blight leaf/039b47d574bc4bb8a14259a1cd96a741.jpg,Tomato___Early_blight,Tomato Early blight leaf,test,exact,140
+raw/plantdoc/test/Tomato Early blight leaf/1234080-Early-Blight.jpg,Tomato___Early_blight,Tomato Early blight leaf,test,exact,142
+raw/plantdoc/test/Tomato Septoria leaf spot/2STEM.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,150
+raw/plantdoc/test/Tomato Septoria leaf spot/2septoria-tomato.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,151
+raw/plantdoc/test/Tomato Septoria leaf spot/55830b60a7cf2.image.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,152
+raw/plantdoc/test/Tomato Septoria leaf spot/636227737977191231-septoria-leaf-spot-VT.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,154
+raw/plantdoc/test/Tomato Septoria leaf spot/6447731_orig.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,155
+raw/plantdoc/test/Tomato Septoria leaf spot/early-blight-septoria-ls-fig-3.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,158
+raw/plantdoc/test/Tomato Septoria leaf spot/sept4disease-019.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,test,exact,159
+raw/plantdoc/test/Tomato leaf bacterial spot/%2320+Bacterial+Spot+and+Speck.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,test,exact,160
+raw/plantdoc/test/Tomato leaf bacterial spot/07.17.18-Common_Tomato_Diseases_Canker-258x300.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,test,exact,161
+raw/plantdoc/test/Tomato leaf bacterial spot/Bacterial_spots563.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,test,exact,162
+raw/plantdoc/test/Tomato leaf bacterial spot/Tom_Bact3.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,test,exact,163
+raw/plantdoc/test/Tomato leaf bacterial spot/Tomato%2BBacterial%2BSpot%2Bon%2BLeaves.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,test,exact,165
+raw/plantdoc/test/Tomato leaf bacterial spot/tomato_bacterial-speck_01_zoom.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,test,exact,167
+raw/plantdoc/test/Tomato leaf late blight/110822-206-Tomato-blight.jpg,Tomato___Late_blight,Tomato leaf late blight,test,exact,168
+raw/plantdoc/test/Tomato leaf late blight/18c.jpg,Tomato___Late_blight,Tomato leaf late blight,test,exact,169
+raw/plantdoc/test/Tomato leaf late blight/636368370164094909-late-blight-15-.jpg,Tomato___Late_blight,Tomato leaf late blight,test,exact,170
+raw/plantdoc/test/Tomato leaf late blight/70.jpg,Tomato___Late_blight,Tomato leaf late blight,test,exact,171
+raw/plantdoc/test/Tomato leaf late blight/LateBlt09_06.jpg,Tomato___Late_blight,Tomato leaf late blight,test,exact,174
+raw/plantdoc/test/Tomato leaf mosaic virus/D%29AlfMov.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,test,exact,179
+raw/plantdoc/test/Tomato leaf mosaic virus/Tomato-Mosaic-1wdr2jx-300x225.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,test,exact,180
+raw/plantdoc/test/Tomato leaf mosaic virus/everystockphoto-21099455-l.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,test,exact,181
+raw/plantdoc/test/Tomato leaf mosaic virus/page_2.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,test,exact,183
+raw/plantdoc/test/Tomato leaf mosaic virus/tmv-tomato-9.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,test,exact,185
+raw/plantdoc/test/Tomato leaf yellow virus/17fc47.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,test,approximate,189
+raw/plantdoc/test/Tomato leaf yellow virus/8226402877_9abf151b5b_b.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,test,approximate,190
+raw/plantdoc/test/Tomato leaf yellow virus/fwa2013313115151.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,test,approximate,191
+raw/plantdoc/test/Tomato leaf yellow virus/tylcv-seminar-1-638.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,test,approximate,193
+raw/plantdoc/test/Tomato leaf/2013-08-20-06.jpg,Tomato___healthy,Tomato leaf,test,healthy_assumed,195
+raw/plantdoc/test/Tomato leaf/IMG_1246.jpg,Tomato___healthy,Tomato leaf,test,healthy_assumed,198
+raw/plantdoc/test/Tomato mold leaf/49%20Leafmold%20Bottom.jpg,Tomato___Leaf_Mold,Tomato mold leaf,test,exact,202
+raw/plantdoc/test/Tomato mold leaf/BIGSD.jpg,Tomato___Leaf_Mold,Tomato mold leaf,test,exact,204
+raw/plantdoc/test/Tomato mold leaf/black_leaf_mold_in_zina_tina.jpg,Tomato___Leaf_Mold,Tomato mold leaf,test,exact,205
+raw/plantdoc/test/Tomato mold leaf/dscn6689.jpg,Tomato___Leaf_Mold,Tomato mold leaf,test,exact,206
+raw/plantdoc/test/grape leaf black rot/5-29black-rot-chardRR.jpg,Grape___Black_rot,grape leaf black rot,test,exact,210
+raw/plantdoc/test/grape leaf black rot/Black%20rot%20on%20foliage.jpg,Grape___Black_rot,grape leaf black rot,test,exact,211
+raw/plantdoc/test/grape leaf black rot/brleaf2_zoom.jpg,Grape___Black_rot,grape leaf black rot,test,exact,213
+raw/plantdoc/test/grape leaf black rot/grape_F15a.jpg,Grape___Black_rot,grape leaf black rot,test,exact,214
+raw/plantdoc/test/grape leaf/DSCN7317.JPG.jpg,Grape___healthy,grape leaf,test,healthy_assumed,218
+raw/plantdoc/test/grape leaf/P1130286.jpg,Grape___healthy,grape leaf,test,healthy_assumed,219
+raw/plantdoc/test/grape leaf/depositphotos_3443387-stock-photo-the-green-grape-leaf-on.jpg,Grape___healthy,grape leaf,test,healthy_assumed,220
+raw/plantdoc/test/grape leaf/depositphotos_6898486-stock-photo-grape-leaves.jpg,Grape___healthy,grape leaf,test,healthy_assumed,221
+raw/plantdoc/test/grape leaf/grape-leaf-picture-id119212425?k=6&m=119212425&s=612x612&w=0&h=8RZBWGcvXe4tAwhhvYZVFzWyRyiN5iTxKfWBpPT1FcU=.jpg,Grape___healthy,grape leaf,test,healthy_assumed,223
+raw/plantdoc/test/grape leaf/vitis-riparia-le-ahaines-b.jpg,Grape___healthy,grape leaf,test,healthy_assumed,227
+raw/plantdoc/train/Apple Scab Leaf/01Apple-scab-2-Venturia-inaequalis.ashx?w=600&h=408&bc=ffffff.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,228
+raw/plantdoc/train/Apple Scab Leaf/12-20_apple_scab1.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,230
+raw/plantdoc/train/Apple Scab Leaf/500_F_125294801_k0A2teQwKxZfTV1pcaerZFf9Th04F04q.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,231
+raw/plantdoc/train/Apple Scab Leaf/Apple%20scab%20-%20early%20infection%20on%20leaves.JPG.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,233
+raw/plantdoc/train/Apple Scab Leaf/Apple-Scab-image-01.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,236
+raw/plantdoc/train/Apple Scab Leaf/Apple-Scab1.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,239
+raw/plantdoc/train/Apple Scab Leaf/Apple-scab-on-crab-apple.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,241
+raw/plantdoc/train/Apple Scab Leaf/AppleScab.JPG.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,242
+raw/plantdoc/train/Apple Scab Leaf/AppleScab14.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,245
+raw/plantdoc/train/Apple Scab Leaf/Apple_Scab163.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,246
+raw/plantdoc/train/Apple Scab Leaf/Apple_scab.jpg?t=1473441220256&width=300&height=200&name=Apple_scab.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,247
+raw/plantdoc/train/Apple Scab Leaf/Apple_scab_symptoms_on_leaf.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,248
+raw/plantdoc/train/Apple Scab Leaf/Malus-Scab-disease-225x300.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,253
+raw/plantdoc/train/Apple Scab Leaf/apple%20scab%20MF821.JPG.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,256
+raw/plantdoc/train/Apple Scab Leaf/apple-scab-disease.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,258
+raw/plantdoc/train/Apple Scab Leaf/apple-scab-leaf-big.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,259
+raw/plantdoc/train/Apple Scab Leaf/apple-scab-obst-krankheit-m7akxy.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,260
+raw/plantdoc/train/Apple Scab Leaf/apple-scab-venturia-inaequalis-early-leaf-infection-and-mycelium-bxbd0k.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,262
+raw/plantdoc/train/Apple Scab Leaf/apple-scab-venturia-inaequalis-early-leaf-infection-and-mycelium-bxbd23.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,263
+raw/plantdoc/train/Apple Scab Leaf/apple-scab-venturia-inaequalis-germinated-from-a-spore-shower-on-an-apple-leaf-X31BGG.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,264
+raw/plantdoc/train/Apple Scab Leaf/apple_scab.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,269
+raw/plantdoc/train/Apple Scab Leaf/apple_scab_1465_180.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,272
+raw/plantdoc/train/Apple Scab Leaf/apples-severely-affected-by-apple-scab-venturia-inaequalis-dgk11a.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,274
+raw/plantdoc/train/Apple Scab Leaf/apples_apple-scab_02_zoom.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,275
+raw/plantdoc/train/Apple Scab Leaf/applescab-500x383.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,277
+raw/plantdoc/train/Apple Scab Leaf/applescab.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,239
+raw/plantdoc/train/Apple Scab Leaf/applescab004.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,278
+raw/plantdoc/train/Apple Scab Leaf/applescab_lf.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,280
+raw/plantdoc/train/Apple Scab Leaf/applescabmalus1.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,283
+raw/plantdoc/train/Apple Scab Leaf/appscab.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,285
+raw/plantdoc/train/Apple Scab Leaf/disease-on-fruit-scab-on-apple-tree-j1r0jp.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,288
+raw/plantdoc/train/Apple Scab Leaf/early-symptoms-of-scab-venturia-inaequalis-on-apple-leaves-AW051N.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,289
+raw/plantdoc/train/Apple Scab Leaf/image0002.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,291
+raw/plantdoc/train/Apple Scab Leaf/img_1920.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,294
+raw/plantdoc/train/Apple Scab Leaf/inaequalis1a.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,296
+raw/plantdoc/train/Apple Scab Leaf/inaequalis1b.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,297
+raw/plantdoc/train/Apple Scab Leaf/scab-disease-apple-leaf-macro-62212448.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,300
+raw/plantdoc/train/Apple Scab Leaf/scab-disease-small.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,301
+raw/plantdoc/train/Apple Scab Leaf/scab-on-tall-spindle-apple-tree-d3phw6.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,303
+raw/plantdoc/train/Apple Scab Leaf/schurft.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,307
+raw/plantdoc/train/Apple Scab Leaf/venturia.jpg,Apple___Apple_scab,Apple Scab Leaf,train,exact,309
+raw/plantdoc/train/Apple leaf/4633813-sweet-apple-with-leaf.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,312
+raw/plantdoc/train/Apple leaf/Apple_tree_leaf_J1.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,315
+raw/plantdoc/train/Apple leaf/CRABAPPLE_leaves.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,318
+raw/plantdoc/train/Apple leaf/Crab-Apple-%28Malus-Sylvestris%29-Leaf.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,319
+raw/plantdoc/train/Apple leaf/Dwarf-Apple-Pink-Lady-2545.jpeg.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,320
+raw/plantdoc/train/Apple leaf/apple-tree-branch-green-leaves-fresh-isolated-white-background-33032924.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,325
+raw/plantdoc/train/Apple leaf/apple-tree-leaves.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,328
+raw/plantdoc/train/Apple leaf/appleleaf+trial+007.JPG.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,329
+raw/plantdoc/train/Apple leaf/depositphotos_30057617-Green-leaf-of-apple-tree.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,336
+raw/plantdoc/train/Apple leaf/depositphotos_4505396-Green-apple-leaf.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,336
+raw/plantdoc/train/Apple leaf/depositphotos_45748597-stock-photo-ripe-apple-with-leaf.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,337
+raw/plantdoc/train/Apple leaf/depositphotos_55202179-stock-photo-green-apple-with-leaf-and.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,338
+raw/plantdoc/train/Apple leaf/depositphotos_6657863-stock-photo-single-red-apple-with-leaf.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,340
+"raw/plantdoc/train/Apple leaf/flat,1000x1000,075,f.u2.jpg",Apple___healthy,Apple leaf,train,healthy_assumed,341
+raw/plantdoc/train/Apple leaf/fruit_apple_apple-tree_wallpaper_EA60026.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,343
+raw/plantdoc/train/Apple leaf/green-apple-fruits-leaf-16266077.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,344
+raw/plantdoc/train/Apple leaf/green-apple-leaf-slice-isolated-white-ripe-background-clipping-path-42352971.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,348
+raw/plantdoc/train/Apple leaf/green-apple-leaf-slice-isolated-white-ripe-background-clipping-path-45471482.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,338
+raw/plantdoc/train/Apple leaf/green-apple-leaf-white-background-33503979.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,350
+raw/plantdoc/train/Apple leaf/green-leaf-apple-tree-14300049.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,65
+raw/plantdoc/train/Apple leaf/green-leaf-apple-tree-isolated-white-background-33032695.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,351
+raw/plantdoc/train/Apple leaf/green-leaf-picture-id177130309?b=1&k=6&m=177130309&s=612x612&w=0&h=VP3U0AM5j0fvQqOwuI5f7cmb2Ji88mVep0eoXQaJRfs=.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,336
+raw/plantdoc/train/Apple leaf/grow-an-apple-tree-from-seed-in-singapore-img5.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,352
+raw/plantdoc/train/Apple leaf/malus-floribunda-le-amoro2-a.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,355
+raw/plantdoc/train/Apple leaf/red-apple-green-leaf-isolated-white-background-57496220.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,356
+raw/plantdoc/train/Apple leaf/red-apple-leaf-slice-white-background-29914331.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,357
+raw/plantdoc/train/Apple leaf/red-apple-leaves-309078.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,358
+raw/plantdoc/train/Apple leaf/shiny-red-apple-green-leaf-isolated-white-background-56202743.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,362
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaf-isolated-on-white-background-287560226.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,15
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaf-set-isolated-on-white-background-300957002.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,363
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaves-collection-isolated-on-white-background-373945045.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,364
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaves-isolated-on-the-white-background-729570907.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,366
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaves-isolated-on-white-background-326520134.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,369
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaves-isolated-on-white-collection-197880929.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,370
+raw/plantdoc/train/Apple leaf/stock-photo-apple-leaves-set-isolated-on-white-271652246.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,371
+raw/plantdoc/train/Apple leaf/stock-photo-red-apple-with-leaf-138430751.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,381
+raw/plantdoc/train/Apple leaf/stock-photo-sweet-apple-with-leaf-111143150.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,312
+raw/plantdoc/train/Apple leaf/stock-photo-whole-ripe-green-apple-with-apple-leaf-and-green-apple-half-isolated-on-white-background-with-566226067.jpg,Apple___healthy,Apple leaf,train,healthy_assumed,383
+raw/plantdoc/train/Apple rust leaf/20130802_111648.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,390
+raw/plantdoc/train/Apple rust leaf/20170524_195105-1k1eu8b.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,391
+raw/plantdoc/train/Apple rust leaf/3-Rust-induced-leaf-scorch-1emjjbl.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,392
+raw/plantdoc/train/Apple rust leaf/601fbee78c62e32a76e768a92ee40193.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,393
+raw/plantdoc/train/Apple rust leaf/C0258424-Cedar_apple_rust_on_a_leaf-SPL.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,397
+raw/plantdoc/train/Apple rust leaf/CAR1.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,400
+raw/plantdoc/train/Apple rust leaf/CedarApple_Rust168.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,405
+raw/plantdoc/train/Apple rust leaf/Cedar_apple_rust_on_crab_apple_leaf_showing_underside_cup.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,406
+raw/plantdoc/train/Apple rust leaf/Cedar_apple_rust_on_crab_apple_leaf_upper_surface.JPG.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,407
+raw/plantdoc/train/Apple rust leaf/DAxpYpoWAAQxi1f.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,408
+raw/plantdoc/train/Apple rust leaf/DIsease-Pest-Management.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,409
+raw/plantdoc/train/Apple rust leaf/Fig-17-Apple-rust-on-lower-surface-on-leaf-at-extreme.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,410
+raw/plantdoc/train/Apple rust leaf/Figure-1.-Typical-cedar-apple-rust-lesions-on-upper-surface-of-apple-leaf.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,411
+raw/plantdoc/train/Apple rust leaf/Figure-3.-Aecial-projections-on-the-underside-of-an-apple-leaf-with-cedar-apple-rust-disease-.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,412
+raw/plantdoc/train/Apple rust leaf/P1020430.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,414
+raw/plantdoc/train/Apple rust leaf/Rust%20on%20Brandywine_ADJ.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,417
+raw/plantdoc/train/Apple rust leaf/aecia-on-apple-e1368285975597.jpeg.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,420
+raw/plantdoc/train/Apple rust leaf/apple+rust+001.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,421
+raw/plantdoc/train/Apple rust leaf/apple-leaf-rust-and-cedar-apple-roestella-pirata-report-of-the-of-picture-id629456105?s=612x612.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,422
+raw/plantdoc/train/Apple rust leaf/apple_leaf.JPG.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,426
+raw/plantdoc/train/Apple rust leaf/apples_black-rot_01_zoom.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,428
+raw/plantdoc/train/Apple rust leaf/apples_rusts+apple-scab.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,429
+raw/plantdoc/train/Apple rust leaf/apples_rusts+frogs-eye.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,430
+raw/plantdoc/train/Apple rust leaf/apples_rusts-cedar-apple_01_zoom.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,431
+raw/plantdoc/train/Apple rust leaf/buckinghamshire-speen-garden-cedar-apple-rust-on-apple-underside-of-F5D3RD.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,432
+raw/plantdoc/train/Apple rust leaf/buckinghamshire-speen-garden-detail-cedar-apple-rust-on-apple-underside-f5d3r7.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,433
+raw/plantdoc/train/Apple rust leaf/car-apple9.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,435
+raw/plantdoc/train/Apple rust leaf/car.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,436
+raw/plantdoc/train/Apple rust leaf/car1__case2.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,437
+raw/plantdoc/train/Apple rust leaf/cedar%20apple%20rust%20upper%20leaf%20surface%20S%20ne%20OH%20RA%209-2-16.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,442
+raw/plantdoc/train/Apple rust leaf/cedar-apple-rust-gymnosporangium-juniperi-pustules-on-apple-leaf-lower-c99tfp.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,444
+raw/plantdoc/train/Apple rust leaf/cedar-apple-rust-gymnosporangium-juniperi-pustules-on-apple-leaf-lower-surface-X12A9H.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,444
+raw/plantdoc/train/Apple rust leaf/cedar-apple-rust_fig-1.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,446
+raw/plantdoc/train/Apple rust leaf/cedar-apple-rust_fig-2.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,447
+raw/plantdoc/train/Apple rust leaf/cedar_apple_rust_3.JPG?1362772840.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,449
+raw/plantdoc/train/Apple rust leaf/cedar_apple_rust_on_jonagold_3.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,452
+raw/plantdoc/train/Apple rust leaf/crab-apple-tree-leaves.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,453
+raw/plantdoc/train/Apple rust leaf/pix053.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,457
+raw/plantdoc/train/Apple rust leaf/quince5_600px.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,458
+raw/plantdoc/train/Apple rust leaf/thumb-20130802_111648.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,390
+raw/plantdoc/train/Apple rust leaf/tree-problems-cedar-apple-rust-apple-leaf-475x350.jpg,Apple___Cedar_apple_rust,Apple rust leaf,train,approximate,462
+raw/plantdoc/train/Bell_pepper leaf spot/0.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,463
+raw/plantdoc/train/Bell_pepper leaf spot/0000.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,464
+raw/plantdoc/train/Bell_pepper leaf spot/02.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,465
+raw/plantdoc/train/Bell_pepper leaf spot/04.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,467
+raw/plantdoc/train/Bell_pepper leaf spot/06.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,469
+raw/plantdoc/train/Bell_pepper leaf spot/100_1657.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,470
+raw/plantdoc/train/Bell_pepper leaf spot/4-dogwood_pm.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,471
+raw/plantdoc/train/Bell_pepper leaf spot/BacterialSpot10.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,476
+raw/plantdoc/train/Bell_pepper leaf spot/Habanero1.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,482
+raw/plantdoc/train/Bell_pepper leaf spot/IMG_0945.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,483
+raw/plantdoc/train/Bell_pepper leaf spot/PepperPhytophLeaf3-2f94629.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,488
+raw/plantdoc/train/Bell_pepper leaf spot/Septoria-leaf-spot.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,489
+raw/plantdoc/train/Bell_pepper leaf spot/TCSV_Pepper%20%285%29.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,491
+raw/plantdoc/train/Bell_pepper leaf spot/TCSV_Pepper%20%286%29.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,492
+raw/plantdoc/train/Bell_pepper leaf spot/bacterialCanker08-129kre6-on-pepper-50-QUALITY-1tzxf2r.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,496
+raw/plantdoc/train/Bell_pepper leaf spot/bacterial_leaf_spot_pepper_plant_l.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,497
+raw/plantdoc/train/Bell_pepper leaf spot/gray-leaf-spot-disease-on-260nw-559799659.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,504
+raw/plantdoc/train/Bell_pepper leaf spot/green-pepper-plant-diseases-bacterial-spot-on-pepper-plant-green-pepper-plant-diseases-photos.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,505
+raw/plantdoc/train/Bell_pepper leaf spot/image_1500x1500%253E.jpeg?1467983528.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,506
+raw/plantdoc/train/Bell_pepper leaf spot/image_1500x1500%253E.jpeg?1472603885.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,507
+raw/plantdoc/train/Bell_pepper leaf spot/image_300x300%2523.jpeg?1472603885.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,508
+raw/plantdoc/train/Bell_pepper leaf spot/image_300x300%2523.jpeg?1472603886.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,509
+raw/plantdoc/train/Bell_pepper leaf spot/image_original.jpeg?1472603885.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,507
+raw/plantdoc/train/Bell_pepper leaf spot/image_original.jpeg?1472603886.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,506
+raw/plantdoc/train/Bell_pepper leaf spot/may27pepleaes001.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,510
+raw/plantdoc/train/Bell_pepper leaf spot/may27pepleaes002.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,511
+raw/plantdoc/train/Bell_pepper leaf spot/pepper-plant-leaves-turning-yellow-plants-turning-yellow-pepper-plant-leaves-turning-yellow-with-brown-spots.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,513
+raw/plantdoc/train/Bell_pepper leaf spot/pepper_bacterial-spot_02_zoom.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,515
+raw/plantdoc/train/Bell_pepper leaf spot/pepper_phytophtera10x1200.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,517
+raw/plantdoc/train/Bell_pepper leaf spot/pepper_phytophtera12x500.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,518
+raw/plantdoc/train/Bell_pepper leaf spot/pepperplantwithbacterialspotimg3206.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,519
+raw/plantdoc/train/Bell_pepper leaf spot/peppers_bacterial_spot_zoom.jpg,"Pepper,_bell___Bacterial_spot",Bell_pepper leaf spot,train,approximate,505
+raw/plantdoc/train/Bell_pepper leaf/0f3sA.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,524
+raw/plantdoc/train/Bell_pepper leaf/14ec45.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,525
+raw/plantdoc/train/Bell_pepper leaf/2477703364_0c94646b48.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,526
+raw/plantdoc/train/Bell_pepper leaf/387502.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,528
+raw/plantdoc/train/Bell_pepper leaf/951d30.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,530
+raw/plantdoc/train/Bell_pepper leaf/Bell-pepper-leaves.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,531
+raw/plantdoc/train/Bell_pepper leaf/Bell-pepper-plant.JPG.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,532
+raw/plantdoc/train/Bell_pepper leaf/CMZEb.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,533
+raw/plantdoc/train/Bell_pepper leaf/DSC04477.JPG.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,534
+raw/plantdoc/train/Bell_pepper leaf/DSCN0652.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,535
+raw/plantdoc/train/Bell_pepper leaf/DSCN3768.JPG.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,536
+raw/plantdoc/train/Bell_pepper leaf/DSCN5835_original.JPG?1472909566.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,537
+raw/plantdoc/train/Bell_pepper leaf/IMG_1495.JPG.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,538
+raw/plantdoc/train/Bell_pepper leaf/IMG_3891.JPG?1492073147.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,540
+raw/plantdoc/train/Bell_pepper leaf/ac9201ad84e0987e6fdd2589258d72fd.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,544
+raw/plantdoc/train/Bell_pepper leaf/b085c28357a5f7839c2dcf582acc9e52.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,545
+raw/plantdoc/train/Bell_pepper leaf/bb2581.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,546
+raw/plantdoc/train/Bell_pepper leaf/bell%20pepper%20rain%20590x330.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,547
+raw/plantdoc/train/Bell_pepper leaf/e8199bb0e4a7edf94351ca07a5aadc06.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,549
+raw/plantdoc/train/Bell_pepper leaf/file.php?id=18598&t=1.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,551
+raw/plantdoc/train/Bell_pepper leaf/fotolia_4311376_XS.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,552
+raw/plantdoc/train/Bell_pepper leaf/october-bell-peppers.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,559
+raw/plantdoc/train/Bell_pepper leaf/pepper.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,562
+raw/plantdoc/train/Bell_pepper leaf/shutterstock_443115826.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,564
+raw/plantdoc/train/Bell_pepper leaf/stock-photo-black-pepper-plant-with-green-berries-and-leaves-555241408.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,565
+raw/plantdoc/train/Bell_pepper leaf/tomato_bell_pepper_garden_pt3-03.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,567
+raw/plantdoc/train/Bell_pepper leaf/uGz0O.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,568
+raw/plantdoc/train/Bell_pepper leaf/v9hX3.jpg,"Pepper,_bell___healthy",Bell_pepper leaf,train,healthy_assumed,569
+raw/plantdoc/train/Blueberry leaf/15rnn8k.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,576
+raw/plantdoc/train/Blueberry leaf/179288748.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,577
+raw/plantdoc/train/Blueberry leaf/4851522550_02e3b9f3b4.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,581
+raw/plantdoc/train/Blueberry leaf/7-blueberry-leaves.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,584
+raw/plantdoc/train/Blueberry leaf/9-Folia-Myrtilli-Blueberry-Leaves-Gjethe-Boronice-1.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,585
+raw/plantdoc/train/Blueberry leaf/9167d851305baf06649c57aea130c8fb.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,586
+raw/plantdoc/train/Blueberry leaf/A+A+Blueberry+Leaf+Disease+002.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,587
+raw/plantdoc/train/Blueberry leaf/BLUEBERRY-BLUE-CROP-LEAF-500x500.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,589
+raw/plantdoc/train/Blueberry leaf/BLUEBERRY-SPARTAN-LEAF-500x500.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,590
+raw/plantdoc/train/Blueberry leaf/Blueberry-leaves.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,593
+raw/plantdoc/train/Blueberry leaf/Blueberry_Damage_2_original.JPG?1431126657.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,598
+raw/plantdoc/train/Blueberry leaf/Chlorotic-Blueberry-Leaf.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,599
+raw/plantdoc/train/Blueberry leaf/Fruit-Blueberry-Northblue.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,601
+raw/plantdoc/train/Blueberry leaf/IMG_0002_original.JPG?1500100269.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,603
+raw/plantdoc/train/Blueberry leaf/IMG_0017_original.JPG?1500100270.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,604
+raw/plantdoc/train/Blueberry leaf/IMG_5310.JPG.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,606
+raw/plantdoc/train/Blueberry leaf/IMG_8502.JPG.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,608
+raw/plantdoc/train/Blueberry leaf/IMG_8680.JPG.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,609
+raw/plantdoc/train/Blueberry leaf/IMG_8698.JPG.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,611
+raw/plantdoc/train/Blueberry leaf/IMG_9275.JPG.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,612
+raw/plantdoc/train/Blueberry leaf/P1200652+Vaccinium+ovalifolium+Ovalleaf+Blueberry+leaf+top+cr.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,614
+raw/plantdoc/train/Blueberry leaf/P1200699+Vaccinium+alaskaense+Alaska+Blueberry+hairy+leaf+margin+Heather+Meadows.JPG.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,615
+raw/plantdoc/train/Blueberry leaf/Red-Blueberry-Leaves.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,617
+raw/plantdoc/train/Blueberry leaf/acid_0033.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,619
+raw/plantdoc/train/Blueberry leaf/blueberries-and-leaves.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,622
+raw/plantdoc/train/Blueberry leaf/blueberry-bushes-clipart-16.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,625
+raw/plantdoc/train/Blueberry leaf/blueberry-goanp-nps.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,629
+raw/plantdoc/train/Blueberry leaf/blueberry-leaf-isolated-white-background-blueberry-leaf-isolated-99227523.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,631
+raw/plantdoc/train/Blueberry leaf/blueberry-leaf-isolated-white-background-clipping-path-82775455.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,632
+raw/plantdoc/train/Blueberry leaf/blueberry-leaf-isolated-white-background-clipping-path-84283705.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,633
+raw/plantdoc/train/Blueberry leaf/blueberry-leaves-isolated-shadow-95294017.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,640
+raw/plantdoc/train/Blueberry leaf/blueberry-leaves-safe.jpeg.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,641
+raw/plantdoc/train/Blueberry leaf/blueberry-leaves-white-collection-isolated-35579573.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,642
+raw/plantdoc/train/Blueberry leaf/close-up-of-a-blueberry-leaf-beginning-to-change-color-for-autumn-f6b5yd.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,648
+raw/plantdoc/train/Blueberry leaf/dscf9033.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,649
+raw/plantdoc/train/Blueberry leaf/image_1500x1500%253E.jpeg?1472756548.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,653
+raw/plantdoc/train/Blueberry leaf/img_8042.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,654
+raw/plantdoc/train/Blueberry leaf/lb_blueberry1.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,656
+raw/plantdoc/train/Blueberry leaf/leaf_arangement.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,658
+raw/plantdoc/train/Blueberry leaf/red+blueberry+leaves.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,661
+raw/plantdoc/train/Blueberry leaf/stock-photo-blueberry-heap-with-green-leaves-close-up-macro-isolated-on-white-background-83867578.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,662
+raw/plantdoc/train/Blueberry leaf/stock-photo-fresh-ripe-blueberries-with-leaves-on-white-background-125173964.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,666
+raw/plantdoc/train/Blueberry leaf/stock-photo-leaf-blueberry-57690040.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,667
+raw/plantdoc/train/Blueberry leaf/three-blueberries-with-leaves-picture-id83566780.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,668
+raw/plantdoc/train/Blueberry leaf/vaccinium-angustifolium-634789-1.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,669
+raw/plantdoc/train/Blueberry leaf/vaccinium-angustifolium-le-ahaines.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,670
+raw/plantdoc/train/Blueberry leaf/vaccinium-corymbosum-le-mlovit.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,671
+raw/plantdoc/train/Blueberry leaf/vaccinium-myrtilloides-le-mlovit.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,675
+raw/plantdoc/train/Blueberry leaf/vaov_006_lhp.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,677
+raw/plantdoc/train/Blueberry leaf/wild-blueberries-576x1024.jpg,Blueberry___healthy,Blueberry leaf,train,healthy_assumed,678
+raw/plantdoc/train/Cherry leaf/100_4608.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,682
+raw/plantdoc/train/Cherry leaf/1348156007-85504600.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,683
+raw/plantdoc/train/Cherry leaf/1b9155649757248759cdbe7d83cc94c0.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,685
+raw/plantdoc/train/Cherry leaf/2febe52cfac784c3191c804390d51ab756a3a7c8b9314_1260x1260.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,686
+raw/plantdoc/train/Cherry leaf/5dab054e26cde431baf6a8e0e3f0f258.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,688
+raw/plantdoc/train/Cherry leaf/6.-Choke-cherry-fall-leaf-colour.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,689
+raw/plantdoc/train/Cherry leaf/CHERRY_CHOKE_leaves.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,695
+raw/plantdoc/train/Cherry leaf/Carolina%2BCherry%2BLaurel%2Bproblem3.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,697
+raw/plantdoc/train/Cherry leaf/Catalina%20Island%20Cherry.JPG.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,698
+raw/plantdoc/train/Cherry leaf/Cherry-Fruit-and-Leaves-tp1263.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,700
+raw/plantdoc/train/Cherry leaf/ECE47.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,701
+raw/plantdoc/train/Cherry leaf/IMG_4280.JPG.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,702
+raw/plantdoc/train/Cherry leaf/IMG_5892_original.JPG?1500348823.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,703
+raw/plantdoc/train/Cherry leaf/canada-red-cherry-leaves.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,707
+raw/plantdoc/train/Cherry leaf/canada_red_chokecherry_11_medium_.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,708
+raw/plantdoc/train/Cherry leaf/cherry+tree.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,709
+raw/plantdoc/train/Cherry leaf/cherry-leaves-e1335624103663.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,711
+raw/plantdoc/train/Cherry leaf/cherrytree-leaf.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,714
+raw/plantdoc/train/Cherry leaf/i-have-a-cherry-tree-5252.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,700
+raw/plantdoc/train/Cherry leaf/prunsero_twig3.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,716
+raw/plantdoc/train/Cherry leaf/prunus-avium-le-rvid-c.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,717
+raw/plantdoc/train/Cherry leaf/prunus-pensylvanica-007.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,718
+raw/plantdoc/train/Cherry leaf/radish-black-cherry-fruits-leaves.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,720
+raw/plantdoc/train/Cherry leaf/yoshino-weeping-cherry-tree9.jpg,Cherry_(including_sour)___healthy,Cherry leaf,train,healthy_assumed,725
+raw/plantdoc/train/Corn Gray leaf spot/1192.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,727
+raw/plantdoc/train/Corn Gray leaf spot/1193.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,728
+raw/plantdoc/train/Corn Gray leaf spot/1355.51grayleafspot.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,729
+raw/plantdoc/train/Corn Gray leaf spot/2013Corn_GrayLeafSpot_0815_0003.JPG.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,731
+raw/plantdoc/train/Corn Gray leaf spot/2013Corn_GrayLeaf_0820_0003.JPG.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,732
+raw/plantdoc/train/Corn Gray leaf spot/2015Corn_Hail_Taylor_PH%2B%25282%2529.JPG.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,733
+raw/plantdoc/train/Corn Gray leaf spot/22-broders-CR-Gray-leaf-spot-corn.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,734
+raw/plantdoc/train/Corn Gray leaf spot/2f73110f80014a25a53f9551c94bf164.png.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,735
+raw/plantdoc/train/Corn Gray leaf spot/Corn-Gray-leafspot-lesions-300x225.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,739
+raw/plantdoc/train/Corn Gray leaf spot/FJ_010_F17220_B00010.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,741
+raw/plantdoc/train/Corn Gray leaf spot/FJ_018_F16271-3.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,742
+raw/plantdoc/train/Corn Gray leaf spot/Fig%202b.%20GLS%20backlit%20copy.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,743
+raw/plantdoc/train/Corn Gray leaf spot/Figure%201.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,745
+raw/plantdoc/train/Corn Gray leaf spot/GLS-pic-1-1-225x300.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,747
+raw/plantdoc/train/Corn Gray leaf spot/GetFile.aspx?guid=fb78e057-33b3-4901-b836-e08e45889f6f.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,749
+raw/plantdoc/train/Corn Gray leaf spot/Gray%20Leaf%20SpotCORN039.JPG.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,750
+raw/plantdoc/train/Corn Gray leaf spot/Gray%20leaf%20spot-Adam%20Sisson%20%2856%29%20copy-400x267.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,751
+raw/plantdoc/train/Corn Gray leaf spot/Greyleafspot.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,756
+raw/plantdoc/train/Corn Gray leaf spot/IMG_5251.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,759
+raw/plantdoc/train/Corn Gray leaf spot/corn-gray-leaf-spot-backlit-2.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,764
+raw/plantdoc/train/Corn Gray leaf spot/cornGLS2.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,766
+raw/plantdoc/train/Corn Gray leaf spot/g1902-1.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,74
+raw/plantdoc/train/Corn Gray leaf spot/g1902-3b.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,768
+raw/plantdoc/train/Corn Gray leaf spot/glfspot.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,769
+raw/plantdoc/train/Corn Gray leaf spot/gls99-anamosa.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,770
+raw/plantdoc/train/Corn Gray leaf spot/gray%20leaf%20spot.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,771
+raw/plantdoc/train/Corn Gray leaf spot/gray_leaf_spot_developing.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,775
+raw/plantdoc/train/Corn Gray leaf spot/grayspot.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,780
+raw/plantdoc/train/Corn Gray leaf spot/lipps-d.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,782
+raw/plantdoc/train/Corn Gray leaf spot/rsz0715grayleafspot.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn Gray leaf spot,train,exact,784
+raw/plantdoc/train/Corn leaf blight/00c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,787
+raw/plantdoc/train/Corn leaf blight/01c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,789
+raw/plantdoc/train/Corn leaf blight/02.JPG.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,790
+raw/plantdoc/train/Corn leaf blight/022.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,791
+raw/plantdoc/train/Corn leaf blight/04c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,793
+raw/plantdoc/train/Corn leaf blight/05c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,794
+raw/plantdoc/train/Corn leaf blight/06c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,795
+raw/plantdoc/train/Corn leaf blight/1200px-Northern_corn_leaf_blight.JPG.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,801
+raw/plantdoc/train/Corn leaf blight/186116-325x209-Northern-Corn-Leaf-Blight-Chilvers.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,802
+raw/plantdoc/train/Corn leaf blight/203725159.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,808
+raw/plantdoc/train/Corn leaf blight/2159_0.jpeg?itok=eBFRbolm.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,809
+raw/plantdoc/train/Corn leaf blight/24154194959_fd4b42edde_b.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,811
+raw/plantdoc/train/Corn leaf blight/28430_rel.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,813
+raw/plantdoc/train/Corn leaf blight/28430_web.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,813
+raw/plantdoc/train/Corn leaf blight/80102321.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,815
+raw/plantdoc/train/Corn leaf blight/BacterialLeafStreakinCornImage1.png.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,816
+raw/plantdoc/train/Corn leaf blight/CmyiAkUUIAAqSEa.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,819
+raw/plantdoc/train/Corn leaf blight/Cochliobolus_heterostrophus.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,820
+raw/plantdoc/train/Corn leaf blight/Corn+Blight+1970+Fungus%3A+Southern+Corn+Leaf+Blight.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,821
+raw/plantdoc/train/Corn leaf blight/Corn-Disease-NCLB-A-Nelson-6-18-2015-F1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,822
+raw/plantdoc/train/Corn leaf blight/Corn-gray-leaf-spot-8-14-15-F1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,827
+raw/plantdoc/train/Corn leaf blight/Corn-gray-leaf-spot-F2-8-7-15.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,829
+raw/plantdoc/train/Corn leaf blight/Corn-northern%20corn%20leaf%20blight-8-21.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,830
+raw/plantdoc/train/Corn leaf blight/Corn020Fig2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,831
+raw/plantdoc/train/Corn leaf blight/Corn_Fig10.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,832
+raw/plantdoc/train/Corn leaf blight/DSCN0128.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,834
+raw/plantdoc/train/Corn leaf blight/Erv-sprayed-4.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,835
+raw/plantdoc/train/Corn leaf blight/Figure-2-.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,794
+raw/plantdoc/train/Corn leaf blight/Freckles-in-older-lesion1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,841
+raw/plantdoc/train/Corn leaf blight/Henrycorn1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,843
+raw/plantdoc/train/Corn leaf blight/IMG_1347.JPG.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,845
+raw/plantdoc/train/Corn leaf blight/IMG_1385.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,846
+raw/plantdoc/train/Corn leaf blight/Kelley%20NCLB.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,850
+raw/plantdoc/train/Corn leaf blight/NCLB-2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,852
+raw/plantdoc/train/Corn leaf blight/Northern-Corn-Blight.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,855
+raw/plantdoc/train/Corn leaf blight/Northern-Corn-Leaf-Blight-in-Sweet-Corn.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,858
+raw/plantdoc/train/Corn leaf blight/Northern-Corn-Leaf-Blight.ashx.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,859
+raw/plantdoc/train/Corn leaf blight/Northern-corn-leaf-blight-NM-F2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,794
+raw/plantdoc/train/Corn leaf blight/Northern-corn-leaf-blight2_twitter.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,864
+raw/plantdoc/train/Corn leaf blight/Northern-leaf-blight-in-corn.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,866
+raw/plantdoc/train/Corn leaf blight/Risk+factors+for+Goss%E2%80%99s+wilt+and+leaf+blight+Percent+surface+residue.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,871
+raw/plantdoc/train/Corn leaf blight/agriculture-crop-disease-northern-corn-leaf-blight-fungus-exserohilum-turcicum-closeup-of-lesions-on-corn-leaves-texas-usa-x74mbx.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,859
+raw/plantdoc/train/Corn leaf blight/article-fungicides-northern-corn-leaf-blight.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,878
+raw/plantdoc/train/Corn leaf blight/bacterial-corn-1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,879
+raw/plantdoc/train/Corn leaf blight/bacterial-corn-300x300.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,879
+raw/plantdoc/train/Corn leaf blight/bacterial-leaf-streak-corn.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,880
+raw/plantdoc/train/Corn leaf blight/bacterial-leaf-streak-of-corn-450-F1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,881
+raw/plantdoc/train/Corn leaf blight/clip_image010.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,884
+raw/plantdoc/train/Corn leaf blight/corn-bacterial-leaf-streak-f4.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,889
+raw/plantdoc/train/Corn leaf blight/corn-bacterial-leaf-streak-zoomed.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,892
+raw/plantdoc/train/Corn leaf blight/corn-baterial-leaf-stripe-f1b.JPG.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,893
+raw/plantdoc/train/Corn leaf blight/corn-disease-update-fig-2-diplodia-leaf-streak1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,895
+raw/plantdoc/train/Corn leaf blight/corn-fig-1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,896
+raw/plantdoc/train/Corn leaf blight/corn-fig-2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,897
+raw/plantdoc/train/Corn leaf blight/corn-leaf-scald-9a.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,900
+raw/plantdoc/train/Corn leaf blight/corn-leaf-scald-9c.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,901
+raw/plantdoc/train/Corn leaf blight/corn-northern-corn-leaf-blight-f6.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,904
+raw/plantdoc/train/Corn leaf blight/corn-northern-corn-leaf-blight.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,904
+raw/plantdoc/train/Corn leaf blight/corn-several-Holcus%20spot%20lesions-f4.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,905
+raw/plantdoc/train/Corn leaf blight/corn-short-backlit-Xanth-lesions-halos-f2-.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,906
+raw/plantdoc/train/Corn leaf blight/corn-short-backlit-Xanth-lesions-halos-f2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,906
+raw/plantdoc/train/Corn leaf blight/corn-stalk-rot-leaf-symptoms-F1.jpg.jpeg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,907
+raw/plantdoc/train/Corn leaf blight/corn_gray_leaf_spot.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,827
+raw/plantdoc/train/Corn leaf blight/cp_VA-123_northern_corn_leaf_blight_article.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,910
+raw/plantdoc/train/Corn leaf blight/disease.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,911
+raw/plantdoc/train/Corn leaf blight/disease3.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,912
+raw/plantdoc/train/Corn leaf blight/fi00245.JPG.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,917
+raw/plantdoc/train/Corn leaf blight/gls99-anamosa-400x334.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,770
+raw/plantdoc/train/Corn leaf blight/gray-leaf-spot-lesions-F4.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,920
+raw/plantdoc/train/Corn leaf blight/gray-leaf-spot-severe--.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,921
+raw/plantdoc/train/Corn leaf blight/helminthosporium-or-turcicum-leaf-stains-on-corn-leaf-disease-of-corn-plant-R5GR3C.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,922
+raw/plantdoc/train/Corn leaf blight/image393.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,924
+raw/plantdoc/train/Corn leaf blight/image_1500x1500%253E.jpeg?1473988931.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,926
+raw/plantdoc/train/Corn leaf blight/nclb4x1200.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,933
+raw/plantdoc/train/Corn leaf blight/ncls-2016-a-shirley.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,935
+raw/plantdoc/train/Corn leaf blight/ncorn_leaf_blight_0796_02.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,936
+raw/plantdoc/train/Corn leaf blight/northern-corn-leaf-blight-exserohilum-turcicum-lesions-on-a-maize-BBFWRB.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,937
+raw/plantdoc/train/Corn leaf blight/northern-corn-leaf-blight-exserohilum-turcicum-lesions-on-a-maize-BX3K2K.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,938
+raw/plantdoc/train/Corn leaf blight/northern-corn-leaf-blight-exserohilum-turcicum-lesions-on-a-maize-leaf-south-africa-XDYJWY.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,938
+raw/plantdoc/train/Corn leaf blight/northern-corn-leaf-blight-exserohilum-turcicum-lesions-on-a-maize-leaf-south-africa-xe3a7j.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,937
+raw/plantdoc/train/Corn leaf blight/northern-corn-leaf-blight__case2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,939
+raw/plantdoc/train/Corn leaf blight/northern_corn_leaf_blight_university_of_delaware-600x400.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,940
+raw/plantdoc/train/Corn leaf blight/northern_leaf_blight.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,941
+raw/plantdoc/train/Corn leaf blight/photo-7-004.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,942
+raw/plantdoc/train/Corn leaf blight/show_picture.asp?id=aaaaaaaaaanoroz&w=524.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,945
+raw/plantdoc/train/Corn leaf blight/smaller-Septoria2.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,946
+raw/plantdoc/train/Corn leaf blight/stock-photo-northern-corn-leaf-blight-nclb-is-a-foliar-disease-of-corn-maize-caused-by-exserohilum-turcicum-592778861.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,949
+raw/plantdoc/train/Corn leaf blight/stock-photo-northern-corn-leaf-blight-nclb-is-a-foliar-disease-of-corn-maize-caused-by-exserohilum-turcicum-592778870.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,950
+raw/plantdoc/train/Corn leaf blight/swcdg1-e1482969712678-300x188.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,952
+raw/plantdoc/train/Corn leaf blight/swcdg1.jpg,Corn_(maize)___Northern_Leaf_Blight,Corn leaf blight,train,approximate,952
+raw/plantdoc/train/Corn rust leaf/36687400253_a227c2ca28_b.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,954
+raw/plantdoc/train/Corn rust leaf/37310253326_7f32b316d1_b.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,955
+raw/plantdoc/train/Corn rust leaf/5833328024_724f1df3f2_b.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,958
+raw/plantdoc/train/Corn rust leaf/COURTESY_southernrust-greyleaf.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,959
+raw/plantdoc/train/Corn rust leaf/Common-rust-east-central-Indiana.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,960
+raw/plantdoc/train/Corn rust leaf/Common-rust-of-corn-Tedford.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,961
+raw/plantdoc/train/Corn rust leaf/Corn-Common-Rust-300x225.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,963
+raw/plantdoc/train/Corn rust leaf/Corn-Common-Rust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,963
+raw/plantdoc/train/Corn rust leaf/Corn-Rusts-wKBishop-story-622x467.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,964
+raw/plantdoc/train/Corn rust leaf/Corn-Southern-Rust-7-17-F1.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,965
+raw/plantdoc/train/Corn rust leaf/Corn-southern-rust-advanced-F1b-8-7-15.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,968
+raw/plantdoc/train/Corn rust leaf/Corn-southern-rust-early-F1a-8-7-15.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,969
+raw/plantdoc/train/Corn rust leaf/Fig3_Common_rust.JPG.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,974
+raw/plantdoc/train/Corn rust leaf/Figure%201%20common%20rust%20on%20corn.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,976
+raw/plantdoc/train/Corn rust leaf/Figure-4-stripe-rust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,981
+raw/plantdoc/train/Corn rust leaf/IMG_1841.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,986
+raw/plantdoc/train/Corn rust leaf/IMG_5011-15vruqb.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,988
+raw/plantdoc/train/Corn rust leaf/SCR.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,992
+raw/plantdoc/train/Corn rust leaf/STANDALONE_Southern-corn-rust_01-WEB.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,993
+raw/plantdoc/train/Corn rust leaf/So-Corn-Rust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,994
+raw/plantdoc/train/Corn rust leaf/Southern%20corn%20rust.ashx?w=600.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,995
+raw/plantdoc/train/Corn rust leaf/Southern-Corn-Rust.ashx?w=770.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,997
+raw/plantdoc/train/Corn rust leaf/SouthernRustLeaf.png.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1003
+raw/plantdoc/train/Corn rust leaf/common-rust-lower-leaf-side.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1005
+raw/plantdoc/train/Corn rust leaf/common-rust-upper-leaf-side.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1006
+raw/plantdoc/train/Corn rust leaf/common-rust3.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1007
+raw/plantdoc/train/Corn rust leaf/commonrust-2016-a-shirley.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1008
+raw/plantdoc/train/Corn rust leaf/corn%20rust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1010
+raw/plantdoc/train/Corn rust leaf/corn-diseases-fig-2-tar-spot.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1013
+raw/plantdoc/train/Corn rust leaf/corn-rust-2.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1015
+raw/plantdoc/train/Corn rust leaf/corn-rust-4.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1017
+raw/plantdoc/train/Corn rust leaf/corn-rust-5.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1018
+raw/plantdoc/train/Corn rust leaf/corn-rust-disease-pests-leaf-260nw-1038062233.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1020
+raw/plantdoc/train/Corn rust leaf/corn-southern-rust-2.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1022
+raw/plantdoc/train/Corn rust leaf/corn-southern-rust-pustules.JPG?itok=VXIzyv8m.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1023
+raw/plantdoc/train/Corn rust leaf/corn-southern-rust-spores.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1024
+raw/plantdoc/train/Corn rust leaf/corn_rust.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1025
+raw/plantdoc/train/Corn rust leaf/disease2.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1029
+raw/plantdoc/train/Corn rust leaf/g14-1680-1.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1030
+raw/plantdoc/train/Corn rust leaf/ga-2015-06-01-crust-02.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1032
+raw/plantdoc/train/Corn rust leaf/imag4090.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1033
+raw/plantdoc/train/Corn rust leaf/image1.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1034
+raw/plantdoc/train/Corn rust leaf/imgF.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1035
+raw/plantdoc/train/Corn rust leaf/markjones-corn-001.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1036
+raw/plantdoc/train/Corn rust leaf/plant-rust-southern-rust-on-corn-leaf-plant-diseases-rust-of-wheat.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1037
+raw/plantdoc/train/Corn rust leaf/rust1_600px-2emtnhc.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1042
+raw/plantdoc/train/Corn rust leaf/southern-rust-als.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1045
+raw/plantdoc/train/Corn rust leaf/southern-rust-close.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1046
+raw/plantdoc/train/Corn rust leaf/southernrust-seminole-june1.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1049
+raw/plantdoc/train/Corn rust leaf/southernrust1.png.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1051
+raw/plantdoc/train/Corn rust leaf/swcdg3.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1053
+raw/plantdoc/train/Corn rust leaf/sweetcorn_Rust-2_zoom.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1055
+raw/plantdoc/train/Corn rust leaf/uuid%3Db547b743-d1a1-4788-86dc-8e90ad17e170%26groupId%3D1841%26t%3D1375243802648.jpg,Corn_(maize)___Common_rust_,Corn rust leaf,train,approximate,1057
+raw/plantdoc/train/Peach leaf/0peach.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1062
+raw/plantdoc/train/Peach leaf/22+August+2013+008-1.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1068
+raw/plantdoc/train/Peach leaf/3939-960x960.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1074
+raw/plantdoc/train/Peach leaf/3940-960x960.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1075
+raw/plantdoc/train/Peach leaf/79a24e562c768cd993776c518b238eed--storyboard-toe.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1078
+raw/plantdoc/train/Peach leaf/DSC02329.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1079
+raw/plantdoc/train/Peach leaf/DSCN1913.JPG.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1080
+raw/plantdoc/train/Peach leaf/Dwarf-Red-Leaf-Peach-leaves-closeup.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1081
+raw/plantdoc/train/Peach leaf/H2c1o.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1082
+raw/plantdoc/train/Peach leaf/P1010703.JPG.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1083
+raw/plantdoc/train/Peach leaf/P1015750.JPG.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1084
+raw/plantdoc/train/Peach leaf/P1015775.JPG.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1085
+raw/plantdoc/train/Peach leaf/Peach-Leaf.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1086
+raw/plantdoc/train/Peach leaf/Peach-leaves.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1088
+raw/plantdoc/train/Peach leaf/Peach_leaves_raw.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1089
+raw/plantdoc/train/Peach leaf/Peachleaf-Willow-leaf-1.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1090
+raw/plantdoc/train/Peach leaf/depositphotos_140609182-stock-photo-beauty-peach-with-leaf.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1093
+raw/plantdoc/train/Peach leaf/depositphotos_4009139-stock-photo-ripe-peach-with-leaves.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1095
+raw/plantdoc/train/Peach leaf/depositphotos_6870648-stock-photo-ripe-peach-fruit-with-leaves.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1097
+raw/plantdoc/train/Peach leaf/fresh-peach-fruits-green-leaves-15654533.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1101
+raw/plantdoc/train/Peach leaf/image_original.jpeg?1473123508.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1103
+raw/plantdoc/train/Peach leaf/peach-and-leaf-stock-picture-2809277.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1107
+raw/plantdoc/train/Peach leaf/peach-leaf-1677674.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1110
+raw/plantdoc/train/Peach leaf/peach-leaf-isolated-white-background-43668230.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1114
+raw/plantdoc/train/Peach leaf/peach-leaf-white-background-40292976.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1116
+raw/plantdoc/train/Peach leaf/peach-leaf__case2.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1117
+raw/plantdoc/train/Peach leaf/peach-leaves-18058413.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1118
+raw/plantdoc/train/Peach leaf/peach-leaves-isolated-white-background-43668179.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1120
+raw/plantdoc/train/Peach leaf/peach-prunus-persica-roter-ellerstaedter-prunus-persica-roter-ellerstaedter-DAM2J4.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1122
+raw/plantdoc/train/Peach leaf/peach-tree-leaf-3-1024x681.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1123
+raw/plantdoc/train/Peach leaf/peach-tree-trunk-new-leaf-18757494.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1124
+raw/plantdoc/train/Peach leaf/peach-with-leaf-isolated-on-white-picture-id466696757.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1125
+raw/plantdoc/train/Peach leaf/peach-with-leaves-stock-picture-1662209.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1128
+raw/plantdoc/train/Peach leaf/peach-with-leaves-stock-picture-1662453.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1129
+raw/plantdoc/train/Peach leaf/peach-with-leaves-stock-picture-1721709.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1130
+raw/plantdoc/train/Peach leaf/peaches-w-leaves.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1134
+raw/plantdoc/train/Peach leaf/stock-photo-fresh-peach-fruits-with-green-leaves-isolated-on-white-background-59305621.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1101
+raw/plantdoc/train/Peach leaf/stock-photo-peach-fruit-isolated-on-white-332799767.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1138
+raw/plantdoc/train/Peach leaf/stock-photo-peach-leaf-collection-isolated-on-white-236633248.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1140
+raw/plantdoc/train/Peach leaf/stock-photo-peach-leaf-isolated-363604259.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1141
+raw/plantdoc/train/Peach leaf/stock-photo-peach-leaf-isolated-370117730.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1142
+raw/plantdoc/train/Peach leaf/stock-photo-peach-leaf-isolated-on-white-background-195325289.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1143
+raw/plantdoc/train/Peach leaf/stock-photo-peach-leaves-isolated-on-white-background-618456884.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1151
+raw/plantdoc/train/Peach leaf/stock-photo-peach-wet-fruit-with-leaf-isolated-on-white-248733745.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1152
+raw/plantdoc/train/Peach leaf/stock-photo-peach-with-leaf-699537772.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1153
+raw/plantdoc/train/Peach leaf/stock-photo-peach-with-leaf-isolated-on-white-with-clipping-path-494602609.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1155
+raw/plantdoc/train/Peach leaf/stock-photo-peach-with-leaves-isolated-on-white-246532954.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1156
+raw/plantdoc/train/Peach leaf/stock-photo-single-peach-with-leaves-on-a-white-background-111042830.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1157
+raw/plantdoc/train/Peach leaf/stock-photo-two-peach-leaves-isolated-on-white-311533217.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1158
+raw/plantdoc/train/Peach leaf/stock-photo-two-sides-of-peach-leaf-isolate-on-white-17407162.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1159
+raw/plantdoc/train/Peach leaf/two-peach-leaves-isolated-on-white-picture-id519433636.jpg,Peach___healthy,Peach leaf,train,healthy_assumed,1158
+raw/plantdoc/train/Potato leaf early blight/0061.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1162
+raw/plantdoc/train/Potato leaf early blight/14321627273_58d893c3e2_potato-plant.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1166
+raw/plantdoc/train/Potato leaf early blight/15hrt15a1f1.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1168
+raw/plantdoc/train/Potato leaf early blight/20080710-early%2Bblight%2Blesions%2Bwith%2Byellow%2Bhaloes.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1169
+raw/plantdoc/train/Potato leaf early blight/20100816earlyblight.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1170
+raw/plantdoc/train/Potato leaf early blight/2643371-version%3D1.0%26t%3D1260361493000.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1172
+raw/plantdoc/train/Potato leaf early blight/2D1A9552.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1174
+raw/plantdoc/train/Potato leaf early blight/2OBH_29_Gardening_early_blight.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1175
+raw/plantdoc/train/Potato leaf early blight/36-early-blight-concentric-rings.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1176
+raw/plantdoc/train/Potato leaf early blight/45035_1.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1178
+raw/plantdoc/train/Potato leaf early blight/500px-Tomato_Early_Blight_Leaf.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1179
+raw/plantdoc/train/Potato leaf early blight/80109626.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1181
+raw/plantdoc/train/Potato leaf early blight/Blght.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1186
+raw/plantdoc/train/Potato leaf early blight/Early%20Blight%20-%20Potatoes.ashx?w=350.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1190
+raw/plantdoc/train/Potato leaf early blight/Early_Blight_of_Tomato177.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1193
+raw/plantdoc/train/Potato leaf early blight/PHYTIN23.img.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1200
+raw/plantdoc/train/Potato leaf early blight/Potato-Blight-on-Leaves.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1202
+raw/plantdoc/train/Potato leaf early blight/Potato-blight-leaves-B.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1203
+raw/plantdoc/train/Potato leaf early blight/Potato_Blight_Leaf.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1206
+raw/plantdoc/train/Potato leaf early blight/Potato_Early_Blight_%26_Late_Blight.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1207
+raw/plantdoc/train/Potato leaf early blight/backus-045-potato-blight.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1211
+raw/plantdoc/train/Potato leaf early blight/blighted-potatoe-leave.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1214
+raw/plantdoc/train/Potato leaf early blight/cq5dam.web.16-9.8.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1215
+raw/plantdoc/train/Potato leaf early blight/early%20blight.tom_.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1216
+raw/plantdoc/train/Potato leaf early blight/early-blight-2.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1217
+raw/plantdoc/train/Potato leaf early blight/early-blight-alternaria-alternata-leaf-spotting-on-potato-leaf-ACG5WF.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,100
+raw/plantdoc/train/Potato leaf early blight/early-blight-closeup-NCSU.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1218
+raw/plantdoc/train/Potato leaf early blight/early-blight-cmyk-opt.jpeg.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1219
+raw/plantdoc/train/Potato leaf early blight/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-by9j8r.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1221
+raw/plantdoc/train/Potato leaf early blight/early-blight-or-targfet-spot-alternaria-solani-lesions-on-a-tomato-ACG8W6.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1222
+raw/plantdoc/train/Potato leaf early blight/early-blight-septoria-ls-fig-1.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1224
+raw/plantdoc/train/Potato leaf early blight/early_blight1.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1225
+raw/plantdoc/train/Potato leaf early blight/eb2.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1227
+raw/plantdoc/train/Potato leaf early blight/fac66s01a.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1230
+raw/plantdoc/train/Potato leaf early blight/fac66s01h.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1231
+raw/plantdoc/train/Potato leaf early blight/fi000294.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1232
+raw/plantdoc/train/Potato leaf early blight/potato-blight-leaf.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1237
+raw/plantdoc/train/Potato leaf early blight/potato-blight-phytophora-infestans-close-up-of-infected-leaf-showing-A60HXN.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1238
+raw/plantdoc/train/Potato leaf early blight/potato-blight-phytophora-infestans-close-up-of-infected-leaf-showing-a60hxn__case2.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1239
+raw/plantdoc/train/Potato leaf early blight/potato-blight-phytophora-infestans-close-up-of-infected-leaf-top-surface-a60hxg.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1240
+raw/plantdoc/train/Potato leaf early blight/potato-blight-showing-on-potato-plant-leaves-KJ70DB.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1243
+raw/plantdoc/train/Potato leaf early blight/potato-early-blight-alternaria-alternata-lesion-on-a-potato-leaf-X96EFD.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,104
+raw/plantdoc/train/Potato leaf early blight/potato-early-blight-alternaria-alternata-target-spot-lesion-on-a-potato-leaf-x63fwh.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1247
+raw/plantdoc/train/Potato leaf early blight/potato-early-blight-lesion-on-a-potato-leaf-picture-id81781211.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1249
+raw/plantdoc/train/Potato leaf early blight/potato_alternaria_04_zoom.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1251
+raw/plantdoc/train/Potato leaf early blight/potato_early-blight_03_zoom.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1254
+raw/plantdoc/train/Potato leaf early blight/potato_early-blight_06_zoom.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1257
+raw/plantdoc/train/Potato leaf early blight/potatoearlyblight.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1259
+raw/plantdoc/train/Potato leaf early blight/potatolb_small_leaf_lesionx1200.jpg,Potato___Early_blight,Potato leaf early blight,train,exact,1262
+raw/plantdoc/train/Potato leaf late blight/14321627273_58d893c3e2_b.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1166
+raw/plantdoc/train/Potato leaf late blight/2976_1600.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1267
+raw/plantdoc/train/Potato leaf late blight/3720946948_339251cc94_z.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1268
+raw/plantdoc/train/Potato leaf late blight/39-late-blight-mold.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1270
+raw/plantdoc/train/Potato leaf late blight/4442_1600.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1272
+raw/plantdoc/train/Potato leaf late blight/B2650062-Potato_late_blight-SPL.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1276
+raw/plantdoc/train/Potato leaf late blight/CzFxqKtWEAA4U3g.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1279
+raw/plantdoc/train/Potato leaf late blight/IMG_0019.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1280
+raw/plantdoc/train/Potato leaf late blight/IMG_5358.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1281
+raw/plantdoc/train/Potato leaf late blight/IMG_5813-1024x768.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1283
+raw/plantdoc/train/Potato leaf late blight/Jessore-potato-late-blight-8-2h2fdkl.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1284
+raw/plantdoc/train/Potato leaf late blight/LB_potato_leaf_topside.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1285
+raw/plantdoc/train/Potato leaf late blight/Late+Blight+of+Potato+and+Tomato.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1286
+raw/plantdoc/train/Potato leaf late blight/Late+blight+on+potato.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1178
+raw/plantdoc/train/Potato leaf late blight/Late-Blight-336x437.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1287
+raw/plantdoc/train/Potato leaf late blight/Late-blight-infected-potato-plants_2.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1289
+raw/plantdoc/train/Potato leaf late blight/Late-blight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1292
+raw/plantdoc/train/Potato leaf late blight/LateBlight03.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1172
+raw/plantdoc/train/Potato leaf late blight/LateBlight13.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1294
+raw/plantdoc/train/Potato leaf late blight/Late_blight_on_potato_leaf.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1296
+raw/plantdoc/train/Potato leaf late blight/Lateblight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1298
+raw/plantdoc/train/Potato leaf late blight/Potato-late-blight-in-field-trial-1.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1302
+raw/plantdoc/train/Potato leaf late blight/PotatoLateBlight2.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1285
+raw/plantdoc/train/Potato leaf late blight/Symptom_potato_late_blight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1303
+raw/plantdoc/train/Potato leaf late blight/White-mould-potato-blight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1304
+raw/plantdoc/train/Potato leaf late blight/b3a52d4eda0deedc34260c4dee847a5b.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1305
+raw/plantdoc/train/Potato leaf late blight/blight-on-potato-leaves.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1306
+raw/plantdoc/train/Potato leaf late blight/cropped-symptom_potato_late_blight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1307
+raw/plantdoc/train/Potato leaf late blight/dsc_8151s.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1309
+raw/plantdoc/train/Potato leaf late blight/early_blight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1305
+raw/plantdoc/train/Potato leaf late blight/figure-7-gudmestad-opt.jpeg.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1312
+raw/plantdoc/train/Potato leaf late blight/gcp_A-2_Late_Blight_of_potatoes_callout1.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1314
+raw/plantdoc/train/Potato leaf late blight/late-blight-leaves.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1317
+raw/plantdoc/train/Potato leaf late blight/late-blight-lesions-potato-leaf-miller-research-809.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1318
+raw/plantdoc/train/Potato leaf late blight/late-blight-midwest_twitter.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1319
+raw/plantdoc/train/Potato leaf late blight/late-blight-on-potato-leaf-550.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1320
+raw/plantdoc/train/Potato leaf late blight/late-blight-potato.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1321
+raw/plantdoc/train/Potato leaf late blight/late_blight.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1323
+raw/plantdoc/train/Potato leaf late blight/late_blight_potato_leaf_500.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1324
+raw/plantdoc/train/Potato leaf late blight/lb4_l.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1330
+raw/plantdoc/train/Potato leaf late blight/phytophthora-infestans-late-blight-or-potato-blight-on-the-haulm-of-E29H6G.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1332
+raw/plantdoc/train/Potato leaf late blight/phytophthora-infestans-potato-blight-first-foliar-symptoms-on-solanum-EJKRCK.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1334
+raw/plantdoc/train/Potato leaf late blight/potato-blight-phytophora-infestans-close-up-of-infected-leaf-top-surface-A60HXG.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1240
+raw/plantdoc/train/Potato leaf late blight/potato-late-blight-phytophthora-infestans-lesions-on-potato-foliage-X4XJF4.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1335
+raw/plantdoc/train/Potato leaf late blight/potato-late-blight-phytophthora-infestans-lesions-on-potato-foliage-a1w19k.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1335
+raw/plantdoc/train/Potato leaf late blight/potato-late-blight-phytophthora-infestans-necrotic-disease-lesions-B7G2EC.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1337
+raw/plantdoc/train/Potato leaf late blight/potato-late-blight-symptom-on-leaves-PGB5H9.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1338
+raw/plantdoc/train/Potato leaf late blight/potato-late-blight-symptom-on-leaves-PGB5NJ.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1339
+raw/plantdoc/train/Potato leaf late blight/potato_late-blight_05_zoom.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1342
+raw/plantdoc/train/Potato leaf late blight/potatolb_upper_leafcux1200.jpg,Potato___Late_blight,Potato leaf late blight,train,exact,1349
+raw/plantdoc/train/Raspberry leaf/12972raspberry_leaf.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1354
+raw/plantdoc/train/Raspberry leaf/171322132-56a6d3693df78cf7729070d3.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1356
+raw/plantdoc/train/Raspberry leaf/20130515+008.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1358
+raw/plantdoc/train/Raspberry leaf/24049d1216854408-spots-raspberry-leaves-dscf1561.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1359
+raw/plantdoc/train/Raspberry leaf/2904.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1360
+raw/plantdoc/train/Raspberry leaf/2905.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1361
+raw/plantdoc/train/Raspberry leaf/483255d3dc56a615ebaa5b424309913c--raspberry-plants-red-raspberry.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1362
+raw/plantdoc/train/Raspberry leaf/5-leaf-berry-1-2.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1364
+raw/plantdoc/train/Raspberry leaf/53840458-raspberry-leaf.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1365
+raw/plantdoc/train/Raspberry leaf/579a1aa0c6b3fd0354d1a6b57a40ac42--red-raspberry-medicinal-plants.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1366
+raw/plantdoc/train/Raspberry leaf/800px_COLOURBOX4311119.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1369
+raw/plantdoc/train/Raspberry leaf/Bee29A.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1370
+raw/plantdoc/train/Raspberry leaf/Beetles-Berry_3998.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1371
+raw/plantdoc/train/Raspberry leaf/IMG_1982.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1382
+raw/plantdoc/train/Raspberry leaf/Leaves-of-Mysore-raspberry.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1385
+raw/plantdoc/train/Raspberry leaf/Lexicon_Raspberry.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1386
+raw/plantdoc/train/Raspberry leaf/Poison_Ivy.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1388
+raw/plantdoc/train/Raspberry leaf/Raspberry-Suckers1.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1366
+raw/plantdoc/train/Raspberry leaf/Raspberry-leaf-and-thimbleberry-leaf.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1389
+raw/plantdoc/train/Raspberry leaf/Raspberry-leaf-tea-benefits-_-Ayurvedum.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1390
+raw/plantdoc/train/Raspberry leaf/Red-Rasp-Leaf.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1392
+raw/plantdoc/train/Raspberry leaf/Rubus_idaeus_leaf.JPG.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1393
+raw/plantdoc/train/Raspberry leaf/black-raspberry-01.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1398
+raw/plantdoc/train/Raspberry leaf/d8731a01428301a3c46a643d12c6093d.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1402
+raw/plantdoc/train/Raspberry leaf/dsc_0127.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1404
+raw/plantdoc/train/Raspberry leaf/feuille-de-framboisier.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1407
+raw/plantdoc/train/Raspberry leaf/fresh-green-raspberry-leaf-isolated-on-white-background-with-clipping-KH37NJ.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1408
+raw/plantdoc/train/Raspberry leaf/gardening+008.JPG.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1410
+raw/plantdoc/train/Raspberry leaf/green-leaves-cherry-raspberry-isolated-white-backgro-fresh-background-light-veins-close-up-herbarium-75513107.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1411
+raw/plantdoc/train/Raspberry leaf/groovy-raspberry1000x1000.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1413
+raw/plantdoc/train/Raspberry leaf/groovy-raspberry3_2.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1414
+raw/plantdoc/train/Raspberry leaf/groovy-raspberry4.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1415
+raw/plantdoc/train/Raspberry leaf/img_0509.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1417
+raw/plantdoc/train/Raspberry leaf/iron-deficiency-symptoms-on-autumn-fruiting-raspberry-leaf-uk-garden-E4W76G.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1421
+raw/plantdoc/train/Raspberry leaf/leaves-of-a-raspberry-stock-photo-1214081.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1425
+raw/plantdoc/train/Raspberry leaf/organic-herbal-smoke-tea-raspberry-leaf.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1428
+raw/plantdoc/train/Raspberry leaf/pbsNJ.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1429
+raw/plantdoc/train/Raspberry leaf/product_red-raspberry-leaf-512x384.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1430
+raw/plantdoc/train/Raspberry leaf/raspberry-bush-leaves-on-a-white-background-rubi-idaei-folium-D6NDCJ.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1432
+raw/plantdoc/train/Raspberry leaf/raspberry-leaf-has-traditionally-been-used-during-the-later-stages-raspberry-leaf.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1436
+raw/plantdoc/train/Raspberry leaf/raspberry-leaf-isolated-white-18415125.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1438
+raw/plantdoc/train/Raspberry leaf/raspberry-leaves-1024x783.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1439
+raw/plantdoc/train/Raspberry leaf/raspberry-leaves-isolated-28028038.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1441
+raw/plantdoc/train/Raspberry leaf/raspberry-leaves-isolated-white-background-15358743.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1442
+raw/plantdoc/train/Raspberry leaf/raspberry_leaf_full.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1444
+raw/plantdoc/train/Raspberry leaf/raspberry_leaves.JPG.JPG.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1445
+raw/plantdoc/train/Raspberry leaf/raspberry_leaves.JPG.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1446
+raw/plantdoc/train/Raspberry leaf/red-rspberry-leaf-help-strengthen-the-uterus-and-the-lining-of-the-uterus.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1450
+raw/plantdoc/train/Raspberry leaf/red_raspberry03.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1451
+raw/plantdoc/train/Raspberry leaf/rubus-idaeus_0714_122911.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1456
+raw/plantdoc/train/Raspberry leaf/shutterstock_302160662.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1457
+raw/plantdoc/train/Raspberry leaf/slide10.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1458
+raw/plantdoc/train/Raspberry leaf/stock-photo-raspberry-leaf-isolated-on-a-white-background-72329308.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1459
+raw/plantdoc/train/Raspberry leaf/village-herbals-bulk-herbs-raspberry-leaves.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1460
+raw/plantdoc/train/Raspberry leaf/yellow-raspberry-leaf-chlorosis-nutrient-deficiency-probably-lack-iron-gardening-problem-72461965.jpg,Raspberry___healthy,Raspberry leaf,train,healthy_assumed,1461
+raw/plantdoc/train/Soyabean leaf/5834652565_6b00a70309_z.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1463
+raw/plantdoc/train/Soyabean leaf/6.15.12+Soybeans+V3.JPG.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1464
+raw/plantdoc/train/Soyabean leaf/DM-on-soy.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1468
+raw/plantdoc/train/Soyabean leaf/IMG_20150714_122008907.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1470
+raw/plantdoc/train/Soyabean leaf/IMG_4810.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1472
+raw/plantdoc/train/Soyabean leaf/Kdefsoybean.JPG.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1475
+raw/plantdoc/train/Soyabean leaf/Leaves-of-Soybean.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1476
+raw/plantdoc/train/Soyabean leaf/Soy-leaves-FAZ050-2015US-IL-Wuerffel-USNQ0F002-28DAB-Plot106b.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1478
+raw/plantdoc/train/Soyabean leaf/a-mid-season-soybean-plants-leaves-show-virtually-no-insect-damage-cxy77t.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1484
+raw/plantdoc/train/Soyabean leaf/a-mid-season-soybean-plants-leaves-show-virtually-no-insect-damage-cxy78f.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1485
+raw/plantdoc/train/Soyabean leaf/asoybeanleafcloseup.JPG.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1487
+raw/plantdoc/train/Soyabean leaf/close-up-shot-of-soy-leaves-glistening-in-the-sunshine-picture-id157639700?s=612x612.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1488
+raw/plantdoc/train/Soyabean leaf/depositphotos_15928367-stock-photo-soy-leaf.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1489
+raw/plantdoc/train/Soyabean leaf/downy-mildew-on-soybeans-2csq9n7.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1492
+raw/plantdoc/train/Soyabean leaf/fresh-soy-leaves-white-46020567.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1493
+raw/plantdoc/train/Soyabean leaf/kdeficiency2.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1495
+raw/plantdoc/train/Soyabean leaf/soy-leaf-27914090.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1498
+raw/plantdoc/train/Soyabean leaf/soybean-leaf-picture-id136581201?s=612x612.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1500
+raw/plantdoc/train/Soyabean leaf/soybean-leaf-single.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1501
+raw/plantdoc/train/Soyabean leaf/soybean-potassium-deficiency-2.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1505
+raw/plantdoc/train/Soyabean leaf/soybean_leaves_01.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1507
+raw/plantdoc/train/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-224197243.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1493
+raw/plantdoc/train/Soyabean leaf/stock-photo-fresh-soy-leaves-isolated-on-white-93841699.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1510
+raw/plantdoc/train/Soyabean leaf/stock-photo-fresh-soy-leaves-with-dew-isolated-on-white-416036248.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1511
+raw/plantdoc/train/Soyabean leaf/stock-photo-green-soy-leaves-in-the-field-agricultural-background-31501516.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1512
+raw/plantdoc/train/Soyabean leaf/stock-photo-green-soy-pods-with-leaves-isolated-on-white-backgraund-310996559.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1514
+raw/plantdoc/train/Soyabean leaf/stock-photo-green-soybeans-leaf-on-white-background-450572512.jpg,Soybean___healthy,Soyabean leaf,train,healthy_assumed,1515
+raw/plantdoc/train/Squash Powdery mildew leaf/130813-01-17828-lg.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1521
+raw/plantdoc/train/Squash Powdery mildew leaf/15005869179_9f39994957_z.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1522
+raw/plantdoc/train/Squash Powdery mildew leaf/16629068955_3092aa68a5_b.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1526
+raw/plantdoc/train/Squash Powdery mildew leaf/16848460256_9787d1c251_z.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1528
+raw/plantdoc/train/Squash Powdery mildew leaf/16874340125_eb222f747b_z.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1529
+raw/plantdoc/train/Squash Powdery mildew leaf/1846.400x400_4.jpeg?itok=845CLslG.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1530
+raw/plantdoc/train/Squash Powdery mildew leaf/1895541545_8cfc6eabee_b.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1531
+raw/plantdoc/train/Squash Powdery mildew leaf/1895543477_9d19ad5257_b.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1532
+raw/plantdoc/train/Squash Powdery mildew leaf/207.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1533
+raw/plantdoc/train/Squash Powdery mildew leaf/3761.400x400_0_0.jpeg.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1534
+raw/plantdoc/train/Squash Powdery mildew leaf/4e55f05d945952cfad9ce97ca444c389.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1537
+raw/plantdoc/train/Squash Powdery mildew leaf/53cf2cffb466d325a61897ef320cfccf.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1538
+raw/plantdoc/train/Squash Powdery mildew leaf/5HttOvj.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1539
+raw/plantdoc/train/Squash Powdery mildew leaf/628x471.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1540
+raw/plantdoc/train/Squash Powdery mildew leaf/6c460a55e7e8607e922d98e1416448d4.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1541
+raw/plantdoc/train/Squash Powdery mildew leaf/7-17-Powdery-mildew-on-zucchini-LINA.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1542
+raw/plantdoc/train/Squash Powdery mildew leaf/7e565dd05211332ae896198afc622054.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1544
+raw/plantdoc/train/Squash Powdery mildew leaf/8-ball-powdery-mildew.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1546
+raw/plantdoc/train/Squash Powdery mildew leaf/Aug+16+2010+051.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1541
+raw/plantdoc/train/Squash Powdery mildew leaf/Aug+22+052.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1549
+raw/plantdoc/train/Squash Powdery mildew leaf/DIYPowderyMildewSpray.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1551
+raw/plantdoc/train/Squash Powdery mildew leaf/DSC05432.JPG.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1552
+raw/plantdoc/train/Squash Powdery mildew leaf/Get-Rid-of-Mold-or-Powdery-Mildew-on-Squash-and-Cucumbers1-1.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1555
+raw/plantdoc/train/Squash Powdery mildew leaf/Get-Rid-of-Mold-or-Powdery-Mildew-on-Squash-and-Cucumbers3-1.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1556
+raw/plantdoc/train/Squash Powdery mildew leaf/IMG_1725.JPG.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1559
+raw/plantdoc/train/Squash Powdery mildew leaf/IW000047.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1569
+raw/plantdoc/train/Squash Powdery mildew leaf/L1360830copyrightTendingMyGarden.com-first-signs-of-powdery-mildew.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1570
+raw/plantdoc/train/Squash Powdery mildew leaf/Moldy-Leaf-Pumpkin-plant.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1572
+raw/plantdoc/train/Squash Powdery mildew leaf/P8230073.JPG.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1574
+raw/plantdoc/train/Squash Powdery mildew leaf/Powdery+Mildew+Control.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1577
+raw/plantdoc/train/Squash Powdery mildew leaf/Powdery+Mildew_00.JPG.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1578
+raw/plantdoc/train/Squash Powdery mildew leaf/Powdery-Mildew-Squash.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1580
+raw/plantdoc/train/Squash Powdery mildew leaf/Powdery-mildew-on-pumpkin-leaf-1024x768.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1582
+raw/plantdoc/train/Squash Powdery mildew leaf/Powdery1.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1584
+raw/plantdoc/train/Squash Powdery mildew leaf/Squash_PowderMildew.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1587
+raw/plantdoc/train/Squash Powdery mildew leaf/Squash_powdery-mildew.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1588
+raw/plantdoc/train/Squash Powdery mildew leaf/bfb5b4fb0d9a0dbe476ca7002b41fe4d.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1590
+raw/plantdoc/train/Squash Powdery mildew leaf/curcurbit-powdery-mildew-erysiphe-or-sphaerotheca-on-cucumber-leaf-B5NP51.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1594
+raw/plantdoc/train/Squash Powdery mildew leaf/dusty-mildew-on-plants-control-powdery-mildew-identifying-powdery-mildew-plant-spray-powdery-mildew-jade-plant-treatment.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1597
+raw/plantdoc/train/Squash Powdery mildew leaf/dusty-mildew-on-plants-downy-mildew-zucchini-plants-powdery-mildew-treatment-tomato-plants.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1598
+raw/plantdoc/train/Squash Powdery mildew leaf/erysiphe-or-spaerotheca-cucurbit-powdery-mildew-on-butternut-squash-f0rh86.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1600
+raw/plantdoc/train/Squash Powdery mildew leaf/file.php?id=16321&t=1.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1601
+raw/plantdoc/train/Squash Powdery mildew leaf/flora-ivy-plant-food-produce-vegetable-conifer-tree-squash-rock.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1602
+raw/plantdoc/train/Squash Powdery mildew leaf/garden-stuff-143.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1603
+raw/plantdoc/train/Squash Powdery mildew leaf/hqdefault.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1604
+raw/plantdoc/train/Squash Powdery mildew leaf/mildew-on-leaf.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1607
+raw/plantdoc/train/Squash Powdery mildew leaf/mold_web12.16.14.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1609
+raw/plantdoc/train/Squash Powdery mildew leaf/pm-squash-big.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1615
+raw/plantdoc/train/Squash Powdery mildew leaf/pmild1_600px.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1616
+raw/plantdoc/train/Squash Powdery mildew leaf/powdery%20mildew%20of%20squash.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1617
+raw/plantdoc/train/Squash Powdery mildew leaf/powdery-mildew-1.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1618
+raw/plantdoc/train/Squash Powdery mildew leaf/powdery-mildew-erysiphe-plantani-on-young-sycamore-leaves-b0ah25.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1619
+raw/plantdoc/train/Squash Powdery mildew leaf/powdery-mildew-on-squash-plants-you-can-prevent-powdery-mildew-disease-by-avoiding-overhead-sprinkling-and-watering-in-the-morning-rather-than-evening-forum-news-service-file-photo-what-causes-powdery.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1620
+raw/plantdoc/train/Squash Powdery mildew leaf/powdery-mildew-pea-leaf.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1621
+raw/plantdoc/train/Squash Powdery mildew leaf/powderymildew-669x578.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1623
+raw/plantdoc/train/Squash Powdery mildew leaf/powderymildew-on-squash.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1624
+raw/plantdoc/train/Squash Powdery mildew leaf/powderymildew_300.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1625
+raw/plantdoc/train/Squash Powdery mildew leaf/powmil.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1628
+raw/plantdoc/train/Squash Powdery mildew leaf/severe%20PM%20at%20MHRI%202013%20%2821%29.JPG.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1629
+raw/plantdoc/train/Squash Powdery mildew leaf/squash-plant-identification-squash-powdery-mildew-garden-squash-varieties-pictures.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1630
+raw/plantdoc/train/Squash Powdery mildew leaf/squash-powdery-mildew.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1630
+raw/plantdoc/train/Squash Powdery mildew leaf/whitemildew1_l.jpg,Squash___Powdery_mildew,Squash Powdery mildew leaf,train,exact,1638
+raw/plantdoc/train/Strawberry leaf/102_0829.JPG.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1641
+raw/plantdoc/train/Strawberry leaf/13400strawberry_leaves.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1642
+raw/plantdoc/train/Strawberry leaf/1534854-a-green-strawberry-leaf-isolated-on-a-white-background.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1643
+raw/plantdoc/train/Strawberry leaf/18423_original.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1645
+raw/plantdoc/train/Strawberry leaf/270412tglr-wild-strawberry-leaf.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1646
+raw/plantdoc/train/Strawberry leaf/344d1150577229-strange-strawberry-leaves-unhealthy-maxim.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1647
+raw/plantdoc/train/Strawberry leaf/41.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1648
+raw/plantdoc/train/Strawberry leaf/5787ab74428a5fdc70e3defda7f00f0a4623876d.jpeg.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1650
+raw/plantdoc/train/Strawberry leaf/7065201-strawberry-leaf.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1652
+raw/plantdoc/train/Strawberry leaf/F-vesca-leaf1.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1654
+raw/plantdoc/train/Strawberry leaf/IMG_1309.JPG.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1656
+raw/plantdoc/train/Strawberry leaf/IMG_4056.JPG.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1658
+raw/plantdoc/train/Strawberry leaf/IMG_4695.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1659
+raw/plantdoc/train/Strawberry leaf/IMG_4696.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1660
+raw/plantdoc/train/Strawberry leaf/IMG_5392.JPG.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1661
+raw/plantdoc/train/Strawberry leaf/Leaves%2C_Wild_strawberry_-_Flickr_-_nekonomania.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1663
+raw/plantdoc/train/Strawberry leaf/Leaves-of-Strawberries.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1664
+raw/plantdoc/train/Strawberry leaf/depositphotos_1090254-Strawberry-leaves.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1670
+raw/plantdoc/train/Strawberry leaf/depositphotos_164701744-stock-photo-closeup-of-strawberry-leaves.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1671
+raw/plantdoc/train/Strawberry leaf/depositphotos_3121648-Strawberry-leaf.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1672
+raw/plantdoc/train/Strawberry leaf/fragaria-vesca-americana-le-ahaines-c.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1681
+raw/plantdoc/train/Strawberry leaf/fresh-green-strawberry-leaf-isolated-on-white-background-with-clipping-KH37KY.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1682
+raw/plantdoc/train/Strawberry leaf/giant-leaves.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1683
+raw/plantdoc/train/Strawberry leaf/green-strawberry-leaf-isolated-on-white-picture-id623362994?k=6&m=623362994&s=612x612&w=0&h=l350NQvVUUsLkRD1jOeEDnUledIWPjFXi86jd_Uv0OE=.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1684
+raw/plantdoc/train/Strawberry leaf/green-strawberry-leaf-isolated-on-white-picture-id654400974?k=6&m=654400974&s=612x612&w=0&h=x97U-8miyZxfXvAUVMbPGGj6_Lt-p35dVXiu1zuBt-Q=.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1685
+raw/plantdoc/train/Strawberry leaf/guttation-on-the-leaves-of-a-strawberry-plant-leaf-guttation-BN3DM8.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1689
+raw/plantdoc/train/Strawberry leaf/leaf-wild-strawberry-plant-25253212.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1694
+raw/plantdoc/train/Strawberry leaf/leaves_comparison.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1695
+raw/plantdoc/train/Strawberry leaf/stock-photo-fresh-green-strawberry-leaf-isolated-on-white-background-strawberry-leaf-with-clipping-path-630981155.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1697
+raw/plantdoc/train/Strawberry leaf/stock-photo-strawberry-leaf-isolated-on-the-white-background-255533380.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1700
+raw/plantdoc/train/Strawberry leaf/stock-photo-strawberry-leaf-isolated-on-white-background-572055775.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1701
+raw/plantdoc/train/Strawberry leaf/stock-photo-strawberry-leaf-isolated-on-white-background-with-clipping-path-568145485.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1702
+raw/plantdoc/train/Strawberry leaf/stock-photo-strawberry-leaves-isolated-on-white-background-collection-227987416.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1705
+raw/plantdoc/train/Strawberry leaf/strawberry-leaf-isolated-on-white-background-picture-id487562700?k=6&m=487562700&s=612x612&w=0&h=uJYH7WuQOtfgoSp4EKzGuRPXoejL470Pkh_zMoIJYEs=.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1710
+raw/plantdoc/train/Strawberry leaf/strawberry-leaf-stock-picture-3646237.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1713
+raw/plantdoc/train/Strawberry leaf/strawberry-leaves-14363903.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1715
+raw/plantdoc/train/Strawberry leaf/strawberry-leaves-close-up.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1718
+raw/plantdoc/train/Strawberry leaf/strawberry-leaves-stock-picture-1860898.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1719
+raw/plantdoc/train/Strawberry leaf/strawberry-plant-leaves-the-distorted-wrinkled-leaves-are-showing-signs-of-cold-damage-the-older-and-younger-leaves-around-them-are-normal-looking-strawberry-plant-leaves-turn-red.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1721
+raw/plantdoc/train/Strawberry leaf/strawberry-plant.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1722
+raw/plantdoc/train/Strawberry leaf/wild-strawberry-fragaria-vesca-leaves-with-a-single-flower-KD619N.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1725
+raw/plantdoc/train/Strawberry leaf/yellow-strawberry-leaves.jpg.1080x0_q100_crop-scale.jpg,Strawberry___healthy,Strawberry leaf,train,healthy_assumed,1727
+raw/plantdoc/train/Tomato Early blight leaf/100_46341.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1728
+raw/plantdoc/train/Tomato Early blight leaf/1058_0.jpeg?itok=OQkdtxgv.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1729
+raw/plantdoc/train/Tomato Early blight leaf/126689-004-D622CD2F.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1303
+raw/plantdoc/train/Tomato Early blight leaf/12July_mwnews_3-C.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1730
+raw/plantdoc/train/Tomato Early blight leaf/20020531-early%20blight%20%20starts%20on%20lower%20leaves.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1732
+raw/plantdoc/train/Tomato Early blight leaf/30053_original.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1735
+raw/plantdoc/train/Tomato Early blight leaf/3606630.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1736
+raw/plantdoc/train/Tomato Early blight leaf/8%20mistakes%204.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1738
+raw/plantdoc/train/Tomato Early blight leaf/8950022d45978228d5e44a35183efdb9--tomatoes-dyi.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1739
+raw/plantdoc/train/Tomato Early blight leaf/BCH%20medium%20thumbnail%20for%20upload%20%2836%29.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1740
+raw/plantdoc/train/Tomato Early blight leaf/EBTomato.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1176
+raw/plantdoc/train/Tomato Early blight leaf/Early+Blight+-+Tomatoes.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1742
+raw/plantdoc/train/Tomato Early blight leaf/Early-bligh_t.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1743
+raw/plantdoc/train/Tomato Early blight leaf/Early-blight.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1743
+raw/plantdoc/train/Tomato Early blight leaf/Early_Blight_of_Tomato1687.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1175
+raw/plantdoc/train/Tomato Early blight leaf/IMG_2436w.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1748
+raw/plantdoc/train/Tomato Early blight leaf/MPC105550.jpg.rendition.largest.ss.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1749
+raw/plantdoc/train/Tomato Early blight leaf/Tomato-Alternaria-Early-Blight.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1752
+raw/plantdoc/train/Tomato Early blight leaf/Tomato-Early-Blight-e1513806873934.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1755
+raw/plantdoc/train/Tomato Early blight leaf/Tomato-blight-large.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1757
+raw/plantdoc/train/Tomato Early blight leaf/Tomato-early-blight_1_1-12wmver.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1759
+raw/plantdoc/train/Tomato Early blight leaf/b54d0e40027ff5e90e8ba7e1e9abf9bd--garden-guide-garden-ideas.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1761
+raw/plantdoc/train/Tomato Early blight leaf/blog_early_blight_628.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1762
+raw/plantdoc/train/Tomato Early blight leaf/confused-bacterial-canker-early-blight-zoom.JPG.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1763
+raw/plantdoc/train/Tomato Early blight leaf/ealryblight.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1766
+raw/plantdoc/train/Tomato Early blight leaf/early%20blight%20%283%29.jpg?itok=UMYWI0xr.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1767
+raw/plantdoc/train/Tomato Early blight leaf/early-blight-closeup-sm.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1218
+raw/plantdoc/train/Tomato Early blight leaf/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-BH3TH0.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1773
+raw/plantdoc/train/Tomato Early blight leaf/early-blight-or-target-spot-alternaria-solani-lesions-on-a-tomato-BY9J8R.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1774
+raw/plantdoc/train/Tomato Early blight leaf/early-blight-pp-labeled_orig.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1736
+raw/plantdoc/train/Tomato Early blight leaf/early-tomato-blight.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1776
+raw/plantdoc/train/Tomato Early blight leaf/earlyblightpotato.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,102
+raw/plantdoc/train/Tomato Early blight leaf/earlyblightresize.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1780
+raw/plantdoc/train/Tomato Early blight leaf/earlyblighttomato.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1781
+raw/plantdoc/train/Tomato Early blight leaf/ebleafb.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1782
+raw/plantdoc/train/Tomato Early blight leaf/p1020083cs.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1786
+raw/plantdoc/train/Tomato Early blight leaf/p1020084s.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1787
+raw/plantdoc/train/Tomato Early blight leaf/tomato-blight-soil-treatment-early-tomato-blight-in-a-microcosm-lower-leaves-curl-up-and-die-bulls-eye-lesions-tomato-fungus-soil-treatment.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1790
+raw/plantdoc/train/Tomato Early blight leaf/tomato_D2b-Early-blight---RPitblado_zoom.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1763
+raw/plantdoc/train/Tomato Early blight leaf/tomato_blight_early.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1792
+raw/plantdoc/train/Tomato Early blight leaf/tomato_early-blight_03_zoom.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1794
+raw/plantdoc/train/Tomato Early blight leaf/tomatoblight.jpg,Tomato___Early_blight,Tomato Early blight leaf,train,exact,1176
+raw/plantdoc/train/Tomato Septoria leaf spot/20809116-standard.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1805
+raw/plantdoc/train/Tomato Septoria leaf spot/3-septoria-leaf-blight-n.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1807
+raw/plantdoc/train/Tomato Septoria leaf spot/32-Septoria-leaf-spot.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1808
+raw/plantdoc/train/Tomato Septoria leaf spot/5454635393351680.jpeg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1817
+raw/plantdoc/train/Tomato Septoria leaf spot/5516100468998144-600x272.jpeg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1818
+raw/plantdoc/train/Tomato Septoria leaf spot/5516100468998144.jpeg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1819
+raw/plantdoc/train/Tomato Septoria leaf spot/5775225744523264.jpeg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1822
+raw/plantdoc/train/Tomato Septoria leaf spot/5c77186a4ea326e5495c9d03cd89ce16.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1824
+raw/plantdoc/train/Tomato Septoria leaf spot/6+1+09+019.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1825
+raw/plantdoc/train/Tomato Septoria leaf spot/6134794031202304-600x272.jpeg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1828
+raw/plantdoc/train/Tomato Septoria leaf spot/BCH%20medium%20thumbnail%20for%20upload%20%2861%29.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1832
+raw/plantdoc/train/Tomato Septoria leaf spot/EPP-7625Fig-5-143x300.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1834
+raw/plantdoc/train/Tomato Septoria leaf spot/IMG_0312_original.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1835
+raw/plantdoc/train/Tomato Septoria leaf spot/IMG_0863_1500x1500%253E.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1836
+raw/plantdoc/train/Tomato Septoria leaf spot/IMG_4452_1500x1500%253E.JPG?1407883119.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1838
+raw/plantdoc/train/Tomato Septoria leaf spot/Leaf%20spot.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1839
+raw/plantdoc/train/Tomato Septoria leaf spot/MPC105550.jpg.rendition.largest.550.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1749
+raw/plantdoc/train/Tomato Septoria leaf spot/PHOTO_1333642732277.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1840
+raw/plantdoc/train/Tomato Septoria leaf spot/Sept9-300x225.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1842
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria%2Bleaf%2Bspot.tomato.JPG.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1843
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria-Tomato.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1846
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria-leaf-spot-hc.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1847
+raw/plantdoc/train/Tomato Septoria leaf spot/SeptoriaLeaf_T3.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1849
+raw/plantdoc/train/Tomato Septoria leaf spot/SeptoriaTomato-B.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1850
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria_Leaf_Spot_of_Tomato186.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1852
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria_Leaf_Spot_of_Tomato187.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1853
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria_leaf_spot_tomato.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1855
+raw/plantdoc/train/Tomato Septoria leaf spot/Septoria_tomato_Margaret%20B_p8170755_0002_25004.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1856
+raw/plantdoc/train/Tomato Septoria leaf spot/Tom_Sept1.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1857
+raw/plantdoc/train/Tomato Septoria leaf spot/Tom_Sept4.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1858
+raw/plantdoc/train/Tomato Septoria leaf spot/Tomato%20bacterial%20spot%20closeup-050S.JPG.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1859
+raw/plantdoc/train/Tomato Septoria leaf spot/Tomato+Problems+Septoria+Leaf+Spot.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1860
+raw/plantdoc/train/Tomato Septoria leaf spot/TomatoDisease_IMG_2744_2016Jul01_original.JPG?1472858324.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1862
+raw/plantdoc/train/Tomato Septoria leaf spot/Tomato_Septoria_Leaf_Spot.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1863
+raw/plantdoc/train/Tomato Septoria leaf spot/b54d0e40027ff5e90e8ba7e1e9abf9bd.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1761
+raw/plantdoc/train/Tomato Septoria leaf spot/b6ca3f80-cc10-4d4f-be0d-771deb9a4969.jpeg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1864
+raw/plantdoc/train/Tomato Septoria leaf spot/bigseptoria01.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1867
+raw/plantdoc/train/Tomato Septoria leaf spot/eb56b488e349c2de423ab6afbcc4bd5b.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1824
+raw/plantdoc/train/Tomato Septoria leaf spot/gray-leaf-spot.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1873
+raw/plantdoc/train/Tomato Septoria leaf spot/leafspot-5aba8283642dca003687f6fa.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1875
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria+tomato.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1878
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-2.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1879
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-in-tomatoes.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1880
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-tomato-1.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1882
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-tomatoes2x2400-202yoxg.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1884
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-leaf-spot-treatment-leaf-spot-septoria-leaf-spot-soil-treatment-septoria-leaf-spot-tomato-organic-treatment.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1885
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-leafspot-on-tomato-leaf-rp-c.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1886
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-lycopersici-ascomycota-common-fungal-leaf-disease-of-tomato-picture-id128110611.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1887
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria-tomato-leaf.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1888
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria3.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1890
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria_leaf_spot_of_tomato-1500x750.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1892
+raw/plantdoc/train/Tomato Septoria leaf spot/septoria_tom_leaves1x1200.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1893
+raw/plantdoc/train/Tomato Septoria leaf spot/slide21-n.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1900
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-blight-treatment-blight.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,489
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-disease-septoria-leaf-spot-d7e1x9.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1904
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-disease-septoria-leaf-spot-d7e1xm.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1906
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-diseases-1-638.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1907
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-leaf-spot-septoria-lycopersici-on-a-tomato-leaflet-acg9j5.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1910
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-plant-is-infected-with-septoria-leaf-spot.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1912
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-3-500x384.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1913
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-3.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1913
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-5-500x384.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1914
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-5.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1914
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato-septoria-leaf-spot-.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1916
+raw/plantdoc/train/Tomato Septoria leaf spot/tomato_septoria_alternaria_1.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1922
+raw/plantdoc/train/Tomato Septoria leaf spot/tomatofactsheet.png.png,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1846
+raw/plantdoc/train/Tomato Septoria leaf spot/tomatoseptorialeafspotjpg-788d20798a3c74e7.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1923
+raw/plantdoc/train/Tomato Septoria leaf spot/vdu-tomato-sept-eb-285x300.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1924
+raw/plantdoc/train/Tomato Septoria leaf spot/x3-most-common-types-tomato-blight.jpg.pagespeed.ic.5cLJi6TXEi.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1926
+raw/plantdoc/train/Tomato Septoria leaf spot/xgray-leaf-spot.jpg.pagespeed.ic.ltF8KfKtQ1.jpg,Tomato___Septoria_leaf_spot,Tomato Septoria leaf spot,train,exact,1873
+raw/plantdoc/train/Tomato leaf bacterial spot/05-069f1.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1927
+raw/plantdoc/train/Tomato leaf bacterial spot/13582051_f520.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1932
+raw/plantdoc/train/Tomato leaf bacterial spot/250?cb=20100819110637.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1933
+raw/plantdoc/train/Tomato leaf bacterial spot/30290.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1935
+raw/plantdoc/train/Tomato leaf bacterial spot/3182.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1936
+raw/plantdoc/train/Tomato leaf bacterial spot/39765006175_e2f0da764d_b.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1938
+raw/plantdoc/train/Tomato leaf bacterial spot/BCH%20medium%20thumbnail%20for%20upload%20%2814%29.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1944
+raw/plantdoc/train/Tomato leaf bacterial spot/BCH%20small%20thumbnail%20for%20upload%20%2814%29.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1944
+raw/plantdoc/train/Tomato leaf bacterial spot/Bacterial-Leaf-Spot-2.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1947
+raw/plantdoc/train/Tomato leaf bacterial spot/Bacterial-spot-on-tomato-leaves.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1950
+raw/plantdoc/train/Tomato leaf bacterial spot/BacterialSpot06.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1952
+raw/plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots1300.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1954
+raw/plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots2276.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1955
+raw/plantdoc/train/Tomato leaf bacterial spot/Bacterial_spots586.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1958
+raw/plantdoc/train/Tomato leaf bacterial spot/Canker-GHTom-CAG-leaf-collapse-copy-50-QUALITY-1ur7cyk.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1959
+raw/plantdoc/train/Tomato leaf bacterial spot/CankerFoliar-copy-50-QUALITY-122b09b.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1960
+raw/plantdoc/train/Tomato leaf bacterial spot/CankerRhiemsFiring1-copy-50-QUALITY-16lcw30.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1961
+raw/plantdoc/train/Tomato leaf bacterial spot/FS547-4-big.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1842
+raw/plantdoc/train/Tomato leaf bacterial spot/Figure-1-6.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1962
+raw/plantdoc/train/Tomato leaf bacterial spot/Figure-3-7.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1963
+raw/plantdoc/train/Tomato leaf bacterial spot/IN0335.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1965
+raw/plantdoc/train/Tomato leaf bacterial spot/Jeter%20Mtn%20Farm_7053.JPG.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1966
+raw/plantdoc/train/Tomato leaf bacterial spot/Leaf%2Bsymptoms%2BMDA.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1968
+raw/plantdoc/train/Tomato leaf bacterial spot/Leaf-spots-on-tomato-leaves-Credits-Hank-Dankers_Q320.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1970
+raw/plantdoc/train/Tomato leaf bacterial spot/LyraEDISServlet.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1972
+raw/plantdoc/train/Tomato leaf bacterial spot/Paret-Fig-1-tomato-bacterial-leaf-spot.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1973
+raw/plantdoc/train/Tomato leaf bacterial spot/RyBx7MH.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1859
+raw/plantdoc/train/Tomato leaf bacterial spot/TC3.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1975
+raw/plantdoc/train/Tomato leaf bacterial spot/TC6-300x194.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1976
+raw/plantdoc/train/Tomato leaf bacterial spot/TomatoBacterialSpot2.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1981
+raw/plantdoc/train/Tomato leaf bacterial spot/alter_cank2-150x150.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1983
+raw/plantdoc/train/Tomato leaf bacterial spot/bac.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1987
+raw/plantdoc/train/Tomato leaf bacterial spot/bact-spot-leaf-big.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1981
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterial-canker3x2400-2ia1kgd.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,161
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterial-canker4x640-1nz1vm7.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1991
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterial-leaf-spot.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1992
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterial-speck-tomato-3.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1994
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterialLeafSpot04-xqxm03.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1998
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterialSpeck03510339f27656b-1scmgh1.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2000
+raw/plantdoc/train/Tomato leaf bacterial spot/bacterialspottomato2.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,1962
+raw/plantdoc/train/Tomato leaf bacterial spot/image3_original.JPG?1472755422.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2005
+raw/plantdoc/train/Tomato leaf bacterial spot/image5_300x300%2523.JPG?1472755422.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2006
+raw/plantdoc/train/Tomato leaf bacterial spot/kg32-beefsteak-tomatoes-08_lg.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2007
+raw/plantdoc/train/Tomato leaf bacterial spot/patarea-bacteriana-frunzelor-pseudomonas-syringae-maculicola-31_5_2.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2011
+raw/plantdoc/train/Tomato leaf bacterial spot/photo-1.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2013
+raw/plantdoc/train/Tomato leaf bacterial spot/tomato-plant-leaves-brown-spots-tomato-leaves-older-ones-with-spots.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2018
+raw/plantdoc/train/Tomato leaf bacterial spot/tomato1A.jpg,Tomato___Bacterial_spot,Tomato leaf bacterial spot,train,exact,2019
+raw/plantdoc/train/Tomato leaf late blight/20150619d.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2023
+raw/plantdoc/train/Tomato leaf late blight/2017-08-27%2B-%2BLate%2BBlight%2Bon%2BGypsy%2B1.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2024
+raw/plantdoc/train/Tomato leaf late blight/600.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2026
+raw/plantdoc/train/Tomato leaf late blight/7262-drought.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2027
+raw/plantdoc/train/Tomato leaf late blight/924977LateBlightLeaf.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2028
+raw/plantdoc/train/Tomato leaf late blight/August-17-2012-Supplemental-6.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2029
+raw/plantdoc/train/Tomato leaf late blight/FS547-6-big.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2031
+raw/plantdoc/train/Tomato leaf late blight/IMG_1526.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2033
+raw/plantdoc/train/Tomato leaf late blight/IMG_2254.JPG.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2034
+raw/plantdoc/train/Tomato leaf late blight/IMG_5360.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2023
+raw/plantdoc/train/Tomato leaf late blight/IMG_5813.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,1283
+raw/plantdoc/train/Tomato leaf late blight/LB-2-225x300.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2037
+raw/plantdoc/train/Tomato leaf late blight/LBleaf2INIA_0.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,1186
+raw/plantdoc/train/Tomato leaf late blight/Late-Blight-A.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2039
+raw/plantdoc/train/Tomato leaf late blight/Late-blight-foliar-leasion-on-tomato.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2041
+raw/plantdoc/train/Tomato leaf late blight/Late-blight-symptoms-on-tomato-leaves-1r3uhy2.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2043
+raw/plantdoc/train/Tomato leaf late blight/LateBlight-Leaflet-Large-Spot_9005-ROTATED-sbzntn.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2045
+raw/plantdoc/train/Tomato leaf late blight/LateBlightLeaf.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2028
+raw/plantdoc/train/Tomato leaf late blight/LateBlt09_05.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2047
+raw/plantdoc/train/Tomato leaf late blight/Late_blight_on_tomato_leaf_%287871756748%29.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2050
+raw/plantdoc/train/Tomato leaf late blight/Tomato-late-blight-leaf-Margaret-McGrath-Cornell-Bugwood.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2045
+raw/plantdoc/train/Tomato leaf late blight/TomatoBlight.JPG.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2055
+raw/plantdoc/train/Tomato leaf late blight/TomatoLateBlight-3-Underside-2ebj05b-300x225.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2056
+raw/plantdoc/train/Tomato leaf late blight/a7710b5901ba1f8e9759ef7576cd9f09.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,1211
+raw/plantdoc/train/Tomato leaf late blight/dsc_4621c.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2059
+raw/plantdoc/train/Tomato leaf late blight/dsc_4624s.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2060
+raw/plantdoc/train/Tomato leaf late blight/late-blight-TomC2-10.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2063
+raw/plantdoc/train/Tomato leaf late blight/late-blight-phytophthora-infestans-damage-to-tomato-leaves-and-fruit-cmnxnf.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2065
+raw/plantdoc/train/Tomato leaf late blight/late-blight-tom-leaf.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2066
+raw/plantdoc/train/Tomato leaf late blight/late_blight1.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,169
+raw/plantdoc/train/Tomato leaf late blight/late_blight_2013_longisland1x1200.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2069
+raw/plantdoc/train/Tomato leaf late blight/late_blight_2013_longisland2x1200.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2070
+raw/plantdoc/train/Tomato leaf late blight/late_blight_drought_leavescuux1200.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2072
+raw/plantdoc/train/Tomato leaf late blight/late_blight_tomato_leaf.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2073
+raw/plantdoc/train/Tomato leaf late blight/late_blight_tomato_leaf1x1200.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2074
+raw/plantdoc/train/Tomato leaf late blight/late_blight_tomato_leaf5x12001-650x305.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2075
+raw/plantdoc/train/Tomato leaf late blight/late_blight_tomato_leaf_.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2077
+raw/plantdoc/train/Tomato leaf late blight/late_blight_tomato_leavesx500.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2079
+raw/plantdoc/train/Tomato leaf late blight/late_blight_tomato_unusual-symptomsx1200.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2081
+raw/plantdoc/train/Tomato leaf late blight/lateblightTom_lesion.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2083
+raw/plantdoc/train/Tomato leaf late blight/photo-2.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2091
+raw/plantdoc/train/Tomato leaf late blight/photo-9.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2092
+raw/plantdoc/train/Tomato leaf late blight/symptoms_of_late_blight.jpg2__0.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2056
+raw/plantdoc/train/Tomato leaf late blight/symptoms_of_late_blight_0.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,1284
+raw/plantdoc/train/Tomato leaf late blight/tomato+blight.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2094
+raw/plantdoc/train/Tomato leaf late blight/tomato-late-blight-foliar-lesions_Scot-Nelson_CC-BY-SA-2.0.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2098
+raw/plantdoc/train/Tomato leaf late blight/tomato-late-blight-phytophthora-infestans-mycelium-and-lesions-on-a15yr2.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2102
+raw/plantdoc/train/Tomato leaf late blight/tomato-late-blight-phytophthora-infestans-necrosis-sporulation-on-a-tomato-leaf-underside-XA233C.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2104
+raw/plantdoc/train/Tomato leaf late blight/tomato-late-blight-phytophthora-infestans-on-tomato-leaves-a15ym0.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2105
+raw/plantdoc/train/Tomato leaf late blight/tomato_late-blight_01_zoom.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2109
+raw/plantdoc/train/Tomato leaf late blight/tomato_late-blight_03_zoom.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,2110
+raw/plantdoc/train/Tomato leaf late blight/tomato_late-blight_04_zoom.jpg,Tomato___Late_blight,Tomato leaf late blight,train,exact,1787
+raw/plantdoc/train/Tomato leaf mosaic virus/3-tomato-mosaic-virus_web.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2113
+raw/plantdoc/train/Tomato leaf mosaic virus/TMV-3.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2118
+raw/plantdoc/train/Tomato leaf mosaic virus/Tomato-brown-rugose-fruit-virus-ToBRFV-infected-tomato-Solanum-lycopersicum-plants_Q320.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2122
+raw/plantdoc/train/Tomato leaf mosaic virus/ab40cce958c60d8b6e0ec2e4fdb8f526.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2123
+raw/plantdoc/train/Tomato leaf mosaic virus/d41c86a650e49b8066d6b347d8e9d3ad.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2124
+raw/plantdoc/train/Tomato leaf mosaic virus/dahliaviralsymptoms2lowresjpg.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2125
+raw/plantdoc/train/Tomato leaf mosaic virus/image022.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2130
+raw/plantdoc/train/Tomato leaf mosaic virus/mosaic-virus-foliage.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2132
+raw/plantdoc/train/Tomato leaf mosaic virus/mosaic_virus_tomato.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2133
+raw/plantdoc/train/Tomato leaf mosaic virus/mosaic_virus_tomato_small.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2134
+raw/plantdoc/train/Tomato leaf mosaic virus/stock-photo-tomato-mosaic-virus-disease-on-tomato-559799668.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2136
+raw/plantdoc/train/Tomato leaf mosaic virus/tmv-tomato-16.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2138
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato-fern-leaf-a-symptom-of-tmv-cmv-or-pepmv-virus-on-tomato-plants-h6ey8w.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2139
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato-leaf-herbicide-damage.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2140
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato-leaves-260nw-670831669.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2141
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato-mosaic-virus-F0BA26.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2143
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato-mosaic-virus-disease-on-260nw-625499777.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2146
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato-mosaic-virus-disease-on-260nw-625499780.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2147
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato_mosaic_virus.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2151
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato_virus_01_zoom.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2152
+raw/plantdoc/train/Tomato leaf mosaic virus/tomato_virus_06_zoom.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2153
+raw/plantdoc/train/Tomato leaf mosaic virus/tomatodisease001sm.jpg,Tomato___Tomato_mosaic_virus,Tomato leaf mosaic virus,train,exact,2154
+raw/plantdoc/train/Tomato leaf yellow virus/1342017-162221-44540.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2157
+raw/plantdoc/train/Tomato leaf yellow virus/14456.img.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2158
+raw/plantdoc/train/Tomato leaf yellow virus/18071.img.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2159
+raw/plantdoc/train/Tomato leaf yellow virus/5146.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2164
+raw/plantdoc/train/Tomato leaf yellow virus/7585001780_4b89e826b7.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2166
+raw/plantdoc/train/Tomato leaf yellow virus/8227475116_0d40e8f21c_b.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2169
+raw/plantdoc/train/Tomato leaf yellow virus/8e60bae9f613f360403943f108a03083.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2170
+raw/plantdoc/train/Tomato leaf yellow virus/DSC01999.JPG.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2171
+raw/plantdoc/train/Tomato leaf yellow virus/DSC02007.JPG.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2173
+raw/plantdoc/train/Tomato leaf yellow virus/Figure-4.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2175
+raw/plantdoc/train/Tomato leaf yellow virus/IMG_2684.JPG.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2176
+raw/plantdoc/train/Tomato leaf yellow virus/IMG_2686.JPG.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2177
+raw/plantdoc/train/Tomato leaf yellow virus/TYLCV-tomate-DB-442-167.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2182
+raw/plantdoc/train/Tomato leaf yellow virus/TYLCV-tomate-DB-445-171.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2183
+raw/plantdoc/train/Tomato leaf yellow virus/TYLCV2.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2185
+raw/plantdoc/train/Tomato leaf yellow virus/TYLCV4.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2186
+raw/plantdoc/train/Tomato leaf yellow virus/TYLCVDFerrinlr.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2187
+raw/plantdoc/train/Tomato leaf yellow virus/Tomato2.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2123
+raw/plantdoc/train/Tomato leaf yellow virus/illustration-thematique-urbino-fig5.plante%20tylcv.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2190
+raw/plantdoc/train/Tomato leaf yellow virus/latest?cb=20100719124603.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2191
+raw/plantdoc/train/Tomato leaf yellow virus/leaf%20curl_3.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2192
+raw/plantdoc/train/Tomato leaf yellow virus/leaves-on-tomato-plant-turning-yellow-what-does-it-mean-when-your-plant-leaves-turn-yellow-tomato-leaf-problems-a-guide-to-leaves-tomato-plant-turning-yellow.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2194
+raw/plantdoc/train/Tomato leaf yellow virus/tj5itxzunn3k.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2200
+raw/plantdoc/train/Tomato leaf yellow virus/tlcv-tomato-leaf-curl-virus-symptoms-on-a-glasshouse-tomato-plant-ACGAG6.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2201
+raw/plantdoc/train/Tomato leaf yellow virus/tomato-plant-virus-tomato-yellow-leaf-curl-virus-tomato-plant-disease-mosaic-virus.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2187
+raw/plantdoc/train/Tomato leaf yellow virus/tomato-yellow-closeup-4.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2205
+raw/plantdoc/train/Tomato leaf yellow virus/tomato-yellow-leaf-curl-disease.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2208
+raw/plantdoc/train/Tomato leaf yellow virus/tomato-yellow-leaf-curl-virus-symptoms-on-tomato-leaves-on-plants-ACGAME.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2210
+raw/plantdoc/train/Tomato leaf yellow virus/tomato-yellow-leaf-curl-virus-symptoms-on-tomato-leaves-on-plants-AXKWFY.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2211
+raw/plantdoc/train/Tomato leaf yellow virus/tomato-yellow-leaf-curl-virus-tomato-1.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2212
+raw/plantdoc/train/Tomato leaf yellow virus/tomato_leaf_roll.JPG.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2215
+raw/plantdoc/train/Tomato leaf yellow virus/tomato_yellow_leaf_curl_virus.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2216
+raw/plantdoc/train/Tomato leaf yellow virus/virus1.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2220
+raw/plantdoc/train/Tomato leaf yellow virus/yellowing.JPG.jpg,Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato leaf yellow virus,train,approximate,2222
+raw/plantdoc/train/Tomato leaf/003.JPG.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2223
+raw/plantdoc/train/Tomato leaf/100_8283.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2225
+raw/plantdoc/train/Tomato leaf/15481477375.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2226
+raw/plantdoc/train/Tomato leaf/1688.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2228
+raw/plantdoc/train/Tomato leaf/2013-08-20-03.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2230
+raw/plantdoc/train/Tomato leaf/20140818-tomato-sauce-vicky-wasik-1.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2233
+raw/plantdoc/train/Tomato leaf/Basil%2Binfected%2Bby%2BTomato%2BSpotted%2BWilt%2BVirus.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2238
+raw/plantdoc/train/Tomato leaf/CTG514794.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2239
+raw/plantdoc/train/Tomato leaf/Fig-2.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2241
+raw/plantdoc/train/Tomato leaf/IMG_2061.JPG.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2242
+raw/plantdoc/train/Tomato leaf/IMG_3192.JPG.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2244
+raw/plantdoc/train/Tomato leaf/L.peruv-assort.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2245
+raw/plantdoc/train/Tomato leaf/PxWBE.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2247
+raw/plantdoc/train/Tomato leaf/curling-issues.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2249
+raw/plantdoc/train/Tomato leaf/depositphotos_120361722-stock-photo-tomato-leaf-closeup.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2250
+raw/plantdoc/train/Tomato leaf/depositphotos_143371585-stock-photo-tomato-leaf-closeup-isolated-on.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2251
+raw/plantdoc/train/Tomato leaf/depositphotos_7182856-stock-photo-tomato-leaf.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2252
+raw/plantdoc/train/Tomato leaf/late_blight_tomato_leaf4x1200.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2258
+raw/plantdoc/train/Tomato leaf/p1011399.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2260
+raw/plantdoc/train/Tomato leaf/single-a-green-leaf-of-tomato-picture-id496662675?k=6&m=496662675&s=612x612&w=0&h=6zKfv022H_9cLQSIR_kpcOAlTeg1eIVtLBbc80PQA7Y=.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2262
+raw/plantdoc/train/Tomato leaf/stock-photo-leaves-of-tomato-plant-isolated-on-white-12085288.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2263
+raw/plantdoc/train/Tomato leaf/stock-photo-tomato-leaves-close-up-macro-shot-isolated-on-white-background-78796204.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2265
+raw/plantdoc/train/Tomato leaf/stock-vector-set-of-vector-elements-for-your-design-red-ripe-tomatoes-with-water-drops-tomato-leaves-and-tomato-203297116.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2266
+raw/plantdoc/train/Tomato leaf/tomato-leaf-20728368.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2267
+raw/plantdoc/train/Tomato leaf/tomato-leaf-6291945.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2269
+raw/plantdoc/train/Tomato leaf/tomato-leaf-6424287.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2270
+raw/plantdoc/train/Tomato leaf/tomato-leaf-isolated-white-34309524.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2272
+raw/plantdoc/train/Tomato leaf/tomato-leaf.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2273
+raw/plantdoc/train/Tomato leaf/tomato-leaves.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2276
+raw/plantdoc/train/Tomato leaf/tomato-vine-ripe-leaves-isolated-against-white-34863029.jpg,Tomato___healthy,Tomato leaf,train,healthy_assumed,2277
+raw/plantdoc/train/Tomato mold leaf/100_4542.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2278
+raw/plantdoc/train/Tomato mold leaf/23600077_1572609202782510_2145699867_o.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2281
+raw/plantdoc/train/Tomato mold leaf/23633262_1572609386115825_1396180255_o.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2283
+raw/plantdoc/train/Tomato mold leaf/5830204360_757cd7fdfc_z.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2285
+raw/plantdoc/train/Tomato mold leaf/603-116-0.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2286
+raw/plantdoc/train/Tomato mold leaf/6032331.JPG.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2287
+raw/plantdoc/train/Tomato mold leaf/607-155-0.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2288
+raw/plantdoc/train/Tomato mold leaf/ArticleImage.aspx?imgid=4987.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2291
+raw/plantdoc/train/Tomato mold leaf/B%29-Leafunsidecladosp-envez.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2292
+raw/plantdoc/train/Tomato mold leaf/Botrytis-Tomato-Seedlings-2-copy-50QUALITY-17wck0d.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2294
+raw/plantdoc/train/Tomato mold leaf/DSCN2697.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2295
+raw/plantdoc/train/Tomato mold leaf/GIVXB.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2298
+raw/plantdoc/train/Tomato mold leaf/IMG_7442%20resized_0.preview.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2302
+raw/plantdoc/train/Tomato mold leaf/Leaf+mold+tomato+%25283%2529.JPG.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2306
+raw/plantdoc/train/Tomato mold leaf/Leaf-mold-caused-by-the-fungal-pathogen-Passalore-fulva-in-tomatoes.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2307
+raw/plantdoc/train/Tomato mold leaf/Leaf-mold3.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2309
+raw/plantdoc/train/Tomato mold leaf/Ormvn.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2311
+raw/plantdoc/train/Tomato mold leaf/Problem-2a.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2313
+raw/plantdoc/train/Tomato mold leaf/Tomato%20greenhouse%20leaf%20edema%20and%20distortion2F.JPG.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2314
+raw/plantdoc/train/Tomato mold leaf/dscf2712.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2321
+raw/plantdoc/train/Tomato mold leaf/dscn6690.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2322
+raw/plantdoc/train/Tomato mold leaf/grey-mould-botrytis-cinerea-on-bottom-of-a-tomato-leaf-late-in-the-AFRDAN.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2325
+raw/plantdoc/train/Tomato mold leaf/image233.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2326
+raw/plantdoc/train/Tomato mold leaf/leaf%2Binf%2B800%2B1.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2328
+raw/plantdoc/train/Tomato mold leaf/leaf_mold1.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2329
+raw/plantdoc/train/Tomato mold leaf/leaf_mold_nightshade2x500.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2332
+raw/plantdoc/train/Tomato mold leaf/leaf_mold_tomato1x1200.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2333
+raw/plantdoc/train/Tomato mold leaf/leaf_mold_tomato7x1200.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2339
+raw/plantdoc/train/Tomato mold leaf/leafmold.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2340
+raw/plantdoc/train/Tomato mold leaf/leafmoldtomato1.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2341
+raw/plantdoc/train/Tomato mold leaf/leafmoldtomato2.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2342
+raw/plantdoc/train/Tomato mold leaf/pm3.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2343
+raw/plantdoc/train/Tomato mold leaf/tdisease6.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2345
+raw/plantdoc/train/Tomato mold leaf/tomato-gray-leaf-spot.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2347
+raw/plantdoc/train/Tomato mold leaf/tomato-leaf-mold-2.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2349
+raw/plantdoc/train/Tomato mold leaf/tomato.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2352
+raw/plantdoc/train/Tomato mold leaf/tomato_Leaf-roll-physiological-7059-SLoewen_thm.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2353
+raw/plantdoc/train/Tomato mold leaf/tomato_fulvia.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2354
+raw/plantdoc/train/Tomato mold leaf/tomato_leaf-mold_02_zoom.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2357
+raw/plantdoc/train/Tomato mold leaf/top-leaf-mold-Fulva-fulvea-WN.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2361
+raw/plantdoc/train/Tomato mold leaf/tylc.jpg,Tomato___Leaf_Mold,Tomato mold leaf,train,exact,2208
+raw/plantdoc/train/Tomato two spotted spider mites leaf/SpotSpeckBlightMite-1l4v879.jpg,Tomato___Spider_mites Two-spotted_spider_mite,Tomato two spotted spider mites leaf,train,exact,2362
+raw/plantdoc/train/grape leaf black rot/01gb.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2366
+raw/plantdoc/train/grape leaf black rot/150px-Plasmopara_viticola_000.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2370
+raw/plantdoc/train/grape leaf black rot/2009+06+069+Downy+mildew.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2371
+raw/plantdoc/train/grape leaf black rot/2009+07+034+black+rot+leaf+and+berry.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2372
+raw/plantdoc/train/grape leaf black rot/220px-Guignardia_bidwellii_08.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2373
+raw/plantdoc/train/grape leaf black rot/35327886795_6f608e0eaa_b.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2374
+raw/plantdoc/train/grape leaf black rot/3_21_14-Caption-Black-Rot-leaf-infection.-265x265.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2375
+raw/plantdoc/train/grape leaf black rot/6-14-11%20ANNEMIEK%20blkRotSp.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2377
+raw/plantdoc/train/grape leaf black rot/80111791.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2379
+raw/plantdoc/train/grape leaf black rot/Black_Rot_of_Grapes1167.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2385
+raw/plantdoc/train/grape leaf black rot/Black_Rot_of_Grapes1168.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2386
+raw/plantdoc/train/grape leaf black rot/Black_Rot_of_Grapes1317.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2387
+raw/plantdoc/train/grape leaf black rot/DCDl_p8UQAAf2hP.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2392
+raw/plantdoc/train/grape leaf black rot/DSCN1228.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2393
+raw/plantdoc/train/grape leaf black rot/Guignardia_bidwellii_%28black_rot%29_on_grape_4.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2396
+raw/plantdoc/train/grape leaf black rot/apr-2016_bryan_black-rot-leaf.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2399
+raw/plantdoc/train/grape leaf black rot/bad_grapes21.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2400
+raw/plantdoc/train/grape leaf black rot/black%20spot%20%2819%29.JPG?itok=mf4II8zq.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2401
+raw/plantdoc/train/grape leaf black rot/black-rot-guignardia-bidwellii-leaf-spot-lesions-on-muscadine-grape-x85jjd.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2403
+raw/plantdoc/train/grape leaf black rot/black-rot-leaves.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2404
+raw/plantdoc/train/grape leaf black rot/black-rot-of-grape_figure-1.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2405
+raw/plantdoc/train/grape leaf black rot/black_rot-grape_leaf.jpeg.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2406
+raw/plantdoc/train/grape leaf black rot/br-ocw-dm.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2408
+raw/plantdoc/train/grape leaf black rot/brshoot2_zoom.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2410
+raw/plantdoc/train/grape leaf black rot/image66.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2414
+raw/plantdoc/train/grape leaf black rot/image_original.jpeg?1495058317.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2415
+raw/plantdoc/train/grape leaf black rot/muscals2.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2414
+raw/plantdoc/train/grape leaf black rot/p_319.jpg,Grape___Black_rot,grape leaf black rot,train,exact,2418
+raw/plantdoc/train/grape leaf/10178grape_leaf.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2421
+raw/plantdoc/train/grape leaf/6cy5kMMEi.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2423
+raw/plantdoc/train/grape leaf/GrapeLeaf.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2424
+raw/plantdoc/train/grape leaf/Grape_leaf_01.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2425
+raw/plantdoc/train/grape leaf/IMG_20150511_095517.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2427
+raw/plantdoc/train/grape leaf/P1130239.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2430
+raw/plantdoc/train/grape leaf/depositphotos_6812535-stock-photo-grape-leaves.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2435
+raw/plantdoc/train/grape leaf/grape+leaves.JPG.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2437
+raw/plantdoc/train/grape leaf/grape-leaf-15796930.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2438
+raw/plantdoc/train/grape leaf/grape-leaf-19616502.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2439
+raw/plantdoc/train/grape leaf/grape-leaf-blossoming-buds-spring-macro-31132897.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2440
+raw/plantdoc/train/grape leaf/grape-leaf-detail-1457175.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2441
+raw/plantdoc/train/grape leaf/grape-leave-clipping-path-3817989.jpg,Grape___healthy,grape leaf,train,healthy_assumed,221
+raw/plantdoc/train/grape leaf/grape-leaves-03-1103349.jpg,Grape___healthy,grape leaf,train,healthy_assumed,65
+raw/plantdoc/train/grape leaf/grape-leaves-19091-1920x1200.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2446
+raw/plantdoc/train/grape leaf/grape-leaves-3368435.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2449
+raw/plantdoc/train/grape leaf/grape-leaves-picture-id108483523?k=6&m=108483523&s=612x612&w=0&h=hBDI-YPeBffgjjZzbHsAaCfARsflsveT1NbcncLft5Y=.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2451
+raw/plantdoc/train/grape leaf/grape-vine-leaf-1327453.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2456
+raw/plantdoc/train/grape leaf/grape-vines-3876069.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2457
+raw/plantdoc/train/grape leaf/grape_leaf_1_bg_20090621.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2459
+raw/plantdoc/train/grape leaf/grapes+003.JPG.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2461
+raw/plantdoc/train/grape leaf/iisland-grape-leaves.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2462
+raw/plantdoc/train/grape leaf/img_0389.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2463
+raw/plantdoc/train/grape leaf/img_4534.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2465
+raw/plantdoc/train/grape leaf/p1010008.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2469
+raw/plantdoc/train/grape leaf/stock-photo-grapes-leaf-isolated-on-white-background-108448556.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2470
+raw/plantdoc/train/grape leaf/trim-the-stem.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2471
+raw/plantdoc/train/grape leaf/vine-leaves-10824119.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2472
+raw/plantdoc/train/grape leaf/young-fresh-grape-leaf-picture-id183867740?k=6&m=183867740&s=612x612&w=0&h=Q8_s3Yw7p_VKQjda-mZPl9rN4lDmpVjjbMUk95HtVFk=.jpg,Grape___healthy,grape leaf,train,healthy_assumed,2473

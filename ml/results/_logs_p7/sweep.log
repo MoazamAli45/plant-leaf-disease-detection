@@ -1,0 +1,248 @@
+exists: results/p7_ref_p6deployed/seed0
+exists: results/p7_ref_p3_mobilenet_v1/seed0
+exists: results/p7_ref_p3_efficientnet_b0/seed0
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+2026-11-19 13:33:23.002144: I external/local_xla/xla/service/service.cc:163] XLA service 0x7448b8800 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-11-19 13:33:23.002157: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795124003.047675  470122 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+100/100 - 40s - 395ms/step - accuracy: 0.6904 - loss: 1.2262 - val_accuracy: 0.4562 - val_loss: 2.0294
+Epoch 2/15
+100/100 - 38s - 376ms/step - accuracy: 0.7417 - loss: 0.8778 - val_accuracy: 0.4466 - val_loss: 1.8923
+Epoch 3/15
+100/100 - 41s - 406ms/step - accuracy: 0.7744 - loss: 0.7586 - val_accuracy: 0.4795 - val_loss: 1.9015
+Epoch 4/15
+100/100 - 42s - 417ms/step - accuracy: 0.7885 - loss: 0.7108 - val_accuracy: 0.5219 - val_loss: 1.6998
+Epoch 5/15
+100/100 - 39s - 393ms/step - accuracy: 0.8021 - loss: 0.6335 - val_accuracy: 0.4726 - val_loss: 1.8251
+Epoch 6/15
+100/100 - 41s - 407ms/step - accuracy: 0.8043 - loss: 0.6210 - val_accuracy: 0.4986 - val_loss: 1.7415
+Epoch 7/15
+100/100 - 40s - 400ms/step - accuracy: 0.8125 - loss: 0.5806 - val_accuracy: 0.5110 - val_loss: 1.6745
+Epoch 8/15
+100/100 - 35s - 353ms/step - accuracy: 0.8342 - loss: 0.5226 - val_accuracy: 0.4959 - val_loss: 1.8166
+Epoch 9/15
+100/100 - 37s - 367ms/step - accuracy: 0.8323 - loss: 0.5270 - val_accuracy: 0.5342 - val_loss: 1.6702
+Epoch 10/15
+100/100 - 36s - 358ms/step - accuracy: 0.8420 - loss: 0.4915 - val_accuracy: 0.5712 - val_loss: 1.4581
+Epoch 11/15
+100/100 - 36s - 365ms/step - accuracy: 0.8546 - loss: 0.4597 - val_accuracy: 0.4260 - val_loss: 1.9344
+Epoch 12/15
+100/100 - 37s - 365ms/step - accuracy: 0.8477 - loss: 0.4654 - val_accuracy: 0.5781 - val_loss: 1.5454
+Epoch 13/15
+100/100 - 36s - 357ms/step - accuracy: 0.8534 - loss: 0.4461 - val_accuracy: 0.5562 - val_loss: 1.5718
+results/p7_P_p3_mobilenet_v1/seed0 {'pd_test_tta': 52.0, 'fp_test_tta': 65.27, 'selection_tta': 39.58, 'lab_check': 97.59}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+2026-11-19 13:43:12.622242: I external/local_xla/xla/service/service.cc:163] XLA service 0x9a808dc00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-11-19 13:43:12.622273: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795124592.627949  502662 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+100/100 - 37s - 368ms/step - accuracy: 0.7001 - loss: 1.2007 - val_accuracy: 0.4425 - val_loss: 2.0613
+Epoch 2/15
+100/100 - 34s - 345ms/step - accuracy: 0.7520 - loss: 0.8553 - val_accuracy: 0.4438 - val_loss: 1.9531
+Epoch 3/15
+100/100 - 35s - 347ms/step - accuracy: 0.7785 - loss: 0.7487 - val_accuracy: 0.4685 - val_loss: 1.8582
+Epoch 4/15
+100/100 - 37s - 368ms/step - accuracy: 0.7942 - loss: 0.6861 - val_accuracy: 0.5247 - val_loss: 1.7984
+Epoch 5/15
+100/100 - 38s - 375ms/step - accuracy: 0.8074 - loss: 0.6278 - val_accuracy: 0.5342 - val_loss: 1.6732
+Epoch 6/15
+100/100 - 36s - 357ms/step - accuracy: 0.8131 - loss: 0.6037 - val_accuracy: 0.4397 - val_loss: 1.8525
+Epoch 7/15
+100/100 - 36s - 357ms/step - accuracy: 0.8257 - loss: 0.5684 - val_accuracy: 0.4781 - val_loss: 1.8203
+Epoch 8/15
+100/100 - 36s - 356ms/step - accuracy: 0.8241 - loss: 0.5484 - val_accuracy: 0.5000 - val_loss: 1.7428
+results/p7_P_p3_mobilenet_v1/seed1 {'pd_test_tta': 50.22, 'fp_test_tta': 60.1, 'selection_tta': 38.69, 'lab_check': 97.45}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+2026-11-19 13:49:39.383232: I external/local_xla/xla/service/service.cc:163] XLA service 0xa68127500 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-11-19 13:49:39.383249: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795124979.388201  521920 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+100/100 - 40s - 400ms/step - accuracy: 0.7017 - loss: 1.1926 - val_accuracy: 0.4411 - val_loss: 2.0833
+Epoch 2/15
+100/100 - 38s - 381ms/step - accuracy: 0.7542 - loss: 0.8543 - val_accuracy: 0.5041 - val_loss: 1.8480
+Epoch 3/15
+100/100 - 37s - 373ms/step - accuracy: 0.7678 - loss: 0.7566 - val_accuracy: 0.4890 - val_loss: 1.8690
+Epoch 4/15
+100/100 - 37s - 370ms/step - accuracy: 0.7879 - loss: 0.6858 - val_accuracy: 0.5589 - val_loss: 1.6221
+Epoch 5/15
+100/100 - 38s - 382ms/step - accuracy: 0.8008 - loss: 0.6663 - val_accuracy: 0.5425 - val_loss: 1.6198
+Epoch 6/15
+100/100 - 37s - 371ms/step - accuracy: 0.8181 - loss: 0.5857 - val_accuracy: 0.5603 - val_loss: 1.6268
+Epoch 7/15
+100/100 - 37s - 373ms/step - accuracy: 0.8210 - loss: 0.5716 - val_accuracy: 0.5603 - val_loss: 1.6489
+Epoch 8/15
+100/100 - 35s - 352ms/step - accuracy: 0.8272 - loss: 0.5529 - val_accuracy: 0.5890 - val_loss: 1.6469
+results/p7_P_p3_mobilenet_v1/seed2 {'pd_test_tta': 49.55, 'fp_test_tta': 63.05, 'selection_tta': 36.51, 'lab_check': 97.72}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+2026-11-19 13:56:22.588164: I external/local_xla/xla/service/service.cc:163] XLA service 0x9e640db00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-11-19 13:56:22.588182: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795125382.593390  541199 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+112/112 - 42s - 378ms/step - accuracy: 0.6575 - loss: 1.3201 - val_accuracy: 0.4767 - val_loss: 1.8255
+Epoch 2/15
+112/112 - 40s - 359ms/step - accuracy: 0.7318 - loss: 0.9008 - val_accuracy: 0.5041 - val_loss: 1.6336
+Epoch 3/15
+112/112 - 43s - 383ms/step - accuracy: 0.7534 - loss: 0.8248 - val_accuracy: 0.5493 - val_loss: 1.5274
+Epoch 4/15
+112/112 - 41s - 364ms/step - accuracy: 0.7775 - loss: 0.7197 - val_accuracy: 0.5932 - val_loss: 1.3599
+Epoch 5/15
+112/112 - 76s - 677ms/step - accuracy: 0.7834 - loss: 0.6756 - val_accuracy: 0.5740 - val_loss: 1.4213
+Epoch 6/15
+112/112 - 4684s - 42s/step - accuracy: 0.8033 - loss: 0.6245 - val_accuracy: 0.5918 - val_loss: 1.3650
+Epoch 7/15
+112/112 - 3469s - 31s/step - accuracy: 0.8055 - loss: 0.5992 - val_accuracy: 0.6110 - val_loss: 1.2656
+Epoch 8/15
+112/112 - 4600s - 41s/step - accuracy: 0.8173 - loss: 0.5748 - val_accuracy: 0.5932 - val_loss: 1.3613
+Epoch 9/15
+112/112 - 5445s - 49s/step - accuracy: 0.8156 - loss: 0.5373 - val_accuracy: 0.6233 - val_loss: 1.2710
+Epoch 10/15
+112/112 - 3664s - 33s/step - accuracy: 0.8349 - loss: 0.5086 - val_accuracy: 0.6205 - val_loss: 1.2714
+results/p7_PF_p3_mobilenet_v1/seed0 {'pd_test_tta': 49.22, 'fp_test_tta': 78.57, 'selection_tta': 53.68, 'lab_check': 98.26}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+2026-11-19 21:54:04.317798: I external/local_xla/xla/service/service.cc:163] XLA service 0x8eecbbd00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-11-19 21:54:04.317829: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795154044.353739  606370 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+112/112 - 47s - 417ms/step - accuracy: 0.6648 - loss: 1.2938 - val_accuracy: 0.5370 - val_loss: 1.6559
+Epoch 2/15
+112/112 - 43s - 387ms/step - accuracy: 0.7385 - loss: 0.8870 - val_accuracy: 0.6041 - val_loss: 1.4465
+Epoch 3/15
+112/112 - 45s - 402ms/step - accuracy: 0.7531 - loss: 0.8090 - val_accuracy: 0.6055 - val_loss: 1.3883
+Epoch 4/15
+112/112 - 43s - 384ms/step - accuracy: 0.7735 - loss: 0.7259 - val_accuracy: 0.5973 - val_loss: 1.3473
+Epoch 5/15
+112/112 - 43s - 388ms/step - accuracy: 0.7878 - loss: 0.6707 - val_accuracy: 0.6110 - val_loss: 1.2955
+Epoch 6/15
+112/112 - 42s - 375ms/step - accuracy: 0.7968 - loss: 0.6409 - val_accuracy: 0.6082 - val_loss: 1.3128
+Epoch 7/15
+112/112 - 44s - 397ms/step - accuracy: 0.8077 - loss: 0.6081 - val_accuracy: 0.6205 - val_loss: 1.2229
+Epoch 8/15
+112/112 - 44s - 393ms/step - accuracy: 0.8175 - loss: 0.5672 - val_accuracy: 0.6082 - val_loss: 1.2877
+Epoch 9/15
+112/112 - 42s - 377ms/step - accuracy: 0.8209 - loss: 0.5408 - val_accuracy: 0.6425 - val_loss: 1.2146
+Epoch 10/15
+112/112 - 42s - 376ms/step - accuracy: 0.8369 - loss: 0.5164 - val_accuracy: 0.6521 - val_loss: 1.1866
+Epoch 11/15
+112/112 - 42s - 379ms/step - accuracy: 0.8380 - loss: 0.4902 - val_accuracy: 0.6397 - val_loss: 1.1648
+Epoch 12/15
+112/112 - 43s - 386ms/step - accuracy: 0.8450 - loss: 0.4716 - val_accuracy: 0.6589 - val_loss: 1.1343
+Epoch 13/15
+112/112 - 42s - 378ms/step - accuracy: 0.8489 - loss: 0.4631 - val_accuracy: 0.6425 - val_loss: 1.1626
+Epoch 14/15
+112/112 - 41s - 368ms/step - accuracy: 0.8582 - loss: 0.4183 - val_accuracy: 0.6466 - val_loss: 1.1537
+Epoch 15/15
+112/112 - 44s - 390ms/step - accuracy: 0.8610 - loss: 0.4154 - val_accuracy: 0.6548 - val_loss: 1.1454
+results/p7_PF_p3_mobilenet_v1/seed1 {'pd_test_tta': 52.67, 'fp_test_tta': 82.14, 'selection_tta': 55.62, 'lab_check': 98.12}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+2026-11-19 22:06:34.985458: I external/local_xla/xla/service/service.cc:163] XLA service 0xb74899b00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-11-19 22:06:34.985483: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): Host, Default Version
+I0000 00:00:1795154794.990594  644537 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+112/112 - 56s - 501ms/step - accuracy: 0.6654 - loss: 1.2685 - val_accuracy: 0.5644 - val_loss: 1.5895
+Epoch 2/15
+112/112 - 47s - 416ms/step - accuracy: 0.7349 - loss: 0.9061 - val_accuracy: 0.5658 - val_loss: 1.5037
+Epoch 3/15
+112/112 - 48s - 428ms/step - accuracy: 0.7514 - loss: 0.8105 - val_accuracy: 0.5233 - val_loss: 1.5721
+Epoch 4/15
+112/112 - 43s - 386ms/step - accuracy: 0.7710 - loss: 0.7340 - val_accuracy: 0.5808 - val_loss: 1.3801
+Epoch 5/15
+112/112 - 50s - 449ms/step - accuracy: 0.7890 - loss: 0.6689 - val_accuracy: 0.5849 - val_loss: 1.3463
+Epoch 6/15
+112/112 - 49s - 440ms/step - accuracy: 0.7957 - loss: 0.6355 - val_accuracy: 0.6301 - val_loss: 1.2546
+Epoch 7/15
+112/112 - 49s - 435ms/step - accuracy: 0.8072 - loss: 0.6012 - val_accuracy: 0.6438 - val_loss: 1.2118
+Epoch 8/15
+112/112 - 45s - 402ms/step - accuracy: 0.8220 - loss: 0.5658 - val_accuracy: 0.6205 - val_loss: 1.2095
+Epoch 9/15
+112/112 - 48s - 431ms/step - accuracy: 0.8276 - loss: 0.5428 - val_accuracy: 0.6356 - val_loss: 1.2476
+Epoch 10/15
+112/112 - 43s - 383ms/step - accuracy: 0.8257 - loss: 0.5390 - val_accuracy: 0.6301 - val_loss: 1.1975
+Epoch 11/15
+112/112 - 46s - 406ms/step - accuracy: 0.8414 - loss: 0.4938 - val_accuracy: 0.6425 - val_loss: 1.1703
+Epoch 12/15
+112/112 - 54s - 485ms/step - accuracy: 0.8383 - loss: 0.4794 - val_accuracy: 0.6356 - val_loss: 1.2333
+Epoch 13/15
+112/112 - 51s - 458ms/step - accuracy: 0.8503 - loss: 0.4566 - val_accuracy: 0.6370 - val_loss: 1.1928
+Epoch 14/15
+112/112 - 52s - 466ms/step - accuracy: 0.8593 - loss: 0.4290 - val_accuracy: 0.6671 - val_loss: 1.1868
+results/p7_PF_p3_mobilenet_v1/seed2 {'pd_test_tta': 49.89, 'fp_test_tta': 78.45, 'selection_tta': 55.37, 'lab_check': 97.59}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+100/100 - 79s - 792ms/step - accuracy: 0.6951 - loss: 1.4247 - val_accuracy: 0.4110 - val_loss: 2.3325
+Epoch 2/15
+100/100 - 68s - 684ms/step - accuracy: 0.7426 - loss: 0.9711 - val_accuracy: 0.4644 - val_loss: 2.0739
+Epoch 3/15
+100/100 - 64s - 638ms/step - accuracy: 0.7697 - loss: 0.8188 - val_accuracy: 0.5123 - val_loss: 1.8362
+Epoch 4/15
+100/100 - 66s - 655ms/step - accuracy: 0.7911 - loss: 0.7215 - val_accuracy: 0.5452 - val_loss: 1.7074
+Epoch 5/15
+100/100 - 63s - 628ms/step - accuracy: 0.8131 - loss: 0.6333 - val_accuracy: 0.5726 - val_loss: 1.6078
+Epoch 6/15
+100/100 - 66s - 661ms/step - accuracy: 0.8232 - loss: 0.5806 - val_accuracy: 0.5534 - val_loss: 1.5942
+Epoch 7/15
+100/100 - 65s - 651ms/step - accuracy: 0.8442 - loss: 0.5162 - val_accuracy: 0.5658 - val_loss: 1.5915
+Epoch 8/15
+100/100 - 66s - 663ms/step - accuracy: 0.8521 - loss: 0.4776 - val_accuracy: 0.5685 - val_loss: 1.5474
+Epoch 9/15
+100/100 - 71s - 708ms/step - accuracy: 0.8556 - loss: 0.4451 - val_accuracy: 0.5808 - val_loss: 1.4834
+Epoch 10/15
+100/100 - 66s - 663ms/step - accuracy: 0.8653 - loss: 0.4198 - val_accuracy: 0.5795 - val_loss: 1.5702
+Epoch 11/15
+100/100 - 68s - 681ms/step - accuracy: 0.8814 - loss: 0.3695 - val_accuracy: 0.5877 - val_loss: 1.5530
+Epoch 12/15
+100/100 - 70s - 698ms/step - accuracy: 0.8889 - loss: 0.3537 - val_accuracy: 0.5877 - val_loss: 1.4480
+Epoch 13/15
+100/100 - 63s - 633ms/step - accuracy: 0.8977 - loss: 0.3250 - val_accuracy: 0.6000 - val_loss: 1.5050
+Epoch 14/15
+100/100 - 78s - 783ms/step - accuracy: 0.9034 - loss: 0.3000 - val_accuracy: 0.6014 - val_loss: 1.5500
+Epoch 15/15
+100/100 - 67s - 672ms/step - accuracy: 0.9043 - loss: 0.2853 - val_accuracy: 0.6000 - val_loss: 1.5582
+results/p7_P_p3_efficientnet_b0/seed0 {'pd_test_tta': 59.02, 'fp_test_tta': 66.13, 'selection_tta': 39.28, 'lab_check': 99.46}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+100/100 - 70s - 698ms/step - accuracy: 0.6919 - loss: 1.4131 - val_accuracy: 0.4055 - val_loss: 2.3539
+Epoch 2/15
+100/100 - 65s - 653ms/step - accuracy: 0.7388 - loss: 0.9575 - val_accuracy: 0.4562 - val_loss: 2.0459
+Epoch 3/15
+100/100 - 66s - 660ms/step - accuracy: 0.7728 - loss: 0.8149 - val_accuracy: 0.5219 - val_loss: 1.8392
+Epoch 4/15
+100/100 - 64s - 639ms/step - accuracy: 0.7942 - loss: 0.7098 - val_accuracy: 0.5438 - val_loss: 1.7203
+Epoch 5/15
+100/100 - 66s - 660ms/step - accuracy: 0.8093 - loss: 0.6437 - val_accuracy: 0.5685 - val_loss: 1.6139
+Epoch 6/15
+100/100 - 67s - 671ms/step - accuracy: 0.8241 - loss: 0.5798 - val_accuracy: 0.5671 - val_loss: 1.5967
+Epoch 7/15
+100/100 - 60s - 596ms/step - accuracy: 0.8370 - loss: 0.5320 - val_accuracy: 0.5753 - val_loss: 1.5603
+Epoch 8/15
+100/100 - 59s - 591ms/step - accuracy: 0.8483 - loss: 0.4805 - val_accuracy: 0.5781 - val_loss: 1.5261
+Epoch 9/15
+100/100 - 71s - 713ms/step - accuracy: 0.8647 - loss: 0.4393 - val_accuracy: 0.5890 - val_loss: 1.5289
+Epoch 10/15
+100/100 - 68s - 676ms/step - accuracy: 0.8697 - loss: 0.4044 - val_accuracy: 0.5932 - val_loss: 1.5385
+Epoch 11/15
+100/100 - 76s - 761ms/step - accuracy: 0.8773 - loss: 0.3814 - val_accuracy: 0.5945 - val_loss: 1.4819
+Epoch 12/15
+100/100 - 67s - 667ms/step - accuracy: 0.8880 - loss: 0.3516 - val_accuracy: 0.5890 - val_loss: 1.5119
+Epoch 13/15
+100/100 - 66s - 662ms/step - accuracy: 0.8968 - loss: 0.3143 - val_accuracy: 0.6014 - val_loss: 1.5427
+Epoch 14/15
+100/100 - 59s - 591ms/step - accuracy: 0.8996 - loss: 0.2936 - val_accuracy: 0.5918 - val_loss: 1.6495
+results/p7_P_p3_efficientnet_b0/seed1 {'pd_test_tta': 58.13, 'fp_test_tta': 67.0, 'selection_tta': 39.47, 'lab_check': 99.2}
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/15
+100/100 - 66s - 661ms/step - accuracy: 0.6945 - loss: 1.4118 - val_accuracy: 0.4068 - val_loss: 2.3625
+Epoch 2/15
+100/100 - 61s - 610ms/step - accuracy: 0.7401 - loss: 0.9597 - val_accuracy: 0.4630 - val_loss: 2.0379
+Epoch 3/15
+100/100 - 61s - 611ms/step - accuracy: 0.7574 - loss: 0.8315 - val_accuracy: 0.5219 - val_loss: 1.8265
+Epoch 4/15
+100/100 - 61s - 609ms/step - accuracy: 0.7992 - loss: 0.7061 - val_accuracy: 0.5534 - val_loss: 1.7050
+Epoch 5/15
+100/100 - 63s - 630ms/step - accuracy: 0.8090 - loss: 0.6481 - val_accuracy: 0.5616 - val_loss: 1.6396
+Epoch 6/15
+100/100 - 63s - 634ms/step - accuracy: 0.8225 - loss: 0.5821 - val_accuracy: 0.5575 - val_loss: 1.5855
+Epoch 7/15
+100/100 - 2173s - 22s/step - accuracy: 0.8361 - loss: 0.5322 - val_accuracy: 0.5767 - val_loss: 1.5509
+Epoch 8/15
+100/100 - 479s - 5s/step - accuracy:

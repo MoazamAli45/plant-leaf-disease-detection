@@ -1,0 +1,68 @@
+{
+ "method": "fttta",
+ "source_run": "results/p6_ft_p3_mobilenet_v1_kall_replay50/seed1",
+ "model": "p3_mobilenet_v1",
+ "k": null,
+ "seed": 1,
+ "lr": 3e-05,
+ "n_field_train": 1278,
+ "n_lab_replay": 1900,
+ "best_epoch": 9,
+ "seconds": 94.21405982971191,
+ "metrics": {
+  "field_val": {
+   "n": 381,
+   "n_classes_present": 27,
+   "accuracy": 0.49606299212598426,
+   "restricted_accuracy": 0.49606299212598426,
+   "top3_accuracy": 0.7637795275590551,
+   "macro_f1": 0.476334669972967,
+   "weighted_f1": 0.4931946174200092,
+   "macro_precision": 0.5341133208857919,
+   "macro_recall": 0.4672508450028229,
+   "ece": 0.07442490138563271,
+   "mean_confidence": 0.5560028553009033,
+   "prob_row_sum_mean": 1.0,
+   "crop_accuracy": 0.6981627296587927
+  },
+  "field_test": {
+   "n": 898,
+   "n_classes_present": 28,
+   "accuracy": 0.5178173719376392,
+   "restricted_accuracy": 0.5189309576837416,
+   "top3_accuracy": 0.7951002227171492,
+   "macro_f1": 0.48069184721668845,
+   "weighted_f1": 0.5131721075046678,
+   "macro_precision": 0.5344618437886492,
+   "macro_recall": 0.47438526461555314,
+   "ece": 0.07395811714978685,
+   "mean_confidence": 0.5808535218238831,
+   "prob_row_sum_mean": 1.0,
+   "crop_accuracy": 0.7126948775055679
+  },
+  "lab_check": {
+   "n": 746,
+   "n_classes_present": 38,
+   "accuracy": 0.9906166219839142,
+   "restricted_accuracy": 0.9906166219839142,
+   "top3_accuracy": 1.0,
+   "macro_f1": 0.9908022459924201,
+   "weighted_f1": 0.990629633986916,
+   "macro_precision": 0.9915549743925031,
+   "macro_recall": 0.9907894736842107,
+   "ece": 0.021568641625844123,
+   "mean_confidence": 0.9699145555496216,
+   "prob_row_sum_mean": 1.0,
+   "crop_accuracy": 0.9986595174262735
+  }
+ },
+ "env": {
+  "python": "3.12.16",
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "devices": [
+   "CPU"
+  ]
+ }
+}

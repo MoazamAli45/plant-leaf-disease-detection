@@ -1,0 +1,63 @@
+{
+ "method": "adabn",
+ "model": "p3_mobilenet_v2",
+ "seed": 2,
+ "n_bn_layers": 52,
+ "n_unlabelled": 1278,
+ "metrics": {
+  "field_val": {
+   "n": 381,
+   "n_classes_present": 27,
+   "accuracy": 0.16535433070866143,
+   "restricted_accuracy": 0.17585301837270342,
+   "top3_accuracy": 0.31758530183727035,
+   "macro_f1": 0.1512858702668476,
+   "weighted_f1": 0.1624939380694843,
+   "macro_precision": 0.20627856041987208,
+   "macro_recall": 0.16061761325349216,
+   "ece": 0.6042149401125633,
+   "mean_confidence": 0.7695692181587219,
+   "prob_row_sum_mean": 1.0,
+   "crop_accuracy": 0.38320209973753283
+  },
+  "field_test": {
+   "n": 898,
+   "n_classes_present": 28,
+   "accuracy": 0.18151447661469933,
+   "restricted_accuracy": 0.20155902004454343,
+   "top3_accuracy": 0.3752783964365256,
+   "macro_f1": 0.17973741478574645,
+   "weighted_f1": 0.188137321967409,
+   "macro_precision": 0.22422890517968533,
+   "macro_recall": 0.17938947645938916,
+   "ece": 0.5786622433460635,
+   "mean_confidence": 0.7601767778396606,
+   "prob_row_sum_mean": 1.0,
+   "crop_accuracy": 0.4064587973273942
+  },
+  "lab_check": {
+   "n": 746,
+   "n_classes_present": 38,
+   "accuracy": 0.935656836461126,
+   "restricted_accuracy": 0.935656836461126,
+   "top3_accuracy": 0.9906166219839142,
+   "macro_f1": 0.9360060894520963,
+   "weighted_f1": 0.9348051313452992,
+   "macro_precision": 0.9463924233661075,
+   "macro_recall": 0.9368421052631579,
+   "ece": 0.03635864910587232,
+   "mean_confidence": 0.9637558460235596,
+   "prob_row_sum_mean": 1.0,
+   "crop_accuracy": 0.9705093833780161
+  }
+ },
+ "env": {
+  "python": "3.12.16",
+  "tensorflow": "2.20.0",
+  "keras": "3.15.1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "devices": [
+   "CPU"
+  ]
+ }
+}

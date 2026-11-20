@@ -1,0 +1,8 @@
+label,train,val,test
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,27,8,19
+Corn_(maize)___Common_rust_,22,8,19
+Corn_(maize)___Northern_Leaf_Blight,829,248,575
+Corn_(maize)___healthy,76,22,54
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,56,18,41
+Tomato___Tomato_mosaic_virus,9,3,7
+Tomato___healthy,140,42,97

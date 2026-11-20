@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CLASSES, DISEASE_META } from "@/lib/classes";
+import { FIELD_ADAPTED } from "@/lib/research";
 
 export const metadata: Metadata = {
   title: "About",
@@ -38,10 +39,16 @@ export default function AboutPage() {
             It recognises {CLASSES.length} classes ({CLASSES.length - healthy} diseases and pests,{" "}
             {healthy} healthy leaves) across {crops} crops.
           </li>
-          <li>It was trained on lab photos of single leaves on plain backgrounds.</li>
           <li>
-            On real field photos it is wrong most of the time (see Research). Use it to learn and to
-            decide what to look up, not to decide treatment.
+            {FIELD_ADAPTED
+              ? `It was trained on lab photos of single leaves on plain backgrounds, then fine-tuned on ${FIELD_ADAPTED.n_field_train.toLocaleString()} labelled field photos from PlantDoc.`
+              : "It was trained on lab photos of single leaves on plain backgrounds."}
+          </li>
+          <li>
+            {FIELD_ADAPTED
+              ? `On held-out field photos it was right ${Math.round(FIELD_ADAPTED.field_test.accuracy * 100)}% of the time, so it is still often wrong (see Research).`
+              : "On real field photos it is wrong most of the time (see Research)."}{" "}
+            Use it to learn and to decide what to look up, not to decide treatment.
           </li>
           <li>Plants and diseases outside its {CLASSES.length} classes are forced into one of them.</li>
         </ul>

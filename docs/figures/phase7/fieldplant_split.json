@@ -1,0 +1,18 @@
+{
+ "archive": "data/downloads/fieldplant/fieldplant.zip",
+ "archive_sha256": "97b7fe8bfa040b9e436a1b88bf8b5342236c3b374c4b21fcae3da89cb4fb0c0d",
+ "n_photos_used": 1480,
+ "n_crops": 2320,
+ "n_photo_pairs_linked": 40,
+ "n_groups": 1441,
+ "groups_crossing_splits": 0,
+ "counts": {
+  "train": 1159,
+  "val": 349,
+  "test": 812
+ },
+ "margin": 0.05,
+ "max_side": 640,
+ "max_dist": 6,
+ "seed": 42
+}

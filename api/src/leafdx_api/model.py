@@ -1,8 +1,10 @@
 """Model loading, prediction and Grad-CAM.
 
-The model is the float32 inference export of the deployed MobileNetV1
-(``ml/models/_export/p3_mobilenet_v1/inference.keras``): raw [0, 255] RGB in, 38 probabilities
-out. Grad-CAM uses the last convolutional block (the backbone for transfer models).
+The model is the float32 Keras file of the deployed MobileNetV1, fine-tuned on field photos
+(``ml/models/_export/p6_deployed/inference.keras``, docs/field.md): raw [0, 255] RGB in, 38
+probabilities out. Predictions average four views (test-time augmentation), exactly as the
+evaluation and the web app do. Grad-CAM uses the last convolutional block of the original
+view (the backbone for transfer models).
 """
 
 from __future__ import annotations
@@ -14,6 +16,16 @@ from pathlib import Path
 import keras
 import numpy as np
 import tensorflow as tf
+
+CROP_FRACTION = 0.875
+
+
+def tta_views(x: tf.Tensor) -> tf.Tensor:
+    """[1, H, W, 3] -> [4, H, W, 3]: the image, its horizontal flip, an 87.5% centre crop
+    resized back, and its flip (as ``ml/src/leafdx/field/methods.py``, ``_views``)."""
+    size = x.shape[1:3]
+    crop = tf.image.resize(tf.image.central_crop(x, CROP_FRACTION), size, method="bilinear")
+    return tf.concat([x, tf.image.flip_left_right(x), crop, tf.image.flip_left_right(crop)], 0)
 
 
 def target_layer(model: keras.Model) -> str:
@@ -51,8 +63,10 @@ class Classifier:
             raise ValueError(f"model has {n_out} outputs but {len(classes)} classes are listed")
         return cls(model=model, grad=gradcam_model(model), classes=classes)
 
-    def predict(self, x: np.ndarray) -> np.ndarray:
-        return np.asarray(self.model(x, training=False))[0]
+    def predict(self, x: np.ndarray, tta: bool = True) -> np.ndarray:
+        x = tf.convert_to_tensor(x, tf.float32)
+        views = tta_views(x) if tta else x
+        return np.asarray(self.model(views, training=False)).mean(axis=0)
 
     def gradcam(self, x: np.ndarray, class_index: int) -> np.ndarray:
         """Heat map in [0, 1] at the input resolution."""

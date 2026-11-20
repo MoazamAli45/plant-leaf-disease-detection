@@ -1,0 +1,8 @@
+fieldplant_class,plantvillage_class,match,rationale
+Corn Gray leaf spot,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,exact,Same name as PlantDoc's class; gray leaf spot is caused by Cercospora zeae-maydis.
+Corn Healthy,Corn_(maize)___healthy,exact,Same crop; healthy.
+Corn leaf blight,Corn_(maize)___Northern_Leaf_Blight,approximate,Same name as PlantDoc's class; northern and southern leaf blight are not distinguished; PlantVillage only has northern.
+Corn rust leaf,Corn_(maize)___Common_rust_,approximate,Same name as PlantDoc's class; common and southern rust are not distinguished; PlantVillage only has common rust.
+Tomato healthy,Tomato___healthy,exact,Same crop; healthy.
+Tomato leaf mosaic virus,Tomato___Tomato_mosaic_virus,exact,Same name as PlantDoc's class; mosaic symptoms can be caused by other viruses.
+Tomato leaf yellow virus,Tomato___Tomato_Yellow_Leaf_Curl_Virus,approximate,Same name as PlantDoc's class; taken to mean TYLCV as for PlantDoc.

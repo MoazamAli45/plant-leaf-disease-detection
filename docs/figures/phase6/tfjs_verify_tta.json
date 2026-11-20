@@ -1,0 +1,7 @@
+{
+ "images": 100,
+ "reference": "Keras float32 model, 4 views (ml/src/leafdx/field/methods.py)",
+ "browser": "TF.js float16 model, 4 views (web/src/lib/tta.ts), wasm backend",
+ "same_top1": 1,
+ "max_abs_prob_diff": 0.007925808429718018
+}

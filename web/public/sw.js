@@ -2,7 +2,7 @@
 // - Pages: network first, falling back to the cached copy (so updates arrive when online).
 // - Model, wasm and built assets: cache first (they are immutable or versioned).
 // Bump VERSION whenever the model files change, or browsers keep serving the old model.
-const VERSION = "leafdx-v1";
+const VERSION = "leafdx-339eae100fa4";
 const PRECACHE = [
   "/",
   "/detect",
@@ -10,9 +10,10 @@ const PRECACHE = [
   "/library",
   "/research",
   "/about",
-  "/model/model.json",
   "/model/group1-shard1of2.bin",
   "/model/group1-shard2of2.bin",
+  "/model/leafdx.json",
+  "/model/model.json",
   "/tfjs-wasm/tfjs-backend-wasm.wasm",
   "/tfjs-wasm/tfjs-backend-wasm-simd.wasm",
   "/tfjs-wasm/tfjs-backend-wasm-threaded-simd.wasm",

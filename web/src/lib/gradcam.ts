@@ -16,10 +16,22 @@
  * browser.
  */
 
-/** Node names in the converted TF.js graph (web/public/model/model.json). */
-export const FEATURE_NODE = "StatefulPartitionedCall/mobilenet_v1_1/mobilenet_1.00_224_1/conv_pw_13_relu_1/Relu6";
-export const OUTPUT_NODE = "Identity";
-export const KERNEL_WEIGHT = "StatefulPartitionedCall/mobilenet_v1_1/classifier_1/Cast/ReadVariableOp";
+/**
+ * What the app needs to know about the deployed model, from web/public/model/leafdx.json
+ * (written by ml/src/leafdx/field/deploy.py, which finds the node names in the converted graph).
+ */
+export type ModelInfo = {
+  /** Backbone name shown to users, e.g. "MobileNetV1" or "EfficientNetB0". */
+  label: string;
+  /** Last feature maps, the input of the global average pooling. */
+  feature_node: string;
+  /** The classifier's K x C dense kernel. */
+  kernel_weight: string;
+  /** The softmax probabilities. */
+  output_node: string;
+  /** 4 = test-time augmentation (lib/tta.ts), 1 = a single view. */
+  tta_views: number;
+};
 
 /** Grad-CAM weight per feature map for class ``c``. ``kernel`` is the dense layer's
  * K x C weight matrix in row-major order. */

@@ -1,0 +1,23 @@
+results/p6_base_p3_mobilenet_v1/seed0 {'field_val': 14.96, 'field_test': 18.15, 'lab_check': 99.06}
+results/p6_tta_p3_mobilenet_v1/seed0 {'field_val': 17.06, 'field_test': 20.04, 'lab_check': 99.2}
+results/p6_adabn_p3_mobilenet_v1/seed0 {'field_val': 18.64, 'field_test': 19.71, 'lab_check': 93.16}
+results/p6_adabn_p3_mobilenet_v1/seed1 {'field_val': 19.16, 'field_test': 19.71, 'lab_check': 93.16}
+results/p6_adabn_p3_mobilenet_v1/seed2 {'field_val': 19.42, 'field_test': 19.93, 'lab_check': 93.16}
+results/p6_base_p3_efficientnet_b0/seed0 {'field_val': 15.49, 'field_test': 19.27, 'lab_check': 99.6}
+results/p6_tta_p3_efficientnet_b0/seed0 {'field_val': 18.37, 'field_test': 19.38, 'lab_check': 99.73}
+results/p6_adabn_p3_efficientnet_b0/seed0 {'field_val': 19.69, 'field_test': 20.27, 'lab_check': 91.82}
+results/p6_adabn_p3_efficientnet_b0/seed1 {'field_val': 19.42, 'field_test': 20.71, 'lab_check': 91.82}
+results/p6_adabn_p3_efficientnet_b0/seed2 {'field_val': 19.69, 'field_test': 20.71, 'lab_check': 91.96}
+results/p6_base_p3_mobilenet_v2/seed0 {'field_val': 12.34, 'field_test': 12.92, 'lab_check': 97.72}
+results/p6_tta_p3_mobilenet_v2/seed0 {'field_val': 12.86, 'field_test': 15.26, 'lab_check': 98.26}
+results/p6_adabn_p3_mobilenet_v2/seed0 {'field_val': 16.27, 'field_test': 18.49, 'lab_check': 93.57}
+results/p6_adabn_p3_mobilenet_v2/seed1 {'field_val': 16.54, 'field_test': 18.6, 'lab_check': 93.57}
+results/p6_adabn_p3_mobilenet_v2/seed2 {'field_val': 16.54, 'field_test': 18.15, 'lab_check': 93.57}
+results/p6_base_p3_mobilenet_v3_small/seed0 {'field_val': 12.86, 'field_test': 14.48, 'lab_check': 98.93}
+results/p6_tta_p3_mobilenet_v3_small/seed0 {'field_val': 15.22, 'field_test': 16.7, 'lab_check': 99.2}
+results/p6_adabn_p3_mobilenet_v3_small/seed0 {'field_val': 14.7, 'field_test': 17.26, 'lab_check': 86.6}
+results/p6_adabn_p3_mobilenet_v3_small/seed1 {'field_val': 14.7, 'field_test': 16.7, 'lab_check': 86.6}
+results/p6_adabn_p3_mobilenet_v3_small/seed2 {'field_val': 14.7, 'field_test': 17.15, 'lab_check': 86.46}
+results/p6_base_p3_cnn_softmax/seed0 {'field_val': 7.61, 'field_test': 8.35, 'lab_check': 88.2}
+results/p6_tta_p3_cnn_softmax/seed0 {'field_val': 6.82, 'field_test': 9.24, 'lab_check': 88.61}
+p3_cnn_softmax has no batch normalisation: AdaBN not applicable

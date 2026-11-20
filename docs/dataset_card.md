@@ -166,7 +166,13 @@ their source). Phase 3 reports test metrics on all test images and on originals 
 
 ## 6. PlantDoc field test set and class mapping
 
-PlantDoc is used **only for evaluation**, with its own train and test folders combined. Of its
+PlantDoc was used **only for evaluation** in Phases 3–5, with its own train and test folders
+combined. In Phase 6 ([`field.md`](field.md)) the 2,557 cleaned images are split once into
+field-train (1,278), field-val (381) and field-test (898), grouped so that near-duplicate copies
+(pHash distance ≤ 6 bits, rotation- and mirror-invariant) stay in one split; PlantDoc's own
+split is not used because it cuts 9 such groups in two, and 26 groups hold the same picture under
+different labels. Field-train is used for fine-tuning the deployed model; field-test only for
+reporting. Manifests: `ml/manifests/field_split/`. Of its
 28 classes, all 28 map to a PlantVillage class. 10 PlantVillage classes have no PlantDoc
 counterpart. The mapping lives in `ml/resources/plantdoc_to_plantvillage.csv`, and a test checks
 it against the real folder names.

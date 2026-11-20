@@ -48,7 +48,34 @@ Unzip the notebook's outputs into `ml/results/` (metrics) and `ml/models/` (weig
 
 Write-up: [`docs/experiments.md`](experiments.md).
 
+## 3b. Field adaptation (Phase 6)
+
+Protocol and results: [`field.md`](field.md). Runs on a laptop CPU (about 4 hours in total).
+
+```bash
+.venv/bin/python -m leafdx.data.field_split          # grouped PlantDoc split -> manifests/field_split/
+for m in p3_mobilenet_v1 p3_efficientnet_b0 p3_mobilenet_v2 p3_mobilenet_v3_small p3_cnn_softmax; do
+  .venv/bin/python -m leafdx.field.run zero --model $m  # baseline, test-time augmentation, AdaBN
+done
+.venv/bin/python -m leafdx.field.run finetune --model p3_mobilenet_v1 --seed 0               # learning-rate check
+.venv/bin/python -m leafdx.field.run finetune --model p3_mobilenet_v1 --seed 0 --lr 1e-4
+bash results/_logs_p6/sweep.sh                         # k-shot fine-tuning sweep
+R=results/p6_ft_p3_mobilenet_v1_kall_replay50
+for s in 0 1 2; do .venv/bin/python -m leafdx.field.run tta --run $R/seed$s; done   # FT + TTA
+.venv/bin/python -m leafdx.field.report               # docs/figures/phase6/
+# the chosen model (docs/field.md §6.3) -> web/public/model, api/model, figures/phase6/deployed.json
+.venv/bin/python -m leafdx.field.deploy --run $R/seed0 --tta
+.venv/bin/python -m leafdx.field.report               # again, for the per-class table
+.venv/bin/python -m leafdx.train.export_web verify --model $R/seed0/model.keras
+(cd ../web && npm run verify-model && npx vitest run src/lib/__tests__/tta-model.test.ts \
+  src/lib/__tests__/gradcam-model.test.ts)
+.venv/bin/python -m leafdx.train.export_web research
+```
+
 ## 4. Export to the app
+
+The app now uses the Phase 6 model, exported by `leafdx.field.deploy` (§3b). The steps below
+export the Phase 3 model instead (version 0.1.0 in the [model card](model_card.md)).
 
 ```bash
 .venv/bin/python -m leafdx.train.export_web classes     # web/src/data/classes.json
